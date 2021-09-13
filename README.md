@@ -31,15 +31,7 @@ Axel Leonel Romano -
 
 Wireframes:  
 
-Home: https://wireframe.cc/W21kDV  
-
-Detalle del Producto: https://wireframe.cc/vFUhKn 
-
-Carrito de Compras: https://wireframe.cc/pIRov0 
-
-Formulario de Registro: https://wireframe.cc/Q64iTF 
-
-Formulario de Login: https://wireframe.cc/4DJ0Az 
+https://wireframe.cc/pro/pp/8500317ae469227#1
 
  
 
@@ -47,7 +39,7 @@ Páginas de referencia:
 
 https://www.newegg.com - Al momento de elegir el producto, el detalle del mismo nos pareció práctico para poner en práctica nuestra propuesta 
 
-https://www.microcenter.com - Posee un buscador que es fácilmente identificable por el usuario y se encuentra a la vista del mismo 
+https://www.libreopcion.com - Posee un buscador que es fácilmente identificable por el usuario y se encuentra a la vista del mismo 
 
 https://www.targetdirect.ca/ - La propuesta de menú principal del sitio es sencilla. Esto sumado a la forma en la que se puede filtrar por producto, hace que nos basemos en ella para el desarrollo de nuestro trabajo 
 
