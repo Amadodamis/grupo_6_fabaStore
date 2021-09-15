@@ -31,10 +31,7 @@ Axel Leonel Romano -
 
 Wireframes:  
 
-Home: https://wireframe.cc/pro/pp/8500317ae469227#1
-
-
- 
+Homepage, detalle del produccto, formulario de registro/login y carrito de compras : https://wireframe.cc/pro/pp/8500317ae469227#1
 
 Páginas de referencia: 
 
