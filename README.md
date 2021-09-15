@@ -33,13 +33,6 @@ Wireframes:
 
 Home: https://wireframe.cc/pro/pp/8500317ae469227#1
 
-Detalle del Producto: https://wireframe.cc/vFUhKn 
-
-Carrito de Compras: https://wireframe.cc/pIRov0 
-
-Formulario de Registro: https://wireframe.cc/Q64iTF 
-
-Formulario de Login: https://wireframe.cc/4DJ0Az 
 
  
 
