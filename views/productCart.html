@@ -15,87 +15,106 @@
 
 <body>
     <header>
-        
-    </header> <!--Hacer header--><!--Hacer header--><!--Hacer header--><!--Hacer header-->
+        <br>
+        <br>
+        <br>
+        <h1>HEADER</h1>
+    </header>
 
     <main>
         <h1>Mi compra</h1>
         <section class="box-compra">
         <section class="Productos">
             <section class="Producto-x">
-                <div class="buttons-close-change">
+                
+                <div class="buttons-close-change">                      <!--Botones cambiar y quitar de lel carrito-->
                     <button><i class="fas fa-exchange-alt"></i></button>
                     <button><i class="far fa-window-close"></i></button>
                 </div>
+
                 <img class="jpg-producto" src="img/img-macbook-pro-2019.jpg" alt="macbook">
 
-                <div class="bloque-descripcion">
-                    <div class="descripcion-producto">
-                        <p class="Nombre-producto">Macbook pro 2019</p>
-                        <div class="stock-d">
-                            <p>Stock disponible </p> 
-                            <i class="far fa-check-circle"></i> 
-                        </div>
-                        <br>
-                        <div class="Precio">
-                            <p>Precio</p>
-                            <p>1000$</p>
-                        </div>
-                   
+                <div class="bloque-descripcion">                        <!--Descripcion del pro-->
+                    <p class="Nombre-producto">Macbook pro 2019</p>
+
+                    <div class="stock-d">
+                        <p>Stock disponible </p> 
+                        <i class="far fa-check-circle"></i> 
                     </div>
-                    <div class="botones-producto">
-                           <p>Cantidad</p>
-                           <button><i class="far fa-minus-square"></i></button>
-                           <input type="text" class="cant-productos">
-                           <button><i class="far fa-plus-square"></i></button>
+
+                    <div class="botones-producto">                      <!--Botones cantidad-->
+                        <p>Cantidad</p>
+                        <div>
+                            <button><i class="far fa-minus-square"></i></button>
+                            <input type="text" class="cant-productos">
+                            <button><i class="far fa-plus-square"></i></button>
+                        </div>
+                        
                     </div>
+                    
+                    <div class="Precio">
+                        <p>Precio</p>
+                        <p>1000$</p>
+                    </div>
+            
                 </div>
+
+
             </section>
 
 
-        <section class="Producto-x">
-            <div class="buttons-close-change">
-                <button><i class="far fa-window-close"></i></button>
-            </div>
-            <img class="jpg-producto" src="img/armado-pc-producto.png" alt="macbook">
-            <div class="bloque-descripcion">
-                <div class="descripcion-producto">
-                    <p class="Nombre-producto">Armado de la computadora</p>
+            <section class="Producto-x">
+                <div class="buttons-close-change">
+                    <button><i class="far fa-window-close"></i></button>
                 </div>
+                    <img class="jpg-producto" src="img/armado-pc-producto.png" alt="macbook">
+                
+                <div class="bloque-descripcion">
+                    <div class="descripcion-producto">
+                        <p class="Nombre-producto">Armado de la computadora</p>
+                    </div>
                     <br>
-                <div class="Precio">
-                    <p>Precio</p>
-                    <p>1000$</p>
-                </div>
+                    <div class="Precio">
+                        <p>Precio</p>
+                        <p>1000$</p>
+                    </div>
+            </section>
+   
+   
         </section>
-   
-   
-    </section>
 
-    <!-- Separador    -->
+        <section class="right-bar-pago">
+            <div class="metodo-pago">                                   <!--Boton select metodo pago-->
+                 <p class="select">Metodo de pago:</p> 
+                    <select class="select "name="select">
+                        <option value="Efectivo" selected>Efectivo</option>
+                        <option value="Tarjeta de credito">Tarjeta de credito</option>
+                        <option value="Tarjeta de debito">Tarjeta de debito</option>
+                        <option value="Mercadopago">Mercadopago</option>
+                        <option value="Brubank">Brubank</option>
+                        <option value="Metamask">Metamask</option>
+                        <option value="Metamask">Binance</option>
+                    </select>
+            </div>
 
-        <div class="right-bar-pago">
-           <div class="metodo-pago">
-            <p class="select">Metodo de pago:</p> 
-            <select class="select "name="select">
-                <option value="Efectivo" selected>Efectivo</option>
-                <option value="Tarjeta de credito">Tarjeta de credito</option>
-                <option value="Tarjeta de debito">Tarjeta de debito</option>
-                <option value="Mercadopago">Mercadopago</option>
-                <option value="Brubank">Brubank</option>
-                <option value="Metamask">Metamask</option>
-                <option value="Metamask">Binance</option>
-              </select>
-           </div>
-            <br>
+            <div>    <!-- radio button forma de envio-->
+                <label>Forma de envio<label>
+                <br>
+                <input type="radio" name="envio" value="retiro">Retiro por el local</label>
+                <input type="radio"  name="envio" value="envio">Envio a domicilio</label>
+            </div>
 
-            <!-- envio    -->
-            envio  - retiro sucursal boton radio
-            <br>
-            <!-- Total a pagar  -->
-            Total a pagar
-        </div>
-    </section>
+            <p>Total a pagar</p>
+
+            <div class="boton-comprar">
+                <input type="submit" name="submit" value="Comprar">
+            </div>
+            
+
+            
+        </section>
+    
+
     </main>
 
     <footer>
