@@ -1,0 +1,45 @@
+/* header*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*****main******/
+
+main{
+    display: flex;
+    margin: auto;
+    max-width: 90vw;
+    justify-content: center;
+    border:dashed purple 1px;
+}
+
+.Productos{
+    flex-grow: 0.7;
+}
+
+.right-bar-pago{
+    flex-grow: 0.3;
+    margin: 15px;
+    padding: 10px;
+    border: solid 1px green;
+
+}
+
+.Producto-x{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px red;
+}
+
+.jpg-producto{
+    width: 30%;
+}
+
+
+
+/*Media queries*/

@@ -17,6 +17,11 @@ app.get("/register", (req, res) => {
     res.sendFile(fileToSend2)
 });
 
+app.get("/productCart", (req, res) => {
+    const fileToSend2 = path.join (__dirname, "/views/productCart.html");
+    res.sendFile(fileToSend2)
+});
+
 app.post("/register", (req,res) => {
     res.redirect("/index")
 })
