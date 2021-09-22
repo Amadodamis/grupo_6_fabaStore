@@ -1,0 +1,22 @@
+{
+  "name": "faba",
+  "version": "1.0.0",
+  "description": "grupo_6_fabaStore\r                                                                    Proyecto integrador DH",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amadodamis/grupo_6_fabaStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amadodamis/grupo_6_fabaStore/issues"
+  },
+  "homepage": "https://github.com/Amadodamis/grupo_6_fabaStore#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
