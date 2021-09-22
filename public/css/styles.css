@@ -6,6 +6,54 @@
 
 /* ACÁ ARRANCO CON EL HEADER BODY*/
 
+/* ACÁ ARRANCO CON EL MAIN BODY*/
+
+/* ACÁ ARRANCO CON EL FOOTER BODY*/
+
+footer {
+    background-color: lightgray;
+}
+
+.footer-titulo {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    color:  #666;
+}
+
+.texto-footer {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    color:  #666;
+}
+
+.imagen-footer {
+    font-size: 2em;
+    color:  #1259c3;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin: 0;
+    color:  #666;
+}
+
+.información-adicional {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+
 /* CSS del formulario de registro */
 
 .form-registro {
