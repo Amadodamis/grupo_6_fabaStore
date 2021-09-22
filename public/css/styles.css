@@ -4,9 +4,47 @@
     padding: 0px
 }
 
+header{
+    background-color: lightgray;
+    height: 150px;
+}
+
+header h1{
+    text-align: center;
+    font-size: 60px;
+    color: black;
+}
 /* ACÁ ARRANCO CON EL HEADER BODY*/
+main{
+    margin: auto;
+    max-width: 95vw;
+    border:dashed red 1px;
+    display: flex;
+}
+
+.barra-lateral{
+    width: 15%;
+    margin: 10px;
+    padding: 10px;
+    border: dashed black 1px;
+    height: 900px;
+}
+
+.cambiale-el-nombre-al-que-quieras{
+    width: 85%;
+    margin: 10px;
+    padding: 10px;
+    height: 900px;
+    border: dashed black 1px;
+
+}
+
 
 /* ACÁ ARRANCO CON EL MAIN BODY*/
+
+
+
+
 
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
