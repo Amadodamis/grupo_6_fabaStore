@@ -10,23 +10,32 @@
 /*****main******/
 
 main{
-    display: flex;
     margin: auto;
     max-width: 90vw;
-    justify-content: center;
     border:dashed purple 1px;
 }
 
+.box-compra{
+    display: flex;
+    justify-content: center;
+}
+
+main h1{
+    display: block;
+    border: solid darkblue 1px;
+}
+
 .Productos{
-    flex-grow: 0.7;
+    flex-grow: 1;
+    width: 50%;
 }
 
 .right-bar-pago{
-    flex-grow: 0.3;
+    width: 50%;
+    flex-grow: 1;
     margin: 15px;
     padding: 10px;
     border: solid 1px green;
-
 }
 
 .Producto-x{
@@ -34,12 +43,64 @@ main{
     padding: 10px;
     margin: 10px;
     border: solid 1px red;
+    align-items: flex-start;
+    justify-content: space-between;
 }
+
+
 
 .jpg-producto{
-    width: 30%;
+    width: 30%;  
 }
 
+main section section img{
+    align-self: center;
+    border: solid 1px rgb(0, 122, 106);
+}
+
+
+.buttons-close-change{
+ 
+    max-height: 25px;
+    align-self: flex-start;
+    order: 3;
+    justify-content: flex-end;
+}
+
+.bloque-descripcion{
+    align-self: center;
+    
+}
+
+.stock-d{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Precio{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones-producto{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cant-productos{
+    max-width: 30px;
+}
+
+.metodo-pago{
+    display: flex;
+}
+
+.select{
+    width: 50%;
+}
 
 
 /*Media queries*/

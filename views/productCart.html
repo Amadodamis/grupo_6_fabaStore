@@ -7,27 +7,40 @@
     <link rel="stylesheet" href="/css/stylesProductCart.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/styles.css"/>
+
     <title>Carrito de compras</title>
 </head>
+
 <body>
     <header>
-        <!--Hacer header-->
-    </header>
+        
+    </header> <!--Hacer header--><!--Hacer header--><!--Hacer header--><!--Hacer header-->
 
     <main>
+        <h1>Mi compra</h1>
+        <section class="box-compra">
         <section class="Productos">
             <section class="Producto-x">
+                <div class="buttons-close-change">
+                    <button><i class="fas fa-exchange-alt"></i></button>
+                    <button><i class="far fa-window-close"></i></button>
+                </div>
                 <img class="jpg-producto" src="img/img-macbook-pro-2019.jpg" alt="macbook">
 
                 <div class="bloque-descripcion">
                     <div class="descripcion-producto">
                         <p class="Nombre-producto">Macbook pro 2019</p>
-                        <div>
-                            <p class="Stock">Stock disponible </p> 
+                        <div class="stock-d">
+                            <p>Stock disponible </p> 
                             <i class="far fa-check-circle"></i> 
                         </div>
                         <br>
-                        <p class="Precio">Precio 1000$</p>
+                        <div class="Precio">
+                            <p>Precio</p>
+                            <p>1000$</p>
+                        </div>
                    
                     </div>
                     <div class="botones-producto">
@@ -37,82 +50,109 @@
                            <button><i class="far fa-plus-square"></i></button>
                     </div>
                 </div>
-                <div>
-                    <button><i class="fas fa-exchange-alt"></i></button>
-                    <button><i class="far fa-window-close"></i></button>
-                </div>
             </section>
 
-        <!-- Separador    -->
-        --------------------------------------------------------------------------
+
         <section class="Producto-x">
-            <img class="jpg-producto" src="img/img-macbook-pro-2019.jpg" alt="macbook">
-            <div class="bloque-descripcion">
-                <div class="descripcion-producto">
-                    <p class="Nombre-producto">Macbook pro 2019</p>
-                    <div>
-                        <p class="Stock">Stock disponible </p> 
-                        <i class="far fa-check-circle"></i> 
-                        <br>
-                        <p class="Precio">Precio 1000$</p>
-                </div>
-               
-                </div>
-           
-                <div class="botones-producto">
-                    <p>Cantidad</p>
-                    <button><i class="far fa-minus-square"></i></button>
-                    <input type="text" class="cant-productos">
-                    <button><i class="far fa-plus-square"></i></button>
-                </div>  
-            </div>
-            <div>
-                <button><i class="fas fa-exchange-alt"></i></button>
+            <div class="buttons-close-change">
                 <button><i class="far fa-window-close"></i></button>
             </div>
-        </section>
-        <!-- Separador    -->
-        ----------------------------------------------------------------
-        <section class="Producto-x">
             <img class="jpg-producto" src="img/armado-pc-producto.png" alt="macbook">
             <div class="bloque-descripcion">
                 <div class="descripcion-producto">
                     <p class="Nombre-producto">Armado de la computadora</p>
+                </div>
                     <br>
-                        <p class="Precio">Precio 1000$</p>
-            <div>
-                <button><i class="far fa-window-close"></i></button>
-            </div>
+                <div class="Precio">
+                    <p>Precio</p>
+                    <p>1000$</p>
+                </div>
         </section>
+   
+   
     </section>
+
     <!-- Separador    -->
 
         <div class="right-bar-pago">
-            <!-- consumidor final    -->
-            consumidor final
+           <div class="metodo-pago">
+            <p class="select">Metodo de pago:</p> 
+            <select class="select "name="select">
+                <option value="Efectivo" selected>Efectivo</option>
+                <option value="Tarjeta de credito">Tarjeta de credito</option>
+                <option value="Tarjeta de debito">Tarjeta de debito</option>
+                <option value="Mercadopago">Mercadopago</option>
+                <option value="Brubank">Brubank</option>
+                <option value="Metamask">Metamask</option>
+                <option value="Metamask">Binance</option>
+              </select>
+           </div>
             <br>
-            <!-- total productos    -->
-            total productos
-            <br>
-            <!-- Metodo de pago      -->
-            Metodo de pago
-            <br>
+
             <!-- envio    -->
-            envio
+            envio  - retiro sucursal boton radio
             <br>
             <!-- Total a pagar  -->
             Total a pagar
         </div>
-
+    </section>
     </main>
 
     <footer>
-
-            <!--Hacer header-->
-
-
+        <section class="información-adicional">
+            <article>
+                <div class="imagen-footer">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h4 class="footer-titulo">Información</h4>
+                <p class="texto-footer">Contáctenos</p>
+                <p class="texto-footer">Política de privacidad</p>
+                <p class="texto-footer">Servicios IT</p>
+            </article>
+            <br/>
+            <article>
+                <div class="imagen-footer">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h4 class="footer-titulo">Servicio al Cliente</h4>
+                <p class="texto-footer">Contáctenos</p>
+                <p class="texto-footer">Devoluciones</p>
+                <p class="texto-footer">Dónde encontrarnos</p>
+            </article>
+            <br/>
+            <article>
+                <div class="imagen-footer">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h4 class="footer-titulo">Mi Cuenta</h4>
+                <p class="texto-footer">Mi Cuenta</p>
+                <p class="texto-footer">Newlsetter</p>
+                <p class="texto-footer">Mis Pedidos</p>
+            </article>
+            <section class="footer-logos">
+                <article>
+                    <div class="imagen-footer">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </article>
+                <br/>
+                <article>
+                    <div class="imagen-footer">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </article>
+                <br/>
+                <article>
+                    <div class="imagen-footer">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <br/>
+            <article>
+                <p class="copyright">Copyright © 2021 fabaStore S.R.L.</p>
+            </article>
     </footer>
-
-
 </body>
 </html>
