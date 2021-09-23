@@ -24,8 +24,8 @@
     <main>
         <h1>Mi compra</h1>
         <section class="box-compra">
-        <section class="Productos">
-            <section class="Producto-x">
+            <section class="Productos">
+                <section class="Producto-x">
                 
                 <div class="buttons-close-change">                      <!--Botones cambiar y quitar de lel carrito-->
                     <button><i class="fas fa-exchange-alt"></i></button>
@@ -60,10 +60,10 @@
                 </div>
 
 
-            </section>
+                </section>
 
 
-            <section class="Producto-x">
+                <section class="Producto-x">
                 <div class="buttons-close-change">
                     <button><i class="far fa-window-close"></i></button>
                 </div>
@@ -78,40 +78,43 @@
                         <p>Precio</p>
                         <p>1000$</p>
                     </div>
-            </section>
+                </section>
    
    
-        </section>
+            </section> <!--Fin seccion productos-->
 
-        <section class="right-bar-pago">
-            <div class="metodo-pago">                                   <!--Boton select metodo pago-->
-                 <p class="select">Metodo de pago:</p> 
-                    <select class="select "name="select">
-                        <option value="Efectivo" selected>Efectivo</option>
-                        <option value="Tarjeta de credito">Tarjeta de credito</option>
-                        <option value="Tarjeta de debito">Tarjeta de debito</option>
-                        <option value="Mercadopago">Mercadopago</option>
-                        <option value="Brubank">Brubank</option>
-                        <option value="Metamask">Metamask</option>
-                        <option value="Metamask">Binance</option>
-                    </select>
-            </div>
 
-            <div>    <!-- radio button forma de envio-->
-                <label>Forma de envio<label>
-                <br>
-                <input type="radio" name="envio" value="retiro">Retiro por el local</label>
-                <input type="radio"  name="envio" value="envio">Envio a domicilio</label>
-            </div>
 
-            <p>Total a pagar</p>
+            <section class="right-bar-pago">    <!-- Box izquierdo de pago-->
+                <div class="metodo-pago">                                   <!--Boton select metodo pago-->
+                    <p class="select">Metodo de pago:</p> 
+                        <select class="select "name="select">
+                            <option value="Efectivo" selected>Efectivo</option>
+                            <option value="Tarjeta de credito">Tarjeta de credito</option>
+                            <option value="Tarjeta de debito">Tarjeta de debito</option>
+                            <option value="Mercadopago">Mercadopago</option>
+                            <option value="Brubank">Brubank</option>
+                            <option value="Metamask">Metamask</option>
+                            <option value="Metamask">Binance</option>
+                        </select>
+                </div>
 
-            <div class="boton-comprar">
-                <input type="submit" name="submit" value="Comprar">
-            </div>
+                <div>    <!-- radio button forma de envio-->
+                    <label>Forma de envio<label>
+                    <br>
+                    <input type="radio" name="envio" value="retiro">Retiro por el local</label>
+                    <input type="radio"  name="envio" value="envio">Envio a domicilio</label>
+                </div>
+
+                <p>Total a pagar</p>
+
+                <div class="boton-comprar">
+                    <input type="submit" name="submit" value="Comprar">
+                </div>
             
-
-            
+             </section>
+        
+        
         </section>
     
 

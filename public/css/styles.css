@@ -15,11 +15,15 @@ header h1{
     color: black;
 }
 /* ACÁ ARRANCO CON EL HEADER BODY*/
+
 main{
     margin: auto;
-    max-width: 95vw;
-    border:dashed red 1px;
+    max-width: 95vw;  
+}
+
+.barra-y-main{
     display: flex;
+    border:dashed red 1px;
 }
 
 .barra-lateral{
