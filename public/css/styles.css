@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
+
+/*
+'Montserrat', sans-serif;
+*/
 
 
 header h1{
