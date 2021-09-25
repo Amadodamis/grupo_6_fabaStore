@@ -18,18 +18,21 @@ rel="stylesheet"/>
 </head>
 <body>
     <header>
-    
-        <div class="main-header">
-            <div class="logo-faba">
-                <img src="img/logo-faba-dimensionado.jpg" alt="">
-            </div>
-            <div>Barra de búsqueda</div>
-                <ul>
-                    <li><a href="/productCart">carrito de Compras (con link al carrito)<i class="fas fa-credit-card"></i></a></li>
-                    <li><a href="/register">Logo usuario para registrarse (con link a registrarse)<i class="fas fa-user-circle"></i></a></li>
-                </ul>
-            
-            
+        <section class="seccionHeader">
+            <a href="/index" class="tamañologo">
+                <img src="img/logo-faba-dimensionado.jpg" alt="" class="logoHeader">
+            </a>
+                <form class="tamañoBuscador">
+                    <input type="search" placeholder=" Buscá Productos, Marcas y Categorías..." class="buscador">
+                </form>
+            <ul class="flexProductoYRegistro">
+                <li class="paddingIconos"><a href="/productCart" ><i class="fas fa-shopping-cart diseñoIcono"></i></a></li>
+                <li class="paddingIconos"><a href="/register" ><i class="fas fa-user-circle diseñoIcono" ></i></a></li>
+            </ul>
+
+        </section>
+
+
                 <nav class="main-navbar">   <!-- Bautista-->
                 <ul>
                     List de Items que van en la nav-bar
@@ -97,7 +100,7 @@ rel="stylesheet"/>
                         <article>
                             <img src="/img/ryzen5-5600X.jpg">
                             <div>
-                                <p class="precio"> $31000</p>
+                                <p class="precio"> $31370</p>
                                 <p class="descuento"> 10% off</p>
                                 <p class="descripcion"> AMD ryzen 5-5600X </p>
                             </div>
@@ -112,6 +115,47 @@ rel="stylesheet"/>
                             </div>
                         </article>
                     </section>
+
+                    <h1> Ofertas</h1>
+
+                    <section class="seccion">
+                        <article>
+                            <img src="/img/Nvidia3060ti.png">
+                            <div>
+                                <p class="precio"> $182540</p>
+                                <p class="descuento"> 15% off</p>
+                                <p class="descripcion"> Asus Tuf RTX 3060 TI 8gb </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="/img/ryzen5-5600X.jpg">
+                            <div>
+                                <p class="precio"> $31370</p>
+                                <p class="descuento"> 10% off</p>
+                                <p class="descripcion"> AMD ryzen 5-5600X </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="/img/FuenteAlimentación.jpg">
+                            <div>
+                                <p class="precio"> $17780</p>
+                                <p class="descuento"> 10% off</p>
+                                <p class="descripcion"> Fuente Gigabyte 850w 80 plus gold </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="/img/Gabinete.jpg">
+                            <div>
+                                <p class="precio"> $8890</p>
+                                <p class="descuento"> 35% off</p>
+                                <p class="descripcion"> Gabinete ATX Cooler Master k501l </p>
+                            </div>
+                        </article>
+                    </section>
+
             </section>
 
     </main>  
