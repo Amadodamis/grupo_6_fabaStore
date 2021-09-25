@@ -4,16 +4,29 @@
     padding: 0px
 }
 
-header{
-    background-color: lightgray;
-    height: 150px;
-}
+
 
 header h1{
     text-align: center;
     font-size: 60px;
     color: black;
 }
+
+header{
+    border: 1px red solid;
+    background-color: salmon;
+}
+
+.logo-faba{
+width: 100vw;
+height: 100%;
+}
+
+.logo-faba img{
+   width: 30%; 
+}
+
+
 /* ACÁ ARRANCO CON EL HEADER BODY*/
 
 main{
