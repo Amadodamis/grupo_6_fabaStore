@@ -26,12 +26,18 @@ main{
     border:dashed red 1px;
 }
 
+
 .barra-lateral{
     width: 15%;
     margin: 10px;
     padding: 10px;
+    background-color: aquamarine;
+    border-radius: 15px;
     border: dashed black 1px;
     height: 900px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cambiale-el-nombre-al-que-quieras{
@@ -260,7 +266,7 @@ footer {
 
 /* ACÁ VAN LAS MEDIA QUERIES */
 
-@media (min-width: 425px) {
+@media (min-width: 360px) {
     .información-adicional {
         display: flex;
         justify-content: space-between;
@@ -271,7 +277,12 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
+@media(min-width:361px) and (max-width:768px){
+
+}
+
+
+@media (min-width: 769px) {
     .información-adicional {
         display: flex;
         justify-content: space-between;
@@ -279,5 +290,5 @@ footer {
         padding: 0px;
         margin: auto;
         width: 100%;
-    }
+    }  
 }

@@ -76,7 +76,7 @@ main section section img{
 }
 
 
-.buttons-close-change{
+.buttons-close-change-minimize{
     max-height: 25px;
     align-self: flex-start;
     order: 3;
