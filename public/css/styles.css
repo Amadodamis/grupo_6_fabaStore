@@ -13,17 +13,47 @@ header h1{
 }
 
 header{
-    border: 1px red solid;
-    background-color: salmon;
+    background-color: black;
 }
-
-.logo-faba{
-width: 100vw;
-height: 100%;
+.logoHeader{
+    width: 100%;
 }
-
-.logo-faba img{
-   width: 30%; 
+.tamañologo{
+    width: 25%;
+}
+.seccionHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.buscador{
+    width: 100%;
+    height: 35px;
+    padding: 10px 30px 10px 10px;
+    border-radius: 5px;
+    border: 0;
+    color: #7e7e83;
+    cursor: inherit;
+}
+.tamañoBuscador{
+    width: 50%;
+    align-self: center;
+    position: relative;
+    right: 4%;
+}
+.flexProductoYRegistro{
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    right: 8%;
+}
+.paddingIconos{
+    padding: 15px;
+}
+.diseñoIcono{
+    color: white;
+   font-size: 2em;
 }
 
 body{
@@ -167,7 +197,7 @@ main section img{
 main section article{
     position: relative;
     margin: 15px;
-    width: 23%;
+    width: 20%;
     background-color: white;
 }
 main article:hover{
@@ -181,6 +211,7 @@ main section article div{
 .seccion{
     display: flex;
     justify-content: space-around;
+    height: 45%;
 }
 .precio{
 color: #666;
