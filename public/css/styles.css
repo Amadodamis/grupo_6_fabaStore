@@ -26,6 +26,10 @@ height: 100%;
    width: 30%; 
 }
 
+body{
+    background-color: rgb(235, 235, 235);
+}
+
 
 /* ACÁ ARRANCO CON EL HEADER BODY*/
 
@@ -59,7 +63,6 @@ main{
     padding: 10px;
     height: 900px;
     border: dashed black 1px;
-
 }
 
 /* ACÁ ARRANCO CON EL BANNER Rotativo*/
@@ -78,7 +81,6 @@ main{
     transition: all 1s ease-in-out;
     animation: banner 16s infinite linear
 }
-
 body .content-wrapper {
     width:85%;
     margin-left: auto;
@@ -154,7 +156,44 @@ body .content-wrapper {
 }
 
 /* ACÁ ARRANCO CON EL MAIN BODY*/
-
+main section h1{
+    color: #666;
+    text-align: center;
+}
+main section img{
+    width: 100%;
+    height: 75%;
+}
+main section article{
+    position: relative;
+    margin: 15px;
+    width: 23%;
+    background-color: white;
+}
+main article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+main section article div{
+    border-top: solid 1px #ebebeb;
+    width: 100%;
+    padding: 15px;
+}
+.seccion{
+    display: flex;
+    justify-content: space-around;
+}
+.precio{
+color: #666;
+font-weight: bold;
+}
+.descuento{
+color: #ff8000;
+font-weight: bold;
+}
+.descripcion{
+color: #666;
+font-weight: bold;
+}
 
 
 
