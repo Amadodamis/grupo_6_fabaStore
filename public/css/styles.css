@@ -349,24 +349,24 @@ footer {
 }
 
 .botton {
-    background-color:  #1259c3;
+    background-color:  #2b175f;
     border: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 15%;
     align-items: center;
 }
 
 .botton-cancelled {
-    background-color:  rgba(128, 128, 128, 0.842);
+    background-color:  #787c84;
     border: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 15%;
     align-items: center;
 }
 
