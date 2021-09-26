@@ -1,49 +1,59 @@
-/* header*/
-
-*{
+* {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
-header{
-    background-color: lightgray;
-    height: 150px;
+.body-productCart{
+background-color: black;
 }
 
-header h1{
-    text-align: center;
-    font-size: 60px;
-    color: black;
-}
+
 
 
 /*****main******/
 
 
-
 main{
     margin: auto;
     max-width: 90vw;
-    border:dashed purple 1px;
 }
+
+.main-productCart{
+ padding: 10px 0 0 0;
+ border-radius: 15px;
+ background-color: #180a36;
+}
+
+.mi-compra{
+    display: block;
+    margin: 15px;
+    border-radius: 10px;
+    background-color:#2b175f;
+
+}
+.mi-compra h1{
+    margin: 15px;
+    font-weight: 500;
+    color:#8c0674;
+}
+
 
 .box-compra{
     display: flex;
     justify-content: center;
 }
 
-main h1{
-    display: block;
-    border: solid darkblue 1px;
-}
 
 .Productos{
     flex-grow: 1;
     width: 50%;
     padding: 10px;
     margin: 15px;
-    border: 1px red solid;
+    background-color:#2b175f;
+    border-radius: 10px;
 }
 
 .right-bar-pago{
@@ -54,16 +64,25 @@ main h1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: solid 1px green;
+    background-color:#2b175f;
+    border-radius: 10px;
 }
 
 .Producto-x{
     display: flex;
     padding: 10px 0 10px 10px;
     margin: 10px;
-    border: solid 1px red;
+    border-radius: 15px;
     align-items: flex-start;
+    background-color: #8c0674;
     justify-content: space-between;
+}
+
+.Producto-x p{
+    color: #c238d8;
+    font-size: 20px;
+    font-weight: 600;
+    line-height:28px;
 }
 
 .jpg-producto{
@@ -72,9 +91,7 @@ main h1{
 
 main section section img{
     align-self: center;
-    border: solid 1px rgb(0, 122, 106);
 }
-
 
 .buttons-close-change-minimize{
     max-height: 25px;
@@ -88,29 +105,28 @@ main section section img{
     align-self: center;
     width: 55%;
     max-height: 80%;
-    border: 1px red solid;
+
     
 }
 
 .stock-d{
-    border: 1px solid red;
+ 
     display: flex;
     justify-content: space-between;
 }
 
 .stock-d i{
-    color: green;
+    color: #c238d8;
 }
 
 .Precio{
-    border: 1px solid red;
+  
     display: flex;
     justify-content: space-between;
 }
 
 .botones-producto{
-    border: 1px solid red;
-    display: flex;
+     display: flex;
     justify-content: space-between;
 }
 
