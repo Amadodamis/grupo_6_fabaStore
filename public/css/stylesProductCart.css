@@ -18,16 +18,18 @@ main{
 }
 
 .main-productCart{
- padding: 10px 0 0 0;
- border-radius: 15px;
- background-color: #180a36;
+    padding: 10px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
 }
 
 .mi-compra{
     display: block;
     margin: 15px;
     border-radius: 10px;
-    background-color:#2b175f;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);;
+    background-color:rgba(43, 23, 95, 0.2);
 
 }
 
@@ -47,7 +49,8 @@ main{
     width: 50%;
     padding: 10px;
     margin: 15px;
-    background-color:#2b175f;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
     border-radius: 10px;
 }
 
@@ -58,11 +61,10 @@ main{
     margin: 10px;
     height: 175px;
     border-radius: 15px;
-    background-color: #8c0674;
     position: relative;
     display: flex;
     justify-content: space-between;
-    color: #c238d8;
+    color: #8c0674;
     font-size: 20px;
     font-weight: 300;
     line-height:28px;
@@ -94,12 +96,13 @@ main{
     
 }
 .buttons-close-change-minimize  i{
-    color: #c238d8;
+    color: #8c0674;
     
 }
 
 .buttons-close-change-minimize i:hover{
     color: white;
+    box-shadow: 0 0 20px #c238d8;
     
 }
 
@@ -127,7 +130,7 @@ main{
 
 .stock-d i{
     font-size: 23px;
-    color: #c238d8;
+    color: #8c0674;
 }
 
 .precio-cart{
@@ -150,35 +153,37 @@ main{
 }
 
 .botones-producto-cant i{
-    color: #c238d8;
+    color: #8c0674;
     font-size: 17px;
+}
+
+.botones-producto-cant i:hover{
+    color:white;
 }
 
 
 .botones-producto-cant input[type=text]{
-    border:2px solid #c238d8;
+    border:2px solid #8c0674;
     border-radius: 5px;
     outline:none;
-    color:#c238d8;
+    color:#8c0674;
     text-align: center;
     background-color: transparent;
 }
 
 .cant-productos{
     width: 30px;
-   
 }
 
 .producto-y{
     padding: 10px 0 10px 10px;
     margin: 10px;
     height: 175px;
-    border-radius: 15px;
-    background-color: #8c0674;
+    border-radius: 15px solid;
     position: relative;
     display: flex;
     justify-content: space-between;
-    color: #c238d8;
+    color: #8c0674;
     font-size: 20px;
     font-weight: 300;
     line-height:28px;
@@ -201,19 +206,20 @@ main{
     width: 50%;
     margin: 15px;
     padding: 10px;
-    background-color:#2b175f;
-    border-radius: 10px;
-    display: flex;
-    height: 200px;
+    box-shadow: 0 0 20px rgba(43, 23, 95, 0.4);
+    background-color:rgba(43, 23, 95, 0.2);
+    border-radius: 10rgba(23, 42, 95, 0.4);
+    display:flex;
+    height:200px;
 }
 
 .box-right-bar-pago p , label{
     font-family: 'Montserrat', sans-serif;
-    color: #c238d8;
+    color: #8c0674;
 }
 
 .box-pago{
-    background-color: #8c0674;
+ 
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -236,10 +242,10 @@ main{
 }
 .select-button{
     cursor: pointer;
-    border:2px solid #c238d8;
+    border:2px solid #8c0674;
     border-radius: 5px;
     outline:none;
-    color:#c238d8;
+    color:#8c0674;
     text-align: center;
     background-color: transparent;
 }
@@ -262,8 +268,15 @@ main{
     border-radius: 5px;
     width: 150px;
     text-align: center;
-    background-color: #c238d8;
+    border: solid 1px #8c0674;
+    background-color: transparent;
     align-self: flex-end;
+    transition: background-color 500ms;
+}
+
+.boton-comprar:hover{
+    background-color: #8c0674;
+
 }
 
 .boton-comprar a{
@@ -271,6 +284,8 @@ main{
     text-align: center;
     font-size: 20px;
     font-weight: 400;
+    transition: color 500ms;
+    color:#8c0674;
 }
 
 .boton-comprar a:hover{
