@@ -67,6 +67,7 @@ body{
 }
 
 
+
 /* ACÁ ARRANCO CON EL HEADER BODY*/
 
 main{
@@ -76,7 +77,6 @@ main{
 
 .barra-y-main{
     display: flex;
-    border:dashed red 1px;
 }
 
 
