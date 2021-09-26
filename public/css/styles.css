@@ -249,15 +249,17 @@ font-weight: bold;
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
 footer {
-    background-color: lightgray;
+    background-color: #180a36;
     width: 100%;
+    border-top: 4px solid white;
+    padding: 20px;
 }
 
 .footer-titulo {
-    font-size: 12px;
+    font-size: 20px;
     text-align: center;
-    margin-bottom: 5px;
-    color:  #666;
+    margin-bottom: 10px;
+    color:  #ebebeb;
 }
 
 .texto-footer {
@@ -265,12 +267,12 @@ footer {
     text-align: center;
     margin-top: 5px;
     margin-left: 5px;
-    color:  #666;
+    color:  #ebebeb;
 }
 
 .imagen-footer {
-    font-size: 1.5em;
-    color:  #1259c3;
+    font-size: 2em;
+    color:  white;
     margin-bottom: 7.5px;
     text-align: center;
     padding: 10px;
@@ -287,17 +289,20 @@ footer {
     justify-content: space-around;
     margin-bottom: 5px;
     margin-top: 5px;
+    font-size: 1em;
+    color: white;
 }
 
 /* CSS del formulario de registro */
 
 .form-registro {
     padding: 25px 15px;
-    background-color: lightgray;
+    background-color: #05040a;
     border: 1px solid gray;
     border-width: 60%;
     font-style: normal;
     text-align: center;
+    color: #EBEBEB
 }
 
 .create-account {
@@ -324,11 +329,12 @@ footer {
 }
 
 .control-form label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-style: italic;
     display: block;
-    font-size: 20px;
+    font-size: 28px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
 }
 
 .control-form-login {
@@ -338,29 +344,34 @@ footer {
 
 .control {
     width: 50%;
-    padding: 8px
+    padding: 8px;
+    color: #EBEBEB
 }
 
 .botton {
-    background-color:  #1259c3;
+    background-color:  #2b175f;
     border: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 15%;
     align-items: center;
 }
 
 .botton-cancelled {
-    background-color:  rgba(128, 128, 128, 0.842);
+    background-color:  #787c84;
     border: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 15%;
     align-items: center;
+}
+
+.opciones-checkbox {
+    color: #EBEBEB
 }
 
 /* ACÁ VAN LAS MEDIA QUERIES */
@@ -377,7 +388,14 @@ footer {
 }
 
 @media(min-width:361px) and (max-width:768px){
-
+    .información-adicional {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+        width: 100%;
+    }
 }
 
 
