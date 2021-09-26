@@ -82,6 +82,8 @@
 
                 <section class="Producto-x">
                 <div class="buttons-close-change-minimize">
+                    <i class="far fa-caret-square-down"></i>
+                    <i class="far fa-caret-square-up"></i>
                     <i class="far fa-window-close"></i>
                 </div>
                     <div class="img-producto">
@@ -105,10 +107,11 @@
 
 
 
-            <section class="right-bar-pago">    <!-- Box izquierdo de pago-->
-                <div class="metodo-pago">                                   <!--Boton select metodo pago-->
-                    <p class="select">Metodo de pago:</p> 
-                        <select class="select "name="select">
+            <section class="box-right-bar-pago">    <!-- Box izquierdo de pago-->
+                <section class="box-pago">
+                    <div class="metodo-pago">                                   <!--Boton select metodo pago-->
+                        <p class="select">Metodo de pago:</p> 
+                        <select class="select-button"name="select">
                             <option value="Efectivo" selected>Efectivo</option>
                             <option value="Tarjeta de credito">Tarjeta de credito</option>
                             <option value="Tarjeta de debito">Tarjeta de debito</option>
@@ -117,21 +120,22 @@
                             <option value="Metamask">Metamask</option>
                             <option value="Metamask">Binance</option>
                         </select>
-                </div>
+                    </div>
 
-                <div>    <!-- radio button forma de envio-->
-                    <label>Forma de envio<label>
-                    <br>
-                    <input type="radio" name="envio" value="retiro">Retiro por el local</label>
-                    <input type="radio"  name="envio" value="envio">Envio a domicilio</label>
-                </div>
+                    <div class="forma-de-envio">    <!-- radio button forma de envio-->
+                            <p class="select">Forma de envio</p>
+                            <select class="select-button" name="select">
+                                <option value="Envio a domicilio">Envio a domicilio</option>
+                                <option value="Retiro por el local">Retiro por el local</option>
+                            </select>                      
+                   </div>
 
-                <p>Total a pagar</p>
+                    <p>Total a pagar</p>
 
-                <div class="boton-comprar">
-                    <input type="submit" name="submit" value="Comprar">
-                </div>
-            
+                    <div class="boton-comprar">
+                        <input type="submit" name="submit" value="Comprar">
+                    </div>
+                </section>
              </section>
         
         

@@ -52,17 +52,7 @@ main{
     border-radius: 10px;
 }
 
-.right-bar-pago{
-    width: 50%;
-    flex-grow: 1;
-    margin: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color:#2b175f;
-    border-radius: 10px;
-}
+
 
 .Producto-x{
     padding: 10px 0 10px 10px;
@@ -146,7 +136,17 @@ main{
 
 .botones-producto-cant i{
     color: #c238d8;
-    font-size: 22px;
+    font-size: 17px;
+}
+
+
+.botones-producto-cant input[type=text]{
+    border:2px solid #c238d8;
+    border-radius: 5px;
+    outline:none;
+    color:#c238d8;
+    text-align: center;
+    background-color: transparent;
 }
 
 .cant-productos{
@@ -156,15 +156,46 @@ main{
 
 
 /*---box metodo pago-----*/
+.box-right-bar-pago{
+    width: 50%;
+    margin: 15px;
+    padding: 10px;
+    background-color:#2b175f;
+    border-radius: 10px;
+}
+
+.box-right-bar-pago p , label{
+    font-family: 'Montserrat', sans-serif;
+    color: #c238d8;
+}
+
+.box-pago{
+    background-color: #8c0674;
+    border-radius: 15px;  
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
 .metodo-pago{
+    display: flex;
+    justify-content: space-between;
 }
 
 .select{
-    width: 50%;
+    width: 50%;  
+}
+.select-button{
+    cursor: pointer;
+    border:2px solid #c238d8;
+    border-radius: 5px;
+    outline:none;
+    color:#c238d8;
+    text-align: center;
+    background-color: transparent;
 }
 
-.boton-comprar{
-
+.forma-de-envio{
+    display:flex;
+    justify-content: space-between;
 }
-
-/*Media queries*/
