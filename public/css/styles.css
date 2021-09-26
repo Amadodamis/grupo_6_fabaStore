@@ -384,23 +384,31 @@ footer {
 .botton {
     background-color:  #2b175f;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 15%;
+    width: 30%;
     align-items: center;
 }
 
 .botton-cancelled {
     background-color:  #787c84;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 15%;
+    width: 30%;
     align-items: center;
+}
+
+.botton:hover {
+    background-color: #180a36;
+}
+
+.botton-cancelled:hover {
+    background-color: lightgray;
 }
 
 .opciones-checkbox {
@@ -432,6 +440,12 @@ footer {
         margin: auto;
         width: 90%;
     }
+    .botton {
+        font-size: 16px;
+    }
+    .botton-cancelled {
+        font-size: 16px;
+    }
 }
 
 
@@ -446,5 +460,17 @@ footer {
         box-shadow: 0 0 20px rgb(43 23 95 / 40%);
         background-color: rgba(43, 23, 95, 0.2);
     }  
-
+    .botton {
+        font-size: 20px;
+    }
+    .botton-cancelled {
+        font-size: 20px;
+    }
+    
+    .botton {
+        font-size: 20px;
+    }
+    .botton-cancelled {
+        font-size: 20px;
+    }
 }
