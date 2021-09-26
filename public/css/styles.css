@@ -293,11 +293,12 @@ footer {
 
 .form-registro {
     padding: 25px 15px;
-    background-color: lightgray;
+    background-color: #05040a;
     border: 1px solid gray;
     border-width: 60%;
     font-style: normal;
     text-align: center;
+    color: #EBEBEB
 }
 
 .create-account {
@@ -324,11 +325,12 @@ footer {
 }
 
 .control-form label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-style: italic;
     display: block;
-    font-size: 20px;
+    font-size: 28px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
 }
 
 .control-form-login {
@@ -338,7 +340,8 @@ footer {
 
 .control {
     width: 50%;
-    padding: 8px
+    padding: 8px;
+    color: #EBEBEB
 }
 
 .botton {
@@ -361,6 +364,10 @@ footer {
     border-radius: 5px;
     width: 50%;
     align-items: center;
+}
+
+.opciones-checkbox {
+    color: #EBEBEB
 }
 
 /* ACÁ VAN LAS MEDIA QUERIES */
