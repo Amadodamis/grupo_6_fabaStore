@@ -249,9 +249,9 @@ font-weight: bold;
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
 footer {
-    background-color: black;
+    background-color: #180a36;
     width: 100%;
-    border: white;
+    border-top: 4px solid white;
     padding: 20px;
 }
 
@@ -259,7 +259,7 @@ footer {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
-    color:  #666;
+    color:  #ebebeb;
 }
 
 .texto-footer {
@@ -267,7 +267,7 @@ footer {
     text-align: center;
     margin-top: 5px;
     margin-left: 5px;
-    color:  #666;
+    color:  #ebebeb;
 }
 
 .imagen-footer {
