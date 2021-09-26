@@ -284,6 +284,7 @@ footer {
     text-align: center;
     margin-bottom: 10px;
     color:  #ebebeb;
+    text-decoration: none;
 }
 
 .texto-footer {
@@ -300,6 +301,10 @@ footer {
     margin-bottom: 7.5px;
     text-align: center;
     padding: 10px;
+}
+
+.imagen-footer:hover {
+    box-shadow: 0 0 20px #c238d8;
 }
 
 .copyright {
