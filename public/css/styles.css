@@ -207,7 +207,7 @@ main section h1{
     color: #666;
     text-align: center;
 }
-main section img{
+.img-producto{  /* Te agregue una clase, por que lo tenias como main section img y me rompia el product cart*/
     width: 100%;
     height: 75%;
 }
