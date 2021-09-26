@@ -21,6 +21,10 @@ app.get("/productCart", (req, res) => {
     const fileToSend2 = path.join (__dirname, "/views/productCart.html");
     res.sendFile(fileToSend2)
 });
+app.get("/productDetail", (req, res) => {
+    const fileToSend2 = path.join (__dirname, "/views/productDetail.html");
+    res.sendFile(fileToSend2)
+});
 
 app.post("/register", (req,res) => {
     res.redirect("/index")

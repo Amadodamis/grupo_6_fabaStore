@@ -1,0 +1,54 @@
+body .banner{
+    display: none;
+}
+.imagen-Produc-Detail{
+    width: 100%;
+}
+.ficha{
+    display: flex;
+}
+.izquierda{
+width: 70%;
+background-color: white;
+}
+.derecha{
+width: 30%;
+background-color: white;
+border-left: solid 1px #ebebeb;
+}
+.distancia-Especificaciones{
+    display: flex;
+    justify-content: space-between;
+}
+.main-detalle-de-lproducto{
+width: 85vw ;
+}
+.tamaño-h3-DP{
+    padding: 15px;
+}
+.tamaño-ul-DP{
+    padding: 15px;
+}
+.Precio-DP{
+    padding-top: 29px;
+    color: #666;
+    text-align: center;
+}
+.titulos-H1{
+    color: #666;
+    text-align: center;
+}
+.titulos-h3{
+    color: #666;
+    text-align: center;
+}
+.estilos-Precio-DP{
+    border-bottom: solid 1px #ebebeb;
+}
+.estilos-Especificaciones-DP{
+    border-top: #ebebeb 1px solid;
+}
+.estilo-Titulo-DP{
+    color: #666;
+    border-bottom: #ebebeb solid 1px;
+}
