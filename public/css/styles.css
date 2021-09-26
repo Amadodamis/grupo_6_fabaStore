@@ -420,7 +420,7 @@ footer {
 
 /* ACÁ VAN LAS MEDIA QUERIES */
 
-@media (min-width: 360px) {
+@media (min-width: 426px) {
     .información-adicional {
         display: flex;
         justify-content: space-between;
@@ -431,7 +431,7 @@ footer {
     }
 }
 
-@media(min-width:361px) and (max-width:768px){
+@media(min-width:426px) and (max-width:768px){
     .información-adicional {
         display: flex;
         justify-content: space-between;
