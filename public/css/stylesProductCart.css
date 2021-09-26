@@ -10,9 +10,6 @@
 background-color: black;
 }
 
-
-
-
 /*****main******/
 
 
@@ -34,18 +31,17 @@ main{
     background-color:#2b175f;
 
 }
+
 .mi-compra h1{
     margin: 15px;
     font-weight: 500;
     color:#8c0674;
 }
 
-
 .box-compra{
     display: flex;
     justify-content: center;
 }
-
 
 .Productos{
     flex-grow: 1;
@@ -69,12 +65,13 @@ main{
 }
 
 .Producto-x{
-    display: flex;
     padding: 10px 0 10px 10px;
     margin: 10px;
+    height: 175px;
     border-radius: 15px;
-    align-items: flex-start;
     background-color: #8c0674;
+    position: relative;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -85,57 +82,81 @@ main{
     line-height:28px;
 }
 
-.jpg-producto{
-    width: 30%;
+.img-producto{
+    width: 200px;
+    height: 200px;
 }
 
-main section section img{
-    align-self: center;
+.jpg-producto{
+    width: 100%;
 }
+
 
 .buttons-close-change-minimize{
     max-height: 25px;
-    align-self: flex-start;
-    order: 3;
-    justify-content: flex-end;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    
 }
-
-
-.bloque-descripcion{
-    align-self: center;
-    width: 55%;
-    max-height: 80%;
-
+.buttons-close-change-minimize  i{
+    color: #c238d8;
     
 }
 
+.buttons-close-change-minimize i:hover{
+    color: white;
+    
+}
+
+
+
+.bloque-descripcion{
+    width: 55%;
+    max-height: 90%;
+    margin-right: 25px;
+
+}
+
 .stock-d{
- 
     display: flex;
     justify-content: space-between;
+
 }
 
 .stock-d i{
+    font-size: 23px;
     color: #c238d8;
 }
 
 .Precio{
-  
-    display: flex;
+    display:flex;
     justify-content: space-between;
+
 }
 
-.botones-producto{
-     display: flex;
-    justify-content: space-between;
+.precio p{
+
+}
+
+.box-producto-cant{
+  display: flex;
+  justify-content: space-between;
+}
+
+.botones-producto-cant i{
+    color: #c238d8;
+    font-size: 22px;
 }
 
 .cant-productos{
-    max-width: 30px;
+    width: 30px;
+   
 }
 
+
+/*---box metodo pago-----*/
 .metodo-pago{
-    display: flex;
 }
 
 .select{
@@ -143,7 +164,7 @@ main section section img{
 }
 
 .boton-comprar{
-    align-self: flex-end;
+
 }
 
 /*Media queries*/
