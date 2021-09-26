@@ -102,7 +102,7 @@ main{
 
 .buttons-close-change-minimize i:hover{
     color: white;
-    box-shadow: 0 0 20px #c238d8;
+    text-shadow: 0 0 20px #c238d8;
     
 }
 

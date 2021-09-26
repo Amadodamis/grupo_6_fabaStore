@@ -25,17 +25,26 @@ header h1{
 header{
     background-color: black;
 }
+
 .logoHeader{
     width: 100%;
 }
+
+
+.seccionHeader{
+    display: flex;
+}
+
 .tamañologo{
     width: 25%;
 }
-.seccionHeader{
+
+.lupa-e-iconos{
+    width: 75%;     /** 75 % del width del header el otro 25 es del logo*/
     display: flex;
     justify-content: space-between;
-
 }
+
 .buscador{
     width: 100%;
     height: 35px;
@@ -45,26 +54,28 @@ header{
     color: #7e7e83;
     cursor: inherit;
 }
+
 .tamañoBuscador{
-    width: 50%;
     align-self: center;
-    position: relative;
-    right: 4%;
+    flex-grow:0.7;
+    margin: 0 0 0 25px;
 }
+
 .flexProductoYRegistro{
+    flex-grow: 0.3;
     display: flex;
-    width: 15%;
-    align-items: center;
     justify-content: space-around;
     position: relative;
     right: 8%;
 }
+
 .paddingIconos{
     padding: 15px;
 }
+
 .diseñoIcono{
     color: white;
-   font-size: 2em;
+    font-size: 2em;
 }
 
 
@@ -273,10 +284,8 @@ font-weight: bold;
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
 footer {
-    background-color: #180a36;
+    background-color: #05040a;
     width: 100%;
-    border-top: 4px solid white;
-    padding: 20px;
 }
 
 .footer-titulo {
@@ -398,6 +407,9 @@ footer {
     color: #EBEBEB
 }
 
+
+
+
 /* ACÁ VAN LAS MEDIA QUERIES */
 
 @media (min-width: 360px) {
@@ -407,7 +419,7 @@ footer {
         text-align: center;
         padding: 0px;
         margin: auto;
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -418,7 +430,7 @@ footer {
         text-align: center;
         padding: 0px;
         margin: auto;
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -428,8 +440,11 @@ footer {
         display: flex;
         justify-content: space-between;
         text-align: center;
-        padding: 0px;
         margin: auto;
-        width: 100%;
+        width: 95%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
     }  
+
 }
