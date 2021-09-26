@@ -351,22 +351,22 @@ footer {
 .botton {
     background-color:  #2b175f;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 15%;
+    width: 30%;
     align-items: center;
 }
 
 .botton-cancelled {
     background-color:  #787c84;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    width: 15%;
+    width: 30%;
     align-items: center;
 }
 
