@@ -394,6 +394,14 @@ footer {
     align-items: center;
 }
 
+.botton:hover {
+    background-color: #180a36;
+}
+
+.botton-cancelled:hover {
+    background-color: lightgray;
+}
+
 .opciones-checkbox {
     color: #EBEBEB
 }
@@ -420,6 +428,12 @@ footer {
         margin: auto;
         width: 100%;
     }
+    .botton {
+        font-size: 16px;
+    }
+    .botton-cancelled {
+        font-size: 16px;
+    }
 }
 
 
@@ -431,5 +445,11 @@ footer {
         padding: 0px;
         margin: auto;
         width: 100%;
-    }  
+    }
+    .botton {
+        font-size: 20px;
+    }
+    .botton-cancelled {
+        font-size: 20px;
+    }
 }
