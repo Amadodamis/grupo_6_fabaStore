@@ -42,6 +42,9 @@ header{
 .lupa-e-iconos{
     width: 75%;     /** 75 % del width del header el otro 25 es del logo*/
     display: flex;
+    margin: 10px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
     justify-content: space-between;
 }
 
@@ -71,6 +74,7 @@ header{
 
 .paddingIconos{
     padding: 15px;
+    list-style:none;
 }
 
 .diseñoIcono{
@@ -78,6 +82,9 @@ header{
     font-size: 2em;
 }
 
+.iconos-header{
+    align-self: center;
+}
 
 
 
