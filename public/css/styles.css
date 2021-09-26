@@ -330,6 +330,9 @@ footer {
     font-size: 1em;
     color: white;
 }
+.información-adicional {
+    background-color: rgba(43, 23, 95, 0.2);
+}  
 
 /* CSS del formulario de registro */
 
