@@ -460,6 +460,9 @@ footer {
 
 /* ACÁ VAN LAS MEDIA QUERIES */
 
+
+/*CELU*/
+
 @media (min-width: 320px) {
 /************header***********/
 
@@ -486,10 +489,15 @@ footer {
 
     .tamañoBuscador{
         order: 2;
+        width: 100%;
+        
     }
     
 }
 
+
+/*TABLET
+*/
 @media(min-width:426px) and (max-width:768px){
     .información-adicional {
         display: flex;
@@ -507,17 +515,26 @@ footer {
     }
 
     .seccionHeader{
-        flex-direction: row;
+        flex-direction: column;
     }
+    .seccionHeader img{
+        max-width: 100vw;
+    }
+
     .lupa-e-iconos{
-        flex-direction: row;
+        flex-direction: column;
     }
+
     .tamañoBuscador{
-        order: 0;
+        order: 2;
+        width: 100%;
+        
     }
 
 }
 
+
+/*DESKTOP*/
 
 @media (min-width: 769px) {
     .información-adicional {
@@ -550,6 +567,7 @@ footer {
 
     .lupa-e-iconos{
         flex-direction: row;
+        width: 100vw;
     }
     .tamañoBuscador{
         order: 0;
