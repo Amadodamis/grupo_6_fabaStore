@@ -71,10 +71,6 @@ main{
 }
 
 
-
-
-
-
 .img-producto-cart{
     flex-grow: 0.4;
     max-width: 40%;
@@ -105,8 +101,6 @@ main{
     text-shadow: 0 0 20px #c238d8;
     
 }
-
-
 
 .bloque-descripcion{
     margin-right: 25px;
@@ -290,4 +284,36 @@ main{
 
 .boton-comprar a:hover{
     color:white;
+}
+
+
+@media (min-width:320px) and (max-width:768px){
+
+    .box-compra{
+        flex-direction: column;
+    }
+
+    .Productos{
+        width: 90%;
+    }
+
+   .box-right-bar-pago{
+       width: 90%;
+   }
+   .stock-d i{
+    display: none;
+}
+.bloque-descripcion{
+    font-size: 10px;
+}
+   .botones-producto-cant i{
+       font-size: 10px;
+   }
+   
+   .box-pago{
+       font-size:10px;
+   }
+
+
+
 }
