@@ -156,7 +156,7 @@ main{
 }
 
 
-.botones-producto-cant input[type=text]{
+.botones-producto-cant input[type=number]{
     border:2px solid #8c0674;
     border-radius: 5px;
     outline:none;

@@ -171,6 +171,7 @@ main{
     transition: all 1s ease-in-out;
     animation: banner 16s infinite linear
 }
+
 body .content-wrapper {
     width:85%;
     margin-left: auto;
