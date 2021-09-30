@@ -19,7 +19,7 @@ El presente proyecto apunta a un diseño sencillo, en dónde el usuario pueda el
 
 Integrantes del equipo: 
 
-Amado Adamis -  
+Amado Adamis -  Estudiante
 
 Francisco Agustín Moletta – Economista y empleado de un Banco de Inversión 
 
