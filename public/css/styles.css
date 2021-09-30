@@ -152,7 +152,6 @@ main{
     width: 85%;
     margin: 10px;
     padding: 10px;
-    height: 900px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(43 23 95 / 40%);
     background-color: rgba(43, 23, 95, 0.2);
@@ -468,6 +467,9 @@ footer {
 @media (min-width: 320px) and (max-width:426px) {
 /************header***********/
 
+    .barra-lateral{
+        display: none;
+    }
 
     .información-adicional {
         display: flex;
@@ -498,6 +500,13 @@ footer {
 
     .footer-logos{
         display: none;
+    }
+    .seccion{
+        flex-direction: column;
+        height: 48%;
+    }
+    .producto-individual{
+        width: 90%;
     }
 }
 
