@@ -44,3 +44,9 @@ https://www.targetdirect.ca/ - La propuesta de menú principal del sitio es senc
 https://www.crucial.com - Este sitio posee una interfaz de login / creación de cuenta que nos parece interesante replicar 
 
 https://www.amazon.com - Básicamente elegimos este sitio porque el carrito de compras es agradable a la vista del usuario y le permite acceder al mismo de manera rápida y sencilla 
+
+
+Tablero de Trabajo:
+
+https://trello.com/b/vXJdZHU1/sprint-2
+
