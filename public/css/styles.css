@@ -15,39 +15,22 @@
 */
 
 
-
-header h1{
-    text-align: center;
-    font-size: 60px;
-    color: black;
+/* ACÁ ARRANCO CON EL HEADER BODY*/
+.logo-Faba-Store{ 
+    width:400px;
+    height: 196px;
 }
 
-header{
-    background-color: black;
+.box-logo-faba-store{ 
+    width:400px;
+    height:196px;
 }
 
-
-
-
-.seccionHeader{
-    width: 100%;
-    display: flex;
-}
-
-
-
-.lupa-e-iconos{  
-    /** 75 % del width del header el otro 25 es del logo*/
-    display: flex;
-    margin: 10px;
-    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
-    background-color: rgba(43, 23, 95, 0.2);
-    justify-content: space-between;
-}
-
-.buscador{
-    width: 100%;
+.box-buscador-header{
     height: 35px;
+}
+.buscador{
+    height: 33px;
     padding: 10px 30px 10px 10px;
     border-radius: 5px;
     border: 0;
@@ -55,45 +38,16 @@ header{
     cursor: inherit;
 }
 
-.tamañoBuscador{
-    align-self: center;
-    flex-grow:0.7;
-    margin: 0 25px 0 25px;
-}
 
-.flexProductoYRegistro{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    right: 8%;
-}
-
-.paddingIconos{
-    padding: 15px;
-    list-style:none;
-}
-
-.paddingIconos i:hover{
-   
-        text-shadow: 0 0 20px #c238d8;
-        color: white;
-
-}
-
-.diseñoIcono{
-    color: white;
-    font-size: 2em;
+.box-iconos-header{
+    height: 35px;
 }
 
 .iconos-header{
-    align-self: center;
-    flex-grow: 0.3;
+    font-size: 25px;
+    margin: 5px;
+    color: white;
 }
-
-
-
-
-/* ACÁ ARRANCO CON EL HEADER BODY*/
 
 main{
     margin: auto;
@@ -466,8 +420,43 @@ footer {
 /*CELU*/
 
 @media (min-width: 320px) and (max-width:426px) {
-/************header***********/
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       .box-logo-faba-store{
+        width: 320px;
+       }
+       .logo-Faba-Store{ /*terminado*/
+        width:320px;
+    }
 
+       .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+        min-width: 320px;
+    
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+        display: flex;
+        flex-direction: column;
+
+        }
+        
+        .box-iconos-header{
+            order: 0;
+            align-self: center;
+        }
+        .box-buscador-header{
+            order: 1;
+        }
+    
+        .buscador{
+            width: 100%;
+        }
     .barra-lateral{
         display: none;
     }
@@ -481,22 +470,6 @@ footer {
         width: 90%;
     }
 
-    .seccionHeader{
-        flex-direction: column;
-    }
-    .seccionHeader img{
-        max-width: 100vw;
-    }
-
-    .lupa-e-iconos{
-        flex-direction: column;
-    }
-
-    .tamañoBuscador{
-        order: 2;
-        width: 100%;
-        
-    }
     
 
     .footer-logos{
@@ -515,6 +488,37 @@ footer {
 /*TABLET
 */
 @media(min-width:426px) and (max-width:768px){
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+    
+       .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+    
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+        display: flex;
+    
+        }
+    
+        .box-buscador-header{
+            flex-grow: 0.9;
+        }
+        
+        .box-iconos-header{
+            flex-grow: 0.1;
+        }
+    
+        .buscador{
+            width: 100%;
+        }
+
+
     .información-adicional {
         display: flex;
         justify-content: space-between;
@@ -530,30 +534,57 @@ footer {
         font-size: 16px;
     }
 
-    .seccionHeader{
-        flex-direction: column;
-    }
-    .seccionHeader img{
-        max-width: 100vw;
-    }
-
-    .lupa-e-iconos{
-        flex-direction: column;
-    }
-
-    .tamañoBuscador{
-        order: 2;
-        width: 100%;
-        
-    }
-
-    
 }
 
 
 /*DESKTOP*/
 
 @media (min-width: 769px) {
+    header{
+        max-width:1440px; /* por si se ve en una resolucion televisor*/
+        margin: auto;     /* por si se ve en una resolucion televisor*/
+        display: flex;
+        max-height:200px; /* para dimensionar logo*/
+       
+        
+    }
+
+    .logo-Faba-Store{ /*terminado*/
+        width:400px;
+        height: 196px;
+    }
+
+    .box-logo-faba-store{ /*terminado*/
+        width:400px;
+        height:196px;
+    }
+   
+    .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+
+        display: flex;
+        align-items: end;
+    }
+
+    .box-buscador-header{
+        flex-grow: 0.8;
+    }
+    
+    .box-iconos-header{
+        flex-grow: 0.2;
+    }
+
+    .buscador{
+        width: 100%;
+    }
+
+
     .información-adicional {
         display: flex;
         justify-content: space-between;
@@ -578,16 +609,5 @@ footer {
         font-size: 20px;
     }
 
-    .seccionHeader{
-        flex-direction: row;
-    }
-
-    .lupa-e-iconos{
-        flex-direction: row;
-        width: 100vw;
-    }
-    .tamañoBuscador{
-        order: 0;
-    }
 
 }
