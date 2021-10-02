@@ -8,39 +8,45 @@ body .banner{
 .ficha{
     display: flex;
 }
-.izquierda{
+.izquierda{ 
 width: 70%;
-background-color: white;
+border-radius: 15px;
+box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+background-color: rgba(43, 23, 95, 0.2);
 }
 .derecha{
 width: 30%;
-background-color: white;
+border-radius: 15px;
+box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+background-color: rgba(43, 23, 95, 0.2);
 border-left: solid 1px #ebebeb;
 }
 .distancia-Especificaciones{
     display: flex;
     justify-content: space-between;
+    color:#c238d8;
 }
 .main-detalle-de-lproducto{
 width: 85vw ;
 }
 .tamaño-h3-DP{
     padding: 15px;
+    color:#c238d8;
 }
 .tamaño-ul-DP{
     padding: 15px;
 }
 .Precio-DP{
     padding-top: 29px;
-    color: #666;
+    color:#c238d8;
     text-align: center;
 }
-.titulos-H1{
-    color: #666;
+.titulos-h1{
+    color:#c238d8;
     text-align: center;
 }
 .titulos-h3{
-    color: #666;
+    color:#c238d8;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -51,20 +57,23 @@ width: 85vw ;
     border-top: #ebebeb 1px solid;
 }
 .estilo-Titulo-DP{
-    color: #666;
+    color:#c238d8;
     border-bottom: #ebebeb solid 1px;
 }
 .info-ficha-cuotas{
     display: flex;
     padding: 10px;
+    color:#c238d8;
 }
 .info-ficha-envios{
     display: flex;
     padding: 10px;
+    color:#c238d8;
 }
 .info-ficha-retirar{
     display: flex;
     padding: 10px;
+    color:#c238d8;
 }
 .info-ficha-stock{
     display: flex;
@@ -101,15 +110,25 @@ width: 85vw ;
     border:none;
     background: transparent;
     padding: 8px 16px;
-    background-color: rgba(126,126,131,.15);
     border-radius: 5px 0 0 5px ;
+    color:#c238d8;
+    border: 1px solid #c238d8;
 }
 .boton-DP-mas{
     border:none;
     background: transparent;
     padding: 8px 16px;
-    background-color: rgba(126,126,131,.15);
     border-radius: 0 5px 5px 0;
+    color:#c238d8;
+    border: 1px solid #c238d8;
+}
+.boton-DP-mas:hover{
+    background-color: #c238d8;
+    color: white;
+}
+.boton-DP-menos:hover{
+    background-color: #c238d8;
+    color: white;
 }
 .texto-cantidad-producto{
     text-align: center;
@@ -122,22 +141,20 @@ width: 85vw ;
     width: 57%;
     margin: auto;
 }
-.boton-comprar-ahora{
+
+.boton-agregar-comprar-carrito{
     width: 100%;
     border: none;
-    background-color:#228cff;
-    color: white;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
     border-radius: 5px;
     padding: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
+    color:#c238d8;
+    border: 1px solid #c238d8;
 }
-.boton-agregar-carrito{
-    width: 100%;
-    border: none;
-    background-color: rgba(126,126,131,.15);
-    border-radius: 5px;
-    padding: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.boton-agregar-comprar-carrito:hover{
+    background-color: #c238d8;
+    color: white;
 }

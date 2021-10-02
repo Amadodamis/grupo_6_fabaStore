@@ -36,7 +36,7 @@ main{
 .mi-compra h1{
     margin: 15px;
     font-weight: 300;
-    color:#8c0674;
+    color:#c238d8;
 }
 
 .box-compra{
@@ -64,7 +64,7 @@ main{
     position: relative;
     display: flex;
     justify-content: space-between;
-    color: #8c0674;
+    color: #c238d8;
     font-size: 20px;
     font-weight: 300;
     line-height:28px;
@@ -92,7 +92,7 @@ main{
     
 }
 .buttons-close-change-minimize  i{
-    color: #8c0674;
+    color: #c238d8;
     
 }
 
@@ -124,7 +124,7 @@ main{
 
 .stock-d i{
     font-size: 23px;
-    color: #8c0674;
+    color: #c238d8;
 }
 
 .precio-cart{
@@ -147,7 +147,7 @@ main{
 }
 
 .botones-producto-cant i{
-    color: #8c0674;
+    color: #c238d8;
     font-size: 17px;
 }
 
@@ -157,10 +157,10 @@ main{
 
 
 .botones-producto-cant input[type=number]{
-    border:2px solid #8c0674;
+    border:2px solid #c238d8;
     border-radius: 5px;
     outline:none;
-    color:#8c0674;
+    color:#c238d8;
     text-align: center;
     background-color: transparent;
 }
@@ -177,7 +177,7 @@ main{
     position: relative;
     display: flex;
     justify-content: space-between;
-    color: #8c0674;
+    color: #c238d8;
     font-size: 20px;
     font-weight: 300;
     line-height:28px;
@@ -209,7 +209,7 @@ main{
 
 .box-right-bar-pago p , label{
     font-family: 'Montserrat', sans-serif;
-    color: #8c0674;
+    color: #c238d8;
 }
 
 .box-pago{
@@ -236,12 +236,13 @@ main{
 }
 .select-button{
     cursor: pointer;
-    border:2px solid #8c0674;
+    border:2px solid #c238d8;
     border-radius: 5px;
     outline:none;
-    color:#8c0674;
+    color:#c238d8;
     text-align: center;
     background-color: transparent;
+    margin: 2.5px;
 }
 
 .forma-de-envio{
@@ -258,32 +259,25 @@ main{
 }
 
 .boton-comprar{
-    cursor: pointer;
-    border-radius: 5px;
     width: 150px;
-    text-align: center;
-    border: solid 1px #8c0674;
-    background-color: transparent;
     align-self: flex-end;
-    transition: background-color 500ms;
 }
 
-.boton-comprar:hover{
-    background-color: #8c0674;
-
-}
-
-.boton-comprar a{
-    text-decoration: none;
-    text-align: center;
+.boton-productCart{
     font-size: 20px;
     font-weight: 400;
     transition: color 500ms;
-    color:#8c0674;
+    width: 100%;
+    background-color: rgba(43, 23, 95, 0.2);
+    border-radius: 5px;
+    padding: 8px;
+    color: #c238d8;
+    border: 1px solid #c238d8;
 }
 
-.boton-comprar a:hover{
+.boton-productCart:hover{
     color:white;
+    background-color: #c238d8;
 }
 
 
@@ -299,13 +293,13 @@ main{
 
    .box-right-bar-pago{
        width: 90%;
-   }
+    }
    .stock-d i{
     display: none;
-}
-.bloque-descripcion{
+    }
+    .bloque-descripcion{
     font-size: 10px;
-}
+    }
    .botones-producto-cant i{
        font-size: 10px;
    }
@@ -314,6 +308,9 @@ main{
        font-size:10px;
    }
 
+   .total-precio p{
+       font-size: 20px;
+   }
 
 
 }
