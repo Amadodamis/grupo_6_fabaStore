@@ -5,7 +5,7 @@ const path = require ("path")
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 
-app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3030/index" ,"http://192.168.0.145:3030/index" ));
+app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/index" ,"http://192.168.0.145:3030/index" ));
 
 app.get("/index", (req,res) => {
     const fileToSend = path.join (__dirname, "/views/index.html")

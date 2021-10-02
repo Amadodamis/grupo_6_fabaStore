@@ -235,7 +235,7 @@ main section h1{
     box-shadow: 0 0 20px #c238d8;
 }
 .descripcion-producto-main{
-    border-top: solid 1px #ebebeb;
+    border-top: #8c0674 1px solid;
     width: 100%;
     padding: 15px;
 }

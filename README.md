@@ -25,7 +25,7 @@ Francisco Agustín Moletta – Economista y empleado de un Banco de Inversión
 
 Bautista Quetglás -  
 
-Axel Leonel Romano -  
+Axel Leonel Romano -  Estudiante
 
  
 
