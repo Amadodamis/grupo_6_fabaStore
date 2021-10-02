@@ -334,7 +334,7 @@ footer {
     color: #EBEBEB
 }
 
-.create-account {
+.iniciar-sesion-tamañano {
     font-size: 24px;
 }
 
@@ -374,7 +374,11 @@ footer {
 .control {
     width: 50%;
     padding: 8px;
-    color: #EBEBEB
+    border-radius: 40px;
+}
+.control:focus{
+    border:5px solid #c238d8;
+    outline: 0;
 }
 
 .botton {
