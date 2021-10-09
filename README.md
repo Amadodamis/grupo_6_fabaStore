@@ -49,4 +49,5 @@ https://www.amazon.com - Básicamente elegimos este sitio porque el carrito de c
 Tablero de Trabajo:
 
 https://trello.com/b/vXJdZHU1/sprint-2
+https://trello.com/b/f72cZt20/sprint-3
 
