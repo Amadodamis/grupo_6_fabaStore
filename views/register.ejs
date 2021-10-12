@@ -5,81 +5,71 @@
 <body class="body-index">
     <%- include('./partials/header') %>
     <br/>
-<main>
 
-    <form action="/register" method="POST" class="form-registro">
+<main class="main-register-login">
+    
+    <section class="section-formulario-register">
 
-        <p class="iniciar-sesion-tamañano">Registro</p>
-        <ul class="logos-login-redes-sociales">
-            <li class="logo-facebook"><a href="https://www.facebook.com/login"><i class="fab fa-facebook"></i></a></li>
-            <li class="logo-message"><a href="https://outlook.live.com/owa/"><i class="far fa-envelope"></i></a></li>
-        </ul>
+        <form action="/register" method="POST" class="form-registro">
 
-        <div class="control-form">
-            <label></label>
-            <input type="text" name="nombre" placeholder="Nombre y apellido" class="control" required maxlength="20" minlength="4">
-        </div>
+            <p class="iniciar-sesion-tamañano">Registrarse</p>
 
-        <div class="control-form">
-            <label></label>
-            <input type="text" name="usuario" placeholder="Nombre de usuario" class="control" required>
-        </div>
+            <div class="control-form">
+                <input type="text" name="usuario" placeholder="Nombre de usuario" class="control" required>
+            </div>
 
-        <div class="control-form">
-            <label></label>
-            <input type="email" name="email" placeholder="E-mail" class="control" required>
-        </div>
+            <div class="control-form">
+                <input type="email" name="email" placeholder="E-mail" class="control" required>
+            </div>
 
-        <div class="control-form">
-            <label class="control-form-label">Fecha de nacimiento</label>
-            <input type="date" name="Fecha" class="control">
-        </div>
+            <div class="control-form">
+                <input type="password" name="clave" class="control" placeholder="Contraseña">
+            </div>
 
-        <div class="control-form">
-            <label></label>
-            <input type="text" name="domicilio" placeholder="Domicilio" class="control">
-        </div>
+            <div class="control-form">
+                <input type="password" name="clave" class="control" placeholder="Confirmar contraseña">
+            </div>
+            <!-- Ver como modificar el titulo de fecha de nacimiento 
+           
+                <div class="control-form">
+                <label>Fecha de nacimiento</label>
+                <input type="date" name="Fecha" class="control">
+            </div>
+            -->
+            <div class="control-form">
+                <input type="text" name="nombre" placeholder="Nombre y apellido" class="control" required maxlength="20" minlength="4">
+            </div>
 
-        <div class="control-form">
-            <label class="control-form-label">Perfil del usuario</label>
-            <input type="radio" name="perfil-del-usuario" value="comprador" id="comprador">
-            <laber for="comprador" class="opciones-checkbox">comprador</laber>
-            <input type="radio" name="perfil-del-usuario" value="vendedor" id="vendedor">
-            <laber for="vendedor" class="opciones-checkbox">vendedor</laber>
-        </div>
+            <div class="control-form">
+                <input type="text" name="domicilio" placeholder="Domicilio" class="control">
+            </div>
 
-        <div class="control-form">
-            <label for="Intereses" class="control-form-label">Intereses<br/></label>
-            <input type="checkbox" name="Intereses" value="Electro" id="Electro">Electro<br/>
-            <input type="checkbox" name="Intereses" value="Gaming" id="Gaming">Gaming<br/>
-        </div>
+            <div class="control-form">
+                <button type="submit" class="botton">Crear Cuenta</button>
+            </div>
+            
+            <ul class="logos-login-redes-sociales">
 
-        <div class="control-form">
-            <label class="control-form-label">Foto de usuario</label>
-            <input type="file" name="avatar" accept=".jpg" multiple>
-        </div>
+                <li class="autologin-icono-lista">
+                    <a href="https://www.facebook.com/login">
+                        <i class="fab fa-facebook icono-autologin"></i>
+                    </a>
+                    <p class="auto-login-p">Registrate con Facebook</p>
+                </li>
+                
+                <li class="autologin-icono-lista">
+                    <a href="https://gmail.com/">
+                    <i class="far fa-envelope icono-autologin"></i>
+                    </a>
+                    <p class="auto-login-p">Registrate con Gmail</p>
+                </li>
+            </ul>
+            <p class="iniciar-sesion-tamañano ">¿Ya tenés una cuenta?<a href="login"> Inicia Sesión</a></p>
+        </form>
+    </section>
 
-        <div class="control-form">
-            <label class="control-form-label">Contraseña</label>
-            <input type="password" name="clave" class="control">
-        </div>
-
-        <div class="control-form">
-            <label class="control-form-label">Confirmar contraseña</label>
-            <input type="password" name="clave" class="control">
-        </div>
-
-        <div class="control-form">
-            <button type="submit" class="botton">Crear Cuenta</button>
-        </div>
-
-        <div class="control-form">
-            <button type="reset" class="botton-cancelled">Borrar Datos</button>
-        </div>
-        
-    </form>
 </main>
-    <br/>
+
 <%- include('./partials/footer') %>
 </body>
 
