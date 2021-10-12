@@ -1,49 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>fabaStore</title>
+    <%- include('./partials/head') %>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet"/>
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/styles.css"/>
-</head>
 <body class="body-index" >
-    <header>
-        <a href="/index" >
-             <div class="box-logo-faba-store">
-                <img src="img/logo-faba-dimensionado.jpg" alt="Logo-Faba-Store" class="logo-Faba-Store">
-            </div>
-        </a>
-    
-            <section class="lupa-e-iconos">
-               <div class="box-buscador-header">
-                <form>
-                    <input type="search" placeholder=" Buscá Productos, Marcas y Categorías..." class="buscador">
-                </form>
-                </div>
-    
-                <div class="box-iconos-header">
-                        <a href="/productCart" ><i class="fas fa-shopping-cart iconos-header" ></i></a>
-                        <a href="/register" ><i class="fas fa-user-circle iconos-header" ></i></a>
-                        <a href="/login" ><i class="fas fa-sign-in-alt iconos-header"></i></a>
-                </div>
-         
-            </section>
-    
-    </header>
+
+    <%- include('./partials/header') %>
 
     <section class="container-banner">
         <div class="banner"></div>
     </section>
+
     <main class="barra-y-main">
             <section class="barra-lateral">
                 <!-- Amado-->
@@ -159,62 +125,8 @@ rel="stylesheet"/>
     <br/>
 
 
-    <footer class="footer">
-        <section class="información-adicional">
-            <article>
-                <div class="imagen-footer">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <h4 class="footer-titulo"><a href="#" class="footer-titulo">Información</a></h4>
-                <p class="texto-footer">Contáctenos</p>
-                <p class="texto-footer">Política de privacidad</p>
-                <p class="texto-footer">Servicios IT</p>
-            </article>
-            <br/>
-            <article>
-                <div class="imagen-footer">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <h4 class="footer-titulo"><a href="#" class="footer-titulo">Servicio al Cliente</a></h4>
-                <p class="texto-footer">Contáctenos</p>
-                <p class="texto-footer">Devoluciones</p>
-                <p class="texto-footer">Dónde encontrarnos</p>
-            </article>
-            <br/>
-            <article>
-                <div class="imagen-footer">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <h4 class="footer-titulo"><a a href="#" class="footer-titulo">Mi Cuenta</a></h4>
-                <p class="texto-footer">Mi Cuenta</p>
-                <p class="texto-footer">Newlsetter</p>
-                <p class="texto-footer">Mis Pedidos</p>
-            </article>
-            <section class="footer-logos">
-                <article>
-                    <div class="imagen-footer"><a href="https://www.facebook.com/login">
-                        <i class="fab fa-facebook logos-i"></i></a>
-                    </div>
-                </article>
-                <br/>
-                <article>
-                    <div class="imagen-footer"><a href="https://www.instagram.com/">
-                        <i class="fab fa-instagram logos-i"></i></a>
-                    </div>
-                </article>
-                <br/>
-                <article>
-                    <div class="imagen-footer"><a href="https://outlook.live.com/owa/">
-                        <i class="far fa-envelope logos-i"></i></a>
-                    </div>
-                </article>
-            </section>
-        </section>
-        <br/>
-        <article>
-            <p class="copyright">Copyright © 2021 fabaStore S.R.L.</p>
-        </article>
-    </footer>
+    <%- include('./partials/footer') %>
     
 </body>
+
 </html>

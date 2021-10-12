@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+<body class="body-index">
+    <%- include('./partials/header') %>
+    <br/>
+<main>
+    
+
+    <form action="/login" method="POST" class="form-registro">
+        <p class="iniciar-sesion-tamañano" >Iniciar Sesión</p>
+        <ul class="logos">
+            <li class="logo-facebook"><a href="https://www.facebook.com/login"><i class="fab fa-facebook"></i></a></li>
+            <li class="logo-message"><a href="https://outlook.live.com/owa/"><i class="far fa-envelope"></i></a></li>
+        </ul>
+
+        <div class="control-form">
+            <label></label>
+            <input type="text" name="usuario" placeholder="Nombre de usuario, telefono o E-mail" class="control" required>
+        </div>
+        <div class="control-form">
+            
+            <input type="password" name="clave" placeholder="Contraseña" class="control">
+        </div>
+        <div class="control-form">
+            <button type="submit" class="botton">Iniciar Sesión<nav></nav></button>
+        </div>
+        <div class="control-form">
+            <button type="reset" class="botton-cancelled">Borrar Datos</button>
+        </div>
+    </form>
+
+
+
+</main>
+    <br/>
+    <%- include('./partials/footer') %>
+</body>

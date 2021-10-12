@@ -275,12 +275,11 @@ footer {
 
 .form-registro {
     padding: 25px 15px;
-    background-color: #05040a;
-    border: 1px solid gray;
-    border-width: 60%;
     font-style: normal;
     text-align: center;
-    color: #EBEBEB
+    color: #c238d8;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
 }
 
 .iniciar-sesion-tamañano {
