@@ -1,11 +1,105 @@
 
+.main-register-login{
+    padding: 10px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
 
+.section-formulario{
 
+    padding: 10px;
+    margin: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-registro {
+    padding: 25px 15px;
+    text-align: center; 
+}
 
 .iniciar-sesion-tamañano {
     font-size: 24px;
+    font-style: normal;
+    text-align: center;
+    color: #c238d8;
 }
 
-.logo-facebook {
-    padding: 20px;
+
+.autologin-icono-lista{
+    padding: 10px;
+}
+
+.icono-autologin{
+    color: white;
+}
+.icono-autologin:hover{
+    text-shadow: 0 0 20px #c238d8;
+    color: white;
+}
+
+
+.logos-login-redes-sociales{
+    font-size: 20px;
+    list-style: none 
+}
+
+.control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 40px;
+}
+.control:focus{
+    border:5px solid #c238d8;
+    outline: 0;
+}
+
+.control-form {
+    margin-bottom: 15px;
+}
+
+.control-form label {
+    margin-bottom: 10px;
+    font-style: italic;
+    display: block;
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
+
+.botton {
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 500ms;
+    width: 100%;
+    background-color: rgba(43, 23, 95, 0.2);
+    border-radius: 5px;
+    padding: 8px;
+    transition: background-color 500ms;
+    color: #c238d8;
+    border: 1px solid #c238d8;
+}
+
+
+
+.botton:hover {
+    color: white;
+    background-color: #c238d8;
+}
+
+
+.opciones-checkbox {
+    color: #EBEBEB
+}
+
+
+.auto-login-p{
+    font-size: 10px;
+    font-style: normal;
+    text-align: center;
+    color: #c238d8;
 }

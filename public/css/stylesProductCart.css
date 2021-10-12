@@ -266,7 +266,7 @@ main{
 .boton-productCart{
     font-size: 20px;
     font-weight: 400;
-    transition: color 500ms;
+    transition: background-color 500ms;
     width: 100%;
     background-color: rgba(43, 23, 95, 0.2);
     border-radius: 5px;
