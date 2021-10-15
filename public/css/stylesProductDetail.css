@@ -1,6 +1,4 @@
-body .banner{
-    display: none;
-}
+
 .imagen-Produc-Detail{
     width: 100%;
     height: 100%;
@@ -158,4 +156,12 @@ width: 85vw ;
 .boton-agregar-comprar-carrito:hover{
     background-color: #c238d8;
     color: white;
+}
+@media (min-width: 320px) and (max-width:426px) {
+    body .banner{
+    display: none;
+        }   
+
+
+
 }
