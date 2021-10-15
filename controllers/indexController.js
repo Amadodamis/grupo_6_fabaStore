@@ -1,8 +1,9 @@
+let arrayProductos=require("../views/source/products");
 
 let controller={
 
     index:(req,res)=>{
-        res.render("index")
+        res.render("index",{prod:arrayProductos})
     }
 }
 
