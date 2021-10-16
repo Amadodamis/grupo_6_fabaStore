@@ -15,6 +15,7 @@ var loginRouter = require('./routes/loginRouter');
 var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
+var uploadProductsRouter = require ('./routes/uploadProductsRouter')
 
 
 //llamados 
@@ -32,4 +33,6 @@ app.use("/productCart", productCartRouter);
 app.use("/productDetail", productDetailRouter);
 
 app.use("/register", registerRouter);
+
+app.use("/uploadProducts", uploadProductsRouter);
 
