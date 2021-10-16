@@ -44,6 +44,7 @@ let tipoProducto=[
 
 let productos=[
     {
+        id: 1,
         Nombreproducto:"G502",
         marca:"Logitech",
         tipoProducto:tipoProducto[12],     //Tipo producto
@@ -57,6 +58,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 2,
         Nombreproducto:"B550",
         marca:"Asus",
         tipoProducto:tipoProducto[11],     //Tipo producto
@@ -70,6 +72,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 3,
         Nombreproducto:"Ryzen 5 - 5600x",
         marca:"AMD",
         tipoProducto:tipoProducto[9],                    //Tipo producto
@@ -83,6 +86,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 4,
         Nombreproducto:"Tridentz 8gb",
         marca:"G.skill",
         tipoProducto:tipoProducto[7],                    //Tipo producto
@@ -96,6 +100,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 5,
         Nombreproducto:"RTX 3060ti",
         marca:"Geforce now",
         tipoProducto:tipoProducto[15],                    //Tipo producto
@@ -109,6 +114,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 6,
         Nombreproducto:"RM-850",
         marca:"Gigabyte",
         tipoProducto:tipoProducto[5],                    //Tipo producto
@@ -122,6 +128,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 7,
         Nombreproducto:"atx k501l",
         marca:"Cooler Master",
         tipoProducto:tipoProducto[6],                    //Tipo producto
@@ -135,6 +142,7 @@ let productos=[
         cuotasSinInteres:false,
     },
     {
+        id: 8,
         Nombreproducto:"mcbook pro 2019",
         marca:"Mac",
         tipoProducto:tipoProducto[13],                    //Tipo producto
