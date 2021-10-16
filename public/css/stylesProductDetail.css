@@ -160,8 +160,16 @@ width: 85vw ;
 @media (min-width: 320px) and (max-width:426px) {
     body .banner{
     display: none;
-        }   
-
-
+    }
+    .ficha{
+        flex-direction: column;
+    }
+    .izquierda{
+        width: 100%;
+    }
+    .derecha{
+        width: 100%;
+        border: none;
+    }
 
 }
