@@ -5,5 +5,6 @@ var controller=require("../controllers/uploadProductsController")
 
 
 router.get("", controller.upload);
+router.post("",controller.formulario)
 
 module.exports = router;
