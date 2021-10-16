@@ -5,6 +5,7 @@ var controller=require("../controllers/indexController")
 
 
 router.get("/", controller.index);
-router.get("/detalle/:productoID/", controller.detalle);
+router.get("/detail/:productId/", controller.detail);
+
 
 module.exports = router;
