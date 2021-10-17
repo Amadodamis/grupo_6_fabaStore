@@ -23,7 +23,7 @@
 
     </div>
 
-    <%user.totalApagar= user.totalApagar + user.cart[0].precio %>
+    
 </section>
 <% }  %> 
 
@@ -61,14 +61,15 @@
         </div>
     
         <div class="precio-cart">
-            <% if (user.cart[i].oferta) { %>
+            <% if (user.cart[i].oferta) { %>  <%# Si el precio esta oferta  se muestra el precio en oferta  %> 
                 <p>Precio</p>
                 <p><%= user.cart[i].precioConOferta %>$</p>
-                <%user.totalApagar= user.totalApagar + user.cart[i].precioConOferta %>
-            <% }else {%>
+                
+
+            <% }else {%>                <%# Si el precio no tiene oferta se muestra el precio real %> 
                 <p>Precio</p>
                 <p><%= user.cart[i].precio %>$</p>
-                <%user.totalApagar= user.totalApagar + user.cart[i].precio %>
+                
                 <%}  %> 
         </div>
 
