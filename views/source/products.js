@@ -19,7 +19,8 @@ let tipoProducto=[
   /*17*/"Teclado",
   /*18*/"Webcam",
 
-]
+];
+
 
 
 //producto rapido
@@ -35,16 +36,26 @@ let tipoProducto=[
         stock:true,
         stockCant:"",                        //tipo num 
         oferta:false,
-        ofertaPorcentaje:"",
-        PrecioConOferta:"",                 //tipo num 
+        ofertaPorcentaje:0,
+        precioConOferta:precionConOfertafunction(this.precio, this.ofertaPorcentaje),                 //tipo num 
         cuotasSinInteres:false,
     },
     
 */
+function precioConOfertaf(precioAct,porcentaje,oferta) {
+    let precioNuevo=precioAct; //para evitar errores.
+    
+    if (oferta){
+     precioNuevo=(precioAct-(precioAct/100)*porcentaje);
+    }
+
+    return precioNuevo;
+}
+
+
 
 let productos=[
     {
-        id: 1,
         modelo:"G502",
         marca:"Logitech",
         tipoProducto:tipoProducto[12],     //Tipo producto
@@ -53,12 +64,11 @@ let productos=[
         stock:true,
         stockCant:1,  //tipo num 
         oferta:true,
-        ofertaPorcentaje:"15",
-        PrecioConOferta:4590, //tipo num 
+        ofertaPorcentaje:15,
+        precioConOferta:precioConOfertaf(5400,15,true), 
         cuotasSinInteres:false,
     },
     {
-        id: 2,
         modelo:"B550",
         marca:"Asus",
         tipoProducto:tipoProducto[11],     //Tipo producto
@@ -68,11 +78,11 @@ let productos=[
         stockCant:1,  //tipo num 
         oferta:true,
         ofertaPorcentaje:20,
-        PrecioConOferta:9760, //tipo num 
+        precioConOferta:precioConOfertaf(12200,20,true),
         cuotasSinInteres:false,
     },
     {
-        id: 3,
+
         modelo:"Ryzen 5 - 5600x",
         marca:"AMD",
         tipoProducto:tipoProducto[9],                    //Tipo producto
@@ -81,12 +91,12 @@ let productos=[
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:true,
-        ofertaPorcentaje:"10",
-        PrecioConOferta:28233,                 //tipo num 
+        ofertaPorcentaje:10,
+        precioConOferta:precioConOfertaf(31370,10,true), 
         cuotasSinInteres:false,
     },
     {
-        id: 4,
+
         modelo:"Tridentz 8gb",
         marca:"G.skill",
         tipoProducto:tipoProducto[7],                    //Tipo producto
@@ -95,12 +105,12 @@ let productos=[
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:false,
-        ofertaPorcentaje:"25",
-        PrecioConOferta:16500,                 //tipo num 
+        ofertaPorcentaje:25,
+        precioConOferta:precioConOfertaf(22000,25,true),
         cuotasSinInteres:false,
     },
     {
-        id: 5,
+
         modelo:"RTX 3060ti",
         marca:"Geforce now",
         tipoProducto:tipoProducto[15],                    //Tipo producto
@@ -109,41 +119,41 @@ let productos=[
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:true,
-        ofertaPorcentaje:"15",
-        PrecioConOferta:155119,                 //tipo num 
+        ofertaPorcentaje:15,
+        precioConOferta:precioConOfertaf(182540,15,true),                //tipo num 
         cuotasSinInteres:false,
     },
     {
-        id: 6,
+
         modelo:"RM-850",
         marca:"Gigabyte",
         tipoProducto:tipoProducto[5],                    //Tipo producto
         img:"/img/FuenteAlimentación.png",
-        precio:"17780",                          //tipo num 
+        precio:17780,                          //tipo num 
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:true,
-        ofertaPorcentaje:"10",
-        PrecioConOferta:16602,                 //tipo num 
+        ofertaPorcentaje:10,
+        precioConOferta:precioConOfertaf(17780,10,true),
         cuotasSinInteres:false,
     },
     {
-        id: 7,
+
         modelo:"atx k501l",
         marca:"Cooler Master",
         tipoProducto:tipoProducto[6],                    //Tipo producto
         img:"/img/Gabinete.png",
-        precio:"8890",                          //tipo num 
+        precio:8890,                          //tipo num 
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:true,
-        ofertaPorcentaje:"35",
-        PrecioConOferta:5778,                 //tipo num 
+        ofertaPorcentaje:35,
+        precioConOferta:precioConOfertaf(8890,35,true),
         cuotasSinInteres:false,
     },
     {
-        id: 8,
-        modelo:"mcbook pro 2019",
+
+        modelo:"Mcbook pro 2019",
         marca:"Mac",
         tipoProducto:tipoProducto[13],                    //Tipo producto
         img:"img/img-macbook-pro-2019.png",
@@ -151,8 +161,8 @@ let productos=[
         stock:true,
         stockCant:1,                        //tipo num 
         oferta:false,
-        ofertaPorcentaje:"",
-        PrecioConOferta:200000,                 //tipo num 
+        ofertaPorcentaje:0,
+        precioConOferta:precioConOfertaf(20000,0,false), 
         cuotasSinInteres:false,
     },
 

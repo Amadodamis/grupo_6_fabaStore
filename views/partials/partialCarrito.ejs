@@ -1,3 +1,34 @@
+<%if (user.cart[0]) {%>
+    
+
+<section class="producto-y"> <!-- Producto armado compu-->
+    <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
+        <i class="far fa-caret-square-down"></i>
+        <i class="far fa-caret-square-up"></i>
+        <i class="fas fa-exchange-alt"></i>
+        <i class="far fa-window-close"></i>
+    </div>
+
+    <div class="img-producto-cart">
+        <img class="jpg-producto" src="<%= user.cart[0].img %>" alt="armado-pc">
+    </div>
+    
+    <div class="bloque-descripcion">                        <!--Descripcion del pro-->
+        <p class="nombre-producto-cart"><%= user.cart[0].Nombre %></p>
+
+        <div class="precio-cart">
+            <p>Precio</p>
+            <p><%= user.cart[0].precio %> $</p>
+        </div>
+
+    </div>
+
+    <%user.totalApagar= user.totalApagar + user.cart[0].precio %>
+</section>
+<% }  %> 
+
+<%for (let i = 1; i < user.cart.length; i++) { %> 
+    
 <section class="producto-x">
     <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
         <i class="far fa-caret-square-down"></i>
@@ -7,12 +38,12 @@
     </div>
 
     <div class="img-producto-cart">
-        <img class="jpg-producto" src="img/img-macbook-pro-2019.png" alt="macbook">
+        <img class="jpg-producto" src="<%= user.cart[i].img %>" alt="macbook">
     </div>
     
 
     <div class="bloque-descripcion">                        <!--Descripcion del pro-->
-        <p class="nombre-producto-cart">Macbook pro 2019</p>
+        <p class="nombre-producto-cart"><%= user.cart[i].modelo %></p>
 
         <div class="stock-d">
             <p>Stock disponible </p> 
@@ -30,8 +61,15 @@
         </div>
     
         <div class="precio-cart">
-            <p>Precio</p>
-            <p>1000$</p>
+            <% if (user.cart[i].oferta) { %>
+                <p>Precio</p>
+                <p><%= user.cart[i].precioConOferta %>$</p>
+                <%user.totalApagar= user.totalApagar + user.cart[i].precioConOferta %>
+            <% }else {%>
+                <p>Precio</p>
+                <p><%= user.cart[i].precio %>$</p>
+                <%user.totalApagar= user.totalApagar + user.cart[i].precio %>
+                <%}  %> 
         </div>
 
     </div>
@@ -39,43 +77,4 @@
 
 </section>
 
-<section class="producto-y"> <!-- Producto armado compu-->
-    <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
-        <i class="far fa-caret-square-down"></i>
-        <i class="far fa-caret-square-up"></i>
-        <i class="fas fa-exchange-alt"></i>
-        <i class="far fa-window-close"></i>
-    </div>
-
-    <div class="img-producto-cart">
-        <img class="jpg-producto" src="img/armado-pc-producto.png" alt="armado-pc">
-    </div>
-    
-
-    <div class="bloque-descripcion">                        <!--Descripcion del pro-->
-        <p class="nombre-producto-cart">Armado de la computadora</p>
-
-        <div class="stock-d">
-            <p>Stock disponible </p> 
-            <i class="far fa-check-circle"></i> 
-        </div>
-
-        <div class="box-producto-cant">                      <!--Botones cantidad-->
-            <p>Cantidad</p>
-            <div class="botones-producto-cant"> 
-                <i class="far fa-minus-square"></i>
-                <input type="number" min="1" max="30" class="cant-productos">
-                <i class="far fa-plus-square"></i>
-            </div>
-            
-        </div>
-    
-        <div class="precio-cart">
-            <p>Precio</p>
-            <p>1000$</p>
-        </div>
-
-    </div>
-
-
-</section>
+<% } %> 

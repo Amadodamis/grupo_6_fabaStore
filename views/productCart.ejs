@@ -19,6 +19,8 @@
             <section class="Productos">
 
                 <%- include('./partials/partialCarrito') %>
+                <!--Llama al partial carrito que tiene la lista de productos-->
+
 
             </section> <!--Fin seccion productos que estan en el carrito-->
 
@@ -50,8 +52,7 @@
 
                     <div class="total-precio">
                         <p>Total a pagar</p>
-                        <% let totalAPagar=7000 %> 
-                        <p class="total-precio-num"><%= totalAPagar %> $</p>
+                        <p class="total-precio-num"><%= user.totalApagar%> $</p>
                     </div>
 
                     <div class="boton-comprar">
