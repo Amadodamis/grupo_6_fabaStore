@@ -1,0 +1,48 @@
+<h1 class="main-h1">Explorá</h1>
+
+<section class="fila-productos">
+    <%# -------------------------------- %>
+ <% let repetido=true;
+ let randomize;
+ let arrayTest=[];
+ let found; %> 
+<%for (let i = 0; i <=7; i++) {  %> 
+    <% 
+        while (repetido==true){
+            randomize=Math.floor(Math.random() * prod.length) + 0; 
+            found = arrayTest.find( element => element == randomize);
+        
+            if (found == undefined){  
+                arrayTest.push(randomize)
+                repetido=false;
+            }
+        }
+    %> <%# randomize guarda el valor aleatorio, para la muestra de articulos en explora %>
+    <%# Seccion de codigo para el randomize %>
+
+
+<article class="producto-individual">
+
+    <div><img class="img-producto" src="<%=prod[randomize].img %> "></div>
+            
+        <div class="descripcion-producto-main">
+
+            <% if (prod[randomize].oferta){%> 
+                <p class="precio"> <%=prod[randomize].precioConOferta %>$</p>
+                <p class="descuento"> <%=prod[randomize].ofertaPorcentaje %>% off</p>
+                <p class="descripcion"> <%=prod[randomize].marca %> <%=prod[randomize].modelo %></p>
+            <% } 
+            else { %>
+                <p class="precio"> <%=prod[randomize].precio %>$</p>
+                <p class="descripcion"> <%=prod[randomize].marca %> <%=prod[randomize].modelo %></p>
+
+            <% } %>
+         </div>
+
+</article>  
+ 
+<% repetido=true %> 
+
+<% }%> 
+
+</section>

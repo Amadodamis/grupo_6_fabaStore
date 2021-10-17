@@ -1,14 +1,17 @@
-let arrayProductos=require("../views/source/products");
+let Productos=require("../views/source/products");
+
 
 let controller={
 
-    index:(req,res)=>{
-        res.render("index",{prod:arrayProductos})
+    index:(req,res)=>{  // vista de la pantalla principal
+        res.render("index",{prod:Productos}) //
     },
+
     detail: (req, res) => {
-        let product = arrayProductos.find(product => product.id == req.params.productId);
+        let product = Productos.find(product => product.id == req.params.productId);
         res.render("productDetail", { product: product });
     }
 }
 
 module.exports = controller;
+

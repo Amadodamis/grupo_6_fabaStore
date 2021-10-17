@@ -28,20 +28,25 @@ let tipoProducto=[
 /*
 
   {
-        modelo:"",
-        marca:"",
-        tipoProducto:tipoProducto[],                    //Tipo producto
-        img:"",
-        precio:"",                          //tipo num 
-        stock:true,
-        stockCant:"",                        //tipo num 
-        oferta:false,
-        ofertaPorcentaje:0,
-        precioConOferta:precionConOfertafunction(this.precio, this.ofertaPorcentaje),                 //tipo num 
-        cuotasSinInteres:false,
+        modelo:"",                              //modelo del producto                       tipo string
+        marca:"",                               //marca del producto                        tipo string
+        tipoProducto:tipoProducto[],            //Tipo producto ejemplo motherboard/mouse   tipo string
+        img:"",                                 //ruta del producto incluyendo /img         tipo string
+        precio:"",                              //precio del producto ,                     tipo num 
+        stock:true,                             //Si existe producto en stock               tipo booleano
+        stockCant:"",                           //Cantidad del mismo producto               tipo num   
+        oferta:false,                           //Existe oferta para el producto            tipo booleano
+        ofertaPorcentaje:0,                     //Cuantitividad de la oferta                tipo num
+        precioConOferta:precionConOfertafunction(this.precio, this.ofertaPorcentaje),       tipo num
+        cuotasSinInteres:false,                 //si el producto tiene o no interes         tipo boolean 
+        cantCuotas:0,                           //cantidad de cuotas                        tipo num
+        precioEnCuotas:0,                       //precio en cuotas                          tipo num
+        especificaciones:[{propiedad:valor}],   //array donde cada posicion  es una especificacion  tipo array de objetos
+                                                                                       
     },
     
 */
+
 function precioConOfertaf(precioAct,porcentaje,oferta) {
     let precioNuevo=precioAct; //para evitar errores.
     
@@ -50,6 +55,36 @@ function precioConOfertaf(precioAct,porcentaje,oferta) {
     }
 
     return precioNuevo;
+}
+
+function interesCuota(hayInteres,precio,cuotas){
+    let precioNuevo;
+    if (hayInteres==false){
+        return precio;
+    }
+
+    if (cuotas==0) {
+        return precio;
+
+    }else if (cuotas==3){
+        //interes 3%
+        precioNuevo= (precio+((precio/100)*3));
+        return precioNuevo;
+    }else if(cuotas==6){
+        //interes 3.7
+        precioNuevo= (precio+((precio/100)*3.7));
+        return precioNuevo;
+    }else if (cuotas==12){
+        //interes 5.5
+        precioNuevo= (precio+((precio/100)*5.5));
+        return precioNuevo;
+    }else{
+        //interes 5.5+ 0.3% por cada cuota 
+        let interes=5.5+((cuotas-12)*0.3);
+        precioNuevo= (precio+((precio/100)*interes));
+        return precioNuevo;
+    }
+   //devuelve el precio con el porcentaje de interes
 }
 
 
@@ -67,6 +102,10 @@ let productos=[
         ofertaPorcentaje:15,
         precioConOferta:precioConOfertaf(5400,15,true), 
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
         modelo:"B550",
@@ -80,6 +119,10 @@ let productos=[
         ofertaPorcentaje:20,
         precioConOferta:precioConOfertaf(12200,20,true),
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -94,6 +137,10 @@ let productos=[
         ofertaPorcentaje:10,
         precioConOferta:precioConOfertaf(31370,10,true), 
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -104,10 +151,14 @@ let productos=[
         precio:22000,                          //tipo num 
         stock:true,
         stockCant:1,                        //tipo num 
-        oferta:false,
+        oferta:true,
         ofertaPorcentaje:25,
         precioConOferta:precioConOfertaf(22000,25,true),
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -122,6 +173,10 @@ let productos=[
         ofertaPorcentaje:15,
         precioConOferta:precioConOfertaf(182540,15,true),                //tipo num 
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -136,6 +191,10 @@ let productos=[
         ofertaPorcentaje:10,
         precioConOferta:precioConOfertaf(17780,10,true),
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -150,6 +209,10 @@ let productos=[
         ofertaPorcentaje:35,
         precioConOferta:precioConOfertaf(8890,35,true),
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
     {
 
@@ -164,6 +227,10 @@ let productos=[
         ofertaPorcentaje:0,
         precioConOferta:precioConOfertaf(20000,0,false), 
         cuotasSinInteres:false,
+        cantCuotas:0,
+        interescuota:0,
+        precioEnCuotas:0,  
+        especificaciones:[],
     },
 
 ]
