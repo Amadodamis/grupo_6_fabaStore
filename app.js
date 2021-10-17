@@ -15,7 +15,7 @@ var loginRouter = require('./routes/loginRouter');
 var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
-var uploadProductsRouter = require ('./routes/uploadProductsRouter')
+var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 
 
 //llamados 
@@ -26,7 +26,7 @@ app.use("/login", loginRouter);
 
 app.post("/login", (req,res) => {
     res.redirect("/index")
-})
+});
 
 app.use("/productCart", productCartRouter);
 

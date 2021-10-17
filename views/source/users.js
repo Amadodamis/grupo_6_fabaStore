@@ -10,11 +10,12 @@ let carritoPersonal=[
 
 let users=[
     {
-    user:"anonimo",
+    user:"admin",
     nUser:0,
-    nombre_y_apellido:"anonimo",
-    mail:"anonimo@gmail.com",
-    password:"anonimo",
+    admin:true,
+    nombre_y_apellido:"admin",
+    mail:"admin@gmail.com",
+    password:"admin123",
     domicilio:"anonimo",
     cart:carritoPersonal,  
 
@@ -22,6 +23,7 @@ let users=[
     {
         user:"jmilei",
         nUser:1,
+        admin:false,
         nombre_y_apellido:"Javier Gerardo Milei",
         mail:"jmilei@gmail.com",
         password:"libertadAvanza2020",
@@ -32,6 +34,7 @@ let users=[
     {  
     user:"Dtrump2025",
     nUser:2,
+    admin:false,
     nombre_y_apellido:"Donald trump",
     mail:"dtrump@gmail.com",
     password:"CHAINA-CHAINA-CHAINA",
@@ -43,6 +46,7 @@ let users=[
     {
         user:"Satoshi nakamoto ",
         nUser:3,
+        admin:false,
         nombre_y_apellido:"Satoshi nakamoto",
         mail:"SatoshiBTC@gmail.com",
         password:"BTCISNOTABUBBLE",
@@ -60,6 +64,9 @@ cartDefault.push(productos[7])        //se le asigna a la posicion 1, la macbook
 cartDefault.push(productos[7])        //2 macbooks
 cartDefault.push(productos[7])         //3macbooks
 cartDefault.push(productos[7])          //4mcbooks
+
+users[0].cart=cartDefault;  //asignacion del array al usuario 0 (el admin )
+console.log(users[0])  
 
 
 module.exports=users;

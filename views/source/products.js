@@ -27,7 +27,7 @@ let tipoProducto=[
 /*
 
   {
-        Nombreproducto:"",
+        modelo:"",
         marca:"",
         tipoProducto:tipoProducto[],                    //Tipo producto
         img:"",
@@ -45,7 +45,7 @@ let tipoProducto=[
 let productos=[
     {
         id: 1,
-        Nombreproducto:"G502",
+        modelo:"G502",
         marca:"Logitech",
         tipoProducto:tipoProducto[12],     //Tipo producto
         img:"/img/mouseG502.png",
@@ -59,7 +59,7 @@ let productos=[
     },
     {
         id: 2,
-        Nombreproducto:"B550",
+        modelo:"B550",
         marca:"Asus",
         tipoProducto:tipoProducto[11],     //Tipo producto
         img:"/img/motherb550.png",
@@ -73,7 +73,7 @@ let productos=[
     },
     {
         id: 3,
-        Nombreproducto:"Ryzen 5 - 5600x",
+        modelo:"Ryzen 5 - 5600x",
         marca:"AMD",
         tipoProducto:tipoProducto[9],                    //Tipo producto
         img:"/img/ryzen5-5600X.png",
@@ -87,7 +87,7 @@ let productos=[
     },
     {
         id: 4,
-        Nombreproducto:"Tridentz 8gb",
+        modelo:"Tridentz 8gb",
         marca:"G.skill",
         tipoProducto:tipoProducto[7],                    //Tipo producto
         img:"/img/ramGskill.png",
@@ -101,7 +101,7 @@ let productos=[
     },
     {
         id: 5,
-        Nombreproducto:"RTX 3060ti",
+        modelo:"RTX 3060ti",
         marca:"Geforce now",
         tipoProducto:tipoProducto[15],                    //Tipo producto
         img:"/img/Nvidia3060ti.png",
@@ -115,7 +115,7 @@ let productos=[
     },
     {
         id: 6,
-        Nombreproducto:"RM-850",
+        modelo:"RM-850",
         marca:"Gigabyte",
         tipoProducto:tipoProducto[5],                    //Tipo producto
         img:"/img/FuenteAlimentación.png",
@@ -129,7 +129,7 @@ let productos=[
     },
     {
         id: 7,
-        Nombreproducto:"atx k501l",
+        modelo:"atx k501l",
         marca:"Cooler Master",
         tipoProducto:tipoProducto[6],                    //Tipo producto
         img:"/img/Gabinete.png",
@@ -143,7 +143,7 @@ let productos=[
     },
     {
         id: 8,
-        Nombreproducto:"mcbook pro 2019",
+        modelo:"mcbook pro 2019",
         marca:"Mac",
         tipoProducto:tipoProducto[13],                    //Tipo producto
         img:"img/img-macbook-pro-2019.png",

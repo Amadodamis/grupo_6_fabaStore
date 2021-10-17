@@ -6,6 +6,6 @@ var controller=require("../controllers/registerController")
 
 router.get("", controller.register);
 
-router.post("",controller.formulario)
+router.post("",controller.formulario);
 
 module.exports = router;
