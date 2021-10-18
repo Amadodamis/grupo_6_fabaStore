@@ -77,11 +77,9 @@ cartDefault.push(productos[7])          //4mcbooks
 users[0].cart=cartDefault;  //asignacion del array al usuario 0 (el admin )
 
 
-console.log(users[0].totalApagar)
 if (users[0].ArmadoEnElLocal){
     users[0].totalApagar=users[0].totalApagar+users[0].precio;
 }
-console.log(users[0].totalApagar)
 
 if (productos[3].oferta){
     users[0].totalApagar=users[0].totalApagar+ productos[3].precioConOferta;

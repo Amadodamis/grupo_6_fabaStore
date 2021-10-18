@@ -1,55 +1,53 @@
 <%if (user.cart[0]) {%>
     
 
-<section class="producto-y"> <!-- Producto armado compu-->
-    <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
-        <i class="far fa-caret-square-down"></i>
-        <i class="far fa-caret-square-up"></i>
-        <i class="fas fa-exchange-alt"></i>
-        <i class="far fa-window-close"></i>
-    </div>
+<section class="producto-x"> <!-- Producto armado compu-->
+    
 
     <div class="img-producto-cart">
         <img class="jpg-producto" src="<%= user.cart[0].img %>" alt="armado-pc">
     </div>
-    
-    <div class="bloque-descripcion">                        <!--Descripcion del pro-->
+    <div class="bloque-descripcion">    
+        <div class="buttons-close-change-minimize">                     
+        <i class="far fa-caret-square-down"></i>
+        <i class="far fa-caret-square-up"></i>
+        <i class="fas fa-exchange-alt"></i>
+        <i class="far fa-window-close"></i>
+        </div>
+        <div>
         <p class="nombre-producto-cart"><%= user.cart[0].Nombre %></p>
 
         <div class="precio-cart">
             <p>Precio</p>
             <p><%= user.cart[0].precio %> $</p>
         </div>
-
+        </div>
     </div>
 
     
 </section>
 <% }  %> 
-
-<%for (let i = 1; i < user.cart.length; i++) { %> 
+<%= user.cart.lengt %> 
+<%for (let i = 1; i < user.cart.length   ; i++) { %> 
     
 <section class="producto-x">
-    <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
-        <i class="far fa-caret-square-down"></i>
-        <i class="far fa-caret-square-up"></i>
-        <i class="fas fa-exchange-alt"></i>
-        <i class="far fa-window-close"></i>
-    </div>
-
+    
     <div class="img-producto-cart">
         <img class="jpg-producto" src="<%= user.cart[i].img %>" alt="macbook">
     </div>
     
 
-    <div class="bloque-descripcion">                        <!--Descripcion del pro-->
-        <p class="nombre-producto-cart"><%= user.cart[i].modelo %></p>
+    <div class="bloque-descripcion">   
 
-        <div class="stock-d">
-            <p>Stock disponible </p> 
-            <i class="far fa-check-circle"></i> 
+        <div class="buttons-close-change-minimize">                      <!--Botones cambiar y quitar de lel carrito-->
+            <i class="far fa-caret-square-down"></i>
+            <i class="far fa-caret-square-up"></i>
+            <i class="fas fa-exchange-alt"></i>
+            <i class="far fa-window-close"></i>
         </div>
 
+        <div>
+        <p class="nombre-producto-cart"><%= user.cart[i].modelo %></p>
         <div class="box-producto-cant">                      <!--Botones cantidad-->
             <p>Cantidad</p>
             <div class="botones-producto-cant"> 
@@ -72,10 +70,11 @@
                 
                 <%}  %> 
         </div>
-
+        </div>
     </div>
 
 
 </section>
+<br>
 
 <% } %> 
