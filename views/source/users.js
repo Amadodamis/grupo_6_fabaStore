@@ -6,7 +6,7 @@ let carritoPersonal=[
         ArmadoEnElLocal:false,
         Nombre:"Armado de la computadora",
         precio:1000,
-        img:"img/armado-pc-producto.png",
+        img:"img/armado-pc-producto.jpg",
     },
     
 ];  // todos los users, van a tener un array cart en la que la posicion 0 (user.cart[0]) es excluisva para el armado de la pc, y es un tipo de dato booleano. 
@@ -74,8 +74,28 @@ cartDefault.push(productos[1])        //2 macbooks
 cartDefault.push(productos[5])         //3macbooks
 cartDefault.push(productos[7])          //4mcbooks
 
-
 users[0].cart=cartDefault;  //asignacion del array al usuario 0 (el admin )
 
+
+if (users[0].ArmadoEnElLocal){
+    users[0].totalApagar=users[0].totalApagar+users[0].precio;
+}
+
+if (productos[3].oferta){
+    users[0].totalApagar=users[0].totalApagar+ productos[3].precioConOferta;
+}else{users[0].totalApagar=users[0].totalApagar+ productos[3].precio}
+
+if (productos[1].oferta){
+    users[0].totalApagar=users[0].totalApagar+ productos[1].precioConOferta;
+}else{users[0].totalApagar=users[0].totalApagar+ productos[1].precio}
+
+if (productos[5].oferta){
+    users[0].totalApagar=users[0].totalApagar+ productos[5].precioConOferta;
+}else{users[0].totalApagar=users[0].totalApagar+ productos[5].precio}
+
+
+if (productos[7].oferta){
+    users[0].totalApagar=users[0].totalApagar+ productos[7].precioConOferta;
+}else{users[0].totalApagar=users[0].totalApagar+ productos[7].precio}
 
 module.exports=users;
