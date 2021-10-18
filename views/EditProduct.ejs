@@ -16,20 +16,21 @@
     
         <section class="section-formulario-register">
     
-            <form action="/uploadProducts" method="POST" class="form-registro">
+            <form action="/uploadProducts" method="PUT" class="form-registro">
     
-                <p class="iniciar-sesion-tamañano">Agregar Producto</p>
+                <p class="iniciar-sesion-tamañano">Editar producto </p>
+                <br>
     
                 <div class="control-form">
-                    <input type="text" name="producto" placeholder="Nombre de Producto" class="control" required>
+                    <input type="text" name="producto" placeholder="<%= prod.modelo %>" class="control" required>
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="marca" placeholder="Marca del Producto" class="control" required>
+                    <input type="text" name="marca" placeholder= "<%= prod.marca %>" class="control" required>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="tipo" placeholder="Tipo de Producto" class="control" required>
+                    <input type="text" name="tipo" placeholder="<%= prod.tipoProducto %>" class="control" required>
                 </div>
     
                 <div class="control-form">
@@ -37,7 +38,7 @@
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio del Producto">
+                    <input type="text" name="precio" class="control" placeholder="Precio Actual: <%= prod.precio %>">
                 </div>
                 
                 <div class="iniciar-sesion-tamañano"> Stock disponible</div>
@@ -50,7 +51,7 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="stock" class="control" placeholder="Cantidad de Stock disponible">
+                    <input type="text" name="stock" class="control" placeholder="Stock actual: <%= prod.stockCant %>">
                 </div>
 
                 <div class="iniciar-sesion-tamañano"> En Oferta </div>
@@ -63,11 +64,11 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="descuento" class="control" placeholder="Descuento por estar en Oferta (%)">
+                    <input type="text" name="descuento" class="control" placeholder="Porcentaje de oferta actual: <%= prod.ofertaPorcentaje %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio con Oferta">
+                    <input type="text" name="precio" class="control" placeholder="Precio con oferta: <%= prod.precioConOferta %>">
                 </div>
     
                 <div class="control-form">
