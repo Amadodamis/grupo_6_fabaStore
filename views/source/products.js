@@ -102,9 +102,9 @@ let productos=[
         ofertaPorcentaje:15,
         precioConOferta:precioConOfertaf(5400,15,true), 
         cuotasSinInteres:false,
-        cantCuotas:0,
-        interescuota:0,
-        precioEnCuotas:0,  
+        cantCuotas: 12,
+        interescuota: 0,
+        precioEnCuotas: 6480,
         especificaciones:[],
     },
     {

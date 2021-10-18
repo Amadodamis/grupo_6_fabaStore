@@ -15,9 +15,9 @@
          <div class="ficha">
             <div class="izquierda">
                 <!-- Acá va el código de JS - Array.filter para ir eligiengo los distintos products.id -->
-                <h2 class="estilo-Titulo-DP">Mouse de juego Logitech G Series Hero 16K G502 negro</h2>
+                <h2 class="estilo-Titulo-DP"><%= productos[0].tipoProducto %>  de juego <%= productos[0].marca %>  <%= productos[0].modelo %> </h2>
                 <div>
-                    <img src="/img/mouseG502.png" class="imagen-Produc-Detail">
+                    <img  class="imagen-Produc-Detail" src= <%=productos[0].img%> >
                 </div>
                 <div class="estilos-Especificaciones-DP">
                     <h3 class="tamaño-h3-DP">Especificaciones</h5>
@@ -36,17 +36,18 @@
             </div>
             <div class="derecha">
                 <div class="estilos-Precio-DP">
-               <h1 class="Precio-DP">$5400</h1>
-               <h1 class="titulos-h1"> Efectivo</h1>
-               <h3 class="Precio-DP">$6400 </h3>
-               <h3 class="titulos-h3">precio de lista</h3>
+                
+                        <h1 class="Precio-DP">$<%= productos[0].precio %> </h1>
+                        <h1 class="titulos-h1"> Precio en Cuotas </h1>
+                        <h3 class="Precio-DP">$<%= productos[0].precioEnCuotas %> </h3>
+                  
                 </div>
                 <div class="info-ficha-cuotas">
                     <div class="iconos-DP">
                         <i class="fas fa-credit-card iconos-DP-tamaño"></i>
                     </div>
                     <div>
-                        <p>12 x $533,33 sin interés</p>
+                        <p><%= productos[0].cantCuotas %> x $<%= productos[0].precioEnCuotas / productos[0].cantCuotas  %>  sin interés</p>
                         <p class="tamaño-texto-DP">Precio de lista</p>
                         <button type="button" class="boton-DP">Ver cuotas</button>
                     </div>

@@ -1,9 +1,9 @@
-let arrayProductos=require("../views/source/products");
+let productos=require("../views/source/products");
 
 let controller={
 
     productDetail:(req,res)=>{
-        res.render("productDetail")
+        res.render("productDetail",{productos:productos})
     },
 }
 
