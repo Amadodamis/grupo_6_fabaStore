@@ -3,7 +3,8 @@ let productos=require("../views/source/products");
 let controller={
 
     productDetail:(req,res)=>{
-        res.render("productDetail",{productos:productos})
+        let id=req.params.id;
+        res.render("productDetail",{prod:productos[id]})
     },
 }
 

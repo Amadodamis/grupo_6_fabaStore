@@ -15,9 +15,9 @@
          <div class="ficha">
             <div class="izquierda">
                 <!-- Acá va el código de JS - Array.filter para ir eligiengo los distintos products.id -->
-                <h2 class="estilo-Titulo-DP"><%= productos[0].tipoProducto %>  de juego <%= productos[0].marca %>  <%= productos[0].modelo %> </h2>
+                <h2 class="estilo-Titulo-DP"><%= prod.tipoProducto %>  de juego <%= prod.marca %>  <%= prod.modelo %> </h2>
                 <div>
-                    <img  class="imagen-Produc-Detail" src= <%=productos[0].img%> >
+                    <img  class="imagen-Produc-Detail" src=<%=prod.img%> >
                 </div>
                 <div class="estilos-Especificaciones-DP">
                     <h3 class="tamaño-h3-DP">Especificaciones</h5>
@@ -37,9 +37,9 @@
             <div class="derecha">
                 <div class="estilos-Precio-DP">
                 
-                        <h1 class="Precio-DP">$<%= productos[0].precio %> </h1>
+                        <h1 class="Precio-DP">$<%= prod.precio %> </h1>
                         <h1 class="titulos-h1"> Precio en Cuotas </h1>
-                        <h3 class="Precio-DP">$<%= productos[0].precioEnCuotas %> </h3>
+                        <h3 class="Precio-DP">$<%= prod.precioEnCuotas %> </h3>
                   
                 </div>
                 <div class="info-ficha-cuotas">
@@ -47,7 +47,7 @@
                         <i class="fas fa-credit-card iconos-DP-tamaño"></i>
                     </div>
                     <div>
-                        <p><%= productos[0].cantCuotas %> x $<%= productos[0].precioEnCuotas / productos[0].cantCuotas  %>  sin interés</p>
+                        <p><%= prod.cantCuotas %> x $<%= prod.precioEnCuotas / prod.cantCuotas  %>  sin interés</p>
                         <p class="tamaño-texto-DP">Precio de lista</p>
                         <button type="button" class="boton-DP">Ver cuotas</button>
                     </div>

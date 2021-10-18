@@ -12,7 +12,7 @@ let tipoProducto=[
   /*10*/"Monitor o televisor",
   /*11*/"Motherboard",
   /*12*/"Mouse",
-  /*13*/"notebook",
+  /*13*/"Notebook",
   /*14*/"Parlante",
   /*15*/"Placa de video",
   /*16*/"Sillas gammer",
@@ -21,31 +21,30 @@ let tipoProducto=[
 
 ];
 
-
-
 //producto rapido
 
 /*
 
   {
-        modelo:"",                              //modelo del producto                       tipo string
-        marca:"",                               //marca del producto                        tipo string
-        tipoProducto:tipoProducto[],            //Tipo producto ejemplo motherboard/mouse   tipo string
-        img:"",                                 //ruta del producto incluyendo /img         tipo string
-        precio:"",                              //precio del producto ,                     tipo num 
-        stock:true,                             //Si existe producto en stock               tipo booleano
-        stockCant:"",                           //Cantidad del mismo producto               tipo num   
-        oferta:false,                           //Existe oferta para el producto            tipo booleano
-        ofertaPorcentaje:0,                     //Cuantitividad de la oferta                tipo num
+        modelo:"",                                  //modelo del producto                       tipo string
+        marca:"",                                   //marca del producto                        tipo string
+        tipoProducto:tipoProducto[],                //Tipo producto ejemplo motherboard/mouse   tipo string
+        img:"",                                     //ruta del producto incluyendo /img         tipo string
+        precio:"",                                  //precio del producto ,                     tipo num 
+        stock:true,                                 //Si existe producto en stock               tipo booleano
+        stockCant:"",                               //Cantidad del mismo producto               tipo num   
+        oferta:false,                               //Existe oferta para el producto            tipo booleano
+        ofertaPorcentaje:0,                         //Cuantitividad de la oferta                tipo num
         precioConOferta:precionConOfertafunction(this.precio, this.ofertaPorcentaje),       tipo num
-        cuotasSinInteres:false,                 //si el producto tiene o no interes         tipo boolean 
-        cantCuotas:0,                           //cantidad de cuotas                        tipo num
-        precioEnCuotas:0,                       //precio en cuotas                          tipo num
-        especificaciones:[{propiedad:valor}],   //array donde cada posicion  es una especificacion  tipo array de objetos
+        cuotasSinInteres:false,                     //si el producto tiene o no interes         tipo boolean 
+        cantCuotas:0,                               //cantidad de cuotas                        tipo num
+        precioEnCuotas:0,                           //precio en cuotas                          tipo num
+        especificaciones:[{propiedad:valor}],       //array donde cada posicion  es una especificacion  tipo array de objetos
                                                                                        
     },
     
 */
+
 
 function precioConOfertaf(precioAct,porcentaje,oferta) {
     let precioNuevo=precioAct; //para evitar errores.
@@ -86,7 +85,6 @@ function interesCuota(hayInteres,precio,cuotas){
     }
    //devuelve el precio con el porcentaje de interes
 }
-
 
 
 let productos=[
@@ -219,7 +217,7 @@ let productos=[
         modelo:"Mcbook pro 2019",
         marca:"Mac",
         tipoProducto:tipoProducto[13],                    //Tipo producto
-        img:"img/img-macbook-pro-2019.png",
+        img:"/img/img-macbook-pro-2019.png",
         precio:200000,                          //tipo num 
         stock:true,
         stockCant:1,                        //tipo num 
@@ -236,13 +234,13 @@ let productos=[
         modelo:"alloy elite",
         marca:"Hyper-x",
         tipoProducto:tipoProducto[17],                    
-        img:"img/Alloy-elite-hyperx.png",
-        precio:95000,                          
+        img:"/img/Alloy-elite-hyperx.png",
+        precio:50000,                          
         stock:true,
         stockCant:1,                      
-        oferta:false,
-        ofertaPorcentaje:0,
-        precioConOferta:precioConOfertaf(95000,0,false), 
+        oferta:true,
+        ofertaPorcentaje:7,
+        precioConOferta:precioConOfertaf(50000,7,true), 
         cuotasSinInteres:false,
         cantCuotas:0,
         interescuota:0,
@@ -253,7 +251,7 @@ let productos=[
         modelo:"I9 LGA 2066 ",
         marca:"Intel",
         tipoProducto:tipoProducto[9],                    
-        img:"img/i9-lga-2066.png",
+        img:"/img/i9-lga-2066.png",
         precio:250000,                          
         stock:true,
         stockCant:1,                      
@@ -270,13 +268,13 @@ let productos=[
         modelo:"HD 5970 ",
         marca:"Ati radeon",
         tipoProducto:tipoProducto[15],                    
-        img:"img/Ati-radeon-5970.png",
+        img:"/img/Ati-radeon-5970.png",
         precio:19000,                          
         stock:true,
         stockCant:1,                      
-        oferta:false,
-        ofertaPorcentaje:0,
-        precioConOferta:precioConOfertaf(95000,0,false), 
+        oferta:true,
+        ofertaPorcentaje:30,
+        precioConOferta:precioConOfertaf(19000,30,true), 
         cuotasSinInteres:false,
         cantCuotas:0,
         interescuota:0,
@@ -288,7 +286,7 @@ let productos=[
         modelo:"r9 ",
         marca:"Ati radeon",
         tipoProducto:tipoProducto[15],                    
-        img:"img/Ati-radeon-r9.png",
+        img:"/img/Ati-radeon-r9.png",
         precio:84000,                          
         stock:true,
         stockCant:1,                      
@@ -305,7 +303,7 @@ let productos=[
         modelo:"X 399 AORUS",
         marca:"gigabyte",
         tipoProducto:tipoProducto[11],                    
-        img:"img/gigabyte-399.png",
+        img:"/img/gigabyte-399.png",
         precio:75000,                          
         stock:true,
         stockCant:1,                      
@@ -322,7 +320,7 @@ let productos=[
         modelo:"ATX b350",
         marca:"ASUS",
         tipoProducto:tipoProducto[11],                    
-        img:"img/asus-atx-b350.png",
+        img:"/img/asus-atx-b350.png",
         precio:65000,                          
         stock:true,
         stockCant:1,                      
@@ -340,20 +338,19 @@ let productos=[
         modelo:"I7 7700K",
         marca:"Intel",
         tipoProducto:tipoProducto[9],                    
-        img:"img/i7-7700k.png",
+        img:"/img/i7-7700k.png",
         precio:150000,                          
         stock:true,
         stockCant:1,                      
-        oferta:false,
-        ofertaPorcentaje:0,
-        precioConOferta:precioConOfertaf(95000,0,false), 
+        oferta:true,
+        ofertaPorcentaje:13,
+        precioConOferta:precioConOfertaf(150000,13,true), 
         cuotasSinInteres:false,
         cantCuotas:0,
         interescuota:0,
         precioEnCuotas:0,  
         especificaciones:[],
     },
-
 ]
 
 

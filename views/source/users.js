@@ -98,4 +98,5 @@ if (productos[7].oferta){
     users[0].totalApagar=users[0].totalApagar+ productos[7].precioConOferta;
 }else{users[0].totalApagar=users[0].totalApagar+ productos[7].precio}
 
+
 module.exports=users;

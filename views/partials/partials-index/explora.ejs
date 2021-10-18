@@ -6,7 +6,7 @@
  let randomize;
  let arrayTest=[];
  let found; %> 
-<%for (let i = 0; i <=7; i++) {  %> 
+<%for (let i = 0; i <8; i++) {  %> 
     <% 
         while (repetido==true){
             randomize=Math.floor(Math.random() * prod.length) + 0; 
@@ -21,9 +21,9 @@
     <%# Seccion de codigo para el randomize %>
 
 
-<article class="producto-individual">
+    <article class="producto-individual">
 
-    <div><img class="img-producto" src="<%=prod[randomize].img %> "></div>
+        <div><img class="img-producto" src="<%=prod[randomize].img %> "></div>
             
         <div class="descripcion-producto-main">
 
@@ -39,9 +39,9 @@
             <% } %>
          </div>
 
-</article>  
+    </article>  
  
-<% repetido=true %> 
+    <% repetido=true %> 
 
 <% }%> 
 
