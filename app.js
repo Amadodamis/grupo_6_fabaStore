@@ -23,11 +23,14 @@ var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
+var productsRouter = require('./routes/productsRouter'); // Rutas /products
 
 
 //llamados
 
 app.use("/", indexRouter); //index
+
+app.use ("/products",productsRouter); //products
 
 app.use("/login", loginRouter);
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head') %>
+
+<body class="body-index" >
+
+    <%- include('./partials/header') %>
+
+    <section class="container-banner">
+        <div class="banner"> </div>
+    </section>
+
+
+    <div class="plus-button-fixed">
+        <i class="fas fa-plus-circle"></i>
+        
+    </div>
+    <br>
+    <main class="barra-y-box-productos">
+            <section class="barra-lateral">
+                <a href="#"><p class="una-palabra-barra-lateral">Arma tu pc</p></a>
+                <a href="/"><p class="una-palabra-barra-lateral">Almacenamiento</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Auriculares</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Cables</p></a>
+                <a href="#"><p class="dos-palabras-barra-lateral">Combo actualizacion</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Coolers</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Fuentes de poder</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Gabinetes</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Memorias ram</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Microfonos</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Microprocesadores</p></a>
+                <a href="#"><p class="dos-palabras-barra-lateral">Monitores y televisores</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Motherboards</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Mouses</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Notebooks</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Parlantes</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Placas de video</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral" >Sillas gamer</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Teclados</p></a>
+                <a href="#"><p class="una-palabra-barra-lateral">Webcams</p></a>
+            </section>
+
+            <section class="box-productos-main">
+                <h1 class="main-h1"> Todos los productos </h1>
+                <section class="fila-productos">
+                    <% for( let index = 0; index < prod.length; index++ ) { %>
+                    
+                        <article class="producto-individual">
+            
+                            <div><img class="img-producto" src=<%= prod[index].img %> ></div>
+                    
+                            <div class="descripcion-producto-main">
+                                <p class="precio"> <%= prod[index].precioConOferta %> $</p>
+                                <p class="descuento"> <%= prod[index].ofertaPorcentaje %> % off</p>
+                                <p class="descripcion"> <%= prod[index].modelo %> <%= prod[index].marca %></p>
+                            </div>
+                        </article>
+                <% } %>
+                </section>
+            </section>
+
+    </main>  
+    <br>
+    <%- include('./partials/footer') %>
+    
+</body>
+
+</html>
