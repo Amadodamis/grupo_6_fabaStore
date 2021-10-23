@@ -4,15 +4,15 @@
     <% for( let index = 0; index < prodOferta.length; index++ ) { %>
         
     <article class="producto-individual">
-
-        <div><img class="img-producto" src=<%= prod[index].img %> ></div>
+        <a href="../../productDetail/<%= prodOferta[index].id %>">
+            <div><img class="img-producto" src=<%= prodOferta[index].img %> ></div>
         
-        <div class="descripcion-producto-main">
-            <p class="precio"> <%= prodOferta[index].precioConOferta %> $</p>
-            <p class="descuento"> <%= prodOferta[index].ofertaPorcentaje %> % off</p>
-            <p class="descripcion"> <%= prodOferta[index].modelo %> <%= prodOferta[index].marca %></p>
-        </div>
-
+            <div class="descripcion-producto-main">
+                <p class="precio"> <%= prodOferta[index].precioConOferta %> $</p>
+                <p class="descuento"> <%= prodOferta[index].ofertaPorcentaje %> % off</p>
+                <p class="descripcion"> <%= prodOferta[index].modelo %> <%= prodOferta[index].marca %></p>
+            </div>
+        </a>
     </article>
     <% } %>
     
