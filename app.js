@@ -1,13 +1,20 @@
-const express = require ("express")
-const app = express ()
+// ************ Require's ************
+const express = require ("express");
 const path = require ("path")
+const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
 
+// ************ express() - (don't touch) ************
+const app = express ();
+
+// ************ Middlewares - (NO TOCAR) ************
+app.use(express.static(path.resolve(__dirname, "./public"))); // Necesario para los archivos estáticos en el folder /public
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
+
+// ************ Template Engine - (NO TOCAR) ************
 app.set('view engine', 'ejs');
-app.use(express.static(path.resolve(__dirname, "./public")));
-
-
-//Servidor
-app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3030/" ));
+app.set('views', path.join(__dirname, '/views'));
 
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
@@ -18,7 +25,7 @@ var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 
 
-//llamados 
+//llamados
 
 app.use("/", indexRouter); //index
 
@@ -35,4 +42,12 @@ app.use("/productDetail", productDetailRouter);
 app.use("/register", registerRouter);
 
 app.use("/uploadProducts", uploadProductsRouter);
+
+// ************ Set the server to listen - (NO TOCAR) ************
+app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3030/" ));
+
+
+
+
+
 
