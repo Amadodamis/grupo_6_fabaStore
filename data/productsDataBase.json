@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "modelo":"G502",
         "marca":"Logitech",
         "tipoProducto":"Mouse",
@@ -17,6 +18,7 @@
         "especificaciones":""
     },
     {
+        "id": 2,
         "modelo":"B550",
         "marca":"Asus",
         "tipoProducto": "Motherboard",
@@ -34,7 +36,8 @@
         "especificaciones":""
     },
     {
-
+        
+        "id": 3,
         "modelo":"Ryzen 5 - 5600x",
         "marca":"AMD",
         "tipoProducto":"Microprocesador",
@@ -53,6 +56,7 @@
     },
     {
 
+        "id": 4,
         "modelo":"Tridentz 8gb",
         "marca":"G.skill",
         "tipoProducto":"Memoria Ram",
@@ -71,6 +75,7 @@
     },
     {
 
+        "id": 5,
         "modelo":"RTX 3060ti",
         "marca":"Geforce now",
         "tipoProducto":"Placa de Video",
@@ -89,6 +94,7 @@
     },
     {
 
+        "id": 6,
         "modelo":"RM-850",
         "marca":"Gigabyte",
         "tipoProducto":"Fuente",
@@ -107,6 +113,7 @@
     },
     {
 
+        "id": 7,
         "modelo":"atx k501l",
         "marca":"Cooler Master",
         "tipoProducto":"Gabinete",
@@ -125,6 +132,7 @@
     },
     {
 
+        "id": 8,
         "modelo":"Mcbook pro 2019",
         "marca":"Mac",
         "tipoProducto":"Notebook",
@@ -142,6 +150,7 @@
         "especificaciones":""
     },
     {
+        "id": 9,
         "modelo":"alloy elite",
         "marca":"Hyper-x",
         "tipoProducto":"Teclado",
@@ -159,6 +168,7 @@
         "especificaciones":""
     },
     {
+        "id": 10,
         "modelo":"I9 LGA 2066 ",
         "marca":"Intel",
         "tipoProducto":"Microprocesador",
@@ -176,6 +186,7 @@
         "especificaciones":""
     },
     {
+        "id": 11,
         "modelo":"HD 5970 ",
         "marca":"Ati radeon",
         "tipoProducto":"Placa de Video",
@@ -194,6 +205,7 @@
 
     },
     {
+        "id": 12,
         "modelo":"r9 ",
         "marca":"Ati radeon",
         "tipoProducto":"Placa de Video",
@@ -211,6 +223,7 @@
         "especificaciones":""
     },
     {
+        "id": 13,
         "modelo":"X 399 AORUS",
         "marca":"gigabyte",
         "tipoProducto":"Motherboard",
@@ -228,6 +241,7 @@
         "especificaciones":""
     },
     {
+        "id": 14,
         "modelo":"ATX b350",
         "marca":"ASUS",
         "tipoProducto":"Motherboard",
@@ -246,6 +260,7 @@
         
     },
     {
+        "id": 15,
         "modelo":"I7 7700K",
         "marca":"Intel",
         "tipoProducto":"Microprocesador",

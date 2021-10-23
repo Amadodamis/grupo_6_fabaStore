@@ -14,16 +14,16 @@
      <section>
          <div class="ficha">
             <div class="izquierda">
-                <!-- Acá va el código de JS - Array.filter para ir eligiengo los distintos products.id -->
-                <h2 class="estilo-Titulo-DP"><%= prod.tipoProducto %>  de juego <%= prod.marca %>  <%= prod.modelo %> </h2>
+                
+                <h2 class="estilo-Titulo-DP"><%= producto.tipoProducto %>  de juego <%= producto.marca %>  <%= producto.modelo %> </h2>
                 <div>
-                    <img  class="imagen-Produc-Detail" src=<%=prod.img%> >
+                    <img  class="imagen-Produc-Detail" src=<%=producto.img%> >
                 </div>
                 <div class="estilos-Especificaciones-DP">
                     <h3 class="tamaño-h3-DP">Especificaciones</h5>
                     <ul class="tamaño-ul-DP">
-                        <li class="distancia-Especificaciones"> <p>Marca</p> <span>Logitech</span></li>
-                        <li class="distancia-Especificaciones"> <p>Modelo</p> <span>G502</span></li>
+                        <li class="distancia-Especificaciones"> <p>Marca</p> <span><%= producto.marca %></span></li>
+                        <li class="distancia-Especificaciones"> <p>Modelo</p> <span><%= producto.modelo %></span></li>
                         <li class="distancia-Especificaciones"> <p>Con Cable</p> <span>Si</span></li>
                         <li class="distancia-Especificaciones"> <p>Tipo de sensor</p> <span>Hero 25K</span> </li>
                         <li class="distancia-Especificaciones"> <p>Resolución de sensor</p> <span>0 - 25000 DPI</span></li>
@@ -37,9 +37,9 @@
             <div class="derecha">
                 <div class="estilos-Precio-DP">
                 
-                        <h1 class="Precio-DP">$<%= prod.precio %> </h1>
+                        <h1 class="Precio-DP">$<%= producto.precio %> </h1>
                         <h1 class="titulos-h1"> Precio en Cuotas </h1>
-                        <h3 class="Precio-DP">$<%= prod.precioEnCuotas %> </h3>
+                        <h3 class="Precio-DP">$<%= producto.precioEnCuotas %> </h3>
                   
                 </div>
                 <div class="info-ficha-cuotas">
@@ -47,7 +47,7 @@
                         <i class="fas fa-credit-card iconos-DP-tamaño"></i>
                     </div>
                     <div>
-                        <p><%= prod.cantCuotas %> x $<%= prod.precioEnCuotas / prod.cantCuotas  %>  sin interés</p>
+                        <p><%= producto.cantCuotas %> x $<%= producto.precioEnCuotas / producto.cantCuotas  %>  sin interés</p>
                         <p class="tamaño-texto-DP">Precio de lista</p>
                         <button type="button" class="boton-DP">Ver cuotas</button>
                     </div>

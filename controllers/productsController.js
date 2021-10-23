@@ -11,9 +11,10 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let controller={
     
     index:(req,res)=>{  // vista de la pantalla principal
-        res.render("products",{prod:productos}) //
+        res.render("products",{
+            prod:productos}) //
     },
-
+    
 }
 
 module.exports = controller;
