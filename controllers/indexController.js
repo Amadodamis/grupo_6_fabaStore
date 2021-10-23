@@ -1,4 +1,14 @@
-let productos=require("../views/source/products");
+const fs = require('fs');
+const path = require('path');
+
+/* En la constante "products" ya tienen los productos que están 
+guardados en la carpeta Data como Json (un array de objetos literales). Por ahora estamos tomando
+los productos de la variable "productos" que está en JS, vamos a tener que empezar a utilizar la variable
+products de ahora en más me parece, para poder guardar los nuevos productos creados */
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+/*let productos=require("../views/source/products");*/
 
 function productosOfertaFunction (arrayProductos){
     let array=[];
