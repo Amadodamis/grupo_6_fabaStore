@@ -1,4 +1,3 @@
-
 let controller={
 
     register:(req,res)=>{

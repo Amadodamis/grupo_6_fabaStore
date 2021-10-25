@@ -1,47 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-/* En la constante "productos" ya tienen los productos que están 
-guardados en la carpeta Data como Json (un array de objetos literales). Por ahora estábamos tomando
-los productos de la variable "productos" que está en JS, vamos a tener que empezar a utilizar la variable
-productos que está en la base de datos JSON de ahora en más me parece, para poder guardar lonuevos productos creados */
+/* Productos viene de la base de datos de json */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-/*let productos=require("../views/source/products");*/
-
-function productosOfertaFunction (arrayProductos){
-    let array=[];
-    let maxActualOferta=0;
-    let indice=0;              //indice es el valor que va a guardar la posicion del valor de oferta mas alto en la iteracion
-    let contador=0;            //contador va a iterar dentro del forEach
-    let indiceRepetido=[];     
-
-    for (let i = 0; i <=3; i++) {
-        arrayProductos.forEach(elemento=>{
-            if (elemento.ofertaPorcentaje>=maxActualOferta){
-                
-                if(!indiceRepetido.includes(contador)){   //si el elemento no está repetido, lo incluyo.
-                    maxActualOferta=elemento.ofertaPorcentaje;
-                    indice=contador; 
-                }
-
-            }
-            contador++;
-            })
-
-        indiceRepetido.push(indice);
-        array[i]=arrayProductos[indice];
-        maxActualOferta=0;contador=0;indice=0;
-        
-    }
-
-return array;
-}
-
-let prodOferta=productosOfertaFunction(productos);
-
-//Array contiene un array de 4 items, con los productos con mayor oferta dentro de productos
+//requiero las funcionalidades de productos
+const funcionesProductos=require("../views/source/funcionesProductos")
+let prodOferta=funcionesProductos.productosOfertaFunction(productos); //prodOferta tiene un array de 4 los 4 elementos con mayor oferta
 
 
 let controller={
