@@ -16,21 +16,21 @@
     
         <section class="section-formulario-register">
     
-            <form action="/EditProducts" method="PUT" class="form-registro">
+            <form action="/editProduct" method="PUT" class="form-registro">
     
                 <p class="iniciar-sesion-tamañano">Editar producto </p>
                 <br>
     
                 <div class="control-form">
-                    <input type="text" name="producto" placeholder="<%= prod.modelo %>" class="control" required>
+                    <input type="text" name="producto" placeholder="<%= producto.modelo %>" class="control" required>
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="marca" placeholder= "<%= prod.marca %>" class="control" required>
+                    <input type="text" name="marca" placeholder= "<%= producto.marca %>" class="control" required>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="tipo" placeholder="<%= prod.tipoProducto %>" class="control" required>
+                    <input type="text" name="tipo" placeholder="<%= producto.tipoProducto %>" class="control" required>
                 </div>
     
                 <div class="control-form">
@@ -38,7 +38,7 @@
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio Actual: <%= prod.precio %>">
+                    <input type="text" name="precio" class="control" placeholder="Precio Actual: <%= producto.precio %>">
                 </div>
                 
                 <div class="iniciar-sesion-tamañano"> Stock disponible</div>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="stock" class="control" placeholder="Stock actual: <%= prod.stockCant %>">
+                    <input type="text" name="stock" class="control" placeholder="Stock actual: <%= producto.stockCant %>">
                 </div>
 
                 <div class="iniciar-sesion-tamañano"> En Oferta </div>
@@ -64,31 +64,31 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="descuento" class="control" placeholder="Porcentaje de oferta actual: <%= prod.ofertaPorcentaje %>">
+                    <input type="text" name="descuento" class="control" placeholder="Porcentaje de oferta actual: <%= producto.ofertaPorcentaje %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio con oferta: <%= prod.precioConOferta %>">
+                    <input type="text" name="precio" class="control" placeholder="Precio con oferta: <%= producto.precioConOferta %>">
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Cuotas sin Interés: <%= prod.cuotasSinInteres %>">
+                    <input type="text" name="cuotas" class="control" placeholder="Cuotas sin Interés: <%= producto.cuotasSinInteres %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Cuotas: <%= prod.cantCuotas %>">
+                    <input type="text" name="cuotas" class="control" placeholder="Cuotas: <%= producto.cantCuotas %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Interés Cuotas: <%= prod.interescuota %>">
+                    <input type="text" name="cuotas" class="control" placeholder="Interés Cuotas: <%= producto.interescuota %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Precio en Cuotas: <%= prod.precioEnCuotas %>">
+                    <input type="text" name="cuotas" class="control" placeholder="Precio en Cuotas: <%= producto.precioEnCuotas %>">
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Especificaciones: <%= prod.especificaciones %>">
+                    <input type="text" name="cuotas" class="control" placeholder="Especificaciones: <%= producto.especificaciones %>">
                 </div>
     
                 <div class="control-form">

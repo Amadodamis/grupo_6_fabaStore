@@ -24,7 +24,7 @@ var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 var productsRouter = require('./routes/productsRouter'); // Rutas /products
-
+var editProductsRouter = require('./routes/editProductsRouter'); // Rutas /editProducts
 
 //llamados
 
@@ -45,6 +45,8 @@ app.use("/productDetail", productDetailRouter);
 app.use("/register", registerRouter);
 
 app.use("/uploadProducts", uploadProductsRouter);
+
+app.use("/editProduct", editProductsRouter);
 
 // ************ Set the server to listen - (NO TOCAR) ************
 app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3030/" ));
