@@ -15,7 +15,7 @@
          <div class="ficha">
             <div class="izquierda">
                 
-                <h2 class="estilo-Titulo-DP"><%= producto.tipoProducto %>  de juego <%= producto.marca %>  <%= producto.modelo %> </h2>
+                <h2 class="estilo-Titulo-DP"><%= producto.tipoProducto %> <%= producto.marca %>  <%= producto.modelo %> </h2>
                 <div>
                     <img  class="imagen-Produc-Detail" src=<%=producto.img%> >
                 </div>
@@ -39,11 +39,12 @@
             </div>
             <div class="derecha">
                 <div class="estilos-Precio-DP">
-                
-                        <h1 class="Precio-DP">$<%= producto.precio %> </h1>
-                        <h1 class="titulos-h1"> Precio en Cuotas </h1>
-                        <h3 class="Precio-DP">$<%= producto.precioEnCuotas %> </h3>
-                  
+                        <% if (producto.oferta) { %>
+                            <h1 class="Precio-DP">$<%= producto.precioConOferta %></h1>
+                        <% } else { %>
+                            <h1 class="Precio-DP">$<%= producto.precio %></h1>
+                        <%  } %> 
+                         
                 </div>
                 <div class="info-ficha-cuotas">
                     <div class="iconos-DP">

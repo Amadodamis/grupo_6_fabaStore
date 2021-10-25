@@ -1,5 +1,5 @@
 const funcionesProductos={
-    precioConOferta:function precioConOfertaf(){
+    precioConOferta:function precioConOfertaf(precioAct,porcentaje,oferta){
                     let precioNuevo=precioAct; //para evitar errores.
     
                     if (oferta){
