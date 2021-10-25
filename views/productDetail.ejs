@@ -90,6 +90,11 @@
                 <div class="productos-agregar-comprar">
                     <button type="button" class="boton-agregar-comprar-carrito"> Agregar al carrito </button>
                     <button type="button" class="boton-agregar-comprar-carrito"> Comprar ahora</button>
+                    <br/>
+                    <a href="/editProduct/<%= producto.id %>" class="boton-agregar-comprar-carrito">Editar Producto</a>
+                    <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Producto</button>
+                    </form>
                 </div>
             </div>
          </div>

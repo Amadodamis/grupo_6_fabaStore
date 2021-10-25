@@ -12,10 +12,6 @@ let controller = {
     formulario: (req,res)=>{
         res.redirect("/")
     },
-    edit:(req,res)=>{
-        let producto=req.params.productoId;
-        res.render("editProduct",{prod:productos[producto]})
-    }
 }
 
 module.exports = controller;
