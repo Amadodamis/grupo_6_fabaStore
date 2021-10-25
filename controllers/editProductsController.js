@@ -17,7 +17,11 @@ let controller = {
     },
     update:(req,res)=>{
         //Editamos el producto que va a llegar por parámetro (su ID)
-        res.render("Producto con id " + req.params.id + " editado y guardado")
+        res.send("Producto con id " + req.params.id + " editado y guardado")
+    },
+    delete:(req,res)=>{
+        // Eliminamos el producto que llegó por parametro su ID
+		res.send("Producto con id " + req.params.id + " eliminado")
     }
 }
 

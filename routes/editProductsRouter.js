@@ -7,4 +7,7 @@ var controller=require("../controllers/editProductsController")
 router.get("/:id",controller.edit);
 router.put("/:id",controller.update);
 
+// Eliminar un Producto
+router.delete("/delete/:id",controller.delete)
+
 module.exports = router;
