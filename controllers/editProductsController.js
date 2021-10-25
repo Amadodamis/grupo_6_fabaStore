@@ -14,6 +14,10 @@ let controller = {
         res.render("editProduct",{
             producto: producto
         })
+    },
+    update:(req,res)=>{
+        //Editamos el producto que va a llegar por parámetro (su ID)
+        res.render("Producto con id " + req.params.id + " editado y guardado")
     }
 }
 
