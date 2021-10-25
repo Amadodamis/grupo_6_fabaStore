@@ -1,4 +1,13 @@
+const fs = require('fs');
+const path = require('path');
+
+/* UsersArray contiene */
+const usersFilePath = path.join(__dirname, '../../data/usersDataBase.json');
+const usersArray = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
 let productos=require("../source/products")
+
 
 // tipo de dato para el carrito personal 
 let carritoPersonal=[
@@ -9,63 +18,16 @@ let carritoPersonal=[
         img:"img/armado-pc-producto.jpg",
     },
     
-];  // todos los users, van a tener un array cart en la que la posicion 0 (user.cart[0]) es excluisva para el armado de la pc, y es un tipo de dato booleano. 
+];  
+
+// todos los users, van a tener una propiedad "cart" q es su carrito personal, donde la posicion 0, es exclusiva para el "armado de la computadora"
+// cart[0].ArmadoEnElLocal  es un tipo de dato booleano, que verifica si el usuario arma o no su computadora en FABA.
 
 
 
-let users=[
-    {
-    user:"admin",
-    nUser:0,
-    admin:true,
-    nombre_y_apellido:"admin",
-    mail:"admin@gmail.com",
-    password:"admin123",
-    domicilio:"anonimo",
-    cart:carritoPersonal,  
-    totalApagar:0,
-    },
-    {
-        user:"jmilei",
-        nUser:1,
-        admin:false,
-        nombre_y_apellido:"Javier Gerardo Milei",
-        mail:"jmilei@gmail.com",
-        password:"libertadAvanza2020",
-        domicilio:"calle falsa 123",
-        cart:carritoPersonal,
-        totalApagar:0,
-    },
-    
-    {  
-    user:"Dtrump2025",
-    nUser:2,
-    admin:false,
-    nombre_y_apellido:"Donald trump",
-    mail:"dtrump@gmail.com",
-    password:"CHAINA-CHAINA-CHAINA",
-    domicilio:"725 5th Ave, New York, NY 10022, EE. UU.",
-    cart:carritoPersonal,
-    totalApagar:0,
-    },
-    
-
-    {
-        user:"Satoshi nakamoto ",
-        nUser:3,
-        admin:false,
-        nombre_y_apellido:"Satoshi nakamoto",
-        mail:"SatoshiBTC@gmail.com",
-        password:"BTCISNOTABUBBLE",
-        domicilio:"NADIE LO SABE Y NADIE LO SABRA",
-        cart:carritoPersonal,
-        totalApagar:0,
-    },
-
-]
+let users=usersArray;
 
 //constructor del usuario anonimo para poder trabajar
-
 let cartDefault=carritoPersonal;       //se le asigna a la posicion 0, el armado de computadora
 cartDefault[0].ArmadoEnElLocal=true;  //se le asigna true para que aparezca en el carrito.
 

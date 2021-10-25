@@ -178,6 +178,11 @@ main{
     height: 250px;
     margin: 15px;
 }
+
+.producto-individual a{
+    text-decoration: none;
+}
+
 .producto-individual{
     border-radius:15px ;
     margin:10px;

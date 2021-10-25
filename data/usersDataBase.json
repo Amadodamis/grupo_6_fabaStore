@@ -1,0 +1,47 @@
+[
+{
+"user":"admin",
+"nUser":0,
+"admin":true,
+"nombre_y_apellido":"admin",
+"mail":"admin@gmail.com",
+"password":"admin123",
+"domicilio":"anonimo",
+"cart":"",  
+"totalApagar":0
+},
+{
+"user":"jmilei",
+"nUser":1,
+"admin":false,
+"nombre_y_apellido":"Javier Gerardo Milei",
+"mail":"jmilei@gmail.com",
+"password":"libertadAvanza2020",
+"domicilio":"calle falsa 123",
+"cart":"carritoPersonal",
+"totalApagar":0
+},
+    
+{  
+"user":"Dtrump2025",
+"nUser":2,
+"admin":false,
+"nombre_y_apellido":"Donald trump",
+"mail":"dtrump@gmail.com",
+"password":"CHAINA-CHAINA-CHAINA",
+"domicilio":"725 5th Ave, New York, NY 10022, EE. UU.",
+"cart":"carritoPersonal",
+"totalApagar":0
+},
+{
+"user":"Satoshi nakamoto ",
+"nUser":3,
+"admin":false,
+"nombre_y_apellido":"Satoshi nakamoto",
+"mail":"SatoshiBTC@gmail.com",
+"password":"BTCISNOTABUBBLE",
+"domicilio":"NADIE LO SABE Y NADIE LO SABRA",
+"cart":"carritoPersonal",
+"totalApagar":0
+}
+]
