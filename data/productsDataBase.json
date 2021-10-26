@@ -30,9 +30,9 @@
         "ofertaPorcentaje":20,
         "precioConOferta": 9776 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":10600,  
         "especificaciones":""
     },
     {
@@ -49,9 +49,9 @@
         "ofertaPorcentaje":10,
         "precioConOferta": 28233 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":34000,  
         "especificaciones":""
     },
     {
@@ -68,9 +68,9 @@
         "ofertaPorcentaje":25,
         "precioConOferta": 16500 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":23000,  
         "especificaciones":""
     },
     {
@@ -87,9 +87,9 @@
         "ofertaPorcentaje":15,
         "precioConOferta": 155159 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":190000,  
         "especificaciones":""
     },
     {
@@ -106,9 +106,9 @@
         "ofertaPorcentaje":10,
         "precioConOferta": 16002 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":19000,  
         "especificaciones":""
     },
     {
@@ -125,9 +125,9 @@
         "ofertaPorcentaje":35,
         "precioConOferta": 5778.5 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":10000,  
         "especificaciones":""
     },
     {
@@ -144,9 +144,9 @@
         "ofertaPorcentaje": 0,
         "precioConOferta": 200000 , 
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":220000,  
         "especificaciones":""
     },
     {
@@ -162,9 +162,9 @@
         "ofertaPorcentaje":7,
         "precioConOferta": 46500 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":52000,  
         "especificaciones":""
     },
     {
@@ -180,9 +180,9 @@
         "ofertaPorcentaje":0,
         "precioConOferta": 250000 , 
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":265000,  
         "especificaciones":""
     },
     {
@@ -198,9 +198,9 @@
         "ofertaPorcentaje":30,
         "precioConOferta": 13300 , 
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":20500,  
         "especificaciones":""
 
     },
@@ -217,9 +217,9 @@
         "ofertaPorcentaje":0,
         "precioConOferta": 84000 , 
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":86000,  
         "especificaciones":""
     },
     {
@@ -235,9 +235,9 @@
         "ofertaPorcentaje":0,
         "precioConOferta": 75000 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":79000,  
         "especificaciones":""
     },
     {
@@ -253,9 +253,9 @@
         "ofertaPorcentaje":0,
         "precioConOferta": 65000 ,
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":68000,  
         "especificaciones":""
         
     },
@@ -272,9 +272,9 @@
         "ofertaPorcentaje":13,
         "precioConOferta": 130500 , 
         "cuotasSinInteres":false,
-        "cantCuotas":0,
+        "cantCuotas":12,
         "interescuota":0,
-        "precioEnCuotas":0,  
+        "precioEnCuotas":161000,  
         "especificaciones":""
     }
 ]
