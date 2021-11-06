@@ -21,7 +21,15 @@ let controller = {
     },
     delete:(req,res)=>{
         // Eliminamos el producto que llegó por parametro su ID
-		res.send("Producto con id " + req.params.id + " eliminado")
+		/*res.send("Producto con id " + req.params.id + " eliminado")*/
+        let id = req.params.id;
+		/* Modificamos el Array */
+		let finalProductos = productos.filter(producto => {
+			return producto.id != id
+		});
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProductos,null," "))
+		res.redirect("/products")
     }
 }
 
