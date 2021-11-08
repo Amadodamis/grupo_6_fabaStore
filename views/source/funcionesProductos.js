@@ -1,12 +1,15 @@
 const funcionesProductos={
-    precioConOferta:function precioConOfertaf(precioAct,porcentaje,oferta){
-                    let precioNuevo=precioAct; //para evitar errores.
-    
-                    if (oferta){
-                        precioNuevo=(precioAct-(precioAct/100)*porcentaje);
-                        }
-
-                    return precioNuevo;
+    precioConOferta:function precioConOfertaf(precioAct,porcentaje,oferta){ //Precio con oferta recibe el precio el porcentaj y si un booleano que confirma si esta e oferta
+                let precioNuevo=precioAct; //para evitar errores.
+        
+                if (oferta){
+                 precioNuevo=(precioAct-(precioAct/100)*porcentaje);
+                }else{
+                    precioNuevo=precioAct;
+                }
+        
+                return precioNuevo;
+                //devuelve el precio con el porcentaje de descuento 
     },
 
     interesCuota:function interesCuota(hayInteres,precio,cuotas){
@@ -67,7 +70,23 @@ const funcionesProductos={
     
                             return array;
 
-    } 
+    },
+        
+    agregarProducto:(producto,nImg,id,form)=>{
+        producto.img="/img/"+nImg;
+        producto.id=id;
+        producto.modelo=form.modelo;
+        producto.marca=form.marca;
+        producto.tipoProducto=form.tipoProducto;
+        producto.precio=form.precio;
+        (form.enOfertaSn=="Si")?producto.oferta=true:producto.oferta=false;
+        producto.ofertaPorcentaje=form.ofertaPorcentaje;
+        //precio con oferta
+        (form.stockSn=="Si")?producto.stock=true:producto.stock=false;
+        producto.stockCant=form.stock;
+        producto.especificaciones=form.especificaciones;
+        return producto;
+    },
 }
 
 module.exports=funcionesProductos;

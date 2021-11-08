@@ -16,12 +16,11 @@
     
         <section class="section-formulario-register">
     
-            <form action="/uploadProducts" method="POST" class="form-registro" enctype="multipart/form-data>
+            <form action="/uploadProducts" method="POST" class="form-registro" enctype="multipart/form-data">
     
                 <p class="iniciar-sesion-tamañano">Agregar Producto</p>
-    
                 <div class="control-form">
-                    <input type="text" name="producto" placeholder="Nombre de Producto" class="control" required>
+                    <input type="text" name="modelo" placeholder="Nombre de Producto" class="control" required>
                 </div>
     
                 <div class="control-form">
@@ -29,8 +28,29 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="tipo" placeholder="Tipo de Producto" class="control" required>
+                    <p class="iniciar-sesion-tamañano">Tipo de producto</p>
+                    <select name="tipoProducto">
+                        <option value="Almacenamiento">Almacenamiento</option>
+                        <option value="Auriculares">Auriculares</option>
+                        <option value="Cables">Cables</option>
+                        <option value="Coolers">Coolers</option>
+                        <option value="Fuentes de poder">Fuentes de poder</option>
+                        <option value="Gabinetes">Gabinetes</option>
+                        <option value="Memorias ram">Memorias ram</option>
+                        <option value="Microfonos">Microfonos</option>
+                        <option value="Microprocesadores">Microprocesadores</option>
+                        <option value="Monitores y televisores">Monitores y televisores</option>
+                        <option value="Motherboards">Motherboards</option>
+                        <option value="Mouses">Mouses</option>
+                        <option value="Notebooks">Notebooks</option>
+                        <option value="Parlantes">Parlantes</option>
+                        <option value="Placas de video">Placas de video</option>
+                        <option value="Sillas gamer">Sillas gamer</option>
+                        <option value="Teclados">Teclados</option>
+                        <option value="Webcams">Webcams</option>
+                    </select>
                 </div>
+                
     
                 <div class="control-form">
                     <input type="file" name="img-producto" accept=".jpg" placeholder="Imagen del Producto">
@@ -39,12 +59,11 @@
                 <div class="control-form">
                     <input type="text" name="precio" class="control" placeholder="Precio del Producto">
                 </div>
-                
-                <div class="iniciar-sesion-tamañano"> Stock disponible</div>
 
                 <div class="control-form">
-                    <select name="stock">
-                        <option value="Sí">Sí</option>
+                    <p class="iniciar-sesion-tamañano">Stock disponible?</p>
+                    <select name="stockSn">
+                        <option value="Si">Si</option>
                         <option value="No">No</option>
                     </select>
                 </div>
@@ -53,21 +72,20 @@
                     <input type="text" name="stock" class="control" placeholder="Cantidad de Stock disponible">
                 </div>
 
-                <div class="iniciar-sesion-tamañano"> En Oferta </div>
-
                 <div class="control-form">
-                    <select name="stock">
-                        <option value="Sí">Sí</option>
+                    <p class="iniciar-sesion-tamañano">En oferta?</p>
+                    <select name="enOfertaSn">
+                        <option value="Si">Si</option>
                         <option value="No">No</option>
                     </select>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio con Oferta">
+                    <input type="text" name="ofertaPorcentaje" placeholder="Porcentaje oferta" class="control" required>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Especificaciones">
+                    <input type="text" name="especificaciones" class="control" placeholder="Especificaciones">
                 </div>
 
                 <div class="control-form">
