@@ -14,9 +14,8 @@ let controller = {
         res.render("uploadProducts",{productos:productos})
     },
     formulario: (req,res)=>{
-        let file = req.file;
-        console.log(file)
-        res.redirect("/")
+        res.send("El archivo se subio") 
+        //res.redirect("/")
     },
 }
 
