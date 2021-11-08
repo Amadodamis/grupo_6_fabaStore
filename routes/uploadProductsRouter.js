@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
     //const fileName= file.fieldname+"-"+Date.now()+ path.extname(file.originalname) Este es el fileName por default con date now blabla;
 
     filename: function (req, file, cb) { 
-      const fileName= file.fieldname+"-"+Date.now()+ path.extname(file.originalname)
+      const fileName= "AAAAASesubio"+ path.extname(file.originalname)
        cb(null,fileName ) 
     },
   
