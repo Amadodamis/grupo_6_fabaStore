@@ -40,15 +40,22 @@ let controller = {
 
         //requiero los datos de la foto que cargue desde el navegador.
         let file=req.file;
+
         //Guardo el valor del ultimo numero de producto
         let id=productos.length+1;
+
         //especifico el tipo de dato que va a ser
         let productoNuevo=tipoProducto;
-        
+
+        //Se completan los campos
         productoNuevo=funcionesProductos.agregarProducto(productoNuevo,file.filename,id,form)
         productoNuevo.precioConOferta=funcionesProductos.precioConOferta(productoNuevo.precio,productoNuevo.ofertaPorcentaje,productoNuevo.oferta);
 
-        console.log(productoNuevo);
+        productos.push(productoNuevo);
+        let productosJson=JSON.stringify(productos);
+        fs.writeFileSync(productsFilePath,productosJson)
+
+
 
         res.redirect("/")
     },
