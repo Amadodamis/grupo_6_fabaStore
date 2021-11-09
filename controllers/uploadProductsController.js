@@ -52,12 +52,10 @@ let controller = {
         productoNuevo.precioConOferta=funcionesProductos.precioConOferta(productoNuevo.precio,productoNuevo.ofertaPorcentaje,productoNuevo.oferta);
 
         productos.push(productoNuevo);
-        let productosJson=JSON.stringify(productos);
+        let productosJson=JSON.stringify(productos,null,"\t");
         fs.writeFileSync(productsFilePath,productosJson)
 
-
-
-        res.redirect("/")
+        res.send(productosJson)
     },
 }
 
