@@ -55,7 +55,7 @@ let controller = {
         let productosJson=JSON.stringify(productos,null,"\t");
         fs.writeFileSync(productsFilePath,productosJson)
 
-        res.send(productosJson)
+        res.redirect("/")
     },
 }
 
