@@ -17,7 +17,37 @@ let controller = {
     },
     update:(req,res)=>{
         //Editamos el producto que va a llegar por parámetro (su ID)
-        res.send("Producto con id " + req.params.id + " editado y guardado")
+        let id = req.params.id;
+        let productToEdit = productos.find(product => {
+            return product.id == id
+        })
+        let editedProduct ={
+            id: id,
+            modelo: req.body.producto,
+            marca: req.body.marca,
+            tipoProducto: req.body.tipo,
+            img: req.file ? req.file.filename : productToEdit.img,
+            precio: req.body.precio[0],
+            stock: req.body.stock[0],
+            stockCant: req.body.stock[1],
+            oferta: req.body.stock[2],
+            ofertaPorcentaje: req.body.descuento,
+            precioConOferta: req.body.precio[1],
+            cuotasSinInteres: req.body.cuotas[0],
+            cantCuotas: req.body.cuotas[1],
+            interescuota: req.body.cuotas[2],
+            precioEnCuotas: req.body.cuotas[3],
+            especificaciones: req.body.cuotas[4] 
+        }
+
+        productos.forEach((producto, index) => {
+            if(producto.id == id){
+                productos[index] = editedProduct
+            }
+        });
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null , " "))
+        res.redirect("/")
     },
     delete:(req,res)=>{
         // Eliminamos el producto que llegó por parametro su ID
