@@ -17,14 +17,13 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 //*************** Session******************************* */
+const session = require('express-session');
 app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
     saveUninitialized: true,
     }));    
 
-//***************** Cookies ******************************/ 
-app.use(cookieParser())
 
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
