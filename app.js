@@ -16,6 +16,16 @@ app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+//*************** Session******************************* */
+app.use(session({
+    secret: 'Nombre del sitio',
+    resave: false,
+    saveUninitialized: true,
+    }));    
+
+//***************** Cookies ******************************/ 
+app.use(cookieParser())
+
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
 var loginRouter = require('./routes/loginRouter');
