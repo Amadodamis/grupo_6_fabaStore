@@ -39,13 +39,13 @@ router.get("", controller.register);
 router.post("", upload.single('avatar'), controller.formulario);
 
 // Validación de datos del usuario creado por formulario
-router.post('/register', validateRegister, controller.register)
+router.post('/register', validateRegister, controller.processRegister)
 
-// Editar un Usuario
-router.put("/register/:id",upload.single('avatar'),controller.update);
+// Editar un Usuario (esto tiene que estar una vez que agreguemos la vista del usuario - podríamos agregarlo ahí mismo)
+/* router.put("/register/:id",upload.single('avatar'),controller.update);*/
 
-// Eliminar un Usuario
-router.delete("/register/delete/:id",controller.delete)
+// Eliminar un Usuario (una vez creada la vista del usuario, podríamos crear la funcionalidad para eliminar un usuario)
+/* router.delete("/register/delete/:id",controller.delete) */
 
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 /* En la constante "usuarios" ya tienen los usuarios que están JSON */
@@ -9,6 +10,9 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 let controller={
 
     register:(req,res)=>{
+        res.render("register")
+    },
+    processRegister: (req,res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             res.render("register")
@@ -22,7 +26,7 @@ let controller={
             id: usuarios[usuarios.length -1].id + 1,
             usuario: req.body.usuario,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password,10),
             fecha: req.body.fecha,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
