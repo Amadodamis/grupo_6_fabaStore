@@ -30,6 +30,9 @@ app.use(session({
     saveUninitialized: true,
     }));    
 
+//*************** Encriptación de Datos******************************* */
+
+
 
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
