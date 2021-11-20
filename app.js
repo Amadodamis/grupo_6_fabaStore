@@ -37,6 +37,7 @@ app.use(session({
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
 var loginRouter = require('./routes/loginRouter');
+var profileRouter =require('./routes/profileRouter');
 var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
@@ -66,6 +67,8 @@ app.use("/register", registerRouter);
 app.use("/uploadProducts", uploadProductsRouter);
 
 app.use("/editProduct", editProductsRouter);
+
+app.use ("/profile", profileRouter)
 
 // ************ Set the server to listen - (NO TOCAR) ************
 app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3030/" ));

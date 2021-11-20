@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require ("multer")
 const { check } = require('express-validator');
+const guestMiddleware = require ("../middlewares/guestMiddleware")
 
 const validateRegister = [
     check('nombre')
@@ -33,7 +34,7 @@ const storage = multer.diskStorage({
 const upload = multer ({storage})
 
 // Crear un Usuario
-router.get("", controller.register);
+router.get("", guestMiddleware, controller.register);
 
 // Cargar el usuario por formulario a la base de datos JSON
 router.post("", upload.single('avatar'), controller.formulario);

@@ -19,6 +19,8 @@ let controller={
         if (usuarioALoguearse) {
             let estaOKLaPassword = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
             if (estaOKLaPassword) {
+                delete usuarioALoguearse.password
+                req.session.userLogged = usuarioALoguearse;
                 return res.send ("perfilUsuario");
             }
             return res.render("login", {
@@ -39,6 +41,11 @@ let controller={
     },
     formulario:(req,res)=>{
         res.redirect("/")
+    },
+    perfil: (req,res) => {
+        return res.render("perfilUsuario", {
+            user: req.session.userLogged
+        }) 
     }
 }
 
