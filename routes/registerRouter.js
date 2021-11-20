@@ -32,11 +32,20 @@ const storage = multer.diskStorage({
 
 const upload = multer ({storage})
 
+// Crear un Usuario
 router.get("", controller.register);
 
+// Cargar el usuario por formulario a la base de datos JSON
 router.post("", upload.single('avatar'), controller.formulario);
 
+// Validación de datos del usuario creado por formulario
 router.post('/register', validateRegister, controller.register)
+
+// Editar un Usuario
+router.put("/register/:id",upload.single('avatar'),controller.update);
+
+// Eliminar un Usuario
+router.delete("/register/delete/:id",controller.delete)
 
 
 module.exports = router;
