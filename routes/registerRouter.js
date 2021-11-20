@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const multer = require ("multer")
 const { check } = require('express-validator');
 
 const validateRegister = [
@@ -19,10 +20,21 @@ const validateRegister = [
 
 var controller=require("../controllers/registerController")
 
+// ****** Configuración de Multer ******* //
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null,"../public/img/avatars")
+    },
+    filename: function (req,file,cb) {
+        cb(null, Date.now() + file.originalname)
+    }
+})
+
+const upload = multer ({storage})
 
 router.get("", controller.register);
 
-router.post("",controller.formulario);
+router.post("", upload.single('avatar'), controller.formulario);
 
 router.post('/register', validateRegister, controller.register)
 
