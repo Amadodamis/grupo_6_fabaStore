@@ -3,27 +3,8 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 
 /* En la constante "usuarios" ya tienen los usuarios que están JSON */
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-let tipoUsuario={
-    id: "",
-    modelo:"",
-    marca:"",
-    tipoProducto:"",
-    img:"",
-    precio:"",
-    stock:"",
-    stockCant:"",
-    oferta:"",
-    ofertaPorcentaje:"",
-    precioConOferta:"",
-    cuotasSinInteres:"",
-    cantCuotas: "",
-    interescuota: "",
-    precioEnCuotas: "",
-    especificaciones:""
-    }
+const usuariosFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 let controller={
 
@@ -36,19 +17,22 @@ let controller={
         }
     },
     formulario:(req,res)=>{
+        // Creación de un nuevo usuario por formulario
+        let nuevoUsuario = {
+            id: usuarios[usuarios.length -1].id + 1,
+            usuario: req.body.usuario,
+            email: req.body.email,
+            password: req.body.password,
+            fecha: req.body.fecha,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            domicilio: req.body.domicilio,
+            avatar: req.file.filename,
+            admin: false
+        }
 
-        //requiero la informacion del formulario y la guardo en form
-        let form=req.body;
-
-        //requiero los datos de la foto que cargue desde el navegador.
-        let file=req.file;
-
-        //Guardo el valor del ultimo numero de producto
-        let id=usuarios.length+1;
-
-        //especifico el tipo de dato que va a ser
-        let usuarioNuevo=tipoUsuario;
-
+        usuarios.push (nuevoUsuario);
+        fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
         res.redirect("/")
     }
 }
