@@ -22,13 +22,18 @@ app.set('views', path.join(__dirname, '/views'));
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 
-//*************** Session******************************* */
+//*************** Session + Middlewares de Aplicación ******************************* */
 const session = require('express-session');
+
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
 app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
     saveUninitialized: true,
-    }));    
+    }));
+
+app.use(userLoggedMiddleware)
 
 //*************** Encriptación de Datos******************************* */
 

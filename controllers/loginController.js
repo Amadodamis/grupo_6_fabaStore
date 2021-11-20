@@ -42,8 +42,8 @@ let controller={
     formulario:(req,res)=>{
         res.redirect("/")
     },
-    perfil: (req,res) => {
-        return res.render("perfilUsuario", {
+    profile: (req,res) => {
+        return res.render("/profile", {
             user: req.session.userLogged
         }) 
     },

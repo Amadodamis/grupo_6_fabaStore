@@ -6,6 +6,6 @@ const authMiddleware =require("../middlewares/authMiddleware")
 var controller=require("../controllers/loginController")
 
 // Profile del usuario
-router.get ("", authMiddleware, controller.perfil)
+router.get ("", authMiddleware, controller.profile)
 
 module.exports = router
