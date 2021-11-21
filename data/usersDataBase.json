@@ -1,51 +1,50 @@
 [
-{
-"id": 0,
-"usuario":"admin",
-"email":"admin@gmail.com",
-"password":"$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
-"fecha":"",
-"nombre":"admin",
-"apellido": "admin",
-"domicilio":"anonimo",
-"avatar":"",
-"admin":true
-},
-{
-"id": 1,
-"usuario":"jmilei",
-"email":"jmilei@gmail.com",
-"password":"libertadAvanza2020",
-"fecha":"",
-"nombre":"Javier Gerardo",
-"apellido": "Milei",
-"domicilio":"calle falsa 123",
-"avatar":"",
-"admin":false
-},
-    
-{  
-"id": 2,
-"usuario":"Dtrump2025",
-"email":"dtrump@gmail.com",
-"password":"CHAINA-CHAINA-CHAINA",
-"fecha":"",
-"nombre":"Donald",
-"apellido":"Trump",
-"domicilio":"725 5th Ave, New York, NY 10022, EE. UU.",
-"avatar":"",
-"admin":false
-},
-{
-"id": 3,
-"usuario":"Satoshi nakamoto ",
-"email":"SatoshiBTC@gmail.com",
-"password":"BTCISNOTABUBBLE",
-"fecha":"",
-"nombre":"Satoshi",
-"apellido":"Nakamoto",
-"domicilio":"NADIE LO SABE Y NADIE LO SABRA",
-"avatar":"",
-"admin":false
-}
+ {
+  "id": 0,
+  "usuario": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
+  "fecha": "",
+  "nombre": "admin",
+  "apellido": "admin",
+  "domicilio": "anonimo",
+  "avatar": "",
+  "admin": true
+ },
+ {
+  "id": 1,
+  "usuario": "jmilei",
+  "email": "jmilei@gmail.com",
+  "password": "libertadAvanza2020",
+  "fecha": "",
+  "nombre": "Javier Gerardo",
+  "apellido": "Milei",
+  "domicilio": "calle falsa 123",
+  "avatar": "",
+  "admin": false
+ },
+ {
+  "id": 2,
+  "usuario": "Dtrump2025",
+  "email": "dtrump@gmail.com",
+  "password": "CHAINA-CHAINA-CHAINA",
+  "fecha": "",
+  "nombre": "Donald",
+  "apellido": "Trump",
+  "domicilio": "725 5th Ave, New York, NY 10022, EE. UU.",
+  "avatar": "",
+  "admin": false
+ },
+ {
+  "id": 3,
+  "usuario": "Satoshi nakamoto ",
+  "email": "SatoshiBTC@gmail.com",
+  "password": "BTCISNOTABUBBLE",
+  "fecha": "",
+  "nombre": "Satoshi",
+  "apellido": "Nakamoto",
+  "domicilio": "NADIE LO SABE Y NADIE LO SABRA",
+  "avatar": "",
+  "admin": false
+ }
 ]

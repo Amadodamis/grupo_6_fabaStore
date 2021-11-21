@@ -12,6 +12,7 @@ let controller={
     register:(req,res)=>{
         res.render("register")
     },
+
     processRegister: (req,res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -20,25 +21,33 @@ let controller={
             res.render("register", { errors: errors.mapped(), old: req.body });
         }
     },
+
     formulario:(req,res)=>{
+        let user=req.body;
+        if (req.body.password != req.body.confpassword){
+            res.send("las contraseñas no coinciden")
+        }
+        else{
         // Creación de un nuevo usuario por formulario
         let nuevoUsuario = {
             id: usuarios[usuarios.length -1].id + 1,
             usuario: req.body.usuario,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password,10),
-            fecha: req.body.fecha,
-            nombre: req.body.nombre,
+            fecha: "fecha sin definir",
+            nombre: "nombre user",
             apellido: req.body.apellido,
             domicilio: req.body.domicilio,
             avatar: req.file.filename,
             admin: false
         }
-        
+    
         usuarios.push (nuevoUsuario);
         fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
         res.redirect("/")
+    }
     },
+
     update:(req,res)=>{
         //Editamos el usuario que va a llegar por parámetro (su ID)
         let id = req.params.id;
