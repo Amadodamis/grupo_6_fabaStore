@@ -34,7 +34,7 @@ let controller={
             avatar: req.file.filename,
             admin: false
         }
-
+        
         usuarios.push (nuevoUsuario);
         fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
         res.redirect("/")

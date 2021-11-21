@@ -8,12 +8,11 @@ var controller=require("../controllers/loginController")
 // Formulario de login
 router.get("", guestMiddleware, controller.login);
 
-// Formulario de logout
-router.get("/logout/", controller.logout);
 
 // Proceso de Formulario de login
 router.post("", controller.procesoLogin);
 
-router.post("",controller.formulario)
+// Formulario de logout
+router.get("/logout", controller.logout);
 
 module.exports = router;

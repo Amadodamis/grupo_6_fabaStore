@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
+
+const path=require('path')
 const multer = require ("multer")
+
 const { check } = require('express-validator');
 const guestMiddleware = require ("../middlewares/guestMiddleware")
 
@@ -24,10 +27,11 @@ var controller=require("../controllers/registerController")
 // ****** Configuración de Multer ******* //
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null,"../public/img/avatars")
+        cb(null, path.join(__dirname, "../public/img/avatars"))
     },
     filename: function (req,file,cb) {
-        cb(null, Date.now() + file.originalname)
+        const fileName= file.fieldname+"-"+Date.now()+ path.extname(file.originalname)
+        cb(null,fileName ) 
     }
 })
 

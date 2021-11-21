@@ -14,42 +14,36 @@ let controller={
         res.render("login")
     },
     procesoLogin: (req,res) => {
-        let usuarioALoguearse = Usuario.findByField("email", req.body.email);
+        //se busca en el json si el email ingresado existe en la base de datos y guarda el usuario solicitado en Usuario a logearse
+        let userEmail=req.body.email;
+        let password=req.body.password;
 
-        if (usuarioALoguearse) {
-            let estaOKLaPassword = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
+        let usuarioALoguearse = usuarios.find( user => user.email==userEmail);
+        
+        if (usuarioALoguearse) { //si el usuario existe en la base de datos
+            let estaOKLaPassword = bcrypt.compareSync(req.body.password, usuarioALoguearse.password); 
+
             if (estaOKLaPassword) {
-                delete usuarioALoguearse.password
                 req.session.userLogged = usuarioALoguearse;
-                return res.send ("perfilUsuario");
+                res.render("perfilUsuario",{pUser:req.session.userLogged});
             }
-            return res.render("login", {
-                errors: {
-                    email: {
-                        msg: "Las credenciales son inválidas"
-                    }
-                }
-            })
+            
         }
-        return res.render("login", {
-            errors: {
-                email: {
-                    msg: "No se encuentra este email en nuestra base de datos"
-                }
-            }
-        })
+        else{ //si la password es incorrecta devuelve al login
+           res.redirect("/login")
+        }
+            
+
     },
-    formulario:(req,res)=>{
-        res.redirect("/")
-    },
+
     profile: (req,res) => {
-        return res.render("/profile", {
-            user: req.session.userLogged
+        res.render("perfilUsuario", {
+            pUser: req.session.userLogged
         }) 
     },
     logout: (req,res)=> {
         req.session.destroy();
-        return res.redirect("/")
+        res.redirect("/")
     }
 }
 
