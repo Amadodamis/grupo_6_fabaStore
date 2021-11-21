@@ -14,8 +14,13 @@
 
             <div class="box-iconos-header">
                     <a href="/productCart" ><i class="fas fa-shopping-cart iconos-header" ></i></a>
-                    <a href="/register" ><i class="fas fa-user-circle iconos-header" ></i></a>
-                    <a href="/login" ><i class="fas fa-sign-in-alt iconos-header"></i></a>
+                    <% if (locals.isLogged) { %>
+                        <a href="/profile" ><img src="../public/img/avatars/<%= locals.userLogged.avatar %>"></a>
+                        Hola <%= locals.userLogged.fullName %>
+                    <% } else { %>
+                        <a href="/register" ><i class="fas fa-user-circle iconos-header" ></i></a>
+                        <a href="/login" ><i class="fas fa-sign-in-alt iconos-header"></i></a>
+                    <% } %>
             </div>
      
         </section>

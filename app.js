@@ -22,18 +22,27 @@ app.set('views', path.join(__dirname, '/views'));
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 
-//*************** Session******************************* */
+//*************** Session + Middlewares de Aplicación ******************************* */
 const session = require('express-session');
+
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
 app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
     saveUninitialized: true,
-    }));    
+    }));
+
+app.use(userLoggedMiddleware)
+
+//*************** Encriptación de Datos******************************* */
+
 
 
 //Requisitos de routas
 var indexRouter = require('./routes/indexRouter');
 var loginRouter = require('./routes/loginRouter');
+var profileRouter =require('./routes/profileRouter');
 var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
@@ -63,6 +72,8 @@ app.use("/register", registerRouter);
 app.use("/uploadProducts", uploadProductsRouter);
 
 app.use("/editProduct", editProductsRouter);
+
+app.use ("/profile", profileRouter)
 
 // ************ Set the server to listen - (NO TOCAR) ************
 app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3032/" ));
