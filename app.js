@@ -56,7 +56,7 @@ app.post("/login", (req,res) => {
 
 app.use("/productCart", productCartRouter);
 
-app.use("/productDetail", productDetailRouter);
+app.use("/productDetail",productDetailRouter);
 
 app.use("/register", registerRouter);
 
@@ -65,7 +65,7 @@ app.use("/uploadProducts", uploadProductsRouter);
 app.use("/editProduct", editProductsRouter);
 
 // ************ Set the server to listen - (NO TOCAR) ************
-app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3030/" ));
+app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3032/" ));
 
 
 
