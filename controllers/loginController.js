@@ -17,7 +17,6 @@ let controller={
     procesoLogin: (req,res) => {
         //se busca en el json si el email ingresado existe en la base de datos y guarda el usuario solicitado en Usuario a logearse
         let userEmail=req.body.email;
-        let password=req.body.password;
 
         let usuarioALoguearse = usuarios.find( user => user.email==userEmail);
         
@@ -26,6 +25,9 @@ let controller={
 
             if (estaOKLaPassword) {
                 req.session.userLogged = usuarioALoguearse;
+                if (req.body.recordame!=undefined){
+                    res.cookie("recordame",usuarioALoguearse.email,{maxAge:30000})
+                }
                 res.redirect("/login/profile")
             }
             
@@ -36,13 +38,17 @@ let controller={
     },
 
     profile: (req,res) => {
-        res.render("perfilUsuario", { pUser: req.session.userLogged }) 
+        if(req.session.userLogged==undefined){// el usuarios[0] es el invitado.
+            res.render("perfilUsuario", { pUser: usuarios[0]})
+
+        }else{
+            res.render("perfilUsuario", { pUser: req.session.userLogged }) 
+        }
     },
     logout: (req,res)=> {
         req.session.destroy();
         res.redirect("/")
     }
 }
-
 
 module.exports = controller;

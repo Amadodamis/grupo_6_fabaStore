@@ -1,18 +1,30 @@
 [
  {
   "id": 0,
-  "usuario": "admin",
-  "email": "admin@gmail.com",
+  "usuario": "invitado",
+  "email": "invitado@gmail.com",
   "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
   "fecha": "",
-  "nombre": "admin",
-  "apellido": "admin",
+  "nombre": "Invitado",
+  "apellido": "-",
   "domicilio": "anonimo",
-  "avatar": "",
+  "avatar": "default.jpg",
   "admin": true
  },
  {
-  "id": 1,
+    "id": 1,
+    "usuario": "admin",
+    "email": "admin@gmail.com",
+    "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
+    "fecha": "",
+    "nombre": "admin",
+    "apellido": "admin",
+    "domicilio": "anonimo",
+    "avatar": "",
+    "admin": true
+   },
+ {
+  "id": 2,
   "usuario": "jmilei",
   "email": "jmilei@gmail.com",
   "password": "libertadAvanza2020",
@@ -24,7 +36,7 @@
   "admin": false
  },
  {
-  "id": 2,
+  "id": 3,
   "usuario": "Dtrump2025",
   "email": "dtrump@gmail.com",
   "password": "CHAINA-CHAINA-CHAINA",
@@ -36,7 +48,7 @@
   "admin": false
  },
  {
-  "id": 3,
+  "id": 4,
   "usuario": "Satoshi nakamoto ",
   "email": "SatoshiBTC@gmail.com",
   "password": "BTCISNOTABUBBLE",
@@ -48,7 +60,7 @@
   "admin": false
  },
  {
-  "id": 4,
+  "id": 5,
   "usuario": "amado",
   "email": "amadodamis@gmail.com",
   "password": "$2a$10$KyJwoVkHV9DfgNnQHxBCoe1xLJqH6sonbJV5CHt/qsc2P24I07UIK",

@@ -25,7 +25,6 @@ app.use(cookieParser())
 //*************** Session + Middlewares de Aplicación ******************************* */
 const session = require('express-session');
 
-
 app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
