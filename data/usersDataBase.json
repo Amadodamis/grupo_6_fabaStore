@@ -46,5 +46,17 @@
   "domicilio": "NADIE LO SABE Y NADIE LO SABRA",
   "avatar": "",
   "admin": false
+ },
+ {
+  "id": 4,
+  "usuario": "amado",
+  "email": "amadodamis@gmail.com",
+  "password": "$2a$10$KyJwoVkHV9DfgNnQHxBCoe1xLJqH6sonbJV5CHt/qsc2P24I07UIK",
+  "fecha": "fecha sin definir",
+  "nombre": "Amado",
+  "apellido": "damis",
+  "domicilio": "asd",
+  "avatar": "default.jpg",
+  "admin": false
  }
 ]

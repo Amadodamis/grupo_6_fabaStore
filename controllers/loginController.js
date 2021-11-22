@@ -13,6 +13,7 @@ let controller={
     login:(req,res)=>{
         res.render("login")
     },
+
     procesoLogin: (req,res) => {
         //se busca en el json si el email ingresado existe en la base de datos y guarda el usuario solicitado en Usuario a logearse
         let userEmail=req.body.email;
@@ -25,26 +26,23 @@ let controller={
 
             if (estaOKLaPassword) {
                 req.session.userLogged = usuarioALoguearse;
-                res.render("perfilUsuario",{pUser:req.session.userLogged});
+                res.redirect("/login/profile")
             }
             
         }
         else{ //si la password es incorrecta devuelve al login
            res.redirect("/login")
         }
-            
-
     },
 
     profile: (req,res) => {
-        res.render("perfilUsuario", {
-            pUser: req.session.userLogged
-        }) 
+        res.render("perfilUsuario", { pUser: req.session.userLogged }) 
     },
     logout: (req,res)=> {
         req.session.destroy();
         res.redirect("/")
     }
 }
+
 
 module.exports = controller;

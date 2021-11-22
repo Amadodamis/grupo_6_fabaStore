@@ -25,15 +25,12 @@ app.use(cookieParser())
 //*************** Session + Middlewares de Aplicación ******************************* */
 const session = require('express-session');
 
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
     saveUninitialized: true,
     }));
-
-app.use(userLoggedMiddleware)
 
 //*************** Encriptación de Datos******************************* */
 
@@ -47,8 +44,8 @@ var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
-var productsRouter = require('./routes/productsRouter'); // Rutas /products
-var editProductsRouter = require('./routes/editProductsRouter'); // Rutas /editProducts
+var productsRouter = require('./routes/productsRouter');                    // Rutas /products
+var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
 
 
 //llamados
@@ -58,10 +55,6 @@ app.use("/", indexRouter); //index
 app.use ("/products",productsRouter); //products
 
 app.use("/login", loginRouter);
-
-app.post("/login", (req,res) => {
-    res.redirect("/index")
-});
 
 app.use("/productCart", productCartRouter);
 

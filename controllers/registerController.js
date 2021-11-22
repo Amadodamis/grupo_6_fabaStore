@@ -1,7 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+
 const bcrypt = require('bcryptjs');
+//para los errores que lleguen por el formulario
 const { validationResult } = require('express-validator');
+
+//usuario guarda funcionalidades para la lista de usuarios 
+const usuario = require('../models/Usuario');
 
 /* En la constante "usuarios" ya tienen los usuarios que están JSON */
 const usuariosFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -19,6 +24,7 @@ let controller={
         let errors = validationResult(req);
         if (errors.isEmpty()) { //si no hay errores
             let user=req.body;
+            
             // Creación de un nuevo usuario por formulario
             let nuevoUsuario = {
                 id: usuarios[usuarios.length -1].id + 1,
@@ -26,7 +32,7 @@ let controller={
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password,10),
                 fecha: "fecha sin definir",
-                nombre: "nombre user",
+                nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 domicilio: req.body.domicilio,
                 avatar: "default.jpg",
@@ -36,14 +42,14 @@ let controller={
             usuarios.push (nuevoUsuario);
             fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
             res.redirect("/")
-            
+
         } else {
             res.render("register", { errors:errors.array(), old: req.body });
         }
     
     },
 
-    update:(req,res)=>{
+    /*update:(req,res)=>{
         //Editamos el usuario que va a llegar por parámetro (su ID)
         let id = req.params.id;
         let usuarioAEditar = usuarios.find(usuario => {
@@ -71,19 +77,19 @@ let controller={
         fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null , " "))
         res.redirect("/")
     },
-
-    delete:(req,res)=>{
+*/
+   /* delete:(req,res)=>{
         // Eliminamos el usuario que llegó por parametro su ID
-		/*res.send("Usuario con id " + req.params.id + " eliminado")*/
+		//res.send("Usuario con id " + req.params.id + " eliminado")
         let id = req.params.id;
-		/* Modificamos el Array */
+		// Modificamos el Array 
 		let finalUsuarios = usuarios.filter(usuario => {
 			return usuario.id != id
 		});
 
 		fs.writeFileSync(usuariosFilePath, JSON.stringify(finalUsuarios,null," "))
 		res.redirect("/")
-    }
+    }*/
 
 }
 
