@@ -47,6 +47,7 @@ let controller={
     },
     logout: (req,res)=> {
         req.session.destroy();
+        res.clearCookie("recordame")
         res.redirect("/")
     }
 }
