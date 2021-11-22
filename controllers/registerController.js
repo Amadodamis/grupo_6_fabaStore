@@ -10,42 +10,40 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 let controller={
 
     register:(req,res)=>{
-        res.render("register")
-    },
-
-    processRegister: (req,res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            res.render("register")
-        } else {
-            res.render("register", { errors: errors.mapped(), old: req.body });
-        }
+        res.render("register",{ errors: errors.array(),old: req.body }) //errors y old sad
     },
 
     formulario:(req,res)=>{
-        let user=req.body;
-        if (req.body.password != req.body.confpassword){
-            res.send("las contraseñas no coinciden")
-        }
-        else{
-        // Creación de un nuevo usuario por formulario
-        let nuevoUsuario = {
-            id: usuarios[usuarios.length -1].id + 1,
-            usuario: req.body.usuario,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password,10),
-            fecha: "fecha sin definir",
-            nombre: "nombre user",
-            apellido: req.body.apellido,
-            domicilio: req.body.domicilio,
-            avatar: req.file.filename,
-            admin: false
+        
+        let errors = validationResult(req);
+        if (errors.isEmpty()) { //si no hay errores
+            let user=req.body;
+            // Creación de un nuevo usuario por formulario
+            let nuevoUsuario = {
+                id: usuarios[usuarios.length -1].id + 1,
+                usuario: req.body.usuario,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password,10),
+                fecha: "fecha sin definir",
+                nombre: "nombre user",
+                apellido: req.body.apellido,
+                domicilio: req.body.domicilio,
+                avatar: "default.jpg",
+                admin: false
+            }
+        
+            usuarios.push (nuevoUsuario);
+            fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
+            res.redirect("/")
+            
+        } else {
+            console.log(errors)
+            //errors=errors.array()
+            //res.send(errors)
+            res.render("register", { errors:errors.array(), old: req.body });
         }
     
-        usuarios.push (nuevoUsuario);
-        fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
-        res.redirect("/")
-    }
     },
 
     update:(req,res)=>{
@@ -76,6 +74,7 @@ let controller={
         fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios, null , " "))
         res.redirect("/")
     },
+
     delete:(req,res)=>{
         // Eliminamos el usuario que llegó por parametro su ID
 		/*res.send("Usuario con id " + req.params.id + " eliminado")*/

@@ -4,23 +4,10 @@ var router = express.Router();
 const path=require('path')
 const multer = require ("multer")
 
-const { check } = require('express-validator');
 const guestMiddleware = require ("../middlewares/guestMiddleware")
 
-const validateRegister = [
-    check('nombre')
-    .notEmpty().withMessage('Debes completar el nombre').bail()
-    .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
-    check('apellido')
-    .notEmpty().withMessage('Debes completar el apellido').bail()
-    .isLength({ min: 5 }).withMessage('El apellido debe tener al menos 5 caracteres'),
-    check("email")
-    .notEmpty().withMessage('Debes completar el email').bail()
-    .isEmail().withMessage('Debes ingresar un email válido'),
-    check('clave')
-    .notEmpty().withMessage('Debes completar la contraseña').bail()
-    .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
-];
+//validate de los campos del registro
+const validateRegister = require("../routes/funcionesYprocesos/validate");
 
 var controller=require("../controllers/registerController")
 
@@ -40,11 +27,8 @@ const upload = multer ({storage})
 // Crear un Usuario
 router.get("", guestMiddleware, controller.register);
 
-// Cargar el usuario por formulario a la base de datos JSON
-router.post("", upload.single('avatar'), controller.formulario);
-
-// Validación de datos del usuario creado por formulario
-router.post('/register', validateRegister, controller.processRegister)
+// Cargar el usuario por formulario a la base de datos JSON y la validacion
+router.post("", upload.single('avatar'),validateRegister, controller.formulario);
 
 // Editar un Usuario (esto tiene que estar una vez que agreguemos la vista del usuario - podríamos agregarlo ahí mismo)
 /* router.put("/register/:id",upload.single('avatar'),controller.update);*/

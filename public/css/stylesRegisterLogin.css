@@ -6,7 +6,7 @@
     background-color: rgba(43, 23, 95, 0.2);
 }
 
-.section-formulario{
+.section-formulario-login{
 
     padding: 10px;
     margin: 15px;
@@ -113,4 +113,16 @@ register*/
     border-radius: 10px;
     display: flex;
     justify-content: center;
+}
+
+.errores-div{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.errores-texto{
+    font-size: 15px;
+    font-style: normal;
+    color: #c238d8;
+    
 }
