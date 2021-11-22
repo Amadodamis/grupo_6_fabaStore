@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil usuario</title>
-</head>
-<body>
-    <h1>Hola.</h1>
-    <h1>El user es <%=pUser.usuario%> </h1>  
-    <h1>nombre:<%=pUser.nombre%></h1> 
-    <h1>id:<%=pUser.id%>, </h1>  
-    <h1>avatar:</h1><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario">
+    
+    <%- include('./partials/head') %>
+
+<body class="body-index" >
+
+    <%- include('./partials/header') %>
+   
+    
+    <section class="container-banner">
+        <div class="banner"> </div>
+    </section>
+<main>
+    <span class="Color-Usuario">Hola</span>
+    <span class="Color-Usuario">usuario <%=pUser.usuario%>, </span>  
+    <span class="Color-Usuario"> Su Email registrado es: <%=pUser.email%>. </span> 
+    <div >
+    <span class="Color-Usuario">ID de Usuario: <%=pUser.id%>. </span>
+    </div >
+    <div >
+        <h1 class="Color-Usuario">Avatar:</h1><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario">
+    </div>  
+</main>  
+<br>
+<%- include('./partials/footer') %>
+
 </body>
+
 </html>

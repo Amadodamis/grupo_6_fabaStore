@@ -70,5 +70,17 @@
   "domicilio": "asd",
   "avatar": "default.jpg",
   "admin": false
+ },
+ {
+  "id": 6,
+  "usuario": "Axel",
+  "email": "axel.leonelromano@gmail.com",
+  "password": "$2a$10$rTYLPFT7AH6xiFki8ykvAOYZUdVqxVQ31c0V9mD04pm4BsbyhoGYK",
+  "fecha": "fecha sin definir",
+  "nombre": "Axel",
+  "apellido": "Romano",
+  "domicilio": "asdd",
+  "avatar": "default.jpg",
+  "admin": false
  }
 ]

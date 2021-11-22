@@ -278,7 +278,17 @@ footer {
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(43 23 95 / 40%);
     background-color: rgba(43, 23, 95, 0.2);
-}  
+} 
+.Color-Usuario{
+    color: #c238d8;
+    font-size: 40px;
+}
+.Avatar-Usuario{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    
+} 
 
 /* CSS del formulario de registro */
 
@@ -519,3 +529,4 @@ footer {
     }
 
 }
+
