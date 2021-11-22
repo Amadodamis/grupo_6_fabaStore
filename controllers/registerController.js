@@ -38,9 +38,6 @@ let controller={
             res.redirect("/")
             
         } else {
-            console.log(errors)
-            //errors=errors.array()
-            //res.send(errors)
             res.render("register", { errors:errors.array(), old: req.body });
         }
     
