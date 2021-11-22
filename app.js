@@ -18,9 +18,6 @@ app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-/***************** Cookies ************************/
-const cookieParser = require('cookie-parser')
-app.use(cookieParser())
 
 //*************** Session + Middlewares de Aplicación ******************************* */
 const session = require('express-session');
@@ -29,7 +26,13 @@ app.use(session({
     secret: 'Nombre del sitio',
     resave: false,
     saveUninitialized: true,
-    }));
+}));
+
+/***************** Cookies ************************/
+var recordameMiddleware=require("./middlewares/recordameMiddleware")
+const cookieParser = require('cookie-parser')
+app.use(cookieParser())
+app.use(recordameMiddleware);
 
 //*************** Encriptación de Datos******************************* */
 
