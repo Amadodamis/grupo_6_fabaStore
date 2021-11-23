@@ -94,5 +94,17 @@
   "domicilio": "asdf",
   "avatar": "default.jpg",
   "admin": false
+ },
+ {
+  "id": 8,
+  "usuario": "Francisco",
+  "email": "francisco@hotmail.com.ar",
+  "password": "$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792",
+  "fecha": "fecha sin definir",
+  "nombre": "Francisco",
+  "apellido": "Xsdf",
+  "domicilio": "1234",
+  "avatar": "default.jpg",
+  "admin": false
  }
 ]
