@@ -35,7 +35,7 @@ let controller={
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 domicilio: req.body.domicilio,
-                avatar: "default.jpg",
+                avatar: req.file.filename,
                 admin: false
             }
             
