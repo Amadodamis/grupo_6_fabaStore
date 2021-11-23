@@ -38,7 +38,7 @@ let controller={
                 avatar: "default.jpg",
                 admin: false
             }
-        
+            
             usuarios.push (nuevoUsuario);
             fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
             res.redirect("/")
@@ -46,7 +46,7 @@ let controller={
         } else {
             res.render("register", { errors:errors.array(), old: req.body });
         }
-    
+       
     },
 
     /*update:(req,res)=>{

@@ -12,17 +12,17 @@
   "admin": true
  },
  {
-    "id": 1,
-    "usuario": "admin",
-    "email": "admin@gmail.com",
-    "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
-    "fecha": "",
-    "nombre": "admin",
-    "apellido": "admin",
-    "domicilio": "anonimo",
-    "avatar": "",
-    "admin": true
-   },
+  "id": 1,
+  "usuario": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
+  "fecha": "",
+  "nombre": "admin",
+  "apellido": "admin",
+  "domicilio": "anonimo",
+  "avatar": "",
+  "admin": true
+ },
  {
   "id": 2,
   "usuario": "jmilei",
