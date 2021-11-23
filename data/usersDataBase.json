@@ -82,5 +82,17 @@
   "domicilio": "asdd",
   "avatar": "default.jpg",
   "admin": false
+ },
+ {
+  "id": 7,
+  "usuario": "Fran",
+  "email": "francisco@hotmail.com",
+  "password": "$2a$10$BuaOUYXet6xrscflOBqPHOrFCTQYaaevKysrDR65Gpdc8OTE/n1Pq",
+  "fecha": "fecha sin definir",
+  "nombre": "Francisco",
+  "apellido": "Moletta",
+  "domicilio": "asdf",
+  "avatar": "default.jpg",
+  "admin": false
  }
 ]
