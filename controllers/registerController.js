@@ -22,9 +22,9 @@ let controller={
     formulario:(req,res)=>{
         
         let errors = validationResult(req);
+        
         if (errors.isEmpty()) { //si no hay errores
-            let user=req.body;
-            
+
             // Creación de un nuevo usuario por formulario
             let nuevoUsuario = {
                 id: usuarios[usuarios.length -1].id + 1,
