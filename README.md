@@ -53,3 +53,5 @@ https://trello.com/b/f72cZt20/sprint-3
 https://trello.com/b/Zyh8NraO/sprint-4
 https://trello.com/b/M6CZ9IJA/sprint-5
 
+Retro: 
+Click on the following link to see previous retros - https://github.com/Amadodamis/grupo_6_fabaStore/commit/24c005721add2ad03679218d99a0354f0142057e
