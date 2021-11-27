@@ -53,6 +53,7 @@ var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 var productsRouter = require('./routes/productsRouter');                    // Rutas /products
 var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
+var editUserRouter = require('./routes/editUserRouter');            // Rutas /editUsuarios
 
 
 //llamados
@@ -72,6 +73,8 @@ app.use("/register", registerRouter);
 app.use("/uploadProducts", uploadProductsRouter);
 
 app.use("/editProduct", editProductsRouter);
+
+app.use("/editUser", editUserRouter);
 
 app.use ("/profile", profileRouter)
 
