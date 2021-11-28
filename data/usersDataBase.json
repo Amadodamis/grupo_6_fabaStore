@@ -12,17 +12,17 @@
   "admin": true
  },
  {
-    "id": 1,
-    "usuario": "admin",
-    "email": "admin@gmail.com",
-    "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
-    "fecha": "",
-    "nombre": "admin",
-    "apellido": "admin",
-    "domicilio": "anonimo",
-    "avatar": "",
-    "admin": true
-   },
+  "id": 1,
+  "usuario": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG",
+  "fecha": "",
+  "nombre": "admin",
+  "apellido": "admin",
+  "domicilio": "anonimo",
+  "avatar": "",
+  "admin": true
+ },
  {
   "id": 2,
   "usuario": "jmilei",
@@ -48,7 +48,7 @@
   "admin": false
  },
  {
-  "id": 4,
+  "id": "4",
   "usuario": "Satoshi nakamoto ",
   "email": "SatoshiBTC@gmail.com",
   "password": "BTCISNOTABUBBLE",
@@ -57,7 +57,7 @@
   "apellido": "Nakamoto",
   "domicilio": "NADIE LO SABE Y NADIE LO SABRA",
   "avatar": "",
-  "admin": false
+  "admin": "false"
  },
  {
   "id": 5,
@@ -82,5 +82,29 @@
   "domicilio": "asdd",
   "avatar": "default.jpg",
   "admin": false
+ },
+ {
+  "id": 8,
+  "usuario": "Francisco",
+  "email": "francisco@hotmail.com.ar",
+  "password": "$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792",
+  "fecha": "fecha sin definir",
+  "nombre": "Francisco",
+  "apellido": "Xsdf",
+  "domicilio": "1234",
+  "avatar": "default.jpg",
+  "admin": false
+ },
+ {
+  "id": "9",
+  "usuario": "Francisco",
+  "email": "francisco@hotmail.com",
+  "password": "$2a$10$d2RBwWrhyVqwo9.OQ7lt7OlddQAv.xB27xC041C3sbRvW7k/Wsc02",
+  "fecha": "fecha sin definir",
+  "nombre": "Francisco",
+  "apellido": "Moletta",
+  "domicilio": "asdfa",
+  "avatar": "",
+  "admin": "false"
  }
 ]

@@ -8,6 +8,9 @@ const methodOverride = require('method-override');
 // ************ express() - (don't touch) ************
 const app = express ();
 
+// ************ Middleware de aplicación - (don't touch) ************
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+
 // ************ Middlewares - (NO TOCAR) ************
 app.use(express.static(path.resolve(__dirname, "./public"))); // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +30,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
+
+app.use(userLoggedMiddleware)
 
 /***************** Cookies ************************/
 var recordameMiddleware=require("./middlewares/recordameMiddleware")
@@ -48,6 +53,7 @@ var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 var productsRouter = require('./routes/productsRouter');                    // Rutas /products
 var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
+var editUserRouter = require('./routes/editUserRouter');            // Rutas /editUsuarios
 
 
 //llamados
@@ -67,6 +73,8 @@ app.use("/register", registerRouter);
 app.use("/uploadProducts", uploadProductsRouter);
 
 app.use("/editProduct", editProductsRouter);
+
+app.use("/editUser", editUserRouter);
 
 app.use ("/profile", profileRouter)
 

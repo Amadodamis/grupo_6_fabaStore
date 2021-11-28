@@ -8,12 +8,13 @@ const validate=[
     check("email")
     .notEmpty().withMessage('Debes completar el email').bail()
     .isEmail().withMessage('Debes ingresar un email válido'),
-
+   
     check('password')
     .notEmpty().withMessage('Debes completar la contraseña').bail()
-    .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
-    .custom(() => { // Esto recibe las contraseñas del req.body y las compara, si no son iguales manda el mensaje al array de errores.
-        if (req.body.password === req.body.Confpassword) {
+    .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
+    check('Confpassword')
+    .custom((valor, {req}) => { // Esto recibe las contraseñas del req.body y las compara, si no son iguales manda el mensaje al array de errores.
+        if (valor  === req.body.password) {
           return true;
         } else {
           return false;

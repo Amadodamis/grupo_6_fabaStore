@@ -16,7 +16,12 @@
     </div >
     <div >
         <h1 class="Color-Usuario">Avatar:</h1><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario">
-    </div>  
+    </div>
+
+    <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>
+                    <form action="/editUser/delete/<%= pUser.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Usuario</button>
+                    </form> 
 </main>  
 <br>
 <%- include('./partials/footer') %>
