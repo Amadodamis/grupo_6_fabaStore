@@ -48,7 +48,7 @@
   "admin": false
  },
  {
-  "id": "4",
+  "id": 4,
   "usuario": "Satoshi nakamoto ",
   "email": "SatoshiBTC@gmail.com",
   "password": "BTCISNOTABUBBLE",
@@ -84,7 +84,7 @@
   "admin": false
  },
  {
-  "id": 8,
+  "id": 7,
   "usuario": "Francisco",
   "email": "francisco@hotmail.com.ar",
   "password": "$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792",

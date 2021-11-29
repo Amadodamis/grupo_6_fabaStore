@@ -30,11 +30,4 @@ router.get("", guestMiddleware, controller.register);
 // Cargar el usuario por formulario a la base de datos JSON y la validacion
 router.post("", upload.single('avatar'),validateRegister, controller.formulario);
 
-// Editar un Usuario (esto tiene que estar una vez que agreguemos la vista del usuario - podríamos agregarlo ahí mismo)
-/* router.put("/register/:id",upload.single('avatar'),controller.update);*/
-
-// Eliminar un Usuario (una vez creada la vista del usuario, podríamos crear la funcionalidad para eliminar un usuario)
-/* router.delete("/register/delete/:id",controller.delete) */
-
-
 module.exports = router;

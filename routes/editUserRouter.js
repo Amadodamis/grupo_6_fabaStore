@@ -3,6 +3,7 @@ var router = express.Router();
 const multer = require('multer')
 
 var controller=require("../controllers/editUserController")
+const authMiddlewareEditUser = require ("../middlewares/authMiddlewareEditUser")
 
 // configuracion de multer
 const storage = multer.diskStorage({
@@ -17,7 +18,7 @@ const upload = multer({storage})
 
 
 // Editar un usuario
-router.get("/:id",controller.edit);
+router.get("/:id",authMiddlewareEditUser,controller.edit);
 router.put("/:id",upload.single('avatar'),controller.update);
 
 // Eliminar un usuario
