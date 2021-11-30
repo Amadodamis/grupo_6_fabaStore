@@ -10,12 +10,11 @@
 <main>
     <span class="Color-Usuario">Hola</span>
     <span class="Color-Usuario">usuario <%=pUser.usuario%>, </span>  
-    <span class="Color-Usuario"> Su Email registrado es: <%=pUser.email%>. </span> 
+    <p class="Color-Usuario" >Su Email registrado es: <%=pUser.email%>.</p>
+    <span class="Color-Usuario">  </span> 
+    <p class="Color-Usuario">ID de Usuario: <%=pUser.id%></p>
     <div >
-    <span class="Color-Usuario">ID de Usuario: <%=pUser.id%>. </span>
-    </div >
-    <div >
-        <h1 class="Color-Usuario">Avatar:</h1><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario">
+        <h1 class="Color-Usuario">Avatar:</h1><span><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario"></span>
     </div>
 
     <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>

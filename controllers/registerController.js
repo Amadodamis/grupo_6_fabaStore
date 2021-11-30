@@ -16,7 +16,7 @@ let controller={
 
     register:(req,res)=>{
         let errors = validationResult(req);
-        res.render("register",{ errors: errors.array(),old: req.body }) //errors y old sad
+        res.render("register",{ errors: errors.array(),old: req.body }) //errors y old estan definidos para evitar que errors genere conflicto en el primer caso
     },
 
     formulario:(req,res)=>{
