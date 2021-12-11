@@ -31,7 +31,7 @@ ALTER TABLE fabastoredb.categoria AUTO_INCREMENT=1;
 
 -- categories --
 INSERT INTO fabastoredb.categoria (ID, nombreCategoría) VALUES
-(1,"Admin"), (2,"Cliente")
+(1,"Admin"), (2,"Cliente");
 
 -- brands --
 INSERT INTO fabastoredb.marca (ID, nombreMarca, empresa) VALUES
@@ -41,7 +41,7 @@ INSERT INTO fabastoredb.marca (ID, nombreMarca, empresa) VALUES
 (13,"PNY","PNY Technologies Inc"), (14,"Astro","Astro Gaming"), (15,"Akracing","Akracing"), (16,"Ideon","Ideon Inc."),
 (17,"Samsung","Samsung"), (18,"BenQ","BenQ"), (19,"Phillips","Phillips"), (20,"Nvidia","Nvidia Corporation"),
 (21,"ASRock","ASRock"), (22,"AFox","AFox"), (23,"Razer","Razer"), (24,"Corsair","Corsair Gaming Inc."),
-(25,"Iphone","Apple Inc."), (26,"Cable","The Cable Company"), (27,"Western Digital","Western Digital Corp."), (28,"Aerocool","Aerocool")
+(25,"Iphone","Apple Inc."), (26,"Cable","The Cable Company"), (27,"Western Digital","Western Digital Corp."), (28,"Aerocool","Aerocool");
 
 -- models --
 INSERT INTO fabastoredb.modelo (ID, nombreModelo, id_marca) VALUES
@@ -51,14 +51,14 @@ INSERT INTO fabastoredb.modelo (ID, nombreModelo, id_marca) VALUES
 (22,"Arctica",15), (23,"Extreme Hunter Pro",16), (24,"F24T35",17), (25,"GW2480",18), (26,"243V5LHSB",19), (27,"GTX 1050 Ti",20), (28,"RX 550",21),
 (29,"RX 550",22), (30,"Lightsync",1), (31,"Viper Mini",23), (32,"Surge",9), (33,"fuente de alimentación 500w",6), (34,"fuente de alimentación RM-750",24), (35,"Cable USB",25),
 (36,"Ethernet 5M",26), (37,"de poder",26), (38,"Hyper 212",7), (39,"Ma610p Cpu cooler",7), (40,"Hyper 212 Turbo",7), (41,"SSD 250 Gb",17), (42,"disco duro 1 Tb",27),
-(43,"ssd m.2 950 Gb",17), (44,"Gabinete",28)
+(43,"ssd m.2 950 Gb",17), (44,"Gabinete",28);
 
 -- type of product --
 INSERT INTO fabastoredb.tipoDeProducto (ID, tipo_de_producto) VALUES
 (1,"Mouses"), (2,"Motherboard"), (3,"Microprocesador"), (4,"Memoria RAM"), (5,"Placa de Video"),
 (6,"Fuente"), (7,"Gabinetes"), (8,"Notebook"), (9,"Teclado"),
 (10,"Auriculares"), (11,"Sillas Gamer"), (12,"Monitores y Televisores"), (13,"Fuentes de Poder"),
-(14,"Cables"), (15,"Coolers"), (16,"Almacenamiento")
+(14,"Cables"), (15,"Coolers"), (16,"Almacenamiento");
 
 -- products --
 INSERT INTO fabastoredb.productos (ID, id_modelo, id_marca, id_tipoProducto, img, precio, stockCantidad, ofertaPorcentaje, precioConOferta, especificaciones) VALUES
@@ -105,7 +105,7 @@ INSERT INTO fabastoredb.productos (ID, id_modelo, id_marca, id_tipoProducto, img
 (41,41,17,16,"producto_1636423221030.png",5000,12,10,4500,""),
 (42,42,27,16,"producto_1636423282426.png",7000,15,15,5950,""),
 (43,43,17,16,"producto_1636423354929.png",13500,15,10,12150,""),
-(44,44,28,7,"producto_1636423556561.png",8000,15,5,7600,""),
+(44,44,28,7,"producto_1636423556561.png",8000,15,5,7600,"");
 
 -- cart (no entendí bien la lógica de este carrito???, un carrito es un ID y solo puede almacenar un único producto? --
 INSERT INTO fabastoredb.carrito_table (ID, id_producto) VALUES
@@ -118,7 +118,7 @@ INSERT INTO fabastoredb.carrito_table (ID, id_producto) VALUES
 (7,7),
 (8,8),
 (9,9),
-(10,10)
+(10,10);
 
 -- users --
 INSERT INTO fabastoredb.usuarios (ID, id_categoria, usuario, email, password, fecha, nombre, apellido, domicilio, avatar, admin, id_carrito) VALUES
@@ -130,5 +130,5 @@ INSERT INTO fabastoredb.usuarios (ID, id_categoria, usuario, email, password, fe
 (6,2,"amado","amadodamis@gmail.com","$2a$10$KyJwoVkHV9DfgNnQHxBCoe1xLJqH6sonbJV5CHt/qsc2P24I07UIK","20211001","Amado","damis","asd","default.jpg",false,6),
 (7,2,"Axel","axel.leonelromano@gmail.com","$2a$10$rTYLPFT7AH6xiFki8ykvAOYZUdVqxVQ31c0V9mD04pm4BsbyhoGYK","20211001","Axel","Romano","asdd","default.jpg",false,7),
 (8,2,"Francisco","francisco@hotmail.com.ar","$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792","20211001","Francisco","Xsdf","1234","default.jpg",false,8),
-(9,2,"Francisco","francisco@hotmail.com","$2a$10$d2RBwWrhyVqwo9.OQ7lt7OlddQAv.xB27xC041C3sbRvW7k/Wsc02","20211001","Francisco","Moletta","asdfa","",false,9)
+(9,2,"Francisco","francisco@hotmail.com","$2a$10$d2RBwWrhyVqwo9.OQ7lt7OlddQAv.xB27xC041C3sbRvW7k/Wsc02","20211001","Francisco","Moletta","asdfa","",false,9);
 
