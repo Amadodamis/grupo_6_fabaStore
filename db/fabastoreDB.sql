@@ -11,8 +11,9 @@ CREATE TABLE `usuarios` (
    `nombre` VARCHAR(255) NOT NULL,
    `apellido` VARCHAR(255) NOT NULL,
    `domicilio` VARCHAR(255) NOT NULL,
+   `avatar` VARCHAR(255),
    `admin` BINARY NOT NULL,
-   `id_carrito` INT NOT NULL,
+   `id_carrito` INT,
    PRIMARY KEY (`ID`)
 );
 
@@ -21,11 +22,12 @@ CREATE TABLE `productos` (
    `id_modelo` INT NOT NULL,
    `id_marca` INT NOT NULL,
    `id_tipoProducto` INT NOT NULL,
+   `img` VARCHAR(255),
    `precio` VARCHAR(255) NOT NULL,
    `stockCantidad` VARCHAR(255) NOT NULL,
    `ofertaPorcentaje` DECIMAL NOT NULL,
    `precioConOferta` DECIMAL NOT NULL,
-   `especificaciones` VARCHAR(255) NOT NULL,
+   `especificaciones` VARCHAR(255),
    PRIMARY KEY (`ID`)
 );
 
