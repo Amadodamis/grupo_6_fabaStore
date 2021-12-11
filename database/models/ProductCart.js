@@ -8,9 +8,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        id_producto: {
+        /*id_producto: {
             type: dataTypes.INTEGER,
-        }
+        }*/
     };
     let config = {
         tableName: 'carrito_table',

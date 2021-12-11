@@ -18,5 +18,14 @@ module.exports = (sequelize, dataTypes) => {
     };
     const TypeOfProduct = sequelize.define(alias, cols, config)
 
+    //Acá creamos las relaciones con los otros modelos (Brand)
+
+    TypeOfProduct.associate = function(models){
+        TypeOfProduct.hasMany(models.Product, {
+            as: "productos",
+            foreignKey: "id_TipoProducto"
+        })
+    }
+
     return TypeOfProduct
 }

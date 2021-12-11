@@ -21,5 +21,18 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Model = sequelize.define(alias, cols, config)
 
+    //Acá creamos las relaciones con los otros modelos (Brand)
+
+    Model.associate = function(models){
+        Model.belongsTo(models.Brand, {
+                as: "marca",
+                foreignKey: "id_marca"
+                }),
+        Model.hasMany(models.Product, {
+            as: "productos",
+            foreignKey: "id_modelo"
+        })
+    }
+
     return Model
 }

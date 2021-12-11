@@ -8,9 +8,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        id_categoria: {
+        /*id_categoria: {
             type: dataTypes.INTEGER,
-        },
+        },*/
         usuario: {
             type: dataTypes.STRING
         },
@@ -36,11 +36,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         admin: {
-            type: dataTypes.BINARY
-        },
-        id_carrito: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING
         }
+        /*id_carrito: {
+            type: dataTypes.INTEGER,
+        }*/
     };
     let config = {
         tableName: 'usuarios',
