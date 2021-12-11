@@ -1,22 +1,22 @@
-// Modelo para la tabla de tipo de producto //
+// Modelo para la tabla de categorías //
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'TypeOfProduct';
+    let alias = 'Category';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        tipo_de_producto: {
+        nombreCategoría: {
             type: dataTypes.STRING
         }
     };
     let config = {
-        tableName: 'tipodeproducto',
+        tableName: 'categoria',
         timestamps: false
     };
-    const TypeOfProduct = sequelize.define(alias, cols, config)
+    const Category = sequelize.define(alias, cols, config)
 
-    return TypeOfProduct
+    return Category
 }

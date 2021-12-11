@@ -1,22 +1,25 @@
-// Modelo para la tabla de tipo de producto //
+// Modelo para la tabla de marcas //
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'TypeOfProduct';
+    let alias = 'Brand';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        tipo_de_producto: {
+        nombreMarca: {
+            type: dataTypes.STRING
+        },
+        empresa: {
             type: dataTypes.STRING
         }
     };
     let config = {
-        tableName: 'tipodeproducto',
+        tableName: 'marca',
         timestamps: false
     };
-    const TypeOfProduct = sequelize.define(alias, cols, config)
+    const Brand = sequelize.define(alias, cols, config)
 
-    return TypeOfProduct
+    return Brand
 }
