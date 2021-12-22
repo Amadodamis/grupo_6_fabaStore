@@ -1,17 +1,12 @@
 const funcionesProductos={
-    precioConOferta:function precioConOfertaf(precioAct,porcentaje,oferta){ //Precio con oferta recibe el precio el porcentaj y si un booleano que confirma si esta e oferta
-                let precioNuevo=precioAct; //para evitar errores.
+   precioConOferta:function precioConOfertaf(array){ //Precio con oferta recibe el precio,el porcentaj y si un booleano que confirma si esta e oferta
+    for (let i = 0; i < array.length; i++) {
+        array[i].precioConOferta= array[i].precio- (array[i].precio*array[i].ofertaPorcentaje/100)
         
-                if (oferta){
-                 precioNuevo=(precioAct-(precioAct/100)*porcentaje);
-                }else{
-                    precioNuevo=precioAct;
-                }
-        
-                return precioNuevo;
-                //devuelve el precio con el porcentaje de descuento 
+    }
+    return array
     },
-
+    
     interesCuota:function interesCuota(hayInteres,precio,cuotas){
                 let precioNuevo;
                 if (hayInteres==false){
@@ -42,13 +37,13 @@ const funcionesProductos={
                 //devuelve el precio con el porcentaje de interes
     },
 
-    productosOfertaFunction:function productosOfertaFunction (arrayProductos){ 
+    productosOfertaFunction:function productosOfertaFunction (arrayProductos){ // devuelve un array de los 4 productos con mayor oferta
                             let array=[];
                             let maxActualOferta=0;
                             let indice=0;              //indice es el valor que va a guardar la posicion del valor de oferta mas alto en la iteracion
                             let contador=0;            //contador va a iterar dentro del forEach
                             let indiceRepetido=[];     
-    
+
                             for (let i = 0; i <=3; i++) {
                                 arrayProductos.forEach(elemento=>{
                                 if (elemento.ofertaPorcentaje>=maxActualOferta){
@@ -67,7 +62,6 @@ const funcionesProductos={
                                 maxActualOferta=0;contador=0;indice=0;
             
                             }   
-    
                             return array;
 
     },

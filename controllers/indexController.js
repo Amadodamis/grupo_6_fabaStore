@@ -4,24 +4,28 @@ const fs = require('fs'); const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+//requiero la base de datos
+const db = require('../database/models/');
+
 //requiero las funcionalidades de productos
 const funcionesProductos=require("../views/source/funcionesProductos")
-
-//prodOferta tiene un array de 4 los 4 elementos con mayor oferta
-let prodOferta=funcionesProductos.productosOfertaFunction(productos);
-
-
-// Aca, se recorre la base de datos de JSON para actualizar si es necesario los precios con ofertas.
-productos.forEach(  (producto)=>{
-producto.precioConOferta=funcionesProductos.precioConOferta(producto.precio,producto.ofertaPorcentaje,producto.oferta)
-}) 
-
-
 
 let controller={
     
     index:(req,res)=>{  // vista de la pantalla principal
-        res.render("index",{prod:productos, prodOferta:prodOferta}) //
+        let prodOferta;  
+        db.Product.findAll(
+            {raw:true,     //raw true sirve para obtener solo el datavalues **********NO SACAR IMPORTANTISIMO*********
+            })  
+            .then(prod => {  
+                console.log(prod)
+                prodOferta = funcionesProductos.productosOfertaFunction(prod); // prodOferta tiene un array de los 4 elementos con mayor oferta de la base de datos
+                
+                prodOferta=funcionesProductos.precioConOferta(prodOferta)  // prodOferta actualiza los precios de las ofertas.
+                
+                res.render("index",{prod, prodOferta})
+            })
+            
     },
 
 }

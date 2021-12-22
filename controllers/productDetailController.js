@@ -12,12 +12,6 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const funcionesProductos=require("../views/source/funcionesProductos")
 
 
-// Aca, se recorre la base de datos de JSON para actualizar si es necesario los precios con ofertas.
-productos.forEach(  (producto)=>{
-    producto.precioConOferta=funcionesProductos.precioConOferta(producto.precio,producto.ofertaPorcentaje,producto.oferta)
-    })
-
-
 let controller={
 
     productDetail:(req,res)=>{
