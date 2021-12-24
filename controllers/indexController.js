@@ -15,15 +15,22 @@ let controller={
     index:(req,res)=>{  // vista de la pantalla principal
         let prodOferta;  
         db.Product.findAll(
-            {raw:true,     //raw true sirve para obtener solo el datavalues **********NO SACAR IMPORTANTISIMO*********
+            {
+            include:["marca",/*"modelo"*/],
+            raw:true,      //raw true sirve para obtener solo el datavalues **********NO SACAR IMPORTANTISIMO*********
+            nest:true,     
             })  
             .then(prod => {  
                 console.log(prod)
+                
                 prodOferta = funcionesProductos.productosOfertaFunction(prod); // prodOferta tiene un array de los 4 elementos con mayor oferta de la base de datos
                 
                 prodOferta=funcionesProductos.precioConOferta(prodOferta)  // prodOferta actualiza los precios de las ofertas.
                 
                 res.render("index",{prod, prodOferta})
+            })
+            .catch(e=>{
+                console.log(e)
             })
             
     },

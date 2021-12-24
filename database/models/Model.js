@@ -27,11 +27,11 @@ module.exports = (sequelize, dataTypes) => {
         Model.belongsTo(models.Brand, {
                 as: "marca",
                 foreignKey: "id_marca"
-                }),
-        Model.hasMany(models.Product, {
+                })
+       /* Model.hasMany(models.Product, {
             as: "productos",
             foreignKey: "id_modelo"
-        })
+        })*/
     }
 
     return Model
