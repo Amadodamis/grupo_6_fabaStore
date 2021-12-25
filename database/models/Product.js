@@ -8,9 +8,12 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        id_modelo: {
-            type: dataTypes.INTEGER,
+        modelo: {
+            type: dataTypes.STRING
         },
+        /*id_modelo: {
+            type: dataTypes.INTEGER,
+        },*/
         id_marca: {
             type: dataTypes.INTEGER,
         },

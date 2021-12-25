@@ -32,11 +32,11 @@
                 <% if (prod[randomize].oferta){%> 
                     <p class="precio"> <%=prod[randomize].precioConOferta %>$</p>
                     <p class="descuento"> <%=prod[randomize].ofertaPorcentaje %>% off</p>
-                    <p class="descripcion"> <%=prod[randomize].marca.nombreMarca %> <%=prod[randomize].id_modelo %></p>
+                    <p class="descripcion"> <%=prod[randomize].marca.nombreMarca %> <%=prod[randomize].modelo %></p>
                 <% } 
                 else { %>
                     <p class="precio"> <%=prod[randomize].precio %>$</p>
-                    <p class="descripcion"> <%=prod[randomize].marca.nombreMarca %> <%=prod[randomize].id_modelo %></p>
+                    <p class="descripcion"> <%=prod[randomize].marca.nombreMarca %> <%=prod[randomize].modelo %></p>
                     
                 <% } %>
                 
