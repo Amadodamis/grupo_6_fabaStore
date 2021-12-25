@@ -14,7 +14,7 @@ const funcionesProductos=require("../views/source/funcionesProductos")
 
 let controller={
 
-    productDetail:(req,res)=>{
+    /*productDetail:(req,res)=>{
         let id=req.params.id;
         const producto = productos.find(producto =>{
             return producto.id == id
@@ -23,18 +23,21 @@ let controller={
         res.render("productDetail",{
             producto: producto
         })
-    }
+    }*/
 
     // Acá va el código para trabajar con los modelos y las tablas de la Base de datos directamente //
     // (falta la info. de las foreign_keys que no se como agregarsela) //
 
-    /*'productDetail': (req, res) => {
+    productDetail: (req, res) => {
         db.Product.findByPk(req.params.id,{
-            include: [{association: "modelo"}, {association: "marca"}, {association: "tipodeproducto"}]
+            include: [{association: "marca"}, {association: "tipodeproducto"}]
         }).then(producto => {
                 res.render('productDetail.ejs', {producto});
+            })
+            .catch(e=>{
+                console.log(e)
             });
-        }*/
+        }
     }
 
 module.exports = controller;
