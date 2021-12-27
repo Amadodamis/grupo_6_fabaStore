@@ -22,19 +22,32 @@ let controller = {
             });
     },
     update:(req,res)=>{
-        //Editamos el producto que va a llegar por parámetro (su ID)
+        //productToEdit se busca en la base de datos para obtener la imagen del producto.
         let productToEdit = db.Product.findByPk(req.params.id);
 
         //conversion de los "si" en valores booleanos.
         if(req.body.ofertaBooleano=="Si"){req.body.ofertaBooleano=true}else{req.body.ofertaBooleano=false}
         if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}else{req.body.stockBooleano=false}
         
+        /*Tipo producto tiene su propia tabla, y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender.*/
+        let tipoProducto=req.body.tipoProducto;
+        if(tipoProducto.charAt(2)==")"){
+            tipoProducto=tipoProducto.charAt(0)+tipoProducto.charAt(1);
+            tipoProducto=parseInt(10,tipoProducto)
+            req.body.tipoProducto=tipoProducto;
+        }else{
+            tipoProducto=tipoProducto.charAt(0);
+            tipoProducto=parseInt(10,tipoProducto);
+            req.body.tipoProducto=tipoProducto;
+        }
+
         //edicion del producto
-        /*db.Product.update(
+        db.Product.update(
             {
                 modelo: req.body.modelo,
                 marca: req.body.marca,
-                tipoProducto: req.body.tipoProducto,
+                tipoProducto: tipoProducto,
                 img: req.file ? req.file.filename : productToEdit.img,
                 precio: req.body.precio,
                 stock: req.body.stockBooleano,
@@ -48,7 +61,7 @@ let controller = {
             })
             .then (() => {
                 res.redirect("/")
-               })*/
+               })
     },
 
     delete:(req,res)=>{
