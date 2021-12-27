@@ -10,77 +10,47 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let controller = {
     edit:(req,res)=>{
-        /*let id=req.params.id;
-        const producto = productos.find(producto =>{
-            return producto.id == id
-        })
-        res.render("editProduct",{
-            producto: producto
-        })*/
-        db.Product.findByPk(req.params.id)
+
+        let id=req.params.id;
+        db.Product.findByPk(id,{
+            include:["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,     
+            })
             .then(producto => {
                 res.render('EditProduct.ejs', {producto:producto});
             });
     },
     update:(req,res)=>{
         //Editamos el producto que va a llegar por parámetro (su ID)
-        /*let id = req.params.id;
-        let productToEdit = productos.find(product => {
-            return product.id == id
-        })
-        let editedProduct ={
-            id: id,
-            modelo: req.body.producto,
-            marca: req.body.marca,
-            tipoProducto: req.body.tipo,
-            img: req.file ? req.file.filename : productToEdit.img,
-            precio: req.body.precio[0],
-            stock: req.body.stock[0],
-            stockCant: req.body.stock[1],
-            oferta: req.body.stock[2],
-            ofertaPorcentaje: req.body.descuento,
-            precioConOferta: req.body.precio[1],
-            cuotasSinInteres: req.body.cuotas[0],
-            cantCuotas: req.body.cuotas[1],
-            interescuota: req.body.cuotas[2],
-            precioEnCuotas: req.body.cuotas[3],
-            especificaciones: req.body.cuotas[4] 
-        }
-
-        productos.forEach((producto, index) => {
-            if(producto.id == id){
-                productos[index] = editedProduct
-            }
-        });
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null , " "))
-        res.redirect("/")*/
         let productToEdit = db.Product.findByPk(req.params.id);
-        db.Product.update(
+
+        //conversion de los "si" en valores booleanos.
+        if(req.body.ofertaBooleano=="Si"){req.body.ofertaBooleano=true}else{req.body.ofertaBooleano=false}
+        if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}else{req.body.stockBooleano=false}
+        
+        //edicion del producto
+        /*db.Product.update(
             {
-                modelo: req.body.producto,
+                modelo: req.body.modelo,
                 marca: req.body.marca,
-                tipoProducto: req.body.tipo,
+                tipoProducto: req.body.tipoProducto,
                 img: req.file ? req.file.filename : productToEdit.img,
-                precio: req.body.precio[0],
-                stock: req.body.stock[0],
-                stockCant: req.body.stock[1],
-                oferta: req.body.stock[2],
-                ofertaPorcentaje: req.body.descuento,
-                precioConOferta: req.body.precio[1],
-                cuotasSinInteres: req.body.cuotas[0],
-                cantCuotas: req.body.cuotas[1],
-                interescuota: req.body.cuotas[2],
-                precioEnCuotas: req.body.cuotas[3],
-                especificaciones: req.body.cuotas[4]
+                precio: req.body.precio,
+                stock: req.body.stockBooleano,
+                stockCant: req.body.stockCant,
+                oferta: req.body.ofertaBooleano,
+                ofertaPorcentaje: req.body.ofertaPorcentaje,
+                especificaciones: req.body.especificaciones
             },
             {
              where: {id: req.params.id}
             })
             .then (() => {
                 res.redirect("/")
-               })
+               })*/
     },
+
     delete:(req,res)=>{
         // Eliminamos el producto que llegó por parametro su ID
 		/*res.send("Producto con id " + req.params.id + " eliminado")*/

@@ -22,15 +22,34 @@
                 <br>
     
                 <div class="control-form">
-                    <input type="text" name="producto" placeholder="" class="control" value= "<%= producto.modelo %>" required>
+                    <input type="text" name="modelo" placeholder="" class="control" value= "<%= producto.modelo %>" required>
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="marca" placeholder= "" class="control" value="<%= producto.marca %>" required>
+                    <input type="text" name="marca" placeholder= "" class="control" value="<%= producto.marca.nombreMarca %>" required>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="tipo" placeholder="" class="control" value="<%= producto.tipoDeProducto %>" required>
+                    <select name="tipoProducto" >
+                        <option value="Almacenamiento">Almacenamiento</option>
+                        <option value="Auriculares">Auriculares</option>
+                        <option value="Cables">Cables</option>
+                        <option value="Coolers">Coolers</option>
+                        <option value="Fuentes de poder">Fuentes de poder</option>
+                        <option value="Gabinetes">Gabinetes</option>
+                        <option value="Memorias ram">Memorias ram</option>
+                        <option value="Microfonos">Microfonos</option>
+                        <option value="Microprocesadores">Microprocesadores</option>
+                        <option value="Monitores y televisores">Monitores y televisores</option>
+                        <option value="Motherboards">Motherboards</option>
+                        <option value="Mouses">Mouses</option>
+                        <option value="Notebooks">Notebooks</option>
+                        <option value="Parlantes">Parlantes</option>
+                        <option value="Placas de video">Placas de video</option>
+                        <option value="Sillas gamer">Sillas gamer</option>
+                        <option value="Teclados">Teclados</option>
+                        <option value="Webcams">Webcams</option>
+                    </select>
                 </div>
     
                 <div class="control-form">
@@ -38,57 +57,37 @@
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio Actual: " value="<%= producto.precio %>">
+                    <input type="text" name="precio" class="control" placeholder="Precio Actual: <%= producto.precio %>" >
                 </div>
                 
                 <div class="iniciar-sesion-tamañano"> Stock disponible</div>
 
                 <div class="control-form">
-                    <select name="stock">
-                        <option value="Sí">Sí</option>
+                    <select name="stockBooleano">
+                        <option value="Si">Sí</option>
                         <option value="No">No</option>
                     </select>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="stock" class="control" placeholder="Stock actual: " value="<%= producto.stockCant %>">
+                    <input type="text" name="stockCant" class="control" placeholder="Stock actual: <%= producto.stockCantidad %>" >
                 </div>
 
                 <div class="iniciar-sesion-tamañano"> En Oferta </div>
 
                 <div class="control-form">
-                    <select name="stock">
-                        <option value="Sí">Sí</option>
+                    <select name="ofertaBooleano">
+                        <option value="Si">Sí</option>
                         <option value="No">No</option>
                     </select>
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="descuento" class="control" placeholder="Porcentaje de oferta actual: " value="<%= producto.ofertaPorcentaje %>">
-                </div>
-
-                <div class="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio con oferta: " value="<%= producto.precioConOferta %>">
+                    <input type="text" name="ofertaPorcentaje" class="control" placeholder="Porcentaje de oferta actual: <%= producto.ofertaPorcentaje %>" >
                 </div>
     
                 <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Cuotas sin Interés: " value="<%= producto.cuotasSinInteres %>">
-                </div>
-
-                <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Cuotas: " value="<%= producto.cantCuotas %>">
-                </div>
-
-                <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Interés Cuotas: " value="<%= producto.interescuota %>">
-                </div>
-
-                <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Precio en Cuotas: " value="<%= producto.precioEnCuotas %>">
-                </div>
-
-                <div class="control-form">
-                    <input type="text" name="cuotas" class="control" placeholder="Especificaciones: " value="<%= producto.especificaciones %>">
+                    <input type="text" name="especificaciones" class="control" placeholder="Especificaciones: " value="<%= producto.especificaciones %>">
                 </div>
     
                 <div class="control-form">
