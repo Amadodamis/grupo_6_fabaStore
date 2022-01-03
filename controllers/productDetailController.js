@@ -8,7 +8,7 @@ let controller={
   // Vista del detalle del producto por ID
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id,{
-            include: [{association: "marca"}, {association: "tipodeproducto"}]
+            include:["marca","tipodeproducto"]
         }).then(producto => {
                 res.render('productDetail.ejs', {producto});
             })

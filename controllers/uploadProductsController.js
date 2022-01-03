@@ -2,11 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const multer = require ("multer")
 
-
-/* En la constante "productos" ya tienen los productos que están JSON */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 //requiero la base de datos
 const db = require('../database/models/');
 
@@ -20,7 +15,6 @@ let controller = {
     },
 
     formulario: (req,res)=>{
-        console.log(req.body)
         //requiero los datos de la foto que cargue desde el navegador.
         let file=req.file;let oferta;
 
