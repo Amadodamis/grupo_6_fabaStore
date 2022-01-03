@@ -8,9 +8,6 @@ const sequelize = db.sequelize;
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-/* En la constante "usuarios" ya tienen los usuarios que están JSON */
-const usuariosFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 
 let controller={
 
@@ -60,8 +57,15 @@ let controller={
     },
 
     profile: (req,res) => {
-        if(req.session.userLogged==undefined){// el usuarios[0] es el invitado.
-            res.render("perfilUsuario", { pUser: usuarios[0]})
+        //La vista del perfil se hace por ssesion, si el usuario no existe se designa un usuario invitado. COMPLETAR
+        if(req.session.userLogged==undefined){
+            let usuarioInvitado={
+                usuario:"Invitado",
+                id:0,
+                email:"invitado",
+                avatar:"default.jpg"
+            };
+            res.render("perfilUsuario", { pUser: usuarioInvitado})
 
         }else{
             res.render("perfilUsuario", { pUser: req.session.userLogged }) 
