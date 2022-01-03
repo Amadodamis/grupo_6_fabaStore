@@ -48,10 +48,6 @@ module.exports = (sequelize, dataTypes) => {
     //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (TypeOfProduct - Brand - Model)
 
     Product.associate = function(models){
-        /*Product.belongsTo(models.Model, {
-            as: "modelo",
-            foreignKey: "id_modelo"
-            }),*/
         Product.belongsTo(models.Brand, {
                 as: "marca",
                 foreignKey: "id_marca"

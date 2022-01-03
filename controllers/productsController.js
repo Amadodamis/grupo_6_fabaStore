@@ -21,11 +21,14 @@ let controller={
     // (falta la info. de las foreign_keys que no se como agregarsela) //
 
     index: (req, res) => {
-        db.Product.findAll({
-            include: [{association: "marca"}, {association: "tipodeproducto"}]
-        })
-        .then(prod => {
-            res.render('products.ejs', {prod})
+        db.Product.findAll( 
+            {
+            include:["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,
+            })
+            .then(prod => {
+                res.render('products.ejs', {prod})
         })
         .catch(e=>{
                 console.log(e)

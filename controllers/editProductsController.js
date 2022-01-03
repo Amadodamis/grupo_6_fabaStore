@@ -4,6 +4,10 @@ const path = require('path');
 //requiero la base de datos
 const db = require('../database/models/');
 
+//requiero las funcionalidades de productos
+const funcionesProductos=require("../views/source/funcionesProductos")
+
+
 let controller = {
     edit:(req,res)=>{
 
@@ -18,12 +22,21 @@ let controller = {
             });
     },
     update:(req,res)=>{
+
         //productToEdit se busca en la base de datos para obtener la imagen del producto.
         let productToEdit = db.Product.findByPk(req.params.id);
 
-        //conversion de los "si" que llegan en el formulario en valores booleanos.
-        if(req.body.ofertaBooleano=="Si"){req.body.ofertaBooleano=true}else{req.body.ofertaBooleano=false}
-        if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}else{req.body.stockBooleano=false}
+        //conversion del "si" en booleano de la oferta y asignacion del precio con el descuento.
+        if(req.body.ofertaBooleano=="Si")
+            {req.body.ofertaBooleano=true;
+            let oferta=funcionesProductos.precioConOfertaIndividual(req.body.ofertaPorcentaje,req.body.precio)}
+        else{
+            req.body.ofertaBooleano=false
+            let oferta=0;}
+
+        //conversion del "si" en booleano del stock
+        if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}
+        else{req.body.stockBooleano=false;req.body.stockCant=0}
         
         /*Tipo producto tiene su propia tabla , y el valor que llega del formulario es un string, 
         por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 18. Es decir, si tipo producto llega "almacenamiento" estas lineas
@@ -39,19 +52,22 @@ let controller = {
             req.body.tipoProducto=tipoProducto;
         }
 
+        let oferta=funcionesProductos.precioConOfertaIndividual(req.body.ofertaPorcentaje,req.body.precio)
+
         //edicion del producto
         db.Product.update(
             {
-                modelo: req.body.modelo,
-                marca: req.body.marca,
+                modelo:req.body.modelo,
+                marca:req.body.marca,
                 tipoProducto: tipoProducto,
                 img: req.file ? req.file.filename : productToEdit.img,
-                precio: req.body.precio,
-                stock: req.body.stockBooleano,
-                stockCant: req.body.stockCant,
-                oferta: req.body.ofertaBooleano,
-                ofertaPorcentaje: req.body.ofertaPorcentaje,
-                especificaciones: req.body.especificaciones
+                precio:req.body.precio,
+                stock:req.body.stockBooleano,
+                stockCant:req.body.stockCant,
+                oferta:req.body.ofertaBooleano,
+                ofertaPorcentaje:req.body.ofertaPorcentaje,
+                precioConOferta:oferta,
+                especificaciones:req.body.especificaciones
             },
             {
              where: {id: req.params.id}
@@ -62,8 +78,6 @@ let controller = {
     },
 
     delete:(req,res)=>{
-         //productToEdit se busca en la base de datos para obtener la imagen del producto.
-        let id=req.params.id;
         db.Product.destroy({
             where: {id: req.params.id}
         })
