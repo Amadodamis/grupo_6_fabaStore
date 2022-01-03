@@ -11,9 +11,6 @@ module.exports = (sequelize, dataTypes) => {
         modelo: {
             type: dataTypes.STRING
         },
-        /*id_modelo: {
-            type: dataTypes.INTEGER,
-        },*/
         id_marca: {
             type: dataTypes.INTEGER,
         },

@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const Usuario = require ("../models/Usuario")
+//requiero la base de datos
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
@@ -15,28 +17,46 @@ let controller={
     login:(req,res)=>{
         res.render("login")
     },
-
+   
     procesoLogin: (req,res) => {
-        //se busca en el json si el email ingresado existe en la base de datos y guarda el usuario solicitado en Usuario a logearse
+        //Guardo los datos que llegaron por formulario
         let userEmail=req.body.email;
+        console.log(req.body.password)
 
-        let usuarioALoguearse = usuarios.find( user => user.email==userEmail);
-        
-        if (usuarioALoguearse) { //si el usuario existe en la base de datos
-            let estaOKLaPassword = bcrypt.compareSync(req.body.password, usuarioALoguearse.password); 
+        db.User.findOne( 
+            {
+            include:["categoria"],
+            raw:true, nest:true,
+            where:{ email:userEmail }
+            })
+            .then(user=> {
+            //Si el usuario existe en la base de datos. 
+                if(user){
+                    //EstaOKLAPassword guarda un booleano de la comparacion de la contraseña que ingreso por formulario con la encriptada de la base de datos
+                    let estaOKLaPassword= bcrypt.compareSync(req.body.password, user.password);
 
-            if (estaOKLaPassword) {
-                req.session.userLogged = usuarioALoguearse;
-                if (req.body.recordame!=undefined){
-                    res.cookie("recordame",usuarioALoguearse.email,{maxAge:30000})
+                    //Si la password es correcta se guarda en session un usuario, su cookie y redirije al perfil
+                    if (estaOKLaPassword) { 
+                        req.session.userLogged = user;
+                        if (req.body.recordame!=undefined){
+                        res.cookie("recordame",user.email,{maxAge:30000})
+                         }
+                        res.redirect("/login/profile")
+                    //Si la password es incorrecta lo informa.
+                    }else{
+                        res.send("Password incorrecta  "+"http://localhost:3032/login")
+                    }
+
+            //Si no existe el usuario en la base de datos.   
+                }else{
+
+                    res.send("el usuario "+ userEmail + "  no existe.  "+"http://localhost:3032/login")
                 }
-                res.redirect("/login/profile")
-            }
-            
-        }
-        else{ //si la password es incorrecta devuelve al login
-           res.redirect("/login")
-        }
+
+        })
+        .catch(e=>{
+                console.log(e)
+            })
     },
 
     profile: (req,res) => {
