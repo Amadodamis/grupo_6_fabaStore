@@ -26,7 +26,7 @@ ALTER TABLE fabastoredb.categoria AUTO_INCREMENT=1;
 
 
 -- categories --
-INSERT INTO fabastoredb.categoria (ID, nombreCategoría) VALUES
+INSERT INTO fabastoredb.categoria (ID, nombreCategoria) VALUES
 (1,"Admin"), (2,"Cliente");
 
 -- brands --
@@ -53,7 +53,7 @@ INSERT INTO fabastoredb.productos (ID, modelo, id_marca, id_tipoProducto, img, p
 (3,"Ryzen 5 - 5600x",3,9,"ryzen5-5600X.png",31370,1,10,0,""),
 (4,"Tridentz 8gb",4,7,"ramGskill.png",22000,1,25,0,""),
 (5,"RTX 3060ti",5,15,"Nvidia3060ti.png",182540,1,15,0,""),
-(6,"RM-850",6,5,"FuenteAlimentacion.png",17780,1,10,0,""),
+(6,"RM-850",6,5,"1641177233414FuenteAlimentacion.jpg",17780,1,10,0,""),
 (7,"atx k501l",7,6,"Gabinete.png",8890,1,35,0,""),
 (8,"Mcbook pro 2019",8,13,"img-macbook-pro-2019.png",200000,1,0,0,""),
 (9,"alloy elite",9,17,"Alloy-elite-hyperx.png",50000,1,7,0,""),
@@ -107,14 +107,14 @@ INSERT INTO fabastoredb.carrito_table (ID, id_producto) VALUES
 (10,10);
 
 -- users --
-INSERT INTO fabastoredb.usuarios (ID, id_categoria, usuario, email, password, fecha, nombre, apellido, domicilio, avatar, admin, id_carrito) VALUES
-(1,1,"invitado","invitado@gmail.com","$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG","20211001","Invitado","-","anonimo","default.jpg",true,1),
-(2,1,"admin","admin@gmail.com","$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG","20211001","admin","admin","anonimo","",true,2),
-(3,2,"jmilei","jmilei@gmail.com","libertadAvanza2020","20211001","Javier Gerardo","Milei","calle falsa 123","20211001",false,3),
-(4,2,"Dtrump2025","dtrump@gmail.com","CHAINA-CHAINA-CHAINA","20211001","Donald","Trump","725 5th Ave, New York, NY 10022, EE. UU.","",false,4),
-(5,2,"Satoshi nakamoto ","SatoshiBTC@gmail.com","BTCISNOTABUBBLE","20211001","Satoshi","Nakamoto","NADIE LO SABE Y NADIE LO SABRA","",false,5),
-(6,2,"amado","amadodamis@gmail.com","$2a$10$KyJwoVkHV9DfgNnQHxBCoe1xLJqH6sonbJV5CHt/qsc2P24I07UIK","20211001","Amado","damis","asd","default.jpg",false,6),
-(7,2,"Axel","axel.leonelromano@gmail.com","$2a$10$rTYLPFT7AH6xiFki8ykvAOYZUdVqxVQ31c0V9mD04pm4BsbyhoGYK","20211001","Axel","Romano","asdd","default.jpg",false,7),
-(8,2,"Francisco","francisco@hotmail.com.ar","$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792","20211001","Francisco","Xsdf","1234","default.jpg",false,8),
-(9,2,"Francisco","francisco@hotmail.com","$2a$10$d2RBwWrhyVqwo9.OQ7lt7OlddQAv.xB27xC041C3sbRvW7k/Wsc02","20211001","Francisco","Moletta","asdfa","",false,9);
+INSERT INTO fabastoredb.usuarios (ID, id_categoria, usuario, email, password, fecha, nombre, apellido, domicilio, avatar, id_carrito) VALUES
+(1,2,"invitado","invitado@gmail.com","$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG","20211001","Invitado","-","anonimo","default.jpg",1),
+(2,2,"admin","admin@gmail.com","$2a$10$wyIOKCmOn.Sz4q4z3WespeEbaPhmuL7zYIQdfw1Tr3Q8U7FA8W8fG","20211001","admin","admin","anonimo","",2),
+(3,2,"jmilei","jmilei@gmail.com","libertadAvanza2020","20211001","Javier Gerardo","Milei","calle falsa 123","20211001",3),
+(4,2,"Dtrump2025","dtrump@gmail.com","CHAINA-CHAINA-CHAINA","20211001","Donald","Trump","725 5th Ave, New York, NY 10022, EE. UU.","",4),
+(5,2,"Satoshi nakamoto ","SatoshiBTC@gmail.com","BTCISNOTABUBBLE","20211001","Satoshi","Nakamoto","NADIE LO SABE Y NADIE LO SABRA","",5),
+(6,1,"amado","amadodamis@gmail.com","$2a$10$KyJwoVkHV9DfgNnQHxBCoe1xLJqH6sonbJV5CHt/qsc2P24I07UIK","20211001","Amado","damis","asd","default.jpg",6),
+(7,1,"Axel","axel.leonelromano@gmail.com","$2a$10$rTYLPFT7AH6xiFki8ykvAOYZUdVqxVQ31c0V9mD04pm4BsbyhoGYK","20211001","Axel","Romano","asdd","default.jpg",7),
+(8,1,"Francisco","francisco@hotmail.com.ar","$2a$10$mCfpIfJSDO8KSV6OMCzIVeBXAu80y0fnnO.pAbv0gfWhUw6HBi792","20211001","Francisco","Xsdf","1234","default.jpg",8),
+(9,1,"Francisco","francisco@hotmail.com","$2a$10$d2RBwWrhyVqwo9.OQ7lt7OlddQAv.xB27xC041C3sbRvW7k/Wsc02","20211001","Francisco","Moletta","asdfa","",9);
 

@@ -13,7 +13,6 @@ CREATE TABLE `usuarios` (
    `apellido` VARCHAR(255) NOT NULL,
    `domicilio` VARCHAR(255) NOT NULL,
    `avatar` VARCHAR(255),
-   `admin` BINARY NOT NULL,
    `id_carrito` INT,
    PRIMARY KEY (`ID`)
 );
@@ -47,7 +46,7 @@ CREATE TABLE `tipoDeProducto` (
 
 CREATE TABLE `categoria` (
    `ID` INT AUTO_INCREMENT,
-   `nombreCategoría` VARCHAR(255) NOT NULL,
+   `nombreCategoria` VARCHAR(255) NOT NULL,
    PRIMARY KEY (`ID`)
 );
 
@@ -67,5 +66,3 @@ ALTER TABLE `productos` ADD CONSTRAINT `FK_2b207b0a-83f3-467b-ad8e-a3f6b2c4874f`
 ALTER TABLE `productos` ADD CONSTRAINT `FK_d8d29f5a-64d1-4ac1-9dcd-96e02c3f4b80` FOREIGN KEY (`id_tipoProducto`) REFERENCES `tipoDeProducto`(`ID`)  ;
 
 ALTER TABLE `carrito_table` ADD CONSTRAINT `FK_8cfe5b57-1256-492b-8fd8-707384bddde2` FOREIGN KEY (`id_producto`) REFERENCES `productos`(`ID`)  ;
-
-select * from productos p 
