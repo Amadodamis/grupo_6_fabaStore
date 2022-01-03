@@ -4,10 +4,6 @@ const path = require('path');
 //requiero la base de datos
 const db = require('../database/models/');
 
-/* En la constante "productos" ya tienen los productos que están JSON */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 let controller = {
     edit:(req,res)=>{
 
@@ -25,12 +21,13 @@ let controller = {
         //productToEdit se busca en la base de datos para obtener la imagen del producto.
         let productToEdit = db.Product.findByPk(req.params.id);
 
-        //conversion de los "si" en valores booleanos.
+        //conversion de los "si" que llegan en el formulario en valores booleanos.
         if(req.body.ofertaBooleano=="Si"){req.body.ofertaBooleano=true}else{req.body.ofertaBooleano=false}
         if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}else{req.body.stockBooleano=false}
         
-        /*Tipo producto tiene su propia tabla, y el valor que llega del formulario es un string, 
-        por lo tanto lo convertimos en un valor que la tabla pueda entender.*/
+        /*Tipo producto tiene su propia tabla , y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 18. Es decir, si tipo producto llega "almacenamiento" estas lineas
+        cambian almacenamiento por 1 ya que 1 es el valor de almacenamiento en la base de datos.*/
         let tipoProducto=req.body.tipoProducto;
         if(tipoProducto.charAt(2)==")"){
             tipoProducto=tipoProducto.charAt(0)+tipoProducto.charAt(1);
@@ -65,17 +62,14 @@ let controller = {
     },
 
     delete:(req,res)=>{
-        // Eliminamos el producto que llegó por parametro su ID
-		/*res.send("Producto con id " + req.params.id + " eliminado")*/
-        let id = req.params.id;
-		/* Modificamos el Array */
-		let finalProductos = productos.filter(producto => {
-			return producto.id != id
-		});
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProductos,null," "))
-		res.redirect("/products")
+         //productToEdit se busca en la base de datos para obtener la imagen del producto.
+        let id=req.params.id;
+        db.Product.destroy({
+            where: {id: req.params.id}
+        })
+        res.redirect("/products")
     }
+
 }
 
 module.exports = controller;
