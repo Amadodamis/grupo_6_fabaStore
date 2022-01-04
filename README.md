@@ -58,4 +58,4 @@ Retro:
 Click on the following link to see previous retros - https://github.com/Amadodamis/grupo_6_fabaStore/commit/24c005721add2ad03679218d99a0354f0142057e
 
 Diagrama de Base de Datos:
-![Diagrama Base de Datos - Sprint N° 6](https://user-images.githubusercontent.com/89265928/146676321-038cc31d-3912-49b8-9dc1-f3274b00b3ad.png)
+![Diagrama Base de Datos - Sprint N° 6 - SinTablaModelo](https://user-images.githubusercontent.com/89265928/147389743-2a90dd4c-dd1b-452f-8f1f-e02fc1dd6acb.png)

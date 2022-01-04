@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nombreCategoría: {
+        nombreCategoria: {
             type: dataTypes.STRING
         }
     };
@@ -17,6 +17,15 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Category = sequelize.define(alias, cols, config)
+    //Acá creamos las relaciones con los otros modelos (Brand)
+    Category.associate= function(models){
+        Category.hasMany(models.User,{
+            as:"usuarios",
+            foreignKey:"id_categoria"
+        })
+
+   }
+    
 
     Category.associate = function(models){
         Category.hasMany(models.User, {

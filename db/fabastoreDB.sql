@@ -13,14 +13,13 @@ CREATE TABLE `usuarios` (
    `apellido` VARCHAR(255) NOT NULL,
    `domicilio` VARCHAR(255) NOT NULL,
    `avatar` VARCHAR(255),
-   `admin` BINARY NOT NULL,
    `id_carrito` INT,
    PRIMARY KEY (`ID`)
 );
 
 CREATE TABLE `productos` (
    `ID` INT NOT NULL AUTO_INCREMENT,
-   `id_modelo` INT NOT NULL,
+   `modelo` VARCHAR(255) NOT NULL,
    `id_marca` INT NOT NULL,
    `id_tipoProducto` INT NOT NULL,
    `img` VARCHAR(255),
@@ -45,16 +44,9 @@ CREATE TABLE `tipoDeProducto` (
    PRIMARY KEY (`ID`)
 );
 
-CREATE TABLE `modelo` (
-   `ID` INT NOT NULL AUTO_INCREMENT,
-   `nombreModelo` VARCHAR(255) NOT NULL,
-   `id_marca` INT NOT NULL,
-   PRIMARY KEY (`ID`)
-);
-
 CREATE TABLE `categoria` (
    `ID` INT AUTO_INCREMENT,
-   `nombreCategoría` VARCHAR(255) NOT NULL,
+   `nombreCategoria` VARCHAR(255) NOT NULL,
    PRIMARY KEY (`ID`)
 );
 
@@ -69,12 +61,8 @@ ALTER TABLE `usuarios` ADD CONSTRAINT `FK_5504c721-712c-44b2-b2c8-2bf429f388f4` 
 
 ALTER TABLE `usuarios` ADD CONSTRAINT `FK_e11d13d4-503e-4a62-b196-2bfa80c1e251` FOREIGN KEY (`id_carrito`) REFERENCES `carrito_table`(`ID`)  ;
 
-ALTER TABLE `productos` ADD CONSTRAINT `FK_ef94ae8a-c6e0-4c18-8b30-c79be3bd28fc` FOREIGN KEY (`id_modelo`) REFERENCES `modelo`(`ID`)  ;
-
 ALTER TABLE `productos` ADD CONSTRAINT `FK_2b207b0a-83f3-467b-ad8e-a3f6b2c4874f` FOREIGN KEY (`id_marca`) REFERENCES `marca`(`ID`)  ;
 
 ALTER TABLE `productos` ADD CONSTRAINT `FK_d8d29f5a-64d1-4ac1-9dcd-96e02c3f4b80` FOREIGN KEY (`id_tipoProducto`) REFERENCES `tipoDeProducto`(`ID`)  ;
-
-ALTER TABLE `modelo` ADD CONSTRAINT `FK_3aadba6a-bc19-49ba-a7c4-dfef5ce1b15f` FOREIGN KEY (`id_marca`) REFERENCES `marca`(`ID`)  ;
 
 ALTER TABLE `carrito_table` ADD CONSTRAINT `FK_8cfe5b57-1256-492b-8fd8-707384bddde2` FOREIGN KEY (`id_producto`) REFERENCES `productos`(`ID`)  ;

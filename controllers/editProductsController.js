@@ -1,66 +1,104 @@
 const fs = require('fs');
 const path = require('path');
 
-/* En la constante "productos" ya tienen los productos que están JSON */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//requiero la base de datos
+const db = require('../database/models/');
+
+//requiero las funcionalidades de productos
+const funcionesProductos=require("../views/source/funcionesProductos")
+
 
 let controller = {
-    edit:(req,res)=>{
+
+//////////////////////////////////////////////ACA ENTRA EN LA VISTA DEL EDIT PRODUCT//////////////////////////////////////
+    edit:(req,res)=>{ 
+
         let id=req.params.id;
-        const producto = productos.find(producto =>{
-            return producto.id == id
-        })
-        res.render("editProduct",{
-            producto: producto
-        })
+        db.Product.findByPk(id,{
+            include:["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,     
+            })
+            .then(producto => {
+                res.render('EditProduct.ejs', {producto:producto});
+            });
     },
+//////////////////////////////////ACA RECIBE EL FORMULARIO DE LA EDICION DE UN PRODUCTO///////////////////////////////////
     update:(req,res)=>{
-        //Editamos el producto que va a llegar por parámetro (su ID)
-        let id = req.params.id;
-        let productToEdit = productos.find(product => {
-            return product.id == id
-        })
-        let editedProduct ={
-            id: id,
-            modelo: req.body.producto,
-            marca: req.body.marca,
-            tipoProducto: req.body.tipo,
-            img: req.file ? req.file.filename : productToEdit.img,
-            precio: req.body.precio[0],
-            stock: req.body.stock[0],
-            stockCant: req.body.stock[1],
-            oferta: req.body.stock[2],
-            ofertaPorcentaje: req.body.descuento,
-            precioConOferta: req.body.precio[1],
-            cuotasSinInteres: req.body.cuotas[0],
-            cantCuotas: req.body.cuotas[1],
-            interescuota: req.body.cuotas[2],
-            precioEnCuotas: req.body.cuotas[3],
-            especificaciones: req.body.cuotas[4] 
+        //productToEdit se busca en la base de datos para obtener la imagen del producto.
+        let productToEdit = db.Product.findByPk(req.params.id);
+        let oferta;
+
+        //conversion del "si" en booleano de la oferta y asignacion del precio con el descuento.
+        if(req.body.ofertaBooleano=="Si")
+            {req.body.ofertaBooleano=true;
+            oferta=funcionesProductos.precioConOfertaIndividual(req.body.ofertaPorcentaje,req.body.precio)}
+        else{
+            req.body.ofertaBooleano=false
+            oferta=0;}
+
+        //conversion del "si" en booleano del stock
+        if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}
+        else{req.body.stockBooleano=false;req.body.stockCant=0}
+        
+        /*Tipo producto tiene su propia tabla , y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 18. Es decir, si tipo producto llega "almacenamiento" estas lineas
+        cambian almacenamiento por 1 ya que 1 es el valor de almacenamiento en la base de datos.*/
+        let tipoProducto=req.body.tipoProducto;
+        if(tipoProducto.charAt(2)==")"){
+            tipoProducto=tipoProducto.charAt(0)+tipoProducto.charAt(1);
+            tipoProducto=parseInt(tipoProducto,10)
+            req.body.tipoProducto=tipoProducto;
+        }else{
+            tipoProducto=tipoProducto.charAt(0);
+            tipoProducto=parseInt(tipoProducto,10);
+            req.body.tipoProducto=tipoProducto;
         }
 
-        productos.forEach((producto, index) => {
-            if(producto.id == id){
-                productos[index] = editedProduct
-            }
-        });
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null , " "))
-        res.redirect("/")
+        /*Marca tiene su propia tabla , y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 28. Es decir, si tipo producto llega "Logitech" estas lineas
+        cambian almacenamiento por 1 ya que 1 es el valor de Logitech en la base de datos.*/
+        let marca=req.body.marca;
+        if(marca.charAt(2)==")"){
+            marca=marca.charAt(0)+marca.charAt(1);
+            marca=parseInt(marca,10)
+            req.body.marca=marca;
+        }else{
+            marca=marca.charAt(0);
+            marca=parseInt(marca,10);
+            req.body.marca=marca;
+        }
+         
+        //edicion del producto
+        db.Product.update(
+            {
+                modelo:req.body.modelo,
+                id_marca:req.body.marca,
+                id_tipoProducto: tipoProducto,
+                img: req.file ? req.file.filename : productToEdit.img,
+                precio:req.body.precio,
+                stock:req.body.stockBooleano,
+                stockCant:req.body.stockCant,
+                oferta:req.body.ofertaBooleano,
+                ofertaPorcentaje:req.body.ofertaPorcentaje,
+                precioConOferta:oferta,
+                especificaciones:req.body.especificaciones
+            },
+            {
+             where: {id: req.params.id}
+            })
+            .then (() => {
+                res.redirect("/")
+               })
     },
-    delete:(req,res)=>{
-        // Eliminamos el producto que llegó por parametro su ID
-		/*res.send("Producto con id " + req.params.id + " eliminado")*/
-        let id = req.params.id;
-		/* Modificamos el Array */
-		let finalProductos = productos.filter(producto => {
-			return producto.id != id
-		});
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProductos,null," "))
-		res.redirect("/products")
+////////////////////////////////////////////////// ELIMINACION DE UN PRODUCTO/////////////////////////////////////////////
+    delete:(req,res)=>{ 
+        db.Product.destroy({
+            where: {id: req.params.id}
+        })
+        res.redirect("/products")
     }
+
 }
 
 module.exports = controller;

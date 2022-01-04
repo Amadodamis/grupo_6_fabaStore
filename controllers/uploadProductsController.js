@@ -2,61 +2,87 @@ const fs = require('fs');
 const path = require('path');
 const multer = require ("multer")
 
+//requiero la base de datos
+const db = require('../database/models/');
 
-/* En la constante "productos" ya tienen los productos que están JSON */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+//requiero las funcionalidades de productos
 const funcionesProductos=require("../views/source/funcionesProductos")
-
-let tipoProducto={
-id: "",
-modelo:"",
-marca:"",
-tipoProducto:"",
-img:"",
-precio:"",
-stock:"",
-stockCant:"",
-oferta:"",
-ofertaPorcentaje:"",
-precioConOferta:"",
-cuotasSinInteres:"",
-cantCuotas: "",
-interescuota: "",
-precioEnCuotas: "",
-especificaciones:""
-}
 
 
 let controller = {
     upload: (req,res)=>{
-        res.render("uploadProducts"/*,{productos:productos}*/)
+        res.render("uploadProducts")
     },
+
     formulario: (req,res)=>{
-        
-        //requiero la informacion del formulario y la guardo en form
-        let form=req.body;
-
         //requiero los datos de la foto que cargue desde el navegador.
-        let file=req.file;
+        let file=req.file;let oferta;
 
-        //Guardo el valor del ultimo numero de producto
-        let id=productos.length+1;
+        //conversion del "si" en booleano de la oferta y asignacion del precio con el descuento.
+        if(req.body.ofertaBooleano=="Si")
+            {req.body.ofertaBooleano=true;
+             oferta=funcionesProductos.precioConOfertaIndividual(req.body.ofertaPorcentaje,req.body.precio)}
+        else{
+            req.body.ofertaBooleano=false
+            oferta=0;}
 
-        //especifico el tipo de dato que va a ser
-        let productoNuevo=tipoProducto;
+        //conversion del "si" en booleano del stock
+        if(req.body.stockBooleano=="Si"){req.body.stockBooleano=true}
+        else{req.body.stockBooleano=false;req.body.stockCant=0}
 
-        //Se completan los campos
-        productoNuevo=funcionesProductos.agregarProducto(productoNuevo,file.filename,id,form)
-        productoNuevo.precioConOferta=funcionesProductos.precioConOferta(productoNuevo.precio,productoNuevo.ofertaPorcentaje,productoNuevo.oferta);
+        /*Tipo producto tiene su propia tabla , y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 18. Es decir, si tipo producto llega "almacenamiento" estas lineas
+        cambian almacenamiento por 1 ya que 1 es el valor de almacenamiento en la base de datos.*/
+        let tipoProducto=req.body.tipoProducto;
+           
+        if(tipoProducto.charAt(2)==")"){
+            tipoProducto=tipoProducto.charAt(0)+tipoProducto.charAt(1);
+            tipoProducto=parseInt(tipoProducto,10)
+   
+            req.body.tipoProducto=tipoProducto;
+        }else{
+            tipoProducto=tipoProducto.charAt(0);
+            tipoProducto=parseInt(tipoProducto,10);
+            req.body.tipoProducto=tipoProducto;
+        }
+        
+        /*Marca tiene su propia tabla , y el valor que llega del formulario es un string, 
+        por lo tanto lo convertimos en un valor que la tabla pueda entender. valor del 1 al 28. Es decir, si tipo producto llega "Logitech" estas lineas
+        cambian almacenamiento por 1 ya que 1 es el valor de Logitech en la base de datos.*/
+        let marca=req.body.marca;
+        if(marca.charAt(2)==")"){
+            marca=marca.charAt(0)+marca.charAt(1);
+            marca=parseInt(marca,10)
+            req.body.marca=marca;
+        }else{
+            marca=marca.charAt(0);
+            marca=parseInt(marca,10);
+            req.body.marca=marca;
+        }
 
-        productos.push(productoNuevo);
-        let productosJson=JSON.stringify(productos,null,"\t");
-        fs.writeFileSync(productsFilePath,productosJson)
+        //Creacion del producto 
+        db.Product.create({
+            modelo:req.body.modelo,
+            id_marca:req.body.marca,
+            id_tipoProducto:req.body.tipoProducto,
+            img:file.filename,
+            precio:req.body.precio,
+            stock:req.body.stockBooleano,
+            stockCant:req.body.stockCant,
+            oferta:req.body.ofertaBooleano,
+            precioConOferta:oferta,
+            ofertaPorcentaje:req.body.ofertaPorcentaje,
 
-        res.redirect("/")
-    },
+            especificaciones: req.body.especificaciones
+           })
+           .then (() => {
+            res.redirect("/products")
+           })
+           .catch(e=>{
+            console.log(e)
+        })
+        
+    }
 }
 
 module.exports = controller;

@@ -8,9 +8,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        /*id_categoria: {
+        id_categoria: {
             type: dataTypes.INTEGER,
-        },*/
+        },
         usuario: {
             type: dataTypes.STRING
         },
@@ -35,9 +35,6 @@ module.exports = (sequelize, dataTypes) => {
         avatar: {
             type: dataTypes.STRING
         },
-        admin: {
-            type: dataTypes.STRING
-        }
         /*id_carrito: {
             type: dataTypes.INTEGER,
         }*/
@@ -47,7 +44,16 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
 
+
     const User = sequelize.define(alias, cols, config)
+    
+   User.associate= function(models){
+        User.belongsTo(models.Category,{
+            as:"categoria",
+            foreignKey:"id_categoria"
+        })
+
+   }
 
     User.associate = function(models){
         User.belongsTo(models.Category, {

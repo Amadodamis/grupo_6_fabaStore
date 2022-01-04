@@ -1,8 +1,6 @@
-const fs = require('fs'); const path = require('path');
+//terminada
 
-/* Productos viene de la base de datos de json */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const fs = require('fs'); const path = require('path');
 
 //requiero la base de datos
 const db = require('../database/models/');
@@ -11,19 +9,24 @@ const db = require('../database/models/');
 const funcionesProductos=require("../views/source/funcionesProductos")
 
 let controller={
-    
-    index:(req,res)=>{  // vista de la pantalla principal
+    // vista de la pantalla principal
+    index:(req,res)=>{  
         let prodOferta;  
         db.Product.findAll(
-            {raw:true,     //raw true sirve para obtener solo el datavalues **********NO SACAR IMPORTANTISIMO*********
+            {
+            include:["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,     
             })  
-            .then(prod => {  
-                console.log(prod)
-                prodOferta = funcionesProductos.productosOfertaFunction(prod); // prodOferta tiene un array de los 4 elementos con mayor oferta de la base de datos
-                
-                prodOferta=funcionesProductos.precioConOferta(prodOferta)  // prodOferta actualiza los precios de las ofertas.
-                
+            .then(prod => {
+                // prodOferta tiene un array de los 4 elementos con mayor oferta de la base de datos
+                prodOferta = funcionesProductos.productosOfertaFunction(prod);
+                // prodOferta actualiza los precios de las ofertas.
+                prodOferta=funcionesProductos.precioConOferta(prodOferta) 
                 res.render("index",{prod, prodOferta})
+            })
+            .catch(e=>{
+                console.log(e)
             })
             
     },

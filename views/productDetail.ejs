@@ -15,16 +15,16 @@
          <div class="ficha">
             <div class="izquierda">
                 
-                <h2 class="estilo-Titulo-DP"><%= producto.tipoProducto %> <%= producto.marca %> <%= producto.modelo %></h2>
+                <h2 class="estilo-Titulo-DP"><%= producto.tipodeproducto.tipo_de_producto %> <%= producto.marca.nombreMarca %> <%= producto.modelo %></h2>
                 <div>
                     <img  class="imagen-Produc-Detail" src=/img/<%=producto.img%> >
                 </div>
                 <div class="estilos-Especificaciones-DP">
                     <h3 class="tamaño-h3-DP">Especificaciones</h5>
                     <ul class="tamaño-ul-DP">
-                        <li class="distancia-Especificaciones"> <p>Marca</p> <span><%= producto.marca %></span></li>
+                        <li class="distancia-Especificaciones"> <p>Marca</p> <span><%= producto.marca.nombreMarca %></span></li>
                         <li class="distancia-Especificaciones"> <p>Modelo</p> <span><%= producto.modelo%></span></li>
-                        <li class="distancia-Especificaciones"> <p>Tipo de producto</p> <span><%= producto.tipoProducto %></span></li>
+                        <li class="distancia-Especificaciones"> <p>Tipo de producto</p> <span><%= producto.tipodeproducto.tipo_de_producto%></span></li>
                         <%# 
                        **********************Cambiar a especificaciones por producto******************
                         <li class="distancia-Especificaciones"> <p>Tipo de sensor</p> <span>Hero 25K</span> </li>

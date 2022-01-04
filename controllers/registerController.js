@@ -1,16 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const bcrypt = require('bcryptjs');
 //para los errores que lleguen por el formulario
 const { validationResult } = require('express-validator');
 
-//usuario guarda funcionalidades para la lista de usuarios 
-const usuario = require('../models/Usuario');
+//requiero la base de datos
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-/* En la constante "usuarios" ya tienen los usuarios que están JSON */
-const usuariosFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs');
 
 let controller={
 
@@ -18,37 +16,34 @@ let controller={
         let errors = validationResult(req);
         res.render("register",{ errors: errors.array(),old: req.body }) //errors y old estan definidos para evitar que errors genere conflicto en el primer caso
     },
-
     formulario:(req,res)=>{
         
         let errors = validationResult(req);
         
-        if (errors.isEmpty()) { //si no hay errores
-
-            // Creación de un nuevo usuario por formulario
-            let nuevoUsuario = {
-                id: usuarios[usuarios.length -1].id + 1,
+        if (errors.isEmpty()) { //si no hay errores en lo qe envia el formulario.
+            db.User.create({
                 usuario: req.body.usuario,
+                id_categoria:2,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password,10),
-                fecha: "fecha sin definir",
+                fecha: req.body.fecha,
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 domicilio: req.body.domicilio,
                 avatar: req.file.filename,
-                admin: false
-            }
+               })
+               .then (() => {
+                res.redirect("/")
+               })
+               .catch(e=>{
+                console.log(e)
+            })
             
-            usuarios.push (nuevoUsuario);
-            fs.writeFileSync(usuariosFilePath, JSON.stringify(usuarios,null," "));
-            res.redirect("/")
-
         } else {
             res.render("register", { errors:errors.array(), old: req.body });
         }
        
     },
-
 }
 
 module.exports = controller;
