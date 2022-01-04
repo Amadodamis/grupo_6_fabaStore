@@ -1,5 +1,6 @@
-CREATE DATABASE IF NOT EXISTS "fabastoredb";
-USE "fabastoredb";
+DROP DATABASE IF EXISTS fabastoredb;
+CREATE DATABASE fabastoredb;
+USE fabastoredb;
 
 CREATE TABLE `usuarios` (
    `ID` INT AUTO_INCREMENT,
