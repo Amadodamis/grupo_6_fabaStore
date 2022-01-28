@@ -64,7 +64,7 @@ app.use ("/products",productsRouter); //products
 
 app.use("/login", loginRouter);
 
-app.use("/productCart", productCartRouter);
+app.use("/productcart", productCartRouter);
 
 app.use("/productDetail",productDetailRouter);
 

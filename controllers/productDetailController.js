@@ -17,8 +17,7 @@ let controller={
                 if (req.session.userLogged !=undefined){
                     req.session.ultimosProductos.push(producto)
                 }
-
-                res.render('productDetail.ejs', {producto});
+                res.render('productDetail.ejs', {producto:producto});
             })
             .catch(e=>{
                 console.log(e)
