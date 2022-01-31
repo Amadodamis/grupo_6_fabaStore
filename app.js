@@ -54,6 +54,10 @@ var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 var productsRouter = require('./routes/productsRouter');                    // Rutas /products
 var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
 var editUserRouter = require('./routes/editUserRouter');            // Rutas /editUsuarios
+// Aquí llamo a la ruta de las api de movies
+const apiProductsRouter = require('./routes/api/productsAPIRoutes')
+//Aquí llamo a la ruta de las api de actors
+const apiUserRouter = require('./routes/api/userAPIRoutes')
 
 
 //llamados
@@ -64,7 +68,7 @@ app.use ("/products",productsRouter); //products
 
 app.use("/login", loginRouter);
 
-app.use("/productCart", productCartRouter);
+app.use("/productcart", productCartRouter);
 
 app.use("/productDetail",productDetailRouter);
 
@@ -77,6 +81,10 @@ app.use("/editProduct", editProductsRouter);
 app.use("/editUser", editUserRouter);
 
 app.use ("/profile", profileRouter)
+
+//Aquí creo la colección de mis recursos de movies (APIs)
+app.use('/api/products',apiProductsRouter);
+app.use('/api/users',apiUserRouter);
 
 // ************ Set the server to listen - (NO TOCAR) ************
 app.listen (3032, () => console.log ("Servidor corriendo http://localhost:3032/" ,"http://192.168.0.145:3032/" ));

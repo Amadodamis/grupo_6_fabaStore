@@ -16,6 +16,7 @@ let controller={
     },
    
     procesoLogin: (req,res) => {
+        console.log(req.body)
         //Guardo los datos que llegaron por formulario
         let userEmail=req.body.email;
         console.log(req.body.password)
@@ -35,6 +36,13 @@ let controller={
                     //Si la password es correcta se guarda en session un usuario, su cookie y redirije al perfil
                     if (estaOKLaPassword) { 
                         req.session.userLogged = user;
+                        
+                        // Cuando se inicia sesion se declara como array el carrito
+                        req.session.carrito = [];
+                       
+                        //Cuando se inicia sesion se crea un array para los ultimos productos visitados.
+                        req.session.ultimosProductos=[];    
+                       
                         if (req.body.recordame!=undefined){
                         res.cookie("recordame",user.email,{maxAge:30000})
                          }
