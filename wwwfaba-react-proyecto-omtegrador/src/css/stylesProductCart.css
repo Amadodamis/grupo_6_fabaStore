@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body-productCart{
+background-color: black;
+}
+
+/*****main******/
+
+
+main{
+    margin: auto;
+    max-width: 90vw;
+}
+
+.main-productCart{
+    padding: 10px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
+
+.mi-compra{
+    display: block;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);;
+    background-color:rgba(43, 23, 95, 0.2);
+
+}
+
+.mi-compra h1{
+    margin: 15px;
+    font-weight: 300;
+    color:#c238d8;
+}
+
+.box-compra{
+    display: flex;
+    justify-content: center;
+}
+
+.Productos{
+    flex-grow: 1;
+    width: 50%;
+    padding: 10px;
+    margin: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+    border-radius: 10px;
+}
+
+
+
+.producto-x{
+    padding: 10px 0 10px 10px;
+    margin: 10px;
+    height: 220px;
+    position: relative;
+    display: flex;
+
+    color: #c238d8;
+    font-size: 20px;
+    font-weight: 300;
+    line-height:28px;
+    
+    border-bottom: #c238d8 1px solid;
+}
+
+
+.img-producto-cart{
+    width: 170px;
+}
+
+.jpg-producto{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.bloque-descripcion{
+    align-self: center;
+}
+
+
+.buttons-close-change-minimize{
+    max-height: 25px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    
+}
+
+.buttons-close-change-minimize  i{
+    color: #c238d8;
+    
+}
+
+.buttons-close-change-minimize i:hover{
+    color: white;
+    text-shadow: 0 0 20px #c238d8;
+    
+}
+
+#nombre-producto-cart p{
+    font-weight: 900;
+    text-align: center;
+}
+
+.precio-cart{
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.precio-cart p{
+    font-weight:300;
+}
+
+.box-producto-cant{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+}
+.box-producto-cant p{
+    font-weight: 300;
+}
+
+.botones-producto-cant i{
+    color: #c238d8;
+    font-size: 17px;
+}
+
+.botones-producto-cant i:hover{
+    color:white;
+}
+
+.botones-producto-cant input[type=number]{
+    border:2px solid #c238d8;
+    border-radius: 5px;
+    outline:none;
+    color:#c238d8;
+    text-align: center;
+    background-color: transparent;
+}
+
+.cant-productos{
+    width: 30px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+} /* evita las arrows en el type number*/
+
+
+
+/*---box metodo pago-----*/
+.box-right-bar-pago{
+    width: 50%;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(43, 23, 95, 0.4);
+    background-color:rgba(43, 23, 95, 0.2);
+    border-radius: 10rgba(23, 42, 95, 0.4);
+    display:flex;
+    height:200px;
+}
+
+.box-right-bar-pago p , label{
+    font-family: 'Montserrat', sans-serif;
+    color: #c238d8;
+}
+
+.box-pago{
+ 
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    align-self: center;
+    max-height: 200px;
+    height: 160px;
+    
+}
+
+.metodo-pago{
+    display: flex;
+    justify-content: space-between;
+}
+
+.select{
+    width: 50%;  
+}
+.select-button{
+    cursor: pointer;
+    border:2px solid #c238d8;
+    border-radius: 5px;
+    outline:none;
+    color:#c238d8;
+    text-align: center;
+    background-color: transparent;
+    margin: 2.5px;
+}
+
+.forma-de-envio{
+    display:flex;
+    justify-content: space-between;
+}
+
+.total-precio{
+    display:flex;
+    justify-content: space-between;
+}
+.total-precio p{
+    font-size: 30px;
+}
+
+.boton-comprar{
+    width: 150px;
+    align-self: flex-end;
+}
+
+.boton-productCart{
+    font-size: 20px;
+    font-weight: 400;
+    transition: background-color 500ms;
+    width: 100%;
+    background-color: rgba(43, 23, 95, 0.2);
+    border-radius: 5px;
+    padding: 8px;
+    color: #c238d8;
+    border: 1px solid #c238d8;
+}
+
+.boton-productCart:hover{
+    color:white;
+    background-color: #c238d8;
+}
+
+
+@media (min-width:320px) and (max-width:900px){
+
+    .box-compra{
+        flex-direction: column;
+    }
+
+    .Productos{
+        width: 90%;
+    }
+
+   .box-right-bar-pago{
+       width: 90%;
+    }
+
+    .bloque-descripcion{
+    font-size: 10px;
+    }
+   .botones-producto-cant i{
+       font-size: 10px;
+   }
+   
+   .box-pago{
+       font-size:10px;
+   }
+
+   .total-precio p{
+       font-size: 20px;
+   }
+
+
+}
