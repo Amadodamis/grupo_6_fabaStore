@@ -1,0 +1,534 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.body-index{
+        background-color: #05040a;
+}
+
+/*
+'Montserrat', sans-serif;
+*/
+/* button
+
+*/
+
+h2 .prueba{
+    font-size: 50px;
+}
+
+/* ACÁ ARRANCO CON EL HEADER BODY*/
+.logo-Faba-Store{ 
+    width:400px;
+    height: 196px;
+}
+
+.box-logo-faba-store{ 
+    width:400px;
+    height:196px;
+}
+
+.box-buscador-header{
+    height: 35px;
+}
+.buscador{
+    height: 33px;
+    padding: 10px 30px 10px 10px;
+    border-radius: 5px;
+    border: 0;
+    color: #7e7e83;
+    cursor: inherit;
+}
+
+
+.box-iconos-header{
+    height: 35px;
+}
+
+.iconos-header{
+    font-size: 25px;
+    margin: 5px;
+    color: white;
+}
+
+main{
+    margin: auto;
+    max-width: 95vw; 
+}
+
+.barra-y-box-productos{
+    display: flex;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
+
+
+.barra-lateral{
+    width: 15%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    height: 900px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
+
+.barra-lateral a:hover{
+    background-color: #c238d8;
+    color: white;
+}
+
+.barra-lateral a{
+    font-weight:300;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color:  #c238d8;
+    text-decoration: None;
+
+}
+
+.una-palabra-barra-lateral{
+    position: relative;
+    top: 8px;
+    font-weight: 300;
+}
+
+.dos-palabras-barra-lateral{
+    top: 5px;
+    font-weight: 300;
+}
+
+
+
+.box-productos-main{
+    width: 85%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
+
+/* ACÁ ARRANCO CON EL BANNER Rotativo*/
+/*/img/banner1.jpg*/
+.banner {
+    width: 100vw;
+    height: 200px;
+    background-image: url(/img/banners/banner1.jpg);
+    background-size:100% 100%;
+    transition: all 1s ease-in-out;
+    animation: banner 16s infinite linear
+}
+
+@keyframes banner {
+    0%{
+        background-image: url(/img/banners/banner1.jpg)
+    }
+    17% {
+        background-image: url(/img/banners/banner1.jpg)
+    }
+    18% {
+        background-image: url(/img/banners/banner2.jpg)
+    }
+    35% {
+        background-image: url(/img/banners/banner2.jpg)
+    }
+    36% {
+        background-image: url(/img/banners/banner3.jpg)
+    }
+    54% {
+        background-image: url(/img/banners/banner3.jpg)
+    }
+    55% {
+        background-image: url(/img/banners/banner4.jpg)
+    }
+    73% {
+        background-image: url(/img/banners/banner4.jpg)
+    }
+
+    74% {
+    background-image: url(/img/banners/banner5.jpg)
+    }
+    
+    92% {
+    background-image: url(/img/banners/banner5.jpg)
+    }
+    93% {
+        background-image: url(/img/banners/banner6.jpg)
+        }
+    99% {
+        background-image: url(/img/banners/banner6.jpg)
+    }
+}
+
+/* ACÁ ARRANCO CON EL MAIN BODY*/
+.main-h1{
+    color: #666;
+    text-align: center;
+}
+.img-producto{  /* Te agregue una clase, por que lo tenias como main section img y me rompia el product cart*/
+    max-width: 250px;
+    width: 80%;
+    height: 250px;
+    margin: 15px;
+}
+
+.producto-individual a{
+    text-decoration: none;
+}
+
+.producto-individual{
+    border-radius:15px ;
+    margin:10px;
+    border:#8c0674 1px solid;
+    width: 270px;
+}
+.producto-individual:hover{
+    
+    box-shadow: 0 0 20px #c238d8;
+}
+.descripcion-producto-main{
+    border-top: #8c0674 1px solid;
+    width: 100%;
+    padding: 15px;
+}
+.fila-productos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.precio{
+color: #666;
+font-weight: bold;
+}
+.descuento{
+color: #ff8000;
+font-weight: bold;
+}
+.descripcion{
+color: #666;
+font-weight: bold;
+}
+
+
+
+
+/* ACÁ ARRANCO CON EL FOOTER BODY*/
+
+footer {
+    background-color: #05040a;
+    width: 100%;
+}
+
+.footer-titulo {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    color:  #c238d8;
+    text-decoration: none;
+}
+
+.texto-footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    color:  #c238d8;
+}
+
+.imagen-footer {
+    font-size: 2em;
+    color:  white;
+    margin-bottom: 7.5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagen-footer:hover {
+    text-shadow: 0 0 20px #c238d8;
+    color: white;
+}
+
+.copyright {
+    font-size: 12px;
+    margin: 0;
+    color:  #666
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+}
+
+.logos-i{
+    color: #ebebeb;
+}
+
+.información-adicional {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+} 
+.Color-Usuario{
+    color: #c238d8;
+    font-size: 40px;
+}
+.Avatar-Usuario{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    
+} 
+
+/* CSS del formulario de registro */
+
+
+
+/* ACÁ VAN LAS MEDIA QUERIES */
+
+
+/*CELU*/
+
+@media (min-width: 320px) and (max-width:426px) {
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       .box-logo-faba-store{
+        width: 320px;
+       }
+       .logo-Faba-Store{ /*terminado*/
+        width:320px;
+    }
+
+    .container-banner{
+        display: none;
+    }
+
+    .plus-button-fixed{
+        width: 50px;
+        height: 50px;
+        margin: 1px;
+        padding: 1px;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+    }
+    
+    .plus-button-fixed i{
+        font-size: 50px;
+        color:#c238d8;
+    }
+
+    .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+        min-width: 320px;
+    
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+        display: flex;
+        flex-direction: column;
+
+        }
+        
+        .box-iconos-header{
+            order: 0;
+            align-self: center;
+        }
+        .box-buscador-header{
+            order: 1;
+        }
+    
+        .buscador{
+            width: 100%;
+        }
+    .barra-lateral{
+        display: none;
+    }
+
+    .información-adicional {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+        width: 90%;
+    }
+
+    
+
+    .footer-logos{
+        display: none;
+    }
+    .seccion{
+        flex-direction: column;
+        height: 48%;
+    }
+    .producto-individual{
+        width: 90%;
+    }
+}
+
+
+/*TABLET
+*/
+@media(min-width:426px) and (max-width:768px){
+    
+    .plus-button-fixed{
+        display: none;
+    }
+    
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+    
+       .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+    
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+        display: flex;
+    
+        }
+    
+        .box-buscador-header{
+            flex-grow: 0.9;
+        }
+        
+        .box-iconos-header{
+            flex-grow: 0.1;
+        }
+    
+        .buscador{
+            width: 100%;
+        }
+
+
+    .información-adicional {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0px;
+        margin: auto;
+        width: 90%;
+    }
+    .botton {
+        font-size: 16px;
+    }
+    .botton-cancelled {
+        font-size: 16px;
+    }
+
+}
+
+
+/*DESKTOP*/
+
+@media (min-width: 769px) {
+
+    .plus-button-fixed{
+        display: none;
+    }
+    header{
+        max-width:1440px; /* por si se ve en una resolucion televisor*/
+        margin: auto;     /* por si se ve en una resolucion televisor*/
+        display: flex;
+        max-height:200px; /* para dimensionar logo*/
+       
+        
+    }
+
+    .logo-Faba-Store{ /*terminado*/
+        width:400px;
+        height: 196px;
+    }
+
+    .box-logo-faba-store{ /*terminado*/
+        width:400px;
+        height:196px;
+    }
+   
+    .lupa-e-iconos{   /*terminado*/
+        width: 100%; /* 100% de lo que resta del header*/
+        padding: 10px;
+        margin: 15px;
+
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+
+        display: flex;
+        align-items: end;
+    }
+
+    .box-buscador-header{
+        flex-grow: 0.8;
+    }
+    
+    .box-iconos-header{
+        flex-grow: 0.2;
+    }
+
+    .buscador{
+        width: 100%;
+    }
+
+
+    .información-adicional {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin: auto;
+        width: 95%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+        background-color: rgba(43, 23, 95, 0.2);
+    }  
+    .botton {
+        font-size: 20px;
+    }
+    .botton-cancelled {
+        font-size: 20px;
+    }
+    
+    .botton {
+        font-size: 20px;
+    }
+    .botton-cancelled {
+        font-size: 20px;
+    }
+    .Productos-link{
+        text-align: center;
+        padding: 5px;
+    }
+    .producto-link-contenido{
+        border: solid 1px #c238d8;
+        border-radius: 5px;
+        padding: 4px;
+        text-decoration: none;
+        background-color: #c238d8;
+    }
+
+}
+
