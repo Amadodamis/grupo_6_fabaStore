@@ -17,9 +17,18 @@ import {Route,Routes,Link} from "react-router-dom"
 function App() {
   return (
     <div className="App">
-    
-    <ProductCart/>
-
+    <Routes> 
+      <Route path="/" element={<Index />}/>
+      <Route path="/login" element={<Login />}/>
+      <Route path="/register" element={<Register />}/>
+      <Route path="/profile" element={<Profile />}/>
+      <Route path="/editUser" element={<EditUser />}/>
+      <Route path="/productDetail" element={<ProductDetail />}/>
+      <Route path="/Products" element={<Products />}/>
+      <Route path="/EditProducts" element={<EditProducts />}/>
+      <Route path="/uploadProducts" element={<UploadProducts />}/>
+      <Route path="/productCart" element={<ProductCart />}/>
+    </Routes>
     </div>
   );
 }
