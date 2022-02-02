@@ -2,6 +2,8 @@ import '../css/styles.css';
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
+import Explora from "./partials/partials-index/explora"
+import Ofertas from './partials/partials-index/ofertas';
 
 
 
@@ -30,7 +32,7 @@ function index() {
           </div> 
           <br />
 
-          <main>
+          <main className="barra-y-box-productos">
 
             <section className="barra-lateral">
                 <Link to="/#"><p className="una-palabra-barra-lateral">Arma tu pc</p></Link>
@@ -57,13 +59,8 @@ function index() {
 
             <section className="box-productos-main"> 
            
-            {/*<%- include('./partials/partials-index/ofertas') %> */}
-
-            {/*
-          
-            <%- include('./partials/partials-index/explora') %>
-
-            */}
+            <Ofertas />
+            <Explora />
 
             </section>
 

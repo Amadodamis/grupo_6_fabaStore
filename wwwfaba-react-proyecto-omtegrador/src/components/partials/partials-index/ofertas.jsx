@@ -1,30 +1,29 @@
 import {Link} from "react-router-dom"
 
+import "../../../css/styles.css"
+import productox from "../../../img/gabinete.png"
+
+let array = [1,2,3,4]
+let items;
+
 function Ofertas() {
     return (
       <div>
-          <h1 className="main-h1"> Ofertas  </h1>
+          <h1  className="main-h1" >Ofertas</h1>
 
-      <section className="fila-productos">
-        {/*<% for( let index = 0; index < prodOferta.length; index++ ) { %> */}
-    
-        {/* 
-    <article className="producto-individual">
-        <Link to="../../productDetail/<%= prodOferta[index].id %>">
-            <div><img className="img-producto" src=/img/<%= prodOferta[index].img %> ></div>
-        
-            <div className="descripcion-producto-main">
-                <p className="precio"> <%= prodOferta[index].precioConOferta %> $</p>
-                <p className="descuento"> <%= prodOferta[index].ofertaPorcentaje %> % off</p>
-                <p className="descripcion"> <%= prodOferta[index].modelo %> <%= prodOferta[index].marca.nombreMarca %></p>
-            </div>
-        </Link>
-    </article>
-
-      */}
-
-    {/*<% } %> */}
-    </section>
+          <section className="fila-productos">
+            { items = array.map((number) =>
+            <article className="producto-individual">
+            <Link to="../../productDetail/id">
+              <div><img className="img-producto" src={productox}/></div>
+              <p className="precio"> Precio con Oferta o precio $</p>
+              <p className="descuento"> oferta porcentaje % off</p>
+              <p className="descripcion"> aca Marca modelo</p>
+            </Link>
+            </article>
+            )}
+          </section>
+          
       </div>
     );
   }
