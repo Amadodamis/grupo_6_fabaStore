@@ -1,6 +1,8 @@
 import Footer from "./partials/footer"
 import Head from "./partials/head"
-import banner from '../img/logo-faba-dimensionado.jpg'
+import Header from "./partials/header"
+import '../css/styles.css';
+
 
 import {Link,Route,Routes} from "react-router-dom"
 
@@ -11,22 +13,21 @@ function index() {
     return (
       <div >
 
-
        <Head />
-       <img src={banner} />
+      
 
         <body classNameName="body-index" >
-          
-          {/* <%- include('./partials/header') %>*/}
 
-          {/* <section classNameName="container-banner">
+          <Header />
+
+           <section classNameName="container-banner">
               <div classNameName="banner"> </div>
-          </section>*/}
+          </section>
           
-          {/*
+          
           <div className="plus-button-fixed">
             <i className="fas fa-plus-circle"></i>
-          </div> */}
+          </div> 
           <br />
 
           <main>
@@ -55,10 +56,12 @@ function index() {
 
             <section className="box-productos-main"> 
            
-            {/* 
-            <%- include('./partials/partials-index/ofertas') %>
+            {/*<%- include('./partials/partials-index/ofertas') %> */}
 
+            {/*
+          
             <%- include('./partials/partials-index/explora') %>
+
             */}
 
             </section>
@@ -67,7 +70,6 @@ function index() {
           </main>
           <br />
             <Footer />
-            {/*<%- include('./partials/footer') %> */}
         </body>
       
 
