@@ -1,7 +1,8 @@
+import '../css/styles.css';
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
-import '../css/styles.css';
+
 
 
 import {Link,Route,Routes} from "react-router-dom"
@@ -11,17 +12,16 @@ function index() {
     
     
     return (
-      <div >
+      <div>
 
-       <Head />
+        <Head />
       
-
-        <body classNameName="body-index" >
+        <body className="body-index" >
 
           <Header />
 
-           <section classNameName="container-banner">
-              <div classNameName="banner"> </div>
+          <section className="container-banner">
+              <div className="banner"> </div>
           </section>
           
           
@@ -31,7 +31,8 @@ function index() {
           <br />
 
           <main>
-          <section className="barra-lateral">
+
+            <section className="barra-lateral">
                 <Link to="/#"><p className="una-palabra-barra-lateral">Arma tu pc</p></Link>
                 <Link to="/#"><p className="una-palabra-barra-lateral">Almacenamiento</p></Link>
                 <Link to="/#"><p className="una-palabra-barra-lateral">Auriculares</p></Link>
@@ -66,10 +67,12 @@ function index() {
 
             </section>
 
-
           </main>
+
           <br />
-            <Footer />
+
+          
+        <Footer />
         </body>
       
 

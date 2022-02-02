@@ -13,9 +13,4 @@ function App() {
   );
 }
 
-{/* <Routes>
-  <Route path="/"  element={<Home />}/>
-  <Route path="/Amado"  element={<Amado />}/>
-</Routes> */}
-
 export default App;

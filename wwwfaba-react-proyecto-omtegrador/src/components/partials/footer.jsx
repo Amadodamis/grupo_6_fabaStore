@@ -1,15 +1,17 @@
 import {Link} from "react-router-dom"
+import '../../css/styles.css';
 
 function Footer() {
     
     
     return (
-      <div className="footer">
+      <footer className="footer">
           <section className="informacion-adicional">
              <article>
                <div className="imagen-footer">
                   <i className="fas fa-credit-card"></i>
                 </div>
+                
                 <h4 className="footer-titulo"><Link to="#" className="footer-titulo">Información</Link></h4>
                 <p className="texto-footer">Contáctenos</p>
                 <p className="texto-footer">Política de privacidad</p>
@@ -65,7 +67,7 @@ function Footer() {
           <article>
               <p class="copyright">Copyright © 2021 fabaStore S.R.L.</p>
           </article>
-      </div>
+      </footer>
     );
   }
   

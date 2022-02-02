@@ -6,16 +6,12 @@
     font-weight: 500;
 }
 
+
 .body-index{
         background-color: #05040a;
 }
 
-/*
-'Montserrat', sans-serif;
-*/
-/* button
 
-*/
 
 h2 .prueba{
     font-size: 50px;
@@ -223,7 +219,7 @@ font-weight: bold;
 
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
-footer {
+.footer {
     background-color: #05040a;
     width: 100%;
 }
@@ -276,7 +272,7 @@ footer {
     color: #ebebeb;
 }
 
-.información-adicional {
+.informacion-adicional {
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(43 23 95 / 40%);
     background-color: rgba(43, 23, 95, 0.2);
@@ -362,7 +358,7 @@ footer {
         display: none;
     }
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -425,7 +421,7 @@ footer {
         }
 
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -495,7 +491,7 @@ footer {
     }
 
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;
