@@ -1,4 +1,3 @@
-import '../../css/prueba.css';
 
 function Head() {
     
