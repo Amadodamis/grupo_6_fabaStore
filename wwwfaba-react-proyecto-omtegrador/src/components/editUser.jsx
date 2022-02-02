@@ -9,7 +9,6 @@ function EditUser() {
     
     
     return (
-      <div >
         <body className="body-index">
           <Head />
           <Header />
@@ -58,7 +57,6 @@ function EditUser() {
 
           <Footer/>
         </body>
-      </div>
     );
   }
   

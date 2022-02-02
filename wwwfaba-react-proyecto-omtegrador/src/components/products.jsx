@@ -4,27 +4,28 @@ import Header from "./partials/header"
 import "../css/styles.css"
 
 import {Link} from "react-router-dom"
-import productoX from '../img/gabinete.png'
+import productox from '../img/gabinete.png'
 
+let array = [1,2,3,4,5,6,7,8,9,10,11,12]
+let items;
 
 function products() {
     
     
     return (
-      <div >
         <body className="body-index">
           <Head />
           <Header />
 
-          <section class="container-banner">
-            <div class="banner"> </div>
+          <section className="container-banner">
+            <div className="banner"> </div>
           </section>
 
-          <div class="plus-button-fixed">
-            <i class="fas fa-plus-circle"></i>     
+          <div className="plus-button-fixed">
+            <i className="fas fa-plus-circle"></i>     
           </div>
           <br />
-          
+          <main className="barra-y-box-productos">
           <section className="barra-lateral">
                 <Link to="/#"><p className="una-palabra-barra-lateral">Arma tu pc</p></Link>
                 <Link to="/#"><p className="una-palabra-barra-lateral">Almacenamiento</p></Link>
@@ -48,9 +49,29 @@ function products() {
                 <Link to="/#"><p className="una-palabra-barra-lateral">Webcams</p></Link>
             </section>
 
-          
+          <section className="box-productos-main">
+          <h1 className="main-h1"> Todos los productos </h1>
+              <section className="fila-productos">
+                { items = array.map((number) =>
+                <article className="producto-individual">
+                <Link to="../../productDetail/id">
+                  <div><img className="img-producto" src={productox}/></div>
+                  <p className="precio"> Precio con Oferta o precio $</p>
+                  <p className="descuento"> oferta porcentaje % off</p>
+                  <p className="descripcion"> aca Marca modelo</p>
+                </Link>
+                </article>
+                )}
+              </section>
+
+
+          </section>
+        
+        </main>
+
+        <br />
+        <Footer />
         </body>  
-      </div>
     );
   }
   

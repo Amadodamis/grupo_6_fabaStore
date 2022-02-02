@@ -14,11 +14,8 @@ function index() {
     
     
     return (
-      <div>
-
-        <Head />
-      
         <body className="body-index" >
+        <Head />
 
           <Header />
 
@@ -71,10 +68,6 @@ function index() {
           
         <Footer />
         </body>
-      
-
-
-      </div>
     );
   }
   

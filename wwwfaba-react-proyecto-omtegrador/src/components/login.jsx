@@ -9,10 +9,7 @@ import {Link} from "react-router-dom"
 function Login() {
     
     return (
-      <div >
         <body className="body-index">
-          
-        
           <Head />
           <Header />
 
@@ -61,7 +58,6 @@ function Login() {
           <br />
           <Footer/>
         </body>
-      </div>
     );
   }
   

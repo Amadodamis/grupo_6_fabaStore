@@ -10,114 +10,96 @@ function ProductDetail() {
     
     
     return (
-      <div >
-        <Head />
-        
         <body className="body-index">
-          <Header />
+            <Head />
+            <Header />
             <section className="container-banner">
               <div className="banner"> </div>
             </section>
 
-          <br />
+             <br />
         
-<main className="main-detalle-del-producto">
-            <section>
-              <div className="ficha">
-                <div className="izquierda">
+            <main className="main-detalle-del-producto">
+                <section>
+                    <div className="ficha">
+                        <div className="izquierda">
                     
-                    <h2 className="estilo-Titulo-DP">tipo producto marca modelo </h2>
-                    <div>
-                    <img className="imagen-Produc-Detail" src={productoX} />
-  
-                    </div>
-                    <div className="estilos-Especificaciones-DP">
-                        <h3 className="tamaño-h3-DP">Especificaciones</h3>
-                        <ul className="tamaño-ul-DP">
-                            <li className="distancia-Especificaciones"> <p>Marca</p> <span></span></li>
-                            <li className="distancia-Especificaciones"> <p>Modelo</p> <span></span></li>
-                            <li className="distancia-Especificaciones"> <p>Tipo de producto</p> <span></span></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-                <div className="derecha">
-                    <div className="estilos-Precio-DP">
-                      {/*
-                            <% if (producto.oferta) { %>
-                       */}
-                                <h1 className="Precio-DP">$precio con oferta</h1>
-                                <h1 className="titulos-h1"> Precio en Cuotas </h1>
-                                <h3 className="Precio-DP">$precio en cuotas</h3>
-                                {/*
-                            <% } else { %>
-
-                                 */}
-                                     {/* 
-                                 
-                                      <h1 className="Precio-DP">$precio</h1>
-                                      <h1 className="titulos-h1"> Precio en Cuotas </h1>
-                                      <h3 className="Precio-DP">$precio en cuotas</h3>
-                                    */}
-                                {/*
-                                
-                            <%  } %> 
-                                 */}
-                             
-                    </div>
-                    <div className="info-ficha-cuotas">
-                        <div className="iconos-DP">
-                            <i className="fas fa-credit-card iconos-DP-tamaño"></i>
-                        </div>
+                        <h2 className="estilo-Titulo-DP">tipo producto marca modelo </h2>
                         <div>
-                            <p>  sin interés</p>
-                            <p className="tamaño-texto-DP">Precio de lista</p>
-                            <button type="button" className="boton-DP">Ver cuotas</button>
+                            <img className="imagen-Produc-Detail" src={productoX} />
                         </div>
-                    </div>
-                    <div className="info-ficha-envios">
-                        <div className="iconos-DP">
-                            <i className="fas fa-shipping-fast iconos-DP-tamaño"></i>
+
+                        <div className="estilos-Especificaciones-DP">
+                            <h3 className="tamaño-h3-DP">Especificaciones</h3>
+                            <ul className="tamaño-ul-DP">
+                                <li className="distancia-Especificaciones"> <p>Marca</p> <span></span></li>
+                                <li className="distancia-Especificaciones"> <p>Modelo</p> <span></span></li>
+                                <li className="distancia-Especificaciones"> <p>Tipo de producto</p> <span></span></li>
+                            </ul>
+                         </div>
                         </div>
-                        <div>
-                            <p>Envío a todo el país</p>
-                            <p className="tamaño-texto-DP">Recibílo en tu domicilio rápido y seguro</p>
-                            <button type="button" className="boton-DP">Ver costo de envío</button>
+
+                        <div className="derecha">
+                        <div className="estilos-Precio-DP"> 
+                            <h1 className="Precio-DP">$precio con oferta</h1>
+                            <h1 className="titulos-h1"> Precio en Cuotas </h1>
+                            <h3 className="Precio-DP">$precio en cuotas</h3>        
                         </div>
-                    </div>
-                    <div className="info-ficha-retirar">
-                        <div className="iconos-DP">
-                            <i className="fas fa-map-marked-alt iconos-DP-tamaño"></i>
+
+                        <div className="info-ficha-cuotas">
+                            <div className="iconos-DP">
+                                <i className="fas fa-credit-card iconos-DP-tamaño"></i>
+                            </div>
+                            <div>
+                                <p>  sin interés</p>
+                                <p className="tamaño-texto-DP">Precio de lista</p>
+                                <button type="button" className="boton-DP">Ver cuotas</button>
+                            </div>
                         </div>
-                        <div>
-                            <p>Podés retirarlo aquí</p>
+
+                        <div className="info-ficha-envios">
+                            <div className="iconos-DP">
+                                <i className="fas fa-shipping-fast iconos-DP-tamaño"></i>
+                            </div>
+                            <div>
+                                <p>Envío a todo el país</p>
+                                <p className="tamaño-texto-DP">Recibílo en tu domicilio rápido y seguro</p>
+                                <button type="button" className="boton-DP">Ver costo de envío</button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="info-ficha-stock">
-                        <div className="iconos-DP">
-                            <i className="fas fa-check-circle color-icono-stock" ></i>
+
+                        <div className="info-ficha-retirar">
+                            <div className="iconos-DP">
+                                <i className="fas fa-map-marked-alt iconos-DP-tamaño"></i>
+                            </div>
+                            <div>
+                                <p>Podés retirarlo aquí</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className="color-stock">Stock disponible</p>
+
+                        <div className="info-ficha-stock">
+                            <div className="iconos-DP">
+                                <i className="fas fa-check-circle color-icono-stock" ></i>
+                            </div>
+                            <div>
+                                <p className="color-stock">Stock disponible</p>
+                            </div>
                         </div>
-                    </div>
                     
-                    <div className="cantidad-producto">
-                        <button type="button" className="boton-DP-menos"><i className="fas fa-minus"></i></button>
-                        <input type="number" min="1" max="99999" className="texto-cantidad-producto" />
-                        <button type="button" className="boton-DP-mas"><i className="fas fa-plus" /></button>
-                    </div>
-                    <div className="productos-agregar-comprar">
+                        <div className="cantidad-producto">
+                            <button type="button" className="boton-DP-menos"><i className="fas fa-minus"></i></button>
+                            <input type="number" min="1" max="99999" className="texto-cantidad-producto" />
+                            <button type="button" className="boton-DP-mas"><i className="fas fa-plus" /></button>
+                        </div>
+
+                        <div className="productos-agregar-comprar">
                             
-                        <form action="/productcart" method="POST" >
-    
+                            <form action="/productcart" method="POST" >
                               <input type="number" name="idproducto" value="<%=producto.id %>" />    
     
                               <input type="submit" className="boton-agregar-comprar-carrito" name="carrito" value="Agregar carrito" />      
                                   
-                        </form>
+                            </form>
               
                         <Link to="/editProduct/<%= producto.id %>" className="boton-agregar-comprar-carrito">Editar Producto</Link>
                                  {/*
@@ -127,18 +109,17 @@ function ProductDetail() {
                         </form>
                                  */}
     
+                        </div>
+
+                        </div>
+
+
                     </div>
-                </div>
+                </section>
+            </main>
 
-
-
-              </div>
-            </section>
-          </main>
-
-          <Footer />
+            <Footer />
         </body>
-      </div>
     );
   }
   
