@@ -9,12 +9,15 @@
 
     <section class="section-formulario-login">
 
-        <form action="/login" method="POST" class="form-registro">
+        <form action="/login" method="POST" id = "formulario" class="form-registro">
 
             <p class="iniciar-sesion-tamañano" >Iniciar Sesión</p>
-
+            <div class="errores">
+                <ul></ul>
+            </div>
             <div class="control-form">
-                <input type="text" name="email" placeholder="Correo Electrónico" class="control" required>
+                <input type="text" name="email" id="email" placeholder="Correo Electrónico" class="control" >
+                <p id="error-email" class="error-formulario"> El campo debe estar Completo y ser un Email valido</p>
                 <% if (locals.errors && errors.email) { %>
                     <div>
                         <%= errors.email.msg %>
@@ -23,9 +26,12 @@
             </div>
 
             <div class="control-form">
-                <input type="password" name="password" placeholder="Contraseña" class="control">
+                <input type="password" name="password" id="password" placeholder="Contraseña" class="control">
+                <p id="error-password" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 1 caracteres</p>
             </div>
-
+            <div class="control-form mensaje-Formulario-no-exito" id="mensaje-Formulario-no-exito">
+                <p>Por favor rellenar el registro correctamente</p>
+            </div>
             <div class="control-form">
                 <button type="submit" class="botton">Iniciar Sesión<nav></nav></button>
             </div>
@@ -57,4 +63,5 @@
 </main>
     <br/>
     <%- include('./partials/footer') %>
+    <script src="/js/validacionLoginFront.js"></script>
 </body>
