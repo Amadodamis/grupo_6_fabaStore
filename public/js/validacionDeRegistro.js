@@ -17,6 +17,7 @@ window.onload = function(){
         apellido: false,
         avatar: false,
     }
+    console.log(campos)
     // atrapo el formulario
     const formulario = document.getElementById("formulario")
 
@@ -25,7 +26,7 @@ window.onload = function(){
 
     //declaro un funcion validarFormulario donde tengo un switch que pasa por cada uno de los inputs que recibo del foreach
     const validarFormulario = function (e){
-        // con el e.target.name agarro el nombre del input que me llega 
+        // con el e.target.name agarro el nombre del input que me llega
         switch (e.target.name) {
             case "usuario":
                 validarCampos(expresiones.usuario, e.target, "usuario")
@@ -57,7 +58,6 @@ window.onload = function(){
 
     // cree la funcion validarCampos que toma una expresion, input y campo que contenga cada campo del formulario
     const validarCampos = function(expresion, input, campo){
-        
     //el if recive la expresion, input y campo que obtiene de algun case del switch 
         if(expresion.test(input.value)){
            //cada uno de los document agregan o remueven uno de las 4 clases que agregue en el css de StyleRegisterLogin
@@ -88,7 +88,6 @@ window.onload = function(){
             document.getElementById(`error-confpassword`).classList.remove("error-formulario")
             document.getElementById(`error-confpassword`).classList.add("error-formulario-activo")
             campos ["password"] = false;
-            console.log(inputPassword2.value)
         } else{
             document.getElementById(`confpassword`).classList.add("correcto")
             document.getElementById(`confpassword`).classList.remove("incorrecto")
@@ -98,7 +97,7 @@ window.onload = function(){
         }
     }
 
-    //valido si el archivo el jpg/jpeg,png,gif - PENDIENTE
+    //valido si el archivo el jpg,jpeg,png,gif - PENDIENTE
     
     // recorre el array de inputs y por cada vez que aprete una tecla o saque el mouse ejecuta la funcion de validar usuario
     inputs.forEach((input) => {
@@ -107,7 +106,7 @@ window.onload = function(){
     })
     
      formulario.addEventListener("submit", function(event){
-        event.preventDefault();
+
         //&& campos.avatar
         if(campos.usuario && campos.password && campos.email && campos.nombre && campos.domicilio && campos.apellido){
             formulario.reset();
@@ -117,6 +116,7 @@ window.onload = function(){
             }, 5000);
         }else{
             document.getElementById("mensaje-Formulario-no-exito").classList.add("mensaje-Formulario-no-exito-activo")
+            event.preventDefault();
         }
     })
 

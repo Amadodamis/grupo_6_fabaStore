@@ -289,6 +289,17 @@ footer {
     height: 200px;
     
 } 
+.producto-link-contenido{
+    border: solid 1px #c238d8;
+    border-radius: 5px;
+    padding: 4px;
+    text-decoration: none;
+    background-color: #c238d8;
+}
+.Productos-link{
+    text-align: center;
+    padding: 5px;
+}
 
 /* CSS del formulario de registro */
 
@@ -381,6 +392,7 @@ footer {
     .producto-individual{
         width: 90%;
     }
+    
 }
 
 
@@ -516,17 +528,8 @@ footer {
     .botton-cancelled {
         font-size: 20px;
     }
-    .Productos-link{
-        text-align: center;
-        padding: 5px;
-    }
-    .producto-link-contenido{
-        border: solid 1px #c238d8;
-        border-radius: 5px;
-        padding: 4px;
-        text-decoration: none;
-        background-color: #c238d8;
-    }
+    
+    
 
 }
 

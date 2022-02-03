@@ -20,7 +20,8 @@
 .form-registro {
     padding: 25px 15px;
     text-align: center; 
-  
+    height: 630px;
+    width: 460px;
 }
 
 .iniciar-sesion-tamañano {
