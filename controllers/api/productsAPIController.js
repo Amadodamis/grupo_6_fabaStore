@@ -12,7 +12,9 @@ const Product = db.Product;
 const productsAPIController = {
     'list': (req, res) => {
         db.Product.findAll({
-            include: ["marca","tipodeproducto"]
+            include: ["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,
         })
         .then(products => {
             let respuesta = {
@@ -31,7 +33,9 @@ const productsAPIController = {
     
     'detail': (req, res) => {
         db.Product.findByPk(req.params.id, {
-            include: ["marca","tipodeproducto"]
+            include: ["marca","tipodeproducto"],
+            raw:true,  
+            nest:true,
         })
             .then(product => {
                 let respuesta = {

@@ -14,8 +14,8 @@ function Ofertas(props) {
           <h1  className="main-h1" >Ofertas</h1>
 
           <section className="fila-productos">
-            {array.map((number) =>
-            <article className="producto-individual">
+            {array.map((number,i) =>
+            <article key={number+i}className="producto-individual">
             <Link to="../../productDetail/id">
               <div><img className="img-producto" src={productox} alt="img-producto"/></div>
               <p className="precio"> Precio con Oferta o precio $</p>

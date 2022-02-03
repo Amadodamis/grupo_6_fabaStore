@@ -1,3 +1,4 @@
+import React from "react"
 import '../css/styles.css';
 import Footer from "./partials/footer"
 import Head from "./partials/head"
@@ -11,8 +12,6 @@ import {Link} from "react-router-dom"
 
 
 function index(props) {
-    
-    console.log(props.amado)
     return (
         <body className="body-index" >
           <Head />

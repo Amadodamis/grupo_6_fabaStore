@@ -1,3 +1,4 @@
+import React from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
@@ -21,7 +22,7 @@ function Profile() {
               <p className="Color-Usuario">ID de Usuario: </p>
               <div >
                 <h1 className="Color-Usuario">Avatar:</h1>
-                 <span><img src={avatar} className="Avatar-Usuario"/></span> 
+                 <span><img src={avatar} className="Avatar-Usuario" alt="avatar"/></span> 
                </div>
                <br />
                <Link to="/editUser/Id-usuario" className="Edit-User-button" >Editar Usuario</Link>

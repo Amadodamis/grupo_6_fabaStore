@@ -1,3 +1,4 @@
+import React from "react"
 import Head from "./partials/head"
 import Header from "./partials/header"
 import Footer from "./partials/footer"
@@ -6,7 +7,6 @@ import PartialCarrito from "./partials/partialCarrito"
 import "../css/styles.css"
 import "../css/stylesProductCart.css"
 
-import {Link} from "react-router-dom"
 
 
 function ProductCart() {

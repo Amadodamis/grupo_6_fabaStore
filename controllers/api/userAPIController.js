@@ -11,7 +11,10 @@ const User = db.User;
 
 const userAPIController = {
     'list': (req, res) => {
-        db.User.findAll()
+        db.User.findAll({
+            raw:true,  
+            nest:true,
+        })
         .then(users => {
             let respuesta = {
                 meta: {

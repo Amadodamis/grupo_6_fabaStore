@@ -1,3 +1,4 @@
+import React from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
@@ -51,15 +52,15 @@ function products() {
           <section className="box-productos-main">
           <h1 className="main-h1"> Todos los productos </h1>
               <section className="fila-productos">
-                {array.map((number) =>
-                <article className="producto-individual">
-                <Link to="../../productDetail/id">
-                  <div><img className="img-producto" src={productox} alt="img-producto"/></div>
-                  <p className="precio"> Precio con Oferta o precio $</p>
-                  <p className="descuento"> oferta porcentaje % off</p>
-                  <p className="descripcion"> aca Marca modelo</p>
-                </Link>
-                </article>
+                {array.map((number,i) =>
+                  <article key={number+i} className="producto-individual">
+                    <Link to="../../productDetail/id">
+                      <div><img className="img-producto" src={productox} alt="img-producto"/></div>
+                      <p className="precio"> Precio con Oferta o precio $</p>
+                      <p className="descuento"> oferta porcentaje % off</p>
+                      <p className="descripcion"> aca Marca modelo</p>
+                    </Link>
+                  </article>
                 )}
               </section>
 
