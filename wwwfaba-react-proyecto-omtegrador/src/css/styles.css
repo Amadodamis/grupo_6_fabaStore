@@ -6,16 +6,12 @@
     font-weight: 500;
 }
 
+
 .body-index{
         background-color: #05040a;
 }
 
-/*
-'Montserrat', sans-serif;
-*/
-/* button
 
-*/
 
 h2 .prueba{
     font-size: 50px;
@@ -122,7 +118,7 @@ main{
 .banner {
     width: 100vw;
     height: 200px;
-    background-image: url(/img/banners/banner1.jpg);
+    background-image: url(../img/banners/banner1.jpg);
     background-size:100% 100%;
     transition: all 1s ease-in-out;
     animation: banner 16s infinite linear
@@ -130,42 +126,42 @@ main{
 
 @keyframes banner {
     0%{
-        background-image: url(/img/banners/banner1.jpg)
+        background-image: url(../img/banners/banner1.jpg)
     }
     17% {
-        background-image: url(/img/banners/banner1.jpg)
+        background-image: url(../img/banners/banner1.jpg)
     }
     18% {
-        background-image: url(/img/banners/banner2.jpg)
+        background-image: url(../img/banners/banner2.jpg)
     }
     35% {
-        background-image: url(/img/banners/banner2.jpg)
+        background-image: url(../img/banners/banner2.jpg)
     }
     36% {
-        background-image: url(/img/banners/banner3.jpg)
+        background-image: url(../img/banners/banner3.jpg)
     }
     54% {
-        background-image: url(/img/banners/banner3.jpg)
+        background-image: url(../img/banners/banner3.jpg)
     }
     55% {
-        background-image: url(/img/banners/banner4.jpg)
+        background-image: url(../img/banners/banner4.jpg)
     }
     73% {
-        background-image: url(/img/banners/banner4.jpg)
+        background-image: url(../img/banners/banner4.jpg)
     }
 
     74% {
-    background-image: url(/img/banners/banner5.jpg)
+    background-image: url(../img/banners/banner5.jpg)
     }
     
     92% {
-    background-image: url(/img/banners/banner5.jpg)
+    background-image: url(../img/banners/banner5.jpg)
     }
     93% {
-        background-image: url(/img/banners/banner6.jpg)
+        background-image: url(../img/banners/banner6.jpg)
         }
     99% {
-        background-image: url(/img/banners/banner6.jpg)
+        background-image: url(../img/banners/banner6.jpg)
     }
 }
 
@@ -223,7 +219,7 @@ font-weight: bold;
 
 /* ACÁ ARRANCO CON EL FOOTER BODY*/
 
-footer {
+.footer {
     background-color: #05040a;
     width: 100%;
 }
@@ -276,7 +272,7 @@ footer {
     color: #ebebeb;
 }
 
-.información-adicional {
+.informacion-adicional {
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(43 23 95 / 40%);
     background-color: rgba(43, 23, 95, 0.2);
@@ -362,7 +358,7 @@ footer {
         display: none;
     }
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -425,7 +421,7 @@ footer {
         }
 
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -495,7 +491,7 @@ footer {
     }
 
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;

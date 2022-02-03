@@ -1,6 +1,11 @@
+import '../css/styles.css';
 import Footer from "./partials/footer"
 import Head from "./partials/head"
-import banner from '../img/logo-faba-dimensionado.jpg'
+import Header from "./partials/header"
+import Explora from "./partials/partials-index/explora"
+import Ofertas from './partials/partials-index/ofertas';
+
+
 
 import {Link,Route,Routes} from "react-router-dom"
 
@@ -9,28 +14,24 @@ function index() {
     
     
     return (
-      <div >
+        <body className="body-index" >
+        <Head />
 
+          <Header />
 
-       <Head />
-       <img src={banner} />
-
-        <body classNameName="body-index" >
+          <section className="container-banner">
+              <div className="banner"> </div>
+          </section>
           
-          {/* <%- include('./partials/header') %>*/}
-
-          {/* <section classNameName="container-banner">
-              <div classNameName="banner"> </div>
-          </section>*/}
           
-          {/*
           <div className="plus-button-fixed">
             <i className="fas fa-plus-circle"></i>
-          </div> */}
+          </div> 
           <br />
 
-          <main>
-          <section className="barra-lateral">
+          <main className="barra-y-box-productos">
+
+            <section className="barra-lateral">
                 <Link to="/#"><p className="una-palabra-barra-lateral">Arma tu pc</p></Link>
                 <Link to="/#"><p className="una-palabra-barra-lateral">Almacenamiento</p></Link>
                 <Link to="/#"><p className="una-palabra-barra-lateral">Auriculares</p></Link>
@@ -55,24 +56,18 @@ function index() {
 
             <section className="box-productos-main"> 
            
-            {/* 
-            <%- include('./partials/partials-index/ofertas') %>
-
-            <%- include('./partials/partials-index/explora') %>
-            */}
+            <Ofertas />
+            <Explora />
 
             </section>
 
-
           </main>
+
           <br />
-            <Footer />
-            {/*<%- include('./partials/footer') %> */}
+
+          
+        <Footer />
         </body>
-      
-
-
-      </div>
     );
   }
   

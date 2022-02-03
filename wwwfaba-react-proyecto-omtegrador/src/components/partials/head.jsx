@@ -1,10 +1,9 @@
-import '../../css/prueba.css';
 
 function Head() {
     
     
     return (
-      <div >
+      
           <head>
             {/* Esto lo tengo q poner?
 
@@ -25,7 +24,7 @@ function Head() {
     
         </head>
         
-      </div>
+      
     );
   }
   
