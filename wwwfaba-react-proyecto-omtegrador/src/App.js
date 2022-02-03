@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Index from "./components/index"
 import Login from "./components/login"
 import Register from "./components/register"
@@ -9,16 +8,17 @@ import Products from "./components/products"
 import EditProducts from "./components/editProducts"
 import UploadProducts from './components/uploadProducts';
 import ProductCart from './components/productCart';
+import Apis from "./components/apis"
 
-
-import {Route,Routes,Link} from "react-router-dom"
+import {Route,Routes} from "react-router-dom"
 
 
 function App() {
+
   return (
     <div className="App">
     <Routes> 
-      <Route path="/" element={<Index />}/>
+      <Route path="/" element={<Index amado="soy amado"/>}/>
       <Route path="/login" element={<Login />}/>
       <Route path="/register" element={<Register />}/>
       <Route path="/profile" element={<Profile />}/>
@@ -28,6 +28,7 @@ function App() {
       <Route path="/EditProducts" element={<EditProducts />}/>
       <Route path="/uploadProducts" element={<UploadProducts />}/>
       <Route path="/productCart" element={<ProductCart />}/>
+      <Route path="/apis" element={<Apis />}/>
     </Routes>
     </div>
   );

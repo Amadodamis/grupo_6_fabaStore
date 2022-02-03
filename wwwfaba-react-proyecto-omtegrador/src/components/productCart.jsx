@@ -13,7 +13,7 @@ function ProductCart() {
     
     
     return (
-      <body  class="body-productCart">
+      <body  className="body-productCart">
         <Head/>
         <Header/>
         <section className="container-banner">
@@ -58,7 +58,7 @@ function ProductCart() {
                     </div>
                   <br />
                     <div className="boton-comprar">
-                        <button type="button" className="boton-productCart"> Confirmar compra <i class="far fa-check-circle"></i></button>
+                        <button type="button" className="boton-productCart"> Confirmar compra <i className="far fa-check-circle"></i></button>
                     </div>
 
                 </section>

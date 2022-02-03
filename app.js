@@ -54,6 +54,7 @@ var uploadProductsRouter = require ('./routes/uploadProductsRouter');
 var productsRouter = require('./routes/productsRouter');                    // Rutas /products
 var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
 var editUserRouter = require('./routes/editUserRouter');            // Rutas /editUsuarios
+
 // Aquí llamo a la ruta de las api de movies
 const apiProductsRouter = require('./routes/api/productsAPIRoutes')
 //Aquí llamo a la ruta de las api de actors

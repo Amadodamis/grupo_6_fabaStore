@@ -66,7 +66,7 @@ function ProductCart() {
             
                         </div>
 
-                        <div class="precio-cart"> 
+                        <div className="precio-cart"> 
                             <p>Precio</p>
 
                             <p>precio</p>

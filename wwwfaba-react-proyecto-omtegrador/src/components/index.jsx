@@ -7,15 +7,15 @@ import Ofertas from './partials/partials-index/ofertas';
 
 
 
-import {Link,Route,Routes} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
-function index() {
+function index(props) {
     
-    
+    console.log(props.amado)
     return (
         <body className="body-index" >
-        <Head />
+          <Head />
 
           <Header />
 
@@ -56,7 +56,7 @@ function index() {
 
             <section className="box-productos-main"> 
            
-            <Ofertas />
+            <Ofertas  />
             <Explora />
 
             </section>
