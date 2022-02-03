@@ -1,3 +1,4 @@
+import React from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
@@ -6,10 +7,9 @@ import "../css/styles.css"
 import {Link} from "react-router-dom"
 import productox from '../img/gabinete.png'
 
-let array = [1,2,3,4,5,6,7,8,9,10,11,12]
-let items;
 
 function products() {
+  let array = [1,2,3,4,5,6,7,8,9,10,11,12]
     
     
     return (
@@ -52,15 +52,15 @@ function products() {
           <section className="box-productos-main">
           <h1 className="main-h1"> Todos los productos </h1>
               <section className="fila-productos">
-                { items = array.map((number) =>
-                <article className="producto-individual">
-                <Link to="../../productDetail/id">
-                  <div><img className="img-producto" src={productox}/></div>
-                  <p className="precio"> Precio con Oferta o precio $</p>
-                  <p className="descuento"> oferta porcentaje % off</p>
-                  <p className="descripcion"> aca Marca modelo</p>
-                </Link>
-                </article>
+                {array.map((number,i) =>
+                  <article key={number+i} className="producto-individual">
+                    <Link to="../../productDetail/id">
+                      <div><img className="img-producto" src={productox} alt="img-producto"/></div>
+                      <p className="precio"> Precio con Oferta o precio $</p>
+                      <p className="descuento"> oferta porcentaje % off</p>
+                      <p className="descripcion"> aca Marca modelo</p>
+                    </Link>
+                  </article>
                 )}
               </section>
 

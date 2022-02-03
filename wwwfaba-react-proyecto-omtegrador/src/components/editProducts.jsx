@@ -1,3 +1,4 @@
+import React from "react"
 import '../css/styles.css';
 import Footer from "./partials/footer"
 import Head from "./partials/head"
@@ -17,12 +18,12 @@ function editProduct() {
         <main className="main-upload-products">
           <section className="section-formulario-register">
 
-            <form action="/editProduct/<%= producto.id %>?_method=PUT" method="POST" class="form-registro" enctype="multipart/form-data">
+            <form action="/editProduct/<%= producto.id %>?_method=PUT" method="POST" className="form-registro" enctype="multipart/form-data">
               <p className="iniciar-sesion-tamañano">Editar producto </p>
                 <br />
               
                 <div className="control-form">
-                    <input type="text" name="modelo" class="control" placeholder="Modelo" />  
+                    <input type="text" name="modelo" className="control" placeholder="Modelo" />  
                 </div>
 
                 <div className="control-form">
@@ -88,7 +89,7 @@ function editProduct() {
                 </div>
     
                 <div className="control-form">
-                    <input type="text" name="precio" class="control" placeholder="Precio" />
+                    <input type="text" name="precio" className="control" placeholder="Precio" />
                 </div>
 
                 <div className="iniciar-sesion-tamañano"> Stock disponible</div>
@@ -101,7 +102,7 @@ function editProduct() {
                 </div>
 
                 <div className="control-form">
-                    <input type="text" name="stockCant" class="control" placeholder="Stock actual: " />
+                    <input type="text" name="stockCant" className="control" placeholder="Stock actual: " />
                 </div>
 
                 <div className="iniciar-sesion-tamañano"> En Oferta </div>
@@ -114,15 +115,15 @@ function editProduct() {
                 </div>
 
                 <div className="control-form">
-                    <input type="text" name="ofertaPorcentaje" class="control" placeholder="Porcentaje de oferta actual: " />
+                    <input type="text" name="ofertaPorcentaje" className="control" placeholder="Porcentaje de oferta actual: " />
                 </div>
     
                 <div className="control-form">
-                    <input type="text" name="especificaciones" class="control" placeholder="Especificaciones: " />
+                    <input type="text" name="especificaciones" className="control" placeholder="Especificaciones: " />
                 </div>
     
-                <div class="control-form">
-                    <button type="submit" class="botton">Editar Producto</button>
+                <div className="control-form">
+                    <button type="submit" className="botton">Editar Producto</button>
                 </div>
 
 

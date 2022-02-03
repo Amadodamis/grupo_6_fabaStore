@@ -152,6 +152,8 @@ width: 85vw ;
     margin-bottom: 10px;
     color:#c238d8;
     border: 1px solid #c238d8;
+    text-decoration: none;
+    text-align: center;
 }
 .boton-agregar-comprar-carrito:hover{
     background-color: #c238d8;

@@ -274,7 +274,7 @@ footer {
     color: #ebebeb;
 }
 
-.información-adicional {
+.informacion-adicional {
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(43 23 95 / 40%);
     background-color: rgba(43, 23, 95, 0.2);
@@ -371,7 +371,7 @@ footer {
         display: none;
     }
 
-    .información-adicional {
+    .informacion-adicional {
         display: flex;
         justify-content: space-between;
         text-align: center;

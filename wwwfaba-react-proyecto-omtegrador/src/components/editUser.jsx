@@ -1,9 +1,10 @@
+import React from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
 import "../css/styles.css"
 import "../css/stylesRegisterLogin.css"
-import {Link} from "react-router-dom"
+
 
 function EditUser() {
     

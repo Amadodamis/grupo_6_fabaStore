@@ -1,3 +1,4 @@
+import React,{Component} from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"
@@ -6,9 +7,24 @@ import "../css/stylesProductDetail.css"
 import productoX from '../img/gabinete.png'
 import {Link} from "react-router-dom"
 
-function ProductDetail() {
+class ProductDetail extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            cant:props.cant
+        }
+    }
+    incrementar(){
+        this.setState({
+            cant: this.state.cant+1
+        })
+    }
+    decrementar(){
+        this.setState({cant:this.state.cant-1})
+    }
     
-    
+    render(){
     return (
         <body className="body-index">
             <Head />
@@ -26,7 +42,7 @@ function ProductDetail() {
                     
                         <h2 className="estilo-Titulo-DP">tipo producto marca modelo </h2>
                         <div>
-                            <img className="imagen-Produc-Detail" src={productoX} />
+                            <img className="imagen-Produc-Detail" src={productoX} alt="imgProductDetail"/>
                         </div>
 
                         <div className="estilos-Especificaciones-DP">
@@ -87,15 +103,14 @@ function ProductDetail() {
                         </div>
                     
                         <div className="cantidad-producto">
-                            <button type="button" className="boton-DP-menos"><i className="fas fa-minus"></i></button>
-                            <input type="number" min="1" max="99999" className="texto-cantidad-producto" />
-                            <button type="button" className="boton-DP-mas"><i className="fas fa-plus" /></button>
+                            <button type="button" onClick={()=>this.decrementar()} className="boton-DP-menos"><i className="fas fa-minus"></i></button>
+                            <input type="number" min="1" max="99999" className="texto-cantidad-producto" value={this.state.cant} />
+                            <button type="button" onClick={()=>this.incrementar()} className="boton-DP-mas"><i className="fas fa-plus" /></button>
                         </div>
 
                         <div className="productos-agregar-comprar">
                             
-                            <form action="/productcart" method="POST" >
-                              <input type="number" name="idproducto" value="<%=producto.id %>" />    
+                            <form action="/productcart" method="POST" >   
     
                               <input type="submit" className="boton-agregar-comprar-carrito" name="carrito" value="Agregar carrito" />      
                                   
@@ -122,5 +137,5 @@ function ProductDetail() {
         </body>
     );
   }
-  
+}
   export default ProductDetail;

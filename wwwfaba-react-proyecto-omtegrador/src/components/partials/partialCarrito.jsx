@@ -2,13 +2,10 @@
 import "../../css/styles.css"
 import "../../css/stylesProductCart.css"
 
-
-import {Link} from "react-router-dom"
 import productox from "../../img/asus-atx-b350.png"
 import productoy from "../../img/armado-pc-producto.jpg"
 
 let array = [1,2,3,4]
-let items;
 
 function ProductCart() {
     
@@ -17,7 +14,7 @@ function ProductCart() {
      <div>
         <section className="producto-x">
             <div className="img-producto-cart">
-            <img className="jpg-producto" src={productoy}/>
+            <img className="jpg-producto" src={productoy} alt="jpg-producto"/>
              </div>
 
             <div className="bloque-descripcion">    
@@ -40,10 +37,10 @@ function ProductCart() {
 
         </section>
 
-        { items = array.map((iterador) =>
-             <section className="producto-x">
+        {array.map((iterador,i) =>
+             <section key={iterador+i}className="producto-x">
                 <div className="img-producto-cart">
-                    <img className="jpg-producto"  src={productox}/>
+                    <img className="jpg-producto"  src={productox} alt="jpg-producto"/>
                 </div>
 
                 <div className="bloque-descripcion">
@@ -66,7 +63,7 @@ function ProductCart() {
             
                         </div>
 
-                        <div class="precio-cart"> 
+                        <div className="precio-cart"> 
                             <p>Precio</p>
 
                             <p>precio</p>

@@ -1,3 +1,4 @@
+import React from "react"
 import Footer from "./partials/footer"
 import Head from "./partials/head"
 import Header from "./partials/header"

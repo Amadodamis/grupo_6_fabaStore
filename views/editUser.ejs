@@ -16,7 +16,7 @@
     
         <section class="section-formulario-register">
     
-            <form action="/editUser/<%= usuarioAEditar.id %>?_method=PUT" method="POST" class="form-registro" enctype="multipart/form-data">
+            <form action="/editUser/<%= usuarioAEditar.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     
                 <p class="iniciar-sesion-tamañano">Editar usuario </p>
                 <br>
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="password" placeholder="" class="control" required>
+                    <input type="text" name="password" placeholder="contraseña" class="control" required>
                 </div>
     
                 <div class="control-form">
