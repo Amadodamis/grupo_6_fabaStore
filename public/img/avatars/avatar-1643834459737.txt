@@ -1,0 +1,19 @@
+Validaciones de front end 
+
+Index -> falta cargar las imagenes de los productos.
+
+Login -> falta el formulario que se envie a algun lugar y las validaciones
+
+Register -> Falta el formulario que se envie a algun lugar y las validaciones
+
+
+Profile -> Falta avatar
+	Edit user redirija al perfil del usuario en 	cuestion
+	delete user que borre el usuario
+
+edit user -> que envie el formulario
+
+product detail -> que envie el fomrulario
+		Error en el eliminar producto
+		sumar y restar cantidad linkeado con el local storage
+		

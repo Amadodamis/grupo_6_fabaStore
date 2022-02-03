@@ -55,5 +55,12 @@ module.exports = (sequelize, dataTypes) => {
 
    }
 
+    User.associate = function(models){
+        User.belongsTo(models.Category, {
+            as: "categoria",
+            foreignKey: "id_categoria"
+        })
+    }
+
     return User
 }

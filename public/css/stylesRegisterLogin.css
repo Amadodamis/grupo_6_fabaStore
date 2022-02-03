@@ -126,3 +126,40 @@ register*/
     color: #c238d8;
     
 }
+
+.correcto {
+    background-color: rgba(6, 250, 6, 0.664);
+    color: white
+}
+.incorrecto {
+    background-color: rgba(253, 14, 14, 0.644);
+    color: white
+}
+.error-formulario{
+    display: none;
+    
+}
+.error-formulario-activo{
+    display: block;
+    color: #c238d8;
+    padding-top: 5px;
+}
+.mensaje-Formulario-exito{
+    display: none;
+}
+.mensaje-Formulario-no-exito{
+    display: none;
+}
+.mensaje-Formulario-no-exito-activo{
+    display: block;
+    color: red;
+    padding-top: 5px;
+}
+.mensaje-Formulario-exito-activo{
+    display: block;
+    color: rgb(0, 255, 42);
+    padding-top: 5px;
+}
+.desaparece{
+    display: none;
+}
