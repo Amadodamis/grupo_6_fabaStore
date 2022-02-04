@@ -33,7 +33,7 @@ let controller={
                 avatar: req.file.filename,
                })
                .then (() => {
-                res.redirect("/")
+                res.redirect("/login")
                })
                .catch(e=>{
                 console.log(e)
