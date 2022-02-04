@@ -9,8 +9,10 @@ import EditProducts from "./components/editProducts"
 import UploadProducts from './components/uploadProducts';
 import ProductCart from './components/productCart';
 import DashBoard from "./components/dashboard"
+import ApiHook2 from "./components/apiHook2"
 
 import {Route,Routes} from "react-router-dom"
+
 
 
 function App() {
@@ -24,17 +26,13 @@ function App() {
       <Route path="/register" element={<Register />}/>
       <Route path="/profile" element={<Profile />}/>
       <Route path="/editUser" element={<EditUser />}/>
-      
-      
-    </Routes>
-
-    <Routes>
       <Route path="/productDetail" element={<ProductDetail cant={1}/>}/>
       <Route path="/Products" element={<Products />}/>
       <Route path="/EditProducts" element={<EditProducts />}/>
       <Route path="/uploadProducts" element={<UploadProducts />}/>
       <Route path="/productCart" element={<ProductCart />}/>
       <Route path="/dashboard" element={<DashBoard />}/>
+      <Route path="/ApiHook2" element={<ApiHook2 />}/>
     </Routes> 
 
     </div>

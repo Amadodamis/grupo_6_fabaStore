@@ -5,6 +5,18 @@
     justify-content: space-around;
 }
 
+.parrafo-categorias{
+    color: #c238d8;
+    text-align: center;
+    font-size: 11px;
+}
+
+.cargando-dashboard{
+        font-size: 100px;
+        color:red;
+        text-align: center;
+}
+
 .articulos-dashboard-top{
     background-color: aliceblue;
     border: solid 1px #c238d8;
@@ -164,4 +176,17 @@
 .titulo-listado-categorias{
     text-align: center;
     color: white;
+}
+
+.parrafo-listado-productos{
+    color: #c238d8;
+    text-align: center;
+    font-size: 11px;
+}
+
+.parrafo-listado-productos-array{
+    color: #c238d8;
+    text-align:left;
+    font-size: 12px;
+
 }

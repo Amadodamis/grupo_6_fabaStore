@@ -34,6 +34,8 @@ const productsAPIController = {
                 meta: {
                     status : 200,
                     total: products.length,
+                    url : 'api/products',
+                    cantCategorias:18,
                     CountCategory:{
                         Almacenamiento:CountByCategory(products,"Almacenamiento"),
                         Auriculares:CountByCategory(products,"Auriculares"),
@@ -55,10 +57,8 @@ const productsAPIController = {
                         Webcams:CountByCategory(products,"Webcams"),
                     }
                 },
-                data: {
-                    products,
-                    detail : 'api/products'
-            }
+                products,
+            
         }
             res.json(respuesta);
         })
@@ -75,9 +75,9 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: product.length,
-                        url: '/api/products/:id'
+                        url: '/api/products/'+product.id
                     },
-                    data: product
+                    product
                 }
                 res.json(respuesta);
             });
