@@ -17,7 +17,7 @@ window.onload = function(){
         apellido: false,
         avatar: false,
     }
-    console.log(campos)
+
     // atrapo el formulario
     const formulario = document.getElementById("formulario")
 

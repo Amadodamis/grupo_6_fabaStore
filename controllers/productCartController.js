@@ -9,7 +9,7 @@ let user=users[0]; //Lo igualo al usuario 0, (anonimo)
 let controller={
     productCart: (req, res)=>{
 
-        console.log(req.body)
+       
         res.render("productCart", {user:user})
     },
     

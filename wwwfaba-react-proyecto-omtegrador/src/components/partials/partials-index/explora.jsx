@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import "../../../css/prueba.css"
+
 import "../../../css/styles.css"
 import productox from "../../../img/gabinete.png"
 
