@@ -37,20 +37,18 @@ class Apis extends Component {
    render(){
 
     let prod;
-    if (this.state.api.length== 0){
-      prod="Cargando.."
+
+    if (this.state.api.length === 0){
+      prod=["Cargando.."]
     }else{
-      prod="hola"
+      console.log(this.state.api[1].modelo)
+      prod=<p>{this.state.api[1].modelo}</p>
     }
 
     return (
 
         <body>
-          <h1>
-
-            {console.log(prod)}
-
-          </h1>
+        
         </body>
     );
   }

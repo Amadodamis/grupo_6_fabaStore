@@ -8,6 +8,19 @@ const moment = require('moment');
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 const Product = db.Product;
 
+function CountByCategory(productos,categoria) {
+    
+    let contador=0;
+    productos.forEach(producto => {
+        if(producto.tipodeproducto.tipo_de_producto==categoria){
+            contador=contador+1
+            
+        }
+        
+    });
+    
+    return contador
+}
 
 const productsAPIController = {
     'list': (req, res) => {
@@ -20,7 +33,27 @@ const productsAPIController = {
             let respuesta = {
                 meta: {
                     status : 200,
-                    total: products.length
+                    total: products.length,
+                    CountCategory:{
+                        Almacenamiento:CountByCategory(products,"Almacenamiento"),
+                        Auriculares:CountByCategory(products,"Auriculares"),
+                        Cables:CountByCategory(products,"Cables"),
+                        Coolers:CountByCategory(products,"Coolers"),
+                        Fuentes:CountByCategory(products,"Fuentes de poder"),
+                        Gabinetes:CountByCategory(products,"Gabinetes"),
+                        MemoriasRam:CountByCategory(products,"Memorias ram"),
+                        Microfonos:CountByCategory(products,"Microfonos"),
+                        Microprocesadores:CountByCategory(products,"Microprocesadores"),
+                        MonitoresYtelevisores:CountByCategory(products,"Monitores y televisores"),
+                        Motherboards:CountByCategory(products,"Motherboards"),
+                        Mouses:CountByCategory(products,"Mouses"),
+                        Notebooks:CountByCategory(products,"Notebooks"),
+                        Parlantes:CountByCategory(products,"Parlantes"),
+                        PlacasDeVideo:CountByCategory(products,"Placas de video"),
+                        SillasGamer:CountByCategory(products,"Sillas gamer"),
+                        Teclados:CountByCategory(products,"Teclados"),
+                        Webcams:CountByCategory(products,"Webcams"),
+                    }
                 },
                 data: {
                     products,
