@@ -33,12 +33,16 @@ window.onload = function(){
                 document.getElementById(`${campo}`).classList.add("correcto")
                 document.getElementById(`error-${campo}`).classList.remove("error-formulario-activo")
                 document.getElementById(`error-${campo}`).classList.add("error-formulario")
+                document.getElementById(`${campo}`).classList.add("fa-check-circle")
+                document.getElementById(`${campo}`).classList.remove("fa-times-circle")
                 campos[campo] = true;
             }else{
                 document.getElementById(`${campo}`).classList.remove("correcto")
                 document.getElementById(`${campo}`).classList.add("incorrecto")
                 document.getElementById(`error-${campo}`).classList.remove("error-formulario")
                 document.getElementById(`error-${campo}`).classList.add("error-formulario-activo")
+                document.getElementById(`${campo}`).classList.add("fa-times-circle")
+                document.getElementById(`${campo}`).classList.remove("fa-check-circle")
                 campos[campo] = false;
             }
             

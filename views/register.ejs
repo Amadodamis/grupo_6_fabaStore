@@ -19,43 +19,92 @@
             <p class="iniciar-sesion-tamañano">Registrarse</p>
 
             <div class="control-form" >
-                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" class="control" >
+                <input type="text" name="usuario" placeholder="Nombre de usuario" class="control" >
+                <div class="icono-display">
+                    <span>
+                        <i id="usuario" class="fas fa-times-circle"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-usuario" class="error-formulario"> El usuario tiene que ser entre 2 y 15 digitos y solo puede contener numeros, letras y guion</p>
             </div>
-
+            
             <div class="control-form">
-                <input type="email" name="email" id="email" placeholder="E-mail" class="control" >
+                <input type="email" name="email"  placeholder="E-mail" class="control" >
+                <div class="icono-display">
+                    <span>
+                        <i id="email" class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-email" class="error-formulario"> El campo debe estar Completo y ser un Email valido</p>
             </div>
 
             <div class="control-form">
-                <input type="password" name="password" id="password" class="control" placeholder="Contraseña">
+                <input type="password" name="password"  id="password1" class="control" placeholder="Contraseña">
+                <div class="icono-display">
+                    <span>
+                        <i id="password" class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-password" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 8 caracteres</p>
             </div>
 
             <div class="control-form">
-                <input type="password" name="Confpassword" id="confpassword" class="control" placeholder="Confirmar contraseña">
+                <input type="password" name="Confpassword" id="confpassword1" class="control" placeholder="Confirmar contraseña" >
+                <div class="icono-display">
+                    <span>
+                        <i id="confpassword"  class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-confpassword" class="error-formulario"> El campo debe estar Completo y las Contraseñas deben ser iguales</p>
             </div>
             <div class="control-form">
-                <input type="text" name="nombre" placeholder="Nombre" id="nombre" class="control"  maxlength="20" minlength="3">
+                <input type="text" name="nombre" placeholder="Nombre"  class="control"  maxlength="20" minlength="3">
+                <div class="icono-display">
+                    <span>
+                        <i id="nombre" class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-nombre" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 3 caracteres</p>
             </div>
 
             <div class="control-form">
-                <input type="text" name="apellido" placeholder="Apellido" id="apellido" class="control"  maxlength="20" minlength="3">
+                <input type="text" name="apellido" placeholder="Apellido"  class="control"  maxlength="20" minlength="3">
+                <div class="icono-display">
+                    <span>
+                        <i id="apellido" class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-apellido" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 3 caracteres, solo puede contener letras</p>
             </div>
 
             <div class="control-form">
-                <input type="text" name="domicilio" placeholder="Domicilio" id="domicilio" class="control">
+                <input type="text" name="domicilio" placeholder="Domicilio"  class="control">
+                <div class="icono-display">
+                    <span>
+                        <i id="domicilio" class="fas fa-check-circle position-icono"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="espacio-error">
                 <p id="error-domicilio" class="error-formulario"> El campo debe estar Completo y solo puede contener letras y numeros</p>
             </div>
 
             <div class="control-form">
                 <label>Seleccionar una imagen para el perfil:</label>
                 <br/>
-                <input type="file" id= "avatar" name="avatar" >
+                <input type="file" id= "avatar" name="avatar" accept="image/png, image/jpeg, image/gif">
             </div>
             <div class="control-form mensaje-Formulario-no-exito" id="mensaje-Formulario-no-exito">
                 <p>Por favor rellenar el registro correctamente</p>

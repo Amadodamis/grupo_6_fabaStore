@@ -64,6 +64,7 @@
 
 .control-form {
     margin-bottom: 15px;
+    display: flex;
 }
 
 
@@ -102,7 +103,13 @@
 
 /*
 register*/
-
+.espacio-error{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
 
 
 .section-formulario-register{
@@ -128,14 +135,16 @@ register*/
     color: #c238d8;
     
 }
-
+.icono-display{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 128, 0, 0);
+}
 .correcto {
-    background-color: rgba(6, 250, 6, 0.664);
-    color: white
+    color: rgb(4, 253, 4)
 }
 .incorrecto {
-    background-color: rgba(253, 14, 14, 0.644);
-    color: white
+    color: red
 }
 .error-formulario{
     display: none;
