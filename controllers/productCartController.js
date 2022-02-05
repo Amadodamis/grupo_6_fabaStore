@@ -6,7 +6,7 @@ const sequelize = db.sequelize;
 
 let controller={
     productCart: (req, res)=>{    
-        let vacio=true;
+        let vacio=true; let totalApagar=0
 
         //Primero pregunta si el usuario esta conectado, si lo esta entra
         if (req.session.userLogged !=undefined){ 
@@ -22,25 +22,27 @@ let controller={
                 nest:true,
                 })
                 .then(prod => {
-                    let carritoArray=[]
+                    let carritoArray=[] //CarritoArray es el array que se va a enviar a el EJS
+
                     // recorro el bucle hasta que todos los elementos del carrito de session  se busquen.
                    for (let i = 0; i < carrito.length; i++) {
                        carritoArray[i]=prod.find(element => element.id == carrito[i])
-                    
                    }
 
-                   console.log(carritoArray)
-               
+                   carritoArray.forEach(elem=>{
+                        totalApagar=totalApagar+(parseInt(elem.precio,10))
+                        })
+                    if(carritoArray.length >0 ){vacio=false}
+
+                   res.render("productCart",{vacio:vacio, invitado:false,carrito:carritoArray,total:totalApagar})
 
             })
             .catch(e=>{
                     console.log(e)
                 })
-
-            res.render("productCart",{vacio:vacio, invitado:false})
         }
         else{ //si el usuario esta desconectado 
-            res.render("productCart",{vacio:vacio,invitado:true})
+            res.render("productCart",{vacio:vacio,invitado:true, carrito:[],total:0})
         }
 
     },
