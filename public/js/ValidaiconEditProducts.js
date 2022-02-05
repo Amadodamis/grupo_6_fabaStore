@@ -50,6 +50,7 @@ window.onload = function(){
             document.getElementById(`${campo}`).classList.remove("fa-times-circle")
             document.getElementById(`${campo}`).classList.add("fa-check-circle")
             //aca hago que el campo del mismo sea true si tiene todas las condiciones bien
+            console.log(campos)
             campos[campo] = true;
         }else {
             document.getElementById(`${campo}`).classList.remove("correcto")
@@ -69,7 +70,9 @@ window.onload = function(){
     })
 
     formEditProducts.addEventListener("submit", function(event){
-        if(campos.usuario && campos.password && campos.email && campos.nombre && campos.domicilio && campos.apellido){
+        
+        if(campos.modelo && campos.precio && campos.stockCant && campos.ofertaPorcentaje && campos.especificaciones){
+            
             
         }else{
             document.getElementById("mensaje-Formulario-no-exito").classList.add("mensaje-Formulario-no-exito-activo")

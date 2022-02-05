@@ -124,6 +124,14 @@
     justify-content: space-around;
     padding-bottom: 15px;
 }
+.mensaje-Formulario-no-exito{
+    display: none;
+}
+.mensaje-Formulario-no-exito-activo{
+    display: block;
+    color: red;
+    padding-top: 5px;
+}
 
 /*
 register*/
