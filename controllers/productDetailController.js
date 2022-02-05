@@ -11,16 +11,14 @@ let controller={
             include:["marca","tipodeproducto"],
             raw:true,  
             nest:true
-        }).then(producto => {
-                //guardo el producto en session de los ultimos productos visitados.
+        }).then(producto => {            
+                let offline=true //si el usuario esta offline , arranca en true
                 
-                
-
-                if (req.session.userLogged !=undefined){
-                    req.session.ultimosProductos.push(producto)
+                if (req.session.userLogged != undefined){
+                    offline=false
                 }
-
-                res.render('productDetail.ejs', {producto:producto});
+                
+                res.render('productDetail.ejs', {producto:producto,offline:offline});
             })
             .catch(e=>{
                 console.log(e)

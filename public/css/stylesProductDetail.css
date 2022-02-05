@@ -164,6 +164,14 @@ width: 85vw ;
     background-color: #c238d8;
     color: white;
 }
+
+.detail-offline{
+    margin: 15px;
+    font-weight: 300;
+    color:#c238d8;
+    text-align: center;
+}
+
 @media (min-width: 320px) and (max-width:426px) {
     body .banner{
     display: none;

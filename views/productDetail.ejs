@@ -34,22 +34,13 @@
                 <div class="derecha">
                     <div class="estilos-Precio-DP">
                             <% if (producto.oferta) { %>
-                                <h1 class="Precio-DP">$<%= producto.precioConOferta %>$</h1>
+                                <h1 class="Precio-DP"><%= producto.precioConOferta %>$</h1>
                             <% } else { %>
-                                <h1 class="Precio-DP">$<%= producto.precio %>$</h1>
+                                <h1 class="Precio-DP"><%= producto.precio %>$</h1>
                             <%  } %> 
                              
                     </div>
-                    <div class="info-ficha-cuotas">
-                        <div class="iconos-DP">
-                            <i class="fas fa-credit-card iconos-DP-tamaño"></i>
-                        </div>
-                        <div>
-                            <p><%= producto.cantCuotas %> x $<%= producto.precioEnCuotas / producto.cantCuotas  %>  sin interés</p>
-                            <p class="tamaño-texto-DP">Precio de lista</p>
-                            <button type="button" class="boton-DP">Ver cuotas</button>
-                        </div>
-                    </div>
+                    
                     <div class="info-ficha-envios">
                         <div class="iconos-DP">
                             <i class="fas fa-shipping-fast iconos-DP-tamaño"></i>
@@ -76,13 +67,15 @@
                             <p class="color-stock">Stock disponible</p>
                         </div>
                     </div>
-                    <div class="cantidad-producto">
-                        <button type="button" class="boton-DP-menos"><i class="fas fa-minus"></i></button>
-                        <input type="number" min="1" max="99999" class="texto-cantidad-producto" value="1">
-                        <button type="button" class="boton-DP-mas"><i class="fas fa-plus"></i></i></button>
-                    </div>
+                   
                     <div class="productos-agregar-comprar">
-                            
+                        <% if (offline == false) { %>
+                        <div class="cantidad-producto">
+                            <button type="button" class="boton-DP-menos"><i class="fas fa-minus"></i></button>
+                            <input type="number" min="1" max="99999" class="texto-cantidad-producto" value="1">
+                            <button type="button" class="boton-DP-mas"><i class="fas fa-plus"></i></i></button>
+                        </div>
+
                         <form action="/productcart" method="POST" >
     
                               <input type="number" name="idproducto" value="<%=producto.id %>" class="input-invisible">    
@@ -96,6 +89,11 @@
                         <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                             <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Producto</button>
                         </form>
+                        <% } else{ %>
+                                <p class="detail-offline">Aun no has iniciado sesion</p>
+                                <p class="detail-offline">Para hacerlo ingresa  <a href="/login">aca</a></p>
+                                <p class="detail-offline">Si aun no tenes cuenta ingresa <a href="/register">aca</a></p>
+                            <% } %>
     
                     </div>
                 </div>
