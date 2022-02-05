@@ -510,7 +510,9 @@ footer {
     .botton-cancelled {
         font-size: 16px;
     }
-
+    .barra-lateral {
+        font-size: 12px
+    }
 }
 
 
