@@ -8,15 +8,13 @@
     <%- include('./partials/header') %>
    
 <main >
-    <span class="Color-Usuario">Hola</span>
-    <span class="Color-Usuario">usuario <%=pUser.usuario%>, </span>  
-    <p class="Color-Usuario" >Su Email registrado es: <%=pUser.email%>.</p>
-    <span class="Color-Usuario">  </span> 
-    <p class="Color-Usuario">ID de Usuario: <%=pUser.id%></p>
     <div >
-        <h1 class="Color-Usuario">Avatar:</h1><span><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario"></span>
+        <h1 class="Color-Usuario">Perfil:</h1><span><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario"></span>
     </div>
-
+    <span class="Color-Usuario">Usuario: <%=pUser.usuario%></span>  
+    <p class="Color-Usuario" >Email: <%=pUser.email%></p>
+    <p class="Color-Usuario">ID de Usuario: <%=pUser.id%></p>
+    
     <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>
                     <form action="/editUser/delete/<%= pUser.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Usuario</button>

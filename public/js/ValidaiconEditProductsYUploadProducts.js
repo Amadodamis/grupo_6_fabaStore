@@ -1,7 +1,7 @@
 window.onload = function(){
     
     const expresiones = {
-        modelo: /^[a-zA-Z0-9\s]{5,20}$/, // Letras, numeros, espacio y de 5 a 20 caracteres
+        modelo: /^[a-zA-Z0-9\s]{5,30}$/, // Letras, numeros, espacio y de 5 a 30 caracteres
         precio: /[\d*]{1,10}/, // numeros de 1 a 10 digitos
         stockCant: /[\d*]{1,4}/, // numeros del 1 al 9999
         ofertaPorcentaje: /^(\d|[1-9]\d|100)$/, // del 1 al 100

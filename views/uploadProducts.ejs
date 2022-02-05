@@ -16,11 +16,19 @@
     
         <section class="section-formulario-register">
     
-            <form action="/uploadProducts" method="POST" class="form-registro" enctype="multipart/form-data">
+            <form action="/uploadProducts" method="POST" id= "Form-edit-products"class="form-registro" enctype="multipart/form-data">
     
                 <p class="iniciar-sesion-tamañano">Agregar Producto</p>
                 <div class="control-form">
                     <input type="text" name="modelo" placeholder="Modelo" class="control" required>
+                    <div class="icono-display">
+                        <span>
+                            <i id="modelo" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-modelo" class="error-formulario"> el modelo debe estar completo y contener al menos 5 caracteres</p>
                 </div>
     
                 <div class="control-form">
@@ -88,6 +96,14 @@
     
                 <div class="control-form">
                     <input type="text" name="precio" class="control" placeholder="Precio del Producto">
+                    <div class="icono-display">
+                        <span>
+                            <i id="precio" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-precio" class="error-formulario"> el precio debe estar completo y contener al menos 1 caracter</p>
                 </div>
 
                 <div class="control-form">
@@ -100,6 +116,14 @@
 
                 <div class="control-form">
                     <input type="text" name="stockCant" class="control" placeholder="Cantidad de Stock disponible">
+                    <div class="icono-display">
+                        <span>
+                            <i id="stockCant" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-stockCant" class="error-formulario"> el stock debe estar completo y contener al menos 1 caracteres</p>
                 </div>
 
                 <div class="control-form">
@@ -112,14 +136,33 @@
 
                 <div class="control-form">
                     <input type="text" name="ofertaPorcentaje" placeholder="Porcentaje oferta" class="control" required>
+                    <div class="icono-display">
+                        <span>
+                            <i id="ofertaPorcentaje" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-ofertaPorcentaje" class="error-formulario"> la oferta debe estar completo y contener un numero del 1 al 100</p>
                 </div>
 
                 <div class="control-form">
                     <input type="text" name="especificaciones" class="control" placeholder="Especificaciones">
+                    <div class="icono-display">
+                        <span>
+                            <i id="especificaciones" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-especificaciones" class="error-formulario"> el especificaiones deben estar completas y contener al menos 20 caracteres</p>
                 </div>
 
                 <div class="control-form">
                     <button type="submit" class="botton">Crear Producto</button>
+                </div>
+                <div class="control-form mensaje-Formulario-no-exito" id="mensaje-Formulario-no-exito">
+                    <p>Por favor rellenar los campos correctamente</p>
                 </div>
             </form>
         </section>
@@ -129,7 +172,7 @@
     <br/>
 
     <%- include('./partials/footer') %>
-    
+    <script src="/js/ValidaiconEditProductsYuploadProducts.js"></script>
 </body>
 
 </html>
