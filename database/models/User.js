@@ -35,9 +35,7 @@ module.exports = (sequelize, dataTypes) => {
         avatar: {
             type: dataTypes.STRING
         },
-        /*id_carrito: {
-            type: dataTypes.INTEGER,
-        }*/
+
     };
     let config = {
         tableName: 'usuarios',
