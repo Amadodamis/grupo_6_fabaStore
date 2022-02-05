@@ -1,33 +1,34 @@
+import React from "react"
 import {useState,useEffect} from "react"
 
-function ApiHook(){
 
-    const [productos,setProductos]=useState([]);
+function ApiHook(){
+    
+    const [productos, setProductos]=useState([])
     
     useEffect(()=>{
-
-        console.log("se monto el componente")
-        fetch("api/products")
-        .then(response=> response.json())
-        .then(data=>{
-            setProductos(data.data.products)
-        })
-        .catch(error=>console.log(error))
+        console.log("Se monto el componente")
+        obtenerDatos()
     },[])
 
+    const obtenerDatos= async () =>{
+        const data = await fetch("api/products")
+        const productos = await data.json()
+        setProductos(productos)
+    }
 
+    
+   console.log(productos.products.length)
+
+
+{
 return(
-            <div>  
-                
-                    {/*
-                     {productos.map((producto)=>{
-      
-                        {producto.modelo}
-                     })}
-                    
-                    */}
-            </div>
+    <div>  
+    
+  </div>
     
 )}
+}
 
 export default ApiHook
+

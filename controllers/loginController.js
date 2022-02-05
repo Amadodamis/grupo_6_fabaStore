@@ -16,10 +16,10 @@ let controller={
     },
    
     procesoLogin: (req,res) => {
-        console.log(req.body)
+        
         //Guardo los datos que llegaron por formulario
         let userEmail=req.body.email;
-        console.log(req.body.password)
+        
 
         db.User.findOne( 
             {

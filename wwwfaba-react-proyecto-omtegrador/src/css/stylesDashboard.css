@@ -1,0 +1,192 @@
+.seccion-arriba-dashboard{
+    border-radius: 1px;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.parrafo-categorias{
+    color: #c238d8;
+    text-align: center;
+    font-size: 11px;
+}
+
+.cargando-dashboard{
+        font-size: 100px;
+        color:red;
+        text-align: center;
+}
+
+.articulos-dashboard-top{
+    background-color: aliceblue;
+    border: solid 1px #c238d8;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+    height: 99%;
+    width: 30%;
+}
+
+.seccion-Abajo-dashboard{
+    border-radius: 1px;
+    height: 60%;
+    width: 100%;
+   
+    display: flex;
+}
+
+.articulos-dashboard-bot{
+    background-color: aliceblue;
+    border: solid 1px #c238d8;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+    
+
+}
+
+.container-img-dashboard{
+    width: 100%;
+    height: 55%;
+}
+
+.foto-producto-dashboard{
+    width: 100%;
+    height: 100%;
+}
+
+.parrafos-dashboard-bot{
+    color: aliceblue;
+}
+
+.parrafos-total-dashboard{
+   color: aliceblue;
+   font-size: 20px;
+   text-align: center;
+}
+
+.lista-categorias{
+    list-style:none;
+    color: aliceblue;
+    text-align: center;
+}
+
+.primer-box-container-dashboard{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgb(43 23 95 / 40%);
+    background-color: rgba(43, 23, 95, 0.2);
+}
+
+
+.container-banner{
+    display: none;
+}
+
+.banner {
+    width: 100vw;
+    height: 200px;
+    background-image: url(../img/banners/banner1.jpg);
+    background-size:100% 100%;
+    transition: all 1s ease-in-out;
+    animation: banner 16s infinite linear
+}
+
+@keyframes banner {
+    0%{
+        background-image: url(../img/banners/banner1.jpg)
+    }
+    17% {
+        background-image: url(../img/banners/banner1.jpg)
+    }
+    18% {
+        background-image: url(../img/banners/banner2.jpg)
+    }
+    35% {
+        background-image: url(../img/banners/banner2.jpg)
+    }
+    36% {
+        background-image: url(../img/banners/banner3.jpg)
+    }
+    54% {
+        background-image: url(../img/banners/banner3.jpg)
+    }
+    55% {
+        background-image: url(../img/banners/banner4.jpg)
+    }
+    73% {
+        background-image: url(../img/banners/banner4.jpg)
+    }
+
+    74% {
+    background-image: url(../img/banners/banner5.jpg)
+    }
+    
+    92% {
+    background-image: url(../img/banners/banner5.jpg)
+    }
+    93% {
+        background-image: url(../img/banners/banner6.jpg)
+        }
+    99% {
+        background-image: url(../img/banners/banner6.jpg)
+    }
+}
+
+
+.plus-button-fixed{
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    padding: 1px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+.plus-button-fixed i{
+    font-size: 50px;
+    color:#c238d8;
+}
+
+@media(min-width:426px) and (max-width:768px){
+    
+    .plus-button-fixed{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .plus-button-fixed{
+        display: none;
+    }
+}
+
+.containter-ult-producto{
+    width: 50%;
+    height: 100%;
+}
+
+.container-lisProds-categorias{
+    height: 100%;
+    width: 50%;
+}
+
+.titulo-listado-categorias{
+    text-align: center;
+    color: white;
+}
+
+.parrafo-listado-productos{
+    color: #c238d8;
+    text-align: center;
+    font-size: 11px;
+}
+
+.parrafo-listado-productos-array{
+    color: #c238d8;
+    text-align:left;
+    font-size: 12px;
+
+}

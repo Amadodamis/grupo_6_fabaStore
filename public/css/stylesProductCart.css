@@ -33,6 +33,13 @@ main{
 
 }
 
+.carrito-texto{
+    margin: 15px;
+    font-weight: 300;
+    color:#c238d8;
+    text-align: center;
+}
+
 .mi-compra h1{
     margin: 15px;
     font-weight: 300;

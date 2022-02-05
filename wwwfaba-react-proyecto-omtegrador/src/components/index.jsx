@@ -5,9 +5,6 @@ import Head from "./partials/head"
 import Header from "./partials/header"
 import Explora from "./partials/partials-index/explora"
 import Ofertas from './partials/partials-index/ofertas';
-
-
-
 import {Link} from "react-router-dom"
 
 

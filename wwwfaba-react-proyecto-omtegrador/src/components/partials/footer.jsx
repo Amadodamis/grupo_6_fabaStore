@@ -9,7 +9,7 @@ function Footer() {
           <section className="informacion-adicional">
              <article>
                <div className="imagen-footer">
-                  <i className="fas fa-credit-card"></i>
+                  
                 </div>
                 
                 <h4 className="footer-titulo"><Link to="#" className="footer-titulo">Información</Link></h4>
@@ -22,7 +22,7 @@ function Footer() {
 
             <article>
                 <div className="imagen-footer">
-                    <i className="fas fa-gift"></i>
+                    
                  </div>
                 <h4 className="footer-titulo"><Link to="#" className="footer-titulo">Servicio al Cliente</Link></h4>
                 <p className="texto-footer">Contáctenos</p>
@@ -34,7 +34,7 @@ function Footer() {
 
             <article>
                 <div className="imagen-footer">
-                    <i className="fas fa-user-shield"></i>
+                    
                 </div>
                 <h4 className="footer-titulo"><Link to="#" className="footer-titulo">Mi Cuenta</Link></h4>
                 <p className="texto-footer">Mi Cuenta</p>

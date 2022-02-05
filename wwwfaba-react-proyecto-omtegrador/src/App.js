@@ -8,16 +8,17 @@ import Products from "./components/products"
 import EditProducts from "./components/editProducts"
 import UploadProducts from './components/uploadProducts';
 import ProductCart from './components/productCart';
-import Apis from "./components/apis"
-import ApiHook from "./components/apiHook"
+import DashBoard from "./components/dashboard"
+import ApiHook2 from "./components/apiHook2"
 
 import {Route,Routes} from "react-router-dom"
+
 
 
 function App() {
 
   return (
-    <div className="App">
+    <div >
       
     <Routes> 
       <Route path="/" element={<Index />}/>
@@ -30,9 +31,9 @@ function App() {
       <Route path="/EditProducts" element={<EditProducts />}/>
       <Route path="/uploadProducts" element={<UploadProducts />}/>
       <Route path="/productCart" element={<ProductCart />}/>
-      <Route path="/apis" element={<Apis />}/>
-      <Route path="/apihook" element={<ApiHook />}/>
-    </Routes>
+      <Route path="/dashboard" element={<DashBoard />}/>
+      <Route path="/ApiHook2" element={<ApiHook2 />}/>
+    </Routes> 
 
     </div>
   );

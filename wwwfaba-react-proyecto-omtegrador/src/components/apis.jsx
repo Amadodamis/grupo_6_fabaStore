@@ -17,7 +17,6 @@ class Apis extends Component {
   }
 
   componentDidMount(){
-    console.log("Me monte!")
     this.apiCall("api/products", this.mostrarApi)
 
 
@@ -27,7 +26,7 @@ class Apis extends Component {
     
     this.setState(
       {
-        api:data.data.products
+        api:data.products
       })
       
   }
@@ -37,20 +36,18 @@ class Apis extends Component {
    render(){
 
     let prod;
-    if (this.state.api.length== 0){
-      prod="Cargando.."
+
+    if (this.state.api.length === 0){
+      prod=["Cargando.."]
     }else{
-      prod="hola"
+      console.log(this.state.api[1].modelo)
+      prod=<p>{this.state.api[1].modelo}</p>
     }
 
     return (
 
         <body>
-          <h1>
-
-            {console.log(prod)}
-
-          </h1>
+        
         </body>
     );
   }
