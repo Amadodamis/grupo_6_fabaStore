@@ -23,35 +23,86 @@
     
                 <div class="control-form">
                     <input type="text" name="usuario" placeholder="" class="control" value= "<%= usuarioAEditar.usuario %>" required>
+                    <div class="icono-display">
+                        <span>
+                            <i id="usuario" class="fas fa-times-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-usuario" class="error-formulario"> El usuario tiene que ser entre 2 y 15 digitos y solo puede contener numeros, letras y guion</p>
                 </div>
     
                 <div class="control-form">
                     <input type="text" name="email" placeholder= "" class="control" value="<%= usuarioAEditar.email %>" required>
+                    <div class="icono-display">
+                        <span>
+                            <i id="email" class="fas fa-check-circle position-icono"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-email" class="error-formulario"> El campo debe estar Completo y ser un Email valido</p>
                 </div>
 
                 <div class="control-form">
                     <input type="text" name="password" placeholder="contraseña" class="control" required>
+                    <div class="icono-display">
+                        <span>
+                            <i id="password" class="fas fa-check-circle position-icono"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-password" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 8 caracteres</p>
                 </div>
     
                 <div class="control-form">
                     <input type="text" name="nombre" class="control" placeholder="" value="<%= usuarioAEditar.nombre %>">
+                    <div class="icono-display">
+                        <span>
+                            <i id="nombre" class="fas fa-check-circle position-icono"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-nombre" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 3 caracteres</p>
                 </div>
 
                 <div class="control-form">
                     <input type="text" name="apellido" class="control" placeholder="" value="<%= usuarioAEditar.apellido %>">
+                    <div class="icono-display">
+                        <span>
+                            <i id="apellido" class="fas fa-check-circle position-icono"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-apellido" class="error-formulario"> El campo debe estar Completo y tiene que contener al menos 3 caracteres, solo puede contener letras</p>
                 </div>
 
                 <div class="control-form">
                     <input type="text" name="domicilio" class="control" placeholder="" value="<%= usuarioAEditar.domicilio %>">
+                    <div class="icono-display">
+                        <span>
+                            <i id="domicilio" class="fas fa-check-circle position-icono"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="espacio-error">
+                    <p id="error-domicilio" class="error-formulario"> El campo debe estar Completo y solo puede contener letras y numeros</p>
                 </div>
 
                 <div class="control-form">
-                    <input type="file" name="avatar" accept=".jpg" placeholder="">
+                    <input type="file" name="avatar" accept="image/png, image/jpeg, image/gif" placeholder="">
                 </div>
-       
+                <div class="control-form mensaje-Formulario-no-exito" id="mensaje-Formulario-no-exito">
+                    <p>Por favor rellenar el registro correctamente</p>
+                </div>
                 <div class="control-form">
                     <button type="submit" class="botton">Editar Usuario</button>
                 </div>
+                
             </form>
         </section>
     

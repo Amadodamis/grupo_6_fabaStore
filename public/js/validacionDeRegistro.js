@@ -109,7 +109,7 @@ window.onload = function(){
     
      formulario.addEventListener("submit", function(event){
 
-        if(campos.usuario && campos.password && campos.email && campos.nombre && campos.domicilio && campos.apellido){
+        if(campos.usuario && campos.password && campos.email && campos.nombre && campos.domicilio && campos.apellido && campos.domicilio){
             
             document.getElementById("mensaje-Formulario-exito").classList.add("mensaje-Formulario-exito-activo")
             setTimeout(() => {
