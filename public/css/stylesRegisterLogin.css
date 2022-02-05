@@ -179,6 +179,18 @@ register*/
 register para celular*/
 @media (min-width: 320px) and (max-width:426px) {
 .section-formulario-register{
-    height: 1100px;
+    height: 900px;
 }
 }
+
+@media (min-width: 426px) and (max-width:769px) {
+    .section-formulario-register{
+        height: 900px;
+    }
+    }
+
+@media (min-width: 769px) {
+    .section-formulario-register{
+        height: 900px;
+    }
+    }
