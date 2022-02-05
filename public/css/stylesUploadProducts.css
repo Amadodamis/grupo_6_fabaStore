@@ -97,6 +97,33 @@
     text-align: center;
     color: #c238d8;
 }
+.correcto {
+    color: rgb(4, 253, 4)
+}
+.incorrecto {
+    color: red
+}
+.error-formulario{
+    display: none;
+    
+}
+.error-formulario-activo{
+    display: block;
+    color: #c238d8;
+    padding-top: 5px;
+}
+.icono-display{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 128, 0, 0);
+}
+.espacio-error{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
 
 /*
 register*/
