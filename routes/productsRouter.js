@@ -8,4 +8,6 @@ router.get("/", productsController.index);
 
 router.get("/categories/", productsController.productsByCategory);
 
+router.post("/busqueda", productsController.busqueda);
+
 module.exports = router;
