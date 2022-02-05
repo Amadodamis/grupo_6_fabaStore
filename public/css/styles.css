@@ -44,6 +44,20 @@
     cursor: inherit;
 }
 
+.article-profile-user{
+    text-align: center;
+    
+}
+
+.section-profile-user{
+    width: 50%;
+}
+
+.formularios-edit-eliminar-profile-user{
+    text-align: center;
+}
+
+
 
 .box-iconos-header{
     height: 35px;
@@ -284,7 +298,7 @@ footer {
 } 
 .Color-Usuario{
     color: #c238d8;
-    font-size: 40px;
+    font-size: 20px;
 }
 .Avatar-Usuario{
     border-radius: 50%;
@@ -292,6 +306,9 @@ footer {
     height: 200px;
     
 } 
+
+
+
 .producto-link-contenido{
     border: solid 1px #c238d8;
     border-radius: 5px;

@@ -15,7 +15,10 @@ let controller={
             nest:true,
             })
             .then(prod => {
-                console.log(prod)
+                if(req.session.userLogged != undefined){
+                    console.log(req.session.userLogged)
+                }
+                
                 res.render('products.ejs', {prod})
         })
         .catch(e=>{

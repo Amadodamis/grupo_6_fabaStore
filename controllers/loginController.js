@@ -28,6 +28,7 @@ let controller={
             where:{ email:userEmail }
             })
             .then(user=> {
+
             //Si el usuario existe en la base de datos. 
                 if(user){
                     //EstaOKLAPassword guarda un booleano de la comparacion de la contraseña que ingreso por formulario con la encriptada de la base de datos

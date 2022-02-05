@@ -7,19 +7,33 @@
 
     <%- include('./partials/header') %>
    
-<main >
-    <div >
-        <h1 class="Color-Usuario">Perfil:</h1><span><img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario"></span>
-    </div>
-    <span class="Color-Usuario">Usuario: <%=pUser.usuario%></span>  
-    <p class="Color-Usuario" >Email: <%=pUser.email%></p>
-    <p class="Color-Usuario">ID de Usuario: <%=pUser.id%></p>
-    
-    <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>
+    <main class="barra-y-box-productos">
+        <section class="section-profile-user">
+            <article class="article-profile-user">
+                    <div class="container-avatar">
+                        <img src="/img/avatars/<%=pUser.avatar%>" alt="avatar de usuario" class="Avatar-Usuario">
+                    </div>
+
+                    <p class="Color-Usuario"> Usuario: <%=pUser.usuario%></p> 
+                    <p class="Color-Usuario" >Email: <%=pUser.email%></p>
+                    <p class="Color-Usuario">Numero de usuario: <%=pUser.id%></p>
+                    <div class="formularios-edit-eliminar-profile-user">
+                    <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>
+
                     <form action="/editUser/delete/<%= pUser.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Usuario</button>
-                    </form> 
-</main>  
+                    </form>
+                    </div>
+            </article> 
+        </section>
+
+        <section>
+                
+
+        </section>
+
+
+    </main>  
 <br>
 <%- include('./partials/footer') %>
 

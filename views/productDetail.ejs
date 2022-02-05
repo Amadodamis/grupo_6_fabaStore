@@ -83,12 +83,13 @@
                               <input type="submit" class="boton-agregar-comprar-carrito" name="carrito" value="Agregar carrito">      
                                   
                         </form>
-              
-                        <a href="/editProduct/<%= producto.id %>" class="boton-agregar-comprar-carrito">Editar Producto</a>
+                                    <% if (admin == true) { %>
+                                        <a href="/editProduct/<%= producto.id %>" class="boton-agregar-comprar-carrito">Editar Producto</a>
     
-                        <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                            <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Producto</button>
-                        </form>
+                                        <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                            <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Producto</button>
+                                         </form>
+                                    <% } %>
                         <% } else{ %>
                                 <p class="detail-offline">Aun no has iniciado sesion</p>
                                 <p class="detail-offline">Para hacerlo ingresa  <a href="/login">aca</a></p>

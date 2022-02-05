@@ -13,12 +13,15 @@ let controller={
             nest:true
         }).then(producto => {            
                 let offline=true //si el usuario esta offline , arranca en true
-                
+                let admin= false;
                 if (req.session.userLogged != undefined){
                     offline=false
+                    if(req.session.userLogged.id_categoria == 1){
+                        admin=true
+                    }
                 }
                 
-                res.render('productDetail.ejs', {producto:producto,offline:offline});
+                res.render('productDetail.ejs', {producto:producto,offline:offline,admin:admin});
             })
             .catch(e=>{
                 console.log(e)
