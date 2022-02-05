@@ -39,7 +39,7 @@ const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 app.use(recordameMiddleware);
 
-//*************** Encriptación de Datos******************************* */
+
 
 
 
@@ -51,21 +51,21 @@ var productCartRouter = require('./routes/productCartRouter');
 var productDetailRouter = require('./routes/productDetailRouter');
 var registerRouter = require('./routes/registerRouter');
 var uploadProductsRouter = require ('./routes/uploadProductsRouter');
-var productsRouter = require('./routes/productsRouter');                    // Rutas /products
-var editProductsRouter = require('./routes/editProductsRouter');            // Rutas /editProducts
-var editUserRouter = require('./routes/editUserRouter');            // Rutas /editUsuarios
+var productsRouter = require('./routes/productsRouter');                    
+var editProductsRouter = require('./routes/editProductsRouter');            
+var editUserRouter = require('./routes/editUserRouter');           
 
-// Aquí llamo a la ruta de las api de movies
+// Aquí llamo a la ruta de las api de Productos
 const apiProductsRouter = require('./routes/api/productsAPIRoutes')
-//Aquí llamo a la ruta de las api de actors
+//Aquí llamo a la ruta de las api de usuarios
 const apiUserRouter = require('./routes/api/userAPIRoutes')
 
 
 //llamados
 
-app.use("/", indexRouter); //index
+app.use("/", indexRouter); 
 
-app.use ("/products",productsRouter); //products
+app.use ("/products",productsRouter);
 
 app.use("/login", loginRouter);
 
@@ -83,7 +83,7 @@ app.use("/editUser", editUserRouter);
 
 app.use ("/profile", profileRouter)
 
-//Aquí creo la colección de mis recursos de movies (APIs)
+//Aquí creo la colección de mis recursos de la base de datos (APIs)
 app.use('/api/products',apiProductsRouter);
 app.use('/api/users',apiUserRouter);
 

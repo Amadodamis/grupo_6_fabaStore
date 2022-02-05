@@ -1,41 +1,7 @@
-<%if (user.cart[0]) {%>
-    
-
-<section class="producto-x"> <!-- Producto armado compu-->
-    
-
-    <div class="img-producto-cart">
-        <img class="jpg-producto" src="<%= user.cart[0].img %>" alt="armado-pc">
-    </div>
-    <div class="bloque-descripcion">    
-        <div class="buttons-close-change-minimize">                     
-        <i class="far fa-caret-square-down"></i>
-        <i class="far fa-caret-square-up"></i>
-        <i class="fas fa-exchange-alt"></i>
-        <i class="far fa-window-close"></i>
-        </div>
-        <div>
-        <p class="nombre-producto-cart"><%= user.cart[0].Nombre %></p>
-
-        <div class="precio-cart">
-            <p>Precio</p>
-            <p><%= user.cart[0].precio %> $</p>
-        </div>
-        </div>
-    </div>
-
-    
-</section>
-<% }  %> 
-
-
-<%= user.cart.lengt %> 
-<%for (let i = 1; i < user.cart.length   ; i++) { %> 
-    
 <section class="producto-x">
     
     <div class="img-producto-cart">
-        <img class="jpg-producto" src="/img/<%= user.cart[i].img %>" alt="macbook">
+        <img class="jpg-producto" src="" alt="">
     </div>
     
 
@@ -49,28 +15,21 @@
         </div>
 
         <div>
-        <p class="nombre-producto-cart"><%= user.cart[i].modelo %></p>
+        <p class="nombre-producto-cart">MODELO</p>
         <div class="box-producto-cant">                      <!--Botones cantidad-->
             <p>Cantidad</p>
             <div class="botones-producto-cant"> 
                 <i class="far fa-minus-square"></i>
-                <input type="number" min="1" max="30"class="cant-productos">
+                <input type="number" min="1" max="30"class="cant-productos" value="1">
                 <i class="far fa-plus-square"></i>
             </div>
             
         </div>
     
-        <div class="precio-cart">
-            <% if (user.cart[i].oferta) { %>  <%# Si el precio esta oferta  se muestra el precio en oferta  %> 
-                <p>Precio</p>
-                <p><%= user.cart[i].precioConOferta %>$</p>
+        <div class="precio-cart"> 
+                <p>Precio: </p>
+                <p>precio$</p>
                 
-
-            <% }else {%>                <%# Si el precio no tiene oferta se muestra el precio real %> 
-                <p>Precio</p>
-                <p><%= user.cart[i].precio %>$</p>
-                
-                <%}  %> 
         </div>
         </div>
     </div>
@@ -78,5 +37,3 @@
 
 </section>
 <br>
-
-<% } %> 

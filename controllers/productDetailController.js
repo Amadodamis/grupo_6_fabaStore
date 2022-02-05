@@ -14,9 +14,12 @@ let controller={
         }).then(producto => {
                 //guardo el producto en session de los ultimos productos visitados.
                 
+                
+
                 if (req.session.userLogged !=undefined){
                     req.session.ultimosProductos.push(producto)
                 }
+
                 res.render('productDetail.ejs', {producto:producto});
             })
             .catch(e=>{

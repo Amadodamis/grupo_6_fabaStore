@@ -12,16 +12,27 @@
 
     <main class="main-productCart">
         <div class="mi-compra">
-            <h1>Mi compra</h1>
+            <h1>Carrito de compra del usuario: </h1> 
         </div>
 
         <section class="box-compra">
 
             <section class="Productos">
 
-                <%- include('./partials/partialCarrito') %>
-                <!--Llama al partial carrito que tiene la lista de productos-->
+                <% if (invitado === true) { %>
+                    <p class="carrito-texto">Aun no has iniciado sesion</p>
+                    <p class="carrito-texto">Para hacerlo ingresa  <a href="/login">aca</a></p>
+                    <p class="carrito-texto">Si aun no tenes cuenta ingresa <a href="/register">aca</a></p>
+                <% } else {%>
 
+                    <% if ( vacio === true ) { %>
+                        <p class="carrito-texto">Aun no tenes elementos en tu carrito</p>
+                        <p class="carrito-texto">Podes ver nuestros productos <a href="/products">aca</a></p>
+                    
+                     <% } %>
+
+                <%} %>
+                
             </section> 
 
 
@@ -52,7 +63,10 @@
 
                     <div class="total-precio">
                         <p>Total a pagar</p>
-                        <p class="total-precio-num"><%= user.totalApagar%> $</p>
+                        <% if ( vacio === true ) { %>
+                            <p class="total-precio-num">0 $</p>
+                        <% } %>
+                        
                     </div>
 
                     <div class="boton-comprar">
