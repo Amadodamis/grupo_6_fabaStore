@@ -29,6 +29,11 @@
                         </span>
                     </div>
                 </div>
+                
+                
+                    <input type="text" name="id" placeholder="" class="input-invisible-edit-user" value= "<%= usuarioAEditar.id %>" required>    
+                
+
                 <div class="espacio-error">
                     <p id="error-usuario" class="error-formulario"> El usuario tiene que ser entre 2 y 15 digitos y solo puede contener numeros, letras y guion</p>
                 </div>
@@ -46,7 +51,7 @@
                 </div>
 
                 <div class="control-form">
-                    <input type="text" name="password" placeholder="contraseña" class="control" required>
+                    <input type="password" name="password" placeholder="contraseña" class="control" required>
                     <div class="icono-display">
                         <span>
                             <i id="password" class="fas fa-check-circle position-icono"></i>

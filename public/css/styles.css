@@ -112,6 +112,10 @@ main{
    
 }
 
+.input-invisible-edit-user{
+    display:none;
+}
+
 .barra-lateral{
     width: 15%;
     margin: 10px;

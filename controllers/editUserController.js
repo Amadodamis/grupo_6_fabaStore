@@ -11,18 +11,46 @@ const sequelize = db.sequelize;
 
 
 let controller = {
-///////////////////La vista de la edicion del usuario se carga por defecto con los datos del session////////////////////////////////////////////////
-/////El intento de editar un usuario que no coincide redirije al login.    
-edit:(req,res)=>{
-        let user=req.session.userLogged;
 
-        res.render("editUser",{
-            usuarioAEditar: user})
+edit:(req,res)=>{
+        let userToEdit=req.url.charAt(1)
+        userToEdit=parseInt(userToEdit, 10)  //aca obtengo por url el numero de usuario que quiero editar
+
+
+        //Primero se evalua el caso en el que el propio user es el que entra a editar su usuario.
+        if(userToEdit == req.session.userLogged.id){ 
+            let user=req.session.userLogged;
+            res.render("editUser",{usuarioAEditar: user})
+        }else{
+            if(req.session.userLogged.id_categoria==1){
+                
+                db.User.findOne( 
+                    {
+                    include:["categoria"],
+                    raw:true, nest:true,
+                    where:{ id:userToEdit }
+                    })
+                    .then(user=> {
+                        console.log(user)
+                        res.render("editUser",{usuarioAEditar: user})
+                    })
+                    .catch(e=>{
+                        console.log(e)
+                    })
+            }
+
+            //una medida extra, en la que si se logro entrar pero no es admin, rebota a login.
+            else{
+
+                res.redirect("/login")
+            }
+        }
 
     },
 
 
     update:(req,res)=>{
+ 
         db.User.update(
             {
                 usuario: req.body.usuario,
@@ -34,21 +62,26 @@ edit:(req,res)=>{
                 avatar: req.file.filename,  
             },
             {
-             where: {id: req.session.userLogged.id}
+             where: {id: req.body.id}
             })
 
             .then (() => {
-                //Despues de editar el usuario(con exito) elimino session y cookies ya que si el usuario continua logeado despues del edit, 
-                //los cambios en la base de datos se generan, pero no se actualizan en la pagina. Por lo tanto se debe volver a logear.
-                req.session.destroy();
-                res.clearCookie("recordame")
-                res.redirect("/")
+                
+                if (req.session.userLogged.id_categoria == 1){ //si la solicitud vino de parte del administrador se redirije al perfil
+                    res.redirect("/profile")
+                }
+                
+                else{ //si la solicitud de edicion vino de parte del propio usuario se deslogea y eliminan las cookies
+
+                    req.session.destroy();
+                    res.clearCookie("recordame")
+                    res.redirect("/")
+                }
             })
 
             .catch(e=>{
                 console.log(e)
             })
-                
        
     },
 
@@ -60,9 +93,15 @@ edit:(req,res)=>{
         })
         //si el usuario se elimina se destruye la cookie y la sesion
         .then(()=>{
-        req.session.destroy();
-        res.clearCookie("recordame")
-        res.redirect("/")
+        if(req.session.userLogged.id_categoria == 1){ //si la solicitud vino de administrador, continua logeado
+            res.redirect("/profile")
+        }
+        else{ //si el usuario se autoelimina, se destruyen las cookies y se deslogea
+
+            req.session.destroy();
+            res.clearCookie("recordame")
+            res.redirect("/")
+        }
         }
 
         )

@@ -44,7 +44,18 @@
 
                         <% for( let i = 0; i < users.length; i++ ) { %>
                             <tr>
-                                <td> <%= users[i].id %> </td> <td><%= users[i].usuario %></td> <td><%= users[i].email %></td> <td><%= users[i].nombre %></td> <td><%= users[i].apellido %></td> <td>editar</td> <td>eliminar</td> <td>admin</td>
+                                <td> <%= users[i].id %> </td>
+                                <td><%= users[i].usuario %></td> 
+                                <td><%= users[i].email %></td> 
+                                <td><%= users[i].nombre %></td> 
+                                <td><%= users[i].apellido %></td> 
+                                <td><a href="/editUser/<%= users[i].id %>">Editar</a></td>
+                                <td>
+                                <form action="/editUser/delete/<%= users[i].id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                    <button type="submit" class="boton-agregar-comprar-carrito">Eliminar</button>
+                                </form>
+                                 </td>
+                                <td>admin</td>
                             </tr>
 
                         <% } %>

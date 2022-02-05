@@ -19,6 +19,7 @@ const upload = multer({storage})
 
 // Editar un usuario
 router.get("/:id",authMiddlewareEditUser,controller.edit);
+
 router.put("/:id",upload.single('avatar'),controller.update);
 
 // Eliminar un usuario
