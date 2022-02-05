@@ -93,18 +93,6 @@ INSERT INTO fabastoredb.productos (ID, modelo, id_marca, id_tipoProducto, img, p
 (43,"ssd m.2 950 Gb",17,1,"producto_1636423354929.png",13500,15,10,12150,""),
 (44,"Gabinete",28,6,"producto_1636423556561.png",8000,15,5,7600,"");
 
--- cart (no entendí bien la lógica de este carrito???, un carrito es un ID y solo puede almacenar un único producto? --
-INSERT INTO fabastoredb.carrito_table (ID, id_producto) VALUES
-(1,1),
-(2,2),
-(3,3),
-(4,4),
-(5,5),
-(6,6),
-(7,7),
-(8,8),
-(9,9),
-(10,10);
 
 -- users --
 INSERT INTO fabastoredb.usuarios (ID, id_categoria, usuario, email, password, fecha, nombre, apellido, domicilio, avatar, id_carrito) VALUES
