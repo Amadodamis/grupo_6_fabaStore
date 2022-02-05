@@ -53,20 +53,6 @@ function DashBoard (){
                                                 .catch(error=>console.log(error))
                                                 },[])
 
-
-  
-
-
-    const object1 = {
-        almacenamiento: 15,
-        mouses: 42,
-        televisores: 12
-      };
-
-    const arrayObj= Object.values(object1) // arrayObj tiene los valores de cada una de las propieades del countcategory en un array
-    const arrayObjKeys= Object.keys(object1); // arrayObj tiene los valores del nombre de las propiedades del countcategory de las categorias en un array
-    
-    let countCategory;
      
 return (
 
@@ -84,7 +70,7 @@ return (
           <br />  
             
           <main className="primer-box-container-dashboard">
-              { meta == 0 &&
+              { meta === 0 &&
                  <section className="seccion-arriba-dashboard">
                     <ArticlesTop titulo="totalproductos" cantidad="cargando" />
 
@@ -107,19 +93,26 @@ return (
             <br />
                  
             <section className="seccion-Abajo-dashboard">
-                
-                <section className="containter-ult-producto">
-                    <ArticlesBotImg foto={foto} ultProd="" img="" id="" modelo="" precio="" cantStock="" ofPorcentaje="" espec=""/> 
-                </section>
+                {productos.length === 0 &&
+                    <section className="containter-ult-producto">
+                        <ArticlesBotImg foto={foto} cargando ="cargando" productos= {productos} /> 
+                    </section>
+                }
+                {productos.length > 0 &&
+                    <section className="containter-ult-producto">
+                        <ArticlesBotImg foto={foto} cargando ="cargando" productos= {productos} ultProducto={productos.length} /> 
+                    </section>
+                }
 
 
                 <br />
 
                 <section className="container-lisProds-categorias">
                     
-                    {meta.total== 0 &&
+                    {meta.total=== 0 &&
                     <ArticleBotCategory cargando="cargando" />
                     }
+
                     { 
                         meta.total>0 &&
                         <ArticleBotCategory categories={meta.CountCategory}/>
@@ -127,7 +120,7 @@ return (
 
 
                     <br />
-                    {productos.length == 0 &&
+                    {productos.length === 0 &&
                     <ArticleBotListadoProductos cargando="cargando" productos={productos} /> 
                     }
 
@@ -135,15 +128,10 @@ return (
                         productos.length > 0 &&
                         <ArticleBotListadoProductos productos= {productos} /> 
                     }
-
-
                 </section>
             </section>  
 
           </main>
-
-
-
 
           <br />
         <Footer />
