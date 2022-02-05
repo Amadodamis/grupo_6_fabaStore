@@ -7,7 +7,7 @@
 
     <%- include('./partials/header') %>
    
-    <main class="barra-y-box-productos">
+    <main class="barra-y-box-productos-profile">
         <section class="section-profile-user">
             <article class="article-profile-user">
                     <div class="container-avatar">
@@ -27,11 +27,42 @@
             </article> 
         </section>
 
-        <section>
-                
+        <% if (pUser.id_categoria ==1 ) { %>
+         
+        
+        <section class="section-admin-user">
+            
+            <article class="admin-panel">
+                <h1 class="admin-panel-h1">Admin panel</h1>
+                <div class="container-table"> 
+                    <table class="table-admin" >
+                        <thead>
+                            <tr>
+                                <th>id </th> <th>user </th> <th>email</th> <th>nombre </th> <th>apellido </th>
+                            </tr>
+                        </thead>
+
+                        <% for( let i = 0; i < users.length; i++ ) { %>
+                            <tr>
+                                <td> <%= users[i].id %> </td> <td><%= users[i].usuario %></td> <td><%= users[i].email %></td> <td><%= users[i].nombre %></td> <td><%= users[i].apellido %></td> <td>editar</td> <td>eliminar</td> <td>admin</td>
+                            </tr>
+
+                        <% } %>
+
+
+                    
+                    </table>
+                </div>
+
+            </article>
+
+            
+            <a href="/uploadProducts" class="boton-agregar-comprar-carrito">Agregar producto</a>
+        
 
         </section>
 
+        <% } %>
 
     </main>  
 <br>
