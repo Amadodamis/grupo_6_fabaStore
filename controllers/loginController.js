@@ -77,9 +77,25 @@ let controller={
             res.render("perfilUsuario", { pUser: usuarioInvitado})
 
         }else{
-            res.render("perfilUsuario", { pUser: req.session.userLogged }) 
+            if(req.session.userLogged.id_categoria != 1 ){ // si el usuario no es admin 
+                res.render("perfilUsuario", { pUser: req.session.userLogged }) 
+            }else{//si el usuario es admin
+                db.User.findAll( 
+                    {
+                        include:["categoria"],
+                        raw:true, nest:true, 
+                    })
+                    .then(users => {    
+                        res.render("perfilUsuario", { pUser: req.session.userLogged,users:users}) 
+                })
+                .catch(e=>{
+                        console.log(e)
+                    })
+
+            }
         }
     },
+
     logout: (req,res)=> {
         req.session.destroy();
         res.clearCookie("recordame")

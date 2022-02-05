@@ -11,7 +11,15 @@ const funcionesProductos=require("../views/source/funcionesProductos")
 
 let controller = {
     upload: (req,res)=>{
-        res.render("uploadProducts")
+        if (req.session.userLogged==undefined){
+            res.redirect("/products")
+        }else{
+            if(req.session.userLogged.id_categoria==1){
+                res.render("uploadProducts")
+            }else{
+                res.redirect("/products")
+            }
+        }
     },
 
     formulario: (req,res)=>{
