@@ -1,7 +1,10 @@
+<% for( let i = 0; i < carrito.length; i++ ) { %>
+
+
 <section class="producto-x">
     
     <div class="img-producto-cart">
-        <img class="jpg-producto" src="" alt="">
+        <img class="jpg-producto" src=/img/<%=carrito[i].img%> alt="">
     </div>
     
 
@@ -15,7 +18,7 @@
         </div>
 
         <div>
-        <p class="nombre-producto-cart">MODELO</p>
+        <p class="nombre-producto-cart"><%= carrito[i].modelo %></p>
         <div class="box-producto-cant">                      <!--Botones cantidad-->
             <p>Cantidad</p>
             <div class="botones-producto-cant"> 
@@ -28,7 +31,7 @@
     
         <div class="precio-cart"> 
                 <p>Precio: </p>
-                <p>precio$</p>
+                <p><%=carrito[i].precio%>$</p>
                 
         </div>
         </div>
@@ -37,3 +40,4 @@
 
 </section>
 <br>
+<% } %>

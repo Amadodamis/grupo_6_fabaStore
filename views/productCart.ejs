@@ -29,8 +29,10 @@
                         <p class="carrito-texto">Aun no tenes elementos en tu carrito</p>
                         <p class="carrito-texto">Podes ver nuestros productos <a href="/products">aca</a></p>
                     
-                     <% } %>
+                     <% }else{ %>
+                        <%- include('./partials/partialCarrito') %>
 
+                        <%} %>
                 <%} %>
                 
             </section> 
@@ -63,9 +65,9 @@
 
                     <div class="total-precio">
                         <p>Total a pagar</p>
-                        <% if ( vacio === true ) { %>
-                            <p class="total-precio-num">0 $</p>
-                        <% } %>
+                        
+                            <p class="total-precio-num"><%= total %>  $</p>
+                        
                         
                     </div>
 
