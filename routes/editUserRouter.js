@@ -25,4 +25,8 @@ router.put("/:id",upload.single('avatar'),controller.update);
 // Eliminar un usuario
 router.delete("/delete/:id",controller.delete)
 
+router.delete("/giveadmin/:id", controller.giveAdmin)
+
+router.delete("/removeadmin/:id", controller.removeAdmin)
+
 module.exports = router;

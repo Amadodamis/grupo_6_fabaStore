@@ -17,6 +17,7 @@
                     <p class="Color-Usuario"> Usuario: <%=pUser.usuario%></p> 
                     <p class="Color-Usuario" >Email: <%=pUser.email%></p>
                     <p class="Color-Usuario">Numero de usuario: <%=pUser.id%></p>
+                    <p class="Color-Usuario">Tipo de usuario: <%=pUser.id_categoria%></p>
                     <div class="formularios-edit-eliminar-profile-user">
                     <a href="/editUser/<%= pUser.id %>" class="boton-agregar-comprar-carrito">Editar Usuario</a>
 
@@ -54,10 +55,23 @@
                                 <form action="/editUser/delete/<%= users[i].id %>?_method=DELETE" method="POST" style="display: inline-flex">
                                     <button type="submit" class="boton-agregar-comprar-carrito">Eliminar</button>
                                 </form>
-                                 </td>
-                                <td>admin</td>
-                            </tr>
+                                </td>
+                              
+                                <% if (users[i].id_categoria == 1) { %>
+                                    <td>
+                                        <form action="/editUser/removeadmin/<%= users[i].id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                            <button type="submit" class="boton-agregar-comprar-carrito">Rem-admin</button>
+                                        </form>
+    
+                                    </td>
+                                <% }else { %>
+                                <td>
+                                    <form action="/editUser/giveadmin/<%= users[i].id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                        <button type="submit" class="boton-agregar-comprar-carrito">Admin</button>
+                                    </form>
 
+                                </td>
+                                <% } %>
                         <% } %>
 
 

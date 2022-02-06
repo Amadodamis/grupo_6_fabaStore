@@ -106,6 +106,43 @@ edit:(req,res)=>{
 
         )
             
+    },
+
+    giveAdmin:(req,res)=>{
+        db.User.update(
+            {
+                id_categoria: 1,  
+            },
+            {
+             where: {id: req.params.id}
+            })
+
+            .then (() => {
+                res.redirect("/profile")
+            })
+
+            .catch(e=>{
+                console.log(e)
+            })
+            
+    },
+    removeAdmin:(req,res)=>{
+         db.User.update(
+            {
+                id_categoria: 2,  
+            },
+            {
+             where: {id: req.params.id}
+            })
+
+            .then (() => {
+                res.redirect("/profile")
+            })
+
+            .catch(e=>{
+                console.log(e)
+            })
+            
     }
 }
 
