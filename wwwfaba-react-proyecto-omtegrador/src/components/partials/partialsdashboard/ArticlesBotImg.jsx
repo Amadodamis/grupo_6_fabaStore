@@ -13,8 +13,6 @@ if (props.ultProducto > 0){
         element.id === props.ultProducto )
     }
     
-    console.log(ultElemento)
-    ///static/media/producto_1636423556561.png
 return(
 
     <React.Fragment>

@@ -11,6 +11,24 @@
     font-size: 11px;
 }
 
+
+.indice-tabla{
+    text-align: left;
+    border-collapse:collapse;
+    width: 100%;
+}
+
+th,td{
+    color: aliceblue;
+    padding-left: 10px;
+}
+
+.thead{
+    background-color: #c238d8;
+    border-bottom: solid 5px black;
+    color: white;
+}
+
 .cargando-dashboard{
         font-size: 100px;
         color:red;

@@ -21,18 +21,7 @@ function App() {
     <div >
       
     <Routes> 
-      <Route path="/" element={<Index />}/>
-      <Route path="/login" element={<Login />}/>
-      <Route path="/register" element={<Register />}/>
-      <Route path="/profile" element={<Profile />}/>
-      <Route path="/editUser" element={<EditUser />}/>
-      <Route path="/productDetail" element={<ProductDetail cant={1}/>}/>
-      <Route path="/Products" element={<Products />}/>
-      <Route path="/EditProducts" element={<EditProducts />}/>
-      <Route path="/uploadProducts" element={<UploadProducts />}/>
-      <Route path="/productCart" element={<ProductCart />}/>
       <Route path="/dashboard" element={<DashBoard />}/>
-      <Route path="/ApiHook2" element={<ApiHook2 />}/>
     </Routes> 
 
     </div>
