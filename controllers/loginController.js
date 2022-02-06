@@ -55,8 +55,7 @@ let controller={
 
             //Si no existe el usuario en la base de datos.   
                 }else{
-
-                    res.send("el usuario "+ userEmail + "  no existe.  "+"http://localhost:3032/login")
+                    res.redirect("/login")
                 }
 
         })
