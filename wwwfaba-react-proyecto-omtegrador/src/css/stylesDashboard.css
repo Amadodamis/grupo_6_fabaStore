@@ -29,6 +29,10 @@ th,td{
     color: white;
 }
 
+.Pagina-dashboard-lista-productos{
+    color: white;
+    font-size: 20px;
+}
 .cargando-dashboard{
         font-size: 100px;
         color:red;
