@@ -11,7 +11,7 @@ return(
             <article className="articulos-dashboard-top">
                 <p className="parrafos-total-dashboard">
                 {props.titulo}</p>
-                <p className="parrafos-total-dashboard">
+                <p className="parrafos-total-dashboard-value">
                     {props.cantidad} </p>
             </article>
 

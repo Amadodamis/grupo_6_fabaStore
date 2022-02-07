@@ -13,7 +13,7 @@ function Register() {
         <body className="body-index">
             <Head />
             <Header />  
-            <section class="section-formulario-register">
+            <section className="section-formulario-register">
         
                 <form action="/register" method="POST" className="form-registro" enctype="multipart/form-data">
 

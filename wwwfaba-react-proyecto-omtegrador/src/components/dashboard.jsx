@@ -9,7 +9,6 @@ import ArticlesBotImg from "./partials/partialsdashboard/ArticlesBotImg";
 
 import '../css/stylesDashboard.css';
 
-import foto from "../img/i7-7700k.png"
 import ArticleBotCategory from "./partials/partialsdashboard/articleBotCategory";
 import ArticleBotListadoProductos from "./partials/partialsdashboard/articleBotListadoProductos";
 
@@ -55,20 +54,11 @@ function DashBoard (){
 
      
 return (
-
-       <body className="body-index" >
+    
+       <div className="body-index" >
           <Head /> <Header />
-
-          <section className="container-banner">
-              <div className="banner"> </div>
-          </section>
-          
-          
-          <div className="plus-button-fixed">
-            <i className="fas fa-plus-circle"></i>
-          </div> 
-          <br />  
-            
+          <br />
+    
           <main className="primer-box-container-dashboard">
               { meta === 0 &&
                  <section className="seccion-arriba-dashboard">
@@ -82,11 +72,11 @@ return (
                 {meta.total > 0 &&
                 
                 <section className="seccion-arriba-dashboard">
-                    <ArticlesTop titulo="totalproductos" cantidad={meta.total} />
+                    <ArticlesTop titulo="Total productos" cantidad={meta.total} />
 
-                    <ArticlesTop titulo="total usuarios" cantidad={metaU.total} />
+                    <ArticlesTop titulo="Total usuarios" cantidad={metaU.total} />
 
-                    <ArticlesTop titulo="total categorias" cantidad={meta.cantCategorias} />  
+                    <ArticlesTop titulo="Total categorias" cantidad={meta.cantCategorias} />  
                 </section>
                 
                 }
@@ -95,15 +85,14 @@ return (
             <section className="seccion-Abajo-dashboard">
                 {productos.length === 0 &&
                     <section className="containter-ult-producto">
-                        <ArticlesBotImg foto={foto} cargando ="cargando" productos= {productos} /> 
+                        <ArticlesBotImg  cargando ="cargando" productos= {productos} /> 
                     </section>
                 }
                 {productos.length > 0 &&
                     <section className="containter-ult-producto">
-                        <ArticlesBotImg foto={foto} cargando ="cargando" productos= {productos} ultProducto={productos.length} /> 
+                        <ArticlesBotImg  cargando ="cargando" productos= {productos} ultProducto={productos.length} /> 
                     </section>
                 }
-
 
                 <br />
 
@@ -136,7 +125,7 @@ return (
           <br />
           
         <Footer />
-        </body>
+        </div>
     )}
 
 export default DashBoard

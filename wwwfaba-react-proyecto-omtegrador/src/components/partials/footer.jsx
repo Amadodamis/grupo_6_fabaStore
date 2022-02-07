@@ -1,3 +1,4 @@
+import React from "react";
 import {Link} from "react-router-dom"
 import '../../css/styles.css';
 
@@ -5,6 +6,7 @@ function Footer() {
     
     
     return (
+      <React.Fragment>
       <footer className="footer">
           <section className="informacion-adicional">
              <article>
@@ -65,9 +67,10 @@ function Footer() {
           </section>
           
           <article>
-              <p class="copyright">Copyright © 2021 fabaStore S.R.L.</p>
+              <p className="copyright">Copyright © 2021 fabaStore S.R.L.</p>
           </article>
       </footer>
+      </React.Fragment>
     );
   }
   

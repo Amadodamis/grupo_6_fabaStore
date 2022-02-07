@@ -38,7 +38,7 @@ function ProductCart() {
         </section>
 
         {array.map((iterador,i) =>
-             <section key={iterador+i}className="producto-x">
+             <section key={iterador+i} className="producto-x">
                 <div className="img-producto-cart">
                     <img className="jpg-producto"  src={productox} alt="jpg-producto"/>
                 </div>

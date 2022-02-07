@@ -40,7 +40,7 @@ class Apis extends Component {
     if (this.state.api.length === 0){
       prod=["Cargando.."]
     }else{
-      console.log(this.state.api[1].modelo)
+
       prod=<p>{this.state.api[1].modelo}</p>
     }
 

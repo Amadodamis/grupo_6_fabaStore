@@ -14,27 +14,30 @@ const productosList=props.productos.map((prod,i)=>{
            <td>{prod.precio}$</td>
            <td>{prod.stockCantidad}</td>
            <td>{prod.ofertaPorcentaje}</td>
-           </tr>
+        </tr>
+        
        
     )
 })
 
-
 return(
 
     <React.Fragment>
-        <h1 className="Pagina-dashboard-lista-productos">Pagina {props.currentPage} </h1>
-        
-
+       <table>
         <thead className="indice-tabla">
                 <tr>
-                    <th>ID </th><th>Marca </th> <th>MODELO </th> <th>PRECIO</th> <th>STOCK</th> <th>% OFERTA</th>
+                    <th>ID</th><th>Marca</th> <th>MODELO</th> <th>PRECIO</th> <th>STOCK</th> <th>%OFERTA</th>
                 </tr>
         </thead>
 
         {productosList}
-        <button onClick={props.prevHandler}>prev</button>
-        <button onClick={props.nextHandler}>next</button>
+        </table>
+        <br />
+        <div>
+        <p className="Pagina-dashboard-lista-productos">Pagina {props.currentPage} </p>
+        <button className="boton-agregar-comprar-carrito" onClick={props.prevHandler}>prev</button>
+        <button className="boton-agregar-comprar-carrito" onClick={props.nextHandler}>next</button>
+        </div>
     </React.Fragment>
 )} 
 export default TablePartial

@@ -329,8 +329,8 @@ font-weight: bold;
         color:#c238d8;
     }
 
-    .lupa-e-iconos{   /*terminado*/
-        width: 100%; /* 100% de lo que resta del header*/
+    .lupa-e-iconos{ 
+        width: 100%; 
         padding: 10px;
         margin: 15px;
         min-width: 320px;

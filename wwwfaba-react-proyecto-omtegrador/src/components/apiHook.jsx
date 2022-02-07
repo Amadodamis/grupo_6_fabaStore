@@ -16,11 +16,6 @@ function ApiHook(){
         const productos = await data.json()
         setProductos(productos)
     }
-
-    
-   console.log(productos.products.length)
-
-
 {
 return(
     <div>  
