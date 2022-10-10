@@ -40,7 +40,7 @@ app.use(cookieParser())
 app.use(recordameMiddleware);
 
 
-
+console.log("asd")
 
 
 //Requisitos de routas
