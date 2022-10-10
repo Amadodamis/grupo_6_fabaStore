@@ -4,9 +4,9 @@ import '../../../css/stylesDashboard.css';
 import '../../../css/styles.css';
 import TablePartial from "./tablePartial";
 
-const productosPorPagina=10;
 function ArticleBotListadoProductos(props){
-
+    
+    const productosPorPagina=10;
     const [productos,setProductos] = useState(props.productos)
     const [items,setItems]= useState([...props.productos].splice(0,productosPorPagina))
     const [currentPage,setCurrentPage]=useState(0)
@@ -45,10 +45,13 @@ return(
          <article className="articulos-dashboard-bot">
                             <p className="parrafos-total-dashboard"> Listado de todos los productos</p>
                             <br />
+                            
                             {props.productos.length === 0 &&  props.cargando ==="cargando" &&
                             <p className="parrafo-listado-productos">cargando... </p> 
 
                             }
+
+
                             {props.productos.length > 0 && 
                             <TablePartial 
                             currentPage={currentPage}

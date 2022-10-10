@@ -1,111 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head') %>
+<%- include('./partials/head') %>
+
     <body class="body-index">
         <%- include('./partials/header') %>
-    
-        <section class="container-banner">
-            <div class="banner"> </div>
-        </section>
-        
-        <br/>
-    
-        <main class="main-detalle-de-lproducto">
-         <section>
-             <div class="ficha">
-                <div class="izquierda">
-                    
-                    <h2 class="estilo-Titulo-DP"><%= producto.tipodeproducto.tipo_de_producto %> <%= producto.marca.nombreMarca %> <%= producto.modelo %></h2>
-                    <div>
-                        <img  class="imagen-Produc-Detail" src=/img/<%=producto.img%> >
-                    </div>
-                    <div class="estilos-Especificaciones-DP">
-                        <h3 class="tamaño-h3-DP">Especificaciones</h5>
-                        <ul class="tamaño-ul-DP">
-                            <li class="distancia-Especificaciones"> <p>Marca</p> <span><%= producto.marca.nombreMarca %></span></li>
-                            <li class="distancia-Especificaciones"> <p>Modelo</p> <span><%= producto.modelo%></span></li>
-                            <li class="distancia-Especificaciones"> <p>Tipo de producto</p> <span><%= producto.tipodeproducto.tipo_de_producto%></span></li>
-                        </ul>
-                    </div>
-                </div>
 
-                
-                <div class="derecha">
-                    <div class="estilos-Precio-DP">
-                            <% if (producto.oferta) { %>
-                                <h1 class="Precio-DP"><%= producto.precioConOferta %>$</h1>
-                            <% } else { %>
-                                <h1 class="Precio-DP"><%= producto.precio %>$</h1>
-                            <%  } %> 
-                             
-                    </div>
-                    
-                    <div class="info-ficha-envios">
-                        <div class="iconos-DP">
-                            <i class="fas fa-shipping-fast iconos-DP-tamaño"></i>
-                        </div>
-                        <div>
-                            <p>Envío a todo el país</p>
-                            <p class="tamaño-texto-DP">Recibílo en tu domicilio rápido y seguro</p>
-                            <button type="button" class="boton-DP">Ver costo de envío</button>
-                        </div>
-                    </div>
-                    <div class="info-ficha-retirar">
-                        <div class="iconos-DP">
-                            <i class="fas fa-map-marked-alt iconos-DP-tamaño"></i>
-                        </div>
-                        <div>
-                            <p>Podés retirarlo aquí</p>
-                        </div>
-                    </div>
-                    <div class="info-ficha-stock">
-                        <div class="iconos-DP">
-                            <i class="fas fa-check-circle color-icono-stock" ></i>
-                        </div>
-                        <div>
-                            <p class="color-stock">Stock disponible</p>
-                        </div>
-                    </div>
-                   
-                    <div class="productos-agregar-comprar">
-                        <% if (offline == false) { %>
-                        <div class="cantidad-producto">
-                            <button type="button" class="boton-DP-menos"><i class="fas fa-minus"></i></button>
-                            <input type="number" min="1" max="99999" class="texto-cantidad-producto" value="1">
-                            <button type="button" class="boton-DP-mas"><i class="fas fa-plus"></i></i></button>
+            <section class="container-banner">
+                <div class="banner"> </div>
+            </section>
+
+            <br />
+
+            <main class="main-detalle-de-lproducto">
+                <section>
+                    <div class="ficha">
+                        <div class="izquierda">
+
+                            <h2 class="estilo-Titulo-DP">
+                                <%= producto.tipodeproducto.tipo_de_producto %>
+                                    <%= producto.marca.nombreMarca %>
+                                        <%= producto.modelo %>
+                            </h2>
+                            <div>
+                                <img class="imagen-Produc-Detail" src=/img/<%=producto.img%> >
+                            </div>
+                            <div class="estilos-Especificaciones-DP">
+                                <h3 class="tamaño-h3-DP">Especificaciones</h5>
+                                    <ul class="tamaño-ul-DP">
+                                        <li class="distancia-Especificaciones">
+                                            <p>Marca</p> <span>
+                                                <%= producto.marca.nombreMarca %>
+                                            </span>
+                                        </li>
+                                        <li class="distancia-Especificaciones">
+                                            <p>Modelo</p> <span>
+                                                <%= producto.modelo%>
+                                            </span>
+                                        </li>
+                                        <li class="distancia-Especificaciones">
+                                            <p>Tipo de producto</p> <span>
+                                                <%= producto.tipodeproducto.tipo_de_producto%>
+                                            </span>
+                                        </li>
+                                    </ul>
+                            </div>
                         </div>
 
-                        <form action="/productcart" method="POST" >
-    
-                              <input type="number" name="idproducto" value="<%=producto.id %>" class="input-invisible">    
-    
-                              <input type="submit" class="boton-agregar-comprar-carrito" name="carrito" value="Agregar carrito">      
-                                  
-                        </form>
-                                    <% if (admin == true) { %>
-                                        <a href="/editProduct/<%= producto.id %>" class="boton-agregar-comprar-carrito">Editar Producto</a>
-    
-                                        <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                                            <button type="submit" class="boton-agregar-comprar-carrito">Eliminar Producto</button>
-                                         </form>
-                                    <% } %>
-                        <% } else{ %>
-                                <p class="detail-offline">Aun no has iniciado sesion</p>
-                                <p class="detail-offline">Para hacerlo ingresa  <a href="/login">aca</a></p>
-                                <p class="detail-offline">Si aun no tenes cuenta ingresa <a href="/register">aca</a></p>
-                            <% } %>
-    
+
+                        <div class="derecha">
+                            <div class="estilos-Precio-DP">
+                                <% if (producto.oferta) { %>
+                                    <h1 class="Precio-DP">
+                                        <%= producto.precioConOferta %>$
+                                    </h1>
+                                    <% } else { %>
+                                        <h1 class="Precio-DP">
+                                            <%= producto.precio %>$
+                                        </h1>
+                                        <% } %>
+
+                            </div>
+
+                            <div class="info-ficha-envios">
+                                <div class="iconos-DP">
+                                    <i class="fas fa-shipping-fast iconos-DP-tamaño"></i>
+                                </div>
+                                <div>
+                                    <p>Envío a todo el país</p>
+                                    <p class="tamaño-texto-DP">Recibílo en tu domicilio rápido y seguro</p>
+                                    <button type="button" class="boton-DP">Ver costo de envío</button>
+                                </div>
+                            </div>
+                            <div class="info-ficha-retirar">
+                                <div class="iconos-DP">
+                                    <i class="fas fa-map-marked-alt iconos-DP-tamaño"></i>
+                                </div>
+                                <div>
+                                    <p>Podés retirarlo aquí</p>
+                                </div>
+                            </div>
+                            <div class="info-ficha-stock">
+                                <div class="iconos-DP">
+                                    <i class="fas fa-check-circle color-icono-stock"></i>
+                                </div>
+                                <div>
+                                    <p class="color-stock">Stock disponible</p>
+                                </div>
+                            </div>
+
+                            <div class="productos-agregar-comprar">
+                                <% if (offline==false) { %>
+                                    <div class="cantidad-producto">
+                                        <button type="button" class="boton-DP-menos"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="number" min="1" max="99999" class="texto-cantidad-producto"
+                                            value="1">
+                                        <button type="button" class="boton-DP-mas"><i
+                                                class="fas fa-plus"></i></i></button>
+                                    </div>
+
+                                    <form action="/productcart" method="POST">
+
+                                        <input type="number" name="idproducto" value="<%=producto.id %>"
+                                            class="input-invisible">
+
+                                        <input type="submit" class="boton-agregar-comprar-carrito" name="carrito"
+                                            value="Agregar carrito">
+
+                                    </form>
+                                    <% if (admin==true) { %>
+                                        <a href="/editProduct/<%= producto.id %>"
+                                            class="boton-agregar-comprar-carrito">Editar Producto</a>
+
+                                        <form action="/editProduct/delete/<%= producto.id %>?_method=DELETE"
+                                            method="POST" style="display: inline-flex">
+                                            <button type="submit" class="boton-agregar-comprar-carrito">Eliminar
+                                                Producto</button>
+                                        </form>
+                                        <% } %>
+                                            <% } else{ %>
+                                                <p class="detail-offline">Aun no has iniciado sesion</p>
+                                                <p class="detail-offline">Para hacerlo ingresa <a href="/login">aca</a>
+                                                </p>
+                                                <p class="detail-offline">Si aun no tenes cuenta ingresa <a
+                                                        href="/register">aca</a></p>
+                                                <% } %>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-             </div>
-         </section>
-        </main>  
-        
-        
-        <br/>
-    
-        <%- include('./partials/footer') %>
-        
+                </section>
+            </main>
+
+
+            <br />
+
+            <%- include('./partials/footer') %>
+
     </body>
+
 </html>
