@@ -50,7 +50,7 @@ module.exports = (sequelize, dataTypes) => {
                 foreignKey: "id_marca"
                 }),
         Product.belongsTo(models.TypeOfProduct, {
-            as: "tipodeproducto",
+            as: "tipoDeProducto",
             foreignKey: "id_tipoProducto"
         })
             }

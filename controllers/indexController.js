@@ -13,12 +13,12 @@ let controller={
         let prodOferta;  
         db.Product.findAll(
             {
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true,     
             })  
             .then(prod => {
-                
+            
                 // prodOferta tiene un array de los 4 elementos con mayor oferta de la base de datos
                 prodOferta = funcionesProductos.productosOfertaFunction(prod);
                 // prodOferta actualiza los precios de las ofertas.

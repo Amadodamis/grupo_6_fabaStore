@@ -17,7 +17,7 @@ let controller={
             
             db.Product.findAll( 
                 {
-                include:["marca","tipodeproducto"],
+                include:["marca","tipoDeProducto"],
                 raw:true,  
                 nest:true,
                 })

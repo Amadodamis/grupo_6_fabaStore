@@ -8,10 +8,11 @@ let controller={
   // Vista del detalle del producto por ID
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id,{
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true
-        }).then(producto => {            
+        }).then(producto => {         
+
                 let offline=true //si el usuario esta offline , arranca en true
                 let admin= false;
                 if (req.session.userLogged != undefined){
@@ -22,6 +23,7 @@ let controller={
                 }
                 
                 res.render('productDetail.ejs', {producto:producto,offline:offline,admin:admin});
+
             })
             .catch(e=>{
                 console.log(e)

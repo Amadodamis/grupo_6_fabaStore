@@ -15,7 +15,7 @@ let controller = {
 
         let id=req.params.id;
         db.Product.findByPk(id,{
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true,     
             })

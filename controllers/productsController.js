@@ -10,7 +10,7 @@ let controller={
     index: (req, res) => {
         db.Product.findAll( 
             {
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true,
             })
@@ -31,7 +31,7 @@ let controller={
         
         db.Product.findAll( 
             {
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true,
             })
@@ -59,7 +59,7 @@ let controller={
     busqueda:(req,res)=>{
         db.Product.findAll( 
             {
-            include:["marca","tipodeproducto"],
+            include:["marca","tipoDeProducto"],
             raw:true,  
             nest:true,
             })
